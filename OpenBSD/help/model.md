@@ -18,22 +18,12 @@ DESCRIÇÃO
 Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
 Necessita Ruby >= 2.0 com Mustache para funcionar..
 
-OPÇÕES
+OPCOES
 ------
-
-* `-b`:
-  Do not write "busy" to stdout while processing.
 
 * `-c` *config-file*:
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
-
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
-
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
 
 EXEMPLOS
 --------
