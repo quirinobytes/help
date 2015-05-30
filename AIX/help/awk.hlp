@@ -1,0 +1,38 @@
+##### AIX HELP
+#
+#
+# awk
+#
+
+
+linguagem de programação utilizada para strem de texto.
+
+
+
+
+
+<example>
+$> cat paylod
+-rw-r--r-- 1 center center  0 Dec  8 21:39 p1
+-rw-r--r-- 1 center center 17 Dec  8 21:15 t1
+-rw-r--r-- 1 center center 26 Dec  8 21:38 t2
+-rw-r--r-- 1 center center 25 Dec  8 21:38 t3
+-rw-r--r-- 1 center center 43 Dec  8 21:39 t4
+-rw-r--r-- 1 center center 48 Dec  8 21:39 t5
+
+
+awk '{ if( $5 > 20 ) print $5}' payload
+
+26
+25
+43
+48
+
+awk 'BEGIN {sum=0} {sum=sum+$5}  END {print sum}' payload
+159
+
+
+
+</example>
+
+

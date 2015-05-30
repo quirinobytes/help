@@ -1,0 +1,28 @@
+##### AIX HELP
+#
+#
+# PS - Process Statistics
+#########################
+
+
+
+serve para exibir estastisticas de processamento.
+
+
+-ef 	-> Serve para mostrar os processos de forma simples, mas com as principais colunas.
+
+
+aux	-> Serve para exibir estatisticas comuns como no Linux
+
+
+-l	-> Long list view, exibe no formato long list, semelhante ao w do linux, exemplo  ps -elf
+
+<example>
+
+	ps -emo THREAD | grep p3	-> Serve para verificar quais processos estao no processador 3.
+
+
+</example>
+
+
+
