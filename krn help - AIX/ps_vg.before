@@ -1,2 +1,0 @@
-      PID    TTY STAT  TIME PGIN  SIZE   RSS   LIM  TSIZ   TRS %CPU %MEM COMMAND
- 30343256  pts/2 A    148:18    0 131196 131252 32768    32    56  1.0  1.0 ./memory_killer 
