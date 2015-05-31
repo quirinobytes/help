@@ -1,72 +1,63 @@
-model(1) -- modelo para minhas man pages v1.0
+screen(1) -- screeno para minhas man pages v1.0
 ===============================================
 
 NOME
 ----
 
-`model` - Modelo de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
+`screen` - screeno de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
 
 SYNOPSIS
 --------
 
-`model` [`-bar`] [`-c` *config-file* ] *file* ...
+`screen` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`model` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`screen` é um programa para abrir multiplas sessões de console em multiplas janelas,
+alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma 
+série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar
+a mesma sessão usando o mesmo usuário e senha.
+
+Pode e deve ser usado com o arquivo de configuração **.screenrc**. Veja mais em screen(1).
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
+* `-x`:
+	Conecta em uma screen já aberto.
+* `-r` *id*:
+  Reconecta no screen específico *id* devido a ter mais de um screen aberto.
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
+* `-ls`:
+  Lista os screen abertos.
 
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
+EXEMPLOS
+========
 
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
-
-ARQUIVOS
---------
+   Mapeamento das teclas no screen
 
 
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
+   F1      -> Cria uma nova sessáo
+   F2      -> Nada
+   F3      -> Nada
+   F4      -> Fecha a Region/Window
+   F5      -> Divide horizontal
+   F6      -> Divide Vertical
+   F7      -> Diminui a Region/Window
+   F8      -> Aumenta a Region/Window
+   F9      -> Muda focus para proxima de Region/Window
+   F10     -> Trocar para proxima sessao nessa Region/Window
+   F11     -> Sai e fecha todas Sessoes e Regions, mas pede confirmacao! (y)
 
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
 
-### ENVIRONMENT 
+ENVIRONMENT 
+-----------
 
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
 
-### DIAGNOSTICS
+*~/.screenrc*
+  O arquivo mágico de configurção que todo admin pode usar. Veja screerc(5) para mais detalhes.
 
-The following diagnostics may be issued on stderr:
-
-**Bad magic number.**
-  The input file does not look like an archive file.
-
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
-
-BUGS
-----
-
-The command name should have been chosen more carefully to reflect its
-purpose.
 
 AUTOR
 -----
