@@ -36,7 +36,7 @@ OPÇÕES
   of virtual memory.
 
 EXEMPLOS
-========
+--------
 
 Coloque os exemplos aqui:
 
@@ -53,13 +53,15 @@ ARQUIVOS
 *~/.foorc*
   Per user configuration file. See foo(5) for further details.
 
-### ENVIRONMENT 
+ENVIRONMENT
+-----------
 
 `FOOCONF`
   If non-null the full pathname for an alternate system wide */etc/foo.conf*.
   Overridden by the `-c` option.
 
-### DIAGNOSTICS
+DIAGNOSTICS
+-----------
 
 The following diagnostics may be issued on stderr:
 
@@ -69,6 +71,12 @@ The following diagnostics may be issued on stderr:
 **Old style baz segments.**
   `foo` can only handle new style baz segments. COBOL object libraries are not
   supported in this version.
+
+COMENTARIOS
+-----------
+
+Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, não sai nada.>
 
 BUGS
 ----

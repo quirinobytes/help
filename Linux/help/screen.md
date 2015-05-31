@@ -33,23 +33,24 @@ OPÇÕES
   Lista os screen abertos.
 
 EXEMPLOS
-========
+--------
 
-   Mapeamento das teclas no screen
+  Tecla | Mapeamento das teclas no screen
+--------|---------------------------------
+   F1   |  -> Cria uma nova sessão 
+   F2   |  -> Nada
+   F3   |  -> Nada
+   F4   |  -> Fecha a Region/Window
+   F5   |  -> Divide horizontal
+   F6   |  -> Divide Vertical
+   F7   |  -> Diminui a Region/Window
+   F8   |  -> Aumenta a Region/Window
+   F9   |  -> Muda focus para proxima de Region/Window
+   F10  |  -> Trocar para proxima sessao nessa Region/Window
+   F11  |  -> Sai e fecha todas Sessoes e Regions, mas pede confirmacao! (y)
 
-
-   F1      -> Cria uma nova sessáo
-   F2      -> Nada
-   F3      -> Nada
-   F4      -> Fecha a Region/Window
-   F5      -> Divide horizontal
-   F6      -> Divide Vertical
-   F7      -> Diminui a Region/Window
-   F8      -> Aumenta a Region/Window
-   F9      -> Muda focus para proxima de Region/Window
-   F10     -> Trocar para proxima sessao nessa Region/Window
-   F11     -> Sai e fecha todas Sessoes e Regions, mas pede confirmacao! (y)
-
+* teste de comandos:
+	<codigo here>
 
 ENVIRONMENT 
 -----------
