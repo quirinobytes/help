@@ -1,16 +1,18 @@
 ##### LINUX HELP######################
 #
 #
-# Program:
+# Program: showkey
 #
 ######################################
 #
-# Desc:
+# Desc: Exibe o codigo da tecla digitada
 #
 ######################################
 
 
+-a -> Exibe o caracter em ASCII.
 
+Crtl+D -> Sair
 
 
 
