@@ -14,9 +14,9 @@ SYNOPSIS
 DESCRICAO
 ---------
 
-`route` √© um comando utilizado para alterar, adicionar e excluir rotas na tabela de rotas do kernel.
+`route` … um comando utilizado para alterar, adicionar e excluir rotas na tabela de rotas do kernel.
 
-O comando √©o mesmo que  *netstat -r*, por√m √ necess√rio ser executado como root para altera
+O comando È o mesmo que  *netstat -r*, porÈm È necessÈrio ser executado como root para ser alterado.
 
 OPCOES
 ------
@@ -57,15 +57,15 @@ ARQUIVOS
 ENVIRONMENT
 -----------
 
-Para habilitar o roteamento de pacotes pelo kernel no OpenBSD fa;a assim:
+Para habilitar o roteamento de pacotes pelo kernel no OpenBSD faa assim:
 
 - ...
 
 COMENTARIOS
 -----------
 
-Coloque seus coment√°rios aqui...
-<- Tag para coment√°rios na Man Page, juro, n√£o sai nada.>
+Coloque seus comentios aqui...
+<- Tag para comentrios na Man Page, juro, n sai nada.>
 
 AUTOR
 -----

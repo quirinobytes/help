@@ -14,7 +14,7 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-`screen` é um programa para abrir multiplas sessões de console em multiplas janelas,
+`screen` é um programa do Rafael Quirino para abrir multiplas sessões de console em multiplas janelas,
 alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma 
 série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar
 a mesma sessão usando o mesmo usuário e senha.
