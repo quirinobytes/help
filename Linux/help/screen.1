@@ -1,0 +1,48 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SCREEN" "1" "May 2015" "" ""
+.
+.SH "NAME"
+\fBscreen\fR \- screeno para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBscreen\fR \- screeno de arquivo MarkDown para gerar Man Pages por Rafael Quirino\.
+.
+.SH "SYNOPSIS"
+\fBscreen\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBscreen\fR é um programa do Rafael Quirino para abrir multiplas sessões de console em multiplas janelas, alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar a mesma sessão usando o mesmo usuário e senha\.
+.
+.P
+Pode e deve ser usado com o arquivo de configuração \fB\.screenrc\fR\. Veja mais em screen(1)\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-x\fR
+Conecta em uma screen já aberto\.
+.
+.TP
+\fB\-r\fR \fIid\fR
+Reconecta no screen específico \fIid\fR devido a ter mais de um screen aberto\.
+.
+.TP
+\fB\-ls\fR
+Lista os screen abertos\.
+.
+.SH "EXEMPLOS"
+.
+.TP
+teste de comandos
+\fIcodigo here\fR
+.
+.SH "ENVIRONMENT"
+\fI~/\.screenrc\fR O arquivo mágico de configurção que todo admin pode usar\. Veja screerc(5) para mais detalhes\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
