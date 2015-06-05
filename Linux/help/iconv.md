@@ -1,4 +1,4 @@
-iconv(1) -- iconv Conversor de arquivos
+iconv(1) -- Conversor de arquivos
 ===============================================
 
 NOME
@@ -22,13 +22,14 @@ OPÇÕES
 * `-f` *file-encode*:
   (from) Define tipo do arquivo de origem.
 * `-t` *file-encode*:
+  (to) Define o tipo que será converido
 
 EXEMPLOS
 --------
 
 * converte o arquivo.txt para UTF-8
 
-	`iconv -f utf-8 -t ucs-4 < arquivo.txt >/dev/null`
+	`$>iconv -f utf-8 -t ucs-4 < arquivo.txt >/dev/null`
 
 ARQUIVOS
 --------
