@@ -1,10 +1,10 @@
-model(1) -- modelo para minhas man pages v1.0
+model(1) -- model para minhas man pages v1.0
 ===============================================
 
 NOME
 ----
 
-`model` - Modelo de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
+`model` - Model de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
 
 SYNOPSIS
 --------
