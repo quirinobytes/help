@@ -1,0 +1,45 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SED" "1" "June 2015" "" ""
+.
+.SH "NAME"
+\fBsed\fR \- sed para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBsed\fR \- sed Stream Editor
+.
+.SH "SYNOPSIS"
+\fBsed\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBsed\fR é um poderoso editor de stream, fluxos de dados\. é possível usa \fIREGEX\fR e também possui grande integração com \fBvim\fR\. Veja mais em vimrc(1)\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-i\fR
+Edita o arquivo diretamente na fonte, Cuidado para não destruir o arquivo\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.IP "1." 4
+Pegar os nomes dos arquivos
+.
+.IP "" 0
+.
+.P
+$> miniman \-ls /root/help/Linux/help/complete\.1 /root/help/Linux/help/iconv\.1 /root/help/Linux/help/if\.1 /root/help/Linux/help/screen\.1
+.
+.P
+Queremos comente os nomes dos arquivos, portanto corta o \.1 e tira todas as letras ate a /
+.
+.P
+\fB$> miniman \-ls | sed \'s/\.1//g\' |sed \'s/[a\-zA\-Z]*\e///g\' complete iconv if screen\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
