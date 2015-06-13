@@ -1,0 +1,70 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "MDADM" "1" "June 2015" "" ""
+.
+.SH "NAME"
+\fBmdadm\fR \- mdadm para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBmdadm\fR \- Admin de midia de disco Linux
+.
+.SH "SYNOPSIS"
+\fBmdadm\fR [\fB\-\-action\fR] [\fIoption\fR ] \fIdev1\fR \fIdev2\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBmdadm\fR é um utilitário que permite fazer todo o controle dos discos \fBRAID\fR mirror, striped entre outros\.
+.
+.SH "ACTION"
+.
+.TP
+\fBcreate\fR:
+
+.
+.TP
+\fBcbuild\fR:
+
+.
+.TP
+\fBcmanage\fR:
+
+.
+.TP
+\fBcmisc\fR:
+
+.
+.TP
+\fBcgrow\fR:
+
+.
+.TP
+\fBcincremental\fR:
+
+.
+.TP
+\fBcmonitor\fR:
+
+.
+.TP
+\fBcdevice\fR:
+
+.
+.TP
+\fB<options>\fR:
+
+.
+.TP
+\fB\-\-create </dev/md0\e1\e2\e3>\fR
+Usado para criar um mirror \fB\-\-level=1\fR Seleciona o tipo do RAID=1 (MIRROR)
+.
+.SH "EXEMPLOS"
+Criar um RAID 1 (mirror) de dois discos: sdb e sdc
+.
+.P
+mdadm \-\-create /dev/md1 \-\-level=1 \-\-raid\-devices=2 /dev/sdb1 /dev/sdc1
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
