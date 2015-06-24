@@ -9,7 +9,7 @@ NOME
 SYNOPSIS
 --------
 
-`lsvg` [`-bar`] [`-c` *config-file* ] *file* ...
+`lsvg` [`OPCOES`] LG-volume-name
 
 DESCRIÇÃO
 ---------
@@ -23,6 +23,21 @@ OPÇÕES
 EXEMPLOS
 --------
 
+lsvg -p rootvg ( displays all PVs that are contained in rootvg.)
+
+# lsvg -p rootvg ( displays all PVs that are contained in rootvg.)
+
+# lsvg -M <hdiskname> ( displays the map of all physical partitions located on <hdiskname>.)
+
+# lsvg -M <hdiskname> ( shows that all partitions of <hdiskname> are not allocated.)
+
+# migratepv <hdiskname> <hdiskname>( migrates the data from <hdiskname> to <hdiskname>)
+
+# lspv -M <hdiskname> ( confirms that <hdiskname> has all partitions free.)
+
+# chpv -c <hdiskname> ( clears the boot record from <hdiskname>.)
+
+# lspv -M <hdiskname> ( confirms that all physical partitions have been migrated to <hdiskname>.)
 
 ARQUIVOS
 --------
