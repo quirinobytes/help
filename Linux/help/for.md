@@ -22,7 +22,7 @@ OPÇÕES
 * `for ((c=0;$c>10;$c++)) do echo $c ; done`:
   In addition to the baz segments, also parse the blurfl headers.
 
-* `for i in \`seq 1 2 10\`; do echo $i ; done`:
+* `for i in $(seq 1 2 10); do echo $i ; done`:
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
   of virtual memory.
 
@@ -31,7 +31,7 @@ EXEMPLOS
 
 Coloque os exemplos aqui:
 
-   `$> for i in ``seq 1 2 10``; do echo $i ; done`
+   `$> for i in `seq 1 2 10`; do echo $i ; done`
 
    `$> for ((c=0;$c>10;$c++)) do echo $c ; done `
 
