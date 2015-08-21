@@ -14,9 +14,9 @@ SYNOPSIS
 DESCRICAO
 ---------
 
-`route` É um comando utilizado para alterar, adicionar e excluir rotas na tabela de rotas do kernel.
+`route` E um comando utilizado para alterar, adicionar e excluir rotas na tabela de rotas do kernel.
 
-O comando é o mesmo que  *netstat -r*, porém é necessério ser executado como root para ser alterado.
+O comando e o mesmo que  *netstat -r*, porem e necessario ser executado como root para ser alterado.
 
 OPCOES
 ------
@@ -52,7 +52,7 @@ ARQUIVOS
 
 
 */etc/mygate*
-  Arquivo de configuraÃÃo default para o OpenBSD.
+  Arquivo de configuracao default para o OpenBSD.
 
 ENVIRONMENT
 -----------

@@ -20,16 +20,22 @@ OPÇÕES
 ------
 
 * `-f` *file-encode*:
-  (from) Define tipo do arquivo de origem.
+  (from) Define tipo do arquivo de origem. -> utf-8 , iso-8859-1 
 * `-t` *file-encode*:
-  (to) Define o tipo que será converido
+  (to) Define o tipo que será converido -> utf-8 , iso-8859-1
+
+* `-c` *file-name*
 
 EXEMPLOS
 --------
 
 * converte o arquivo.txt para UTF-8
 
-	`$>iconv -f utf-8 -t ucs-4 < arquivo.txt >/dev/null`
+	`$> iconv -f utf-8 -t ucs-4 < arquivo.txt >/dev/null`
+
+* limpa os caracteres estranhos no arquivo
+	
+	`$> iconv -f utf-8 -t utf-8 -c file.txt > novoarquivo-limpo.txt`
 
 ARQUIVOS
 --------
