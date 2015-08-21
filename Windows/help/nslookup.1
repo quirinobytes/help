@@ -1,0 +1,68 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "NSLOOKUP" "1" "August 2015" "" ""
+.
+.SH "NAME"
+\fBnslookup\fR \- nslookup para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBnslookup\fR \- nslookup serve para testar o serviço de DNS, questionar NOMES, DOMÍNIOS, MX etc\.
+.
+.SH "SYNOPSIS"
+\fBnslookup\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBnslookup\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fBserver A\.B\.C\.D\fR
+Use o servidor A\.B\.C\.D para realizar as perguntas de DNS\.
+.
+.TP
+\fBdebug\fR
+Seleciona o modo de debug para vizualizar o MAXIMO de INFORMACOES de DEBUG\.
+.
+.TP
+\fBset q=A\fR
+Seleciona o modo de visuação de retorno tipo ADDRESS\.
+.
+.TP
+\fBset q=MX\fR
+Seleciona o modo de visualização tipo Mail Exchanger, para saber quem é o MX de um domínio por exemplo\.
+.
+.TP
+\fBset q=PTR\fR
+Seleciona o modo de visualização tipo POINTER, para saber quer é o REVERSO de determinado IP\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> nslookup server 200\.204\.0\.10\fR > set q=mx > www\.google\.com\.br
+.
+.SH "ARQUIVOS"
+\fI/c/Windows/System32/Drivers/etc/hosts\fR Arquivo LOCAL usado para traduzir nome para IP para o WINDOWS
+.
+.P
+\fI/etc/hosts\fR Arquivo LOCAL usado para traduzir nome para IP para o LINUX
+.
+.P
+/etc/resolv\.conf Arquivo usado para definir quem é o servidor DNS para o LINUX\.
+.
+.SH "DIAGNOSTICS"
+\fBDNS DEBUG TROUBLESHOOTING\fR \fBdebug\fR usado para realizar o debug do serviço de DNS, traz bastante informação sobre a QUERY DNS\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+dig(5), ping(1), dnstop(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
