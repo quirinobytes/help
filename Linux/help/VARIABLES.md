@@ -19,9 +19,14 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+* `$0`:  -> Nome do processo que esta executando.
+* `$1`:  -> Primeiro argumento.
+* `$2`:  -> Segundo argumento.
+* `$3`:  -> Terceiro argumento, e assim por diante.
+
 
 * `$$`:  -> Numero do Processo PAI.
-* `$?`:  -> Saída de erro.
+* `$?`:  -> Código de erro de retorno do processo.
 * `$!`:  -> PID do ultimo *processo filho* iniciado com sucesso.
 
 * `$#`:  -> Total de argumentos passados via linha de comando.
@@ -32,7 +37,7 @@ EXEMPLOS
 
 Coloque os exemplos aqui:
 
-   `$> date '%Y/%m/%d'`
+   `$> args() { echo $1 $2 $3; } ;  args arg1 arg2 arg3 `
 
 
 ARQUIVOS
