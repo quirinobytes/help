@@ -14,7 +14,13 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-`VARIABLES` que pode ser utilizadas em BASH
+`VARIABLES` que pode ser utilizadas em BASH.
+
+Variáveis em Shell Script são globais, ou seja podem ser usadas fora da funcao.
+
+Para declarar uma variável *lOCAL* deve-se indicar da seguinte forma:
+
+local VAR='Existem variáveis locais!'
 
 OPÇÕES
 ------
