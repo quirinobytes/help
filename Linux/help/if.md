@@ -30,6 +30,31 @@ q
 * `-d`:
   Verifica se o diretório existe.
 
+* `-eq`: igual
+
+* `-ne`: diferente
+
+* `-gt`: maior
+
+* `-ge`: maior ou igual
+
+* `-lt`: menor
+
+* `-le`: menor ou igual
+
+* `-d`: se é um diretório
+
+* `-e`: se existe
+
+* `-z`: se é vazio
+
+* `-f`: se contem texto.
+
+* `-r`: se o arquivo possui permissão de leitura
+
+* `-w`: se o arquivo possui permissão de escrita.
+
+* `-x`: se o arquivo é executavel.
 
 EXAMPLES
 --------
