@@ -1,0 +1,60 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "CASE" "1" "August 2015" "" ""
+.
+.SH "NAME"
+\fBcase\fR \- comando para selecionar varias condições
+.
+.SH "NOME"
+\fBcase\fR \- é um comando utilizado para escolher entre multiplas opções\.
+.
+.SH "SYNOPSIS"
+\fBcase\fR $VARIAVEL in
+.
+.IP "" 4
+.
+.nf
+
+casoA) comandos
+    ;;
+casoB) comandos
+    ;;
+*)  comandos
+    ;;
+esac
+.
+.fi
+.
+.IP "" 0
+.
+.SH "DESCRIÇÃO"
+\fBcase\fR é um comando utilizado para escolher entre várias opções, quando necessário, pode\-se passar varias opções para ele escolher, e executar uma lista de comandos em caso dessa opção ser encontrada, ou executar uma opção geral para outras todas opções que nao forem encontradas
+.
+.SH "EXEMPLOS"
+Escolher entre casoA ou casoB, e se nao encontrar execute o comando seguinte\. `$> case $VARIAVEL in casoA) comandos ;;
+.
+.IP "" 4
+.
+.nf
+
+casoB)
+    comandos_1
+    comandos_2
+    ;;
+*)
+    comandos
+    ;;
+.
+.fi
+.
+.IP "" 0
+.
+.P
+esac`
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
