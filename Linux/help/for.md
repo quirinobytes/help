@@ -9,7 +9,9 @@ NOME
 SYNOPSIS
 --------
 
-`for` [`-bar`] [`-c` *config-file* ] *file* ...
+`for <iteração> in <lista>; do
+	bloco de codigos/comando
+done`
 
 DESCRIÇÃO
 ---------
