@@ -1,13 +1,13 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "SED" "1" "June 2015" "" ""
+.TH "SED" "1" "August 2015" "" ""
 .
 .SH "NAME"
-\fBsed\fR \- sed para minhas man pages v1\.0
+\fBsed\fR \- sed stream editor
 .
 .SH "NOME"
-\fBsed\fR \- sed Stream Editor
+\fBsed\fR \- sed Stream Editor\.
 .
 .SH "SYNOPSIS"
 \fBsed\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
@@ -33,7 +33,7 @@ Pegar os nomes dos arquivos
 $> miniman \-ls /root/help/Linux/help/complete\.1 /root/help/Linux/help/iconv\.1 /root/help/Linux/help/if\.1 /root/help/Linux/help/screen\.1
 .
 .P
-Queremos comente os nomes dos arquivos, portanto corta o \.1 e tira todas as letras ate a /
+Queremos somente os nomes dos arquivos, portanto corta o \.1 e tira todas as letras ate a /
 .
 .P
 \fB$> miniman \-ls | sed \'s/\.1//g\' |sed \'s/[a\-zA\-Z]*\e///g\' complete iconv if screen\fR
@@ -42,4 +42,4 @@ Queremos comente os nomes dos arquivos, portanto corta o \.1 e tira todas as let
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
 .
 .SH "VEJA SOBRE"
-ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
+REGEX(5), awk(1), cut(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

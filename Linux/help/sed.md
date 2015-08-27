@@ -1,10 +1,10 @@
-sed(1) -- sed para minhas man pages v1.0
+sed(1) -- sed stream editor
 ===============================================
 
 NOME
 ----
 
-`sed` - sed Stream Editor
+`sed` - sed Stream Editor.
 
 SYNOPSIS
 --------
@@ -38,7 +38,7 @@ $> miniman -ls
 /root/help/Linux/help/screen.1
 
 
-  Queremos comente os nomes dos arquivos, portanto corta o .1 e tira todas as letras ate a /
+  Queremos somente os nomes dos arquivos, portanto corta o .1 e tira todas as letras ate a /
 
 
 `$> miniman -ls | sed 's/.1//g' |sed 's/[a-zA-Z]*\///g'
@@ -56,5 +56,5 @@ Rafael Quirino - <quirinobytes (a) gmail com>
 VEJA SOBRE
 ----------
 
-ronn(5), markdown(1), txt2tags(1) [Linux Man Page Howto](
+REGEX(5), awk(1), cut(1) [Linux Man Page Howto](
 http://www.schweikhardt.net/man_page_howto.html)
