@@ -48,6 +48,13 @@ if
 screen
 `
 
+Apagar as linhas em branco de um arquivo
+`$> sed '/^$/d' arquivo.txt > novoarquivo.txt ou 
+awk 'NF>0' arquivo.txt > novoarquivo.txt`
+
+
+
+
 AUTOR
 -----
 

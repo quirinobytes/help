@@ -38,6 +38,9 @@ Queremos somente os nomes dos arquivos, portanto corta o \.1 e tira todas as let
 .P
 \fB$> miniman \-ls | sed \'s/\.1//g\' |sed \'s/[a\-zA\-Z]*\e///g\' complete iconv if screen\fR
 .
+.P
+Apagar as linhas em branco de um arquivo \fB$> sed \'/^$/d\' arquivo\.txt > novoarquivo\.txt ou awk \'NF>0\' arquivo\.txt > novoarquivo\.txt\fR
+.
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
 .
