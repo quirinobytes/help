@@ -41,6 +41,11 @@ Coloque os exemplos aqui:
 
    `$> iscsiadm -m discovery -t st -p 192.168.45.145 `
 
+O retorno é algo parecido com isso:
+
+192.168.45.145:3260,1 iqn.2006-01.com.openfiler:tsn.73ef1a2e5abf
+192.168.45.145:3260,1 iqn.2006-01.com.openfiler:tsn.acc51ecccc11
+
 
 AUTOR
 -----
