@@ -55,7 +55,10 @@ AUTH_DATA="ssousername=$SSO_USERNAME&password=$SSO_PASSWORD&site2pstoretoken=$SS
 
 
 2. exemplo de Wget
-$WGET --user-agent="Mozilla/5.0" --secure-protocol=auto --post-data $AUTH_DATA --save-cookies=$COOKIE_FILE --keep-session-cookies $SSO_SERVER$SSO_AUTH_URL -O sso.out >> $LOGFILE 2>&1
+wget --user-agent="Mozilla/5.0" --secure-protocol=auto --post-data $AUTH_DATA --save-cookies=$COOKIE_FILE --keep-session-cookies $SSO_SERVER$SSO_AUTH_URL -O sso.out >> $LOGFILE 2>&1
+
+3. Exmplo de FTP
+wget --ftp-user=xyz--ftp-password=12345 ftp://localhost/outgoing/DATA.ZIP
 
 ENVIRONMENT
 -----------

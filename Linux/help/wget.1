@@ -57,7 +57,10 @@ Exemplo de Wget SSO_TOKEN=\fBecho $SSO_RESPONSE| cut \-d \'=\' \-f 2|cut \-d \' 
 \fB$> wget \-\-user\-agent="Mozilla/5\.0" \-\-secure\-protocol=auto \-\-post\-data $AUTH_DATA \-\-save\-cookies=$COOKIE_FILE \-\-keep\-session\-cookies $SSO_SERVER$SSO_AUTH_URL \-O sso\.out >> $LOGFILE 2>&1\fR
 .
 .IP "2." 4
-exemplo de Wget $WGET \-\-user\-agent="Mozilla/5\.0" \-\-secure\-protocol=auto \-\-post\-data $AUTH_DATA \-\-save\-cookies=$COOKIE_FILE \-\-keep\-session\-cookies $SSO_SERVER$SSO_AUTH_URL \-O sso\.out >> $LOGFILE 2>&1
+exemplo de Wget wget \-\-user\-agent="Mozilla/5\.0" \-\-secure\-protocol=auto \-\-post\-data $AUTH_DATA \-\-save\-cookies=$COOKIE_FILE \-\-keep\-session\-cookies $SSO_SERVER$SSO_AUTH_URL \-O sso\.out >> $LOGFILE 2>&1
+.
+.IP "3." 4
+Exmplo de FTP wget \-\-ftp\-user=xyz\-\-ftp\-password=12345 ftp://localhost/outgoing/DATA\.ZIP
 .
 .IP "" 0
 .
