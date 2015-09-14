@@ -46,7 +46,18 @@ Remover um programa
 
 Exemplo de como Iniciar e Terminar um processo
 
-` PROCESS (Win32_Process) / Starting and Exiting
+
+Exemplo de help para o process
+
+`wmic:root\cli process /?`
+
+Exemplo de uso de parametros
+
+`wmic:root\cli PATH SMS_R_System.LastLogonUserName='PTHOMSEN'` 
+
+Exemplo de uso com PROCESS (Win32_Process) / Starting and Exiting
+
+`
 
 $> WMIC PROCESS CALL Create "calc.exe"
 
