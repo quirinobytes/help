@@ -1,0 +1,38 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "WMIC" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBwmic\fR \- wmic Windows Management Intrumentation Command
+.
+.SH "NOME"
+\fBwmic\fR \- wmic de cliente do WMI que permite executar comandos wmi nos hosts Windows\.
+.
+.SH "SYNOPSIS"
+\fBwmic\fR [\fB/namespace:root\eWMI\fR] [\fBPATH\fR \fICLASS\-NAME\fR ]
+.
+.SH "DESCRIÇÃO"
+\fBwmic\fR é usado para enviar comandos para o sistema operacional via WMI\. É possível recuperar todo tipo de informação do Sistema Operacional, como serial number, hostname, programas instalados, numeros das interfaces de rede, HBA, etc\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB/namespace:\fR
+Pode ser usado para indicar o Namespace desejado, no caso /namespace:\eroot\eWMI
+.
+.TP
+\fBPATH CLASS\-NAME\fR
+Usado para definir a classe usada para executar o comando que deseja as informações \.
+.
+.SH "EXEMPLOS"
+Recuperar informações sobre as HBA
+.
+.P
+\fB$>wmic /namespace:\e\eroot\eWMI PATH MSFC_FCAdapterHBAAttributes\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+wmic(5), powershell(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
