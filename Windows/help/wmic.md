@@ -44,6 +44,20 @@ Remover um programa
 
     `$> product where name="Adobe Reader X" call uninstall`
 
+Exemplo de como Iniciar e Terminar um processo
+
+` PROCESS (Win32_Process) / Starting and Exiting
+
+$> WMIC PROCESS CALL Create "calc.exe"
+
+$> WMIC PROCESS WHERE Name="calc.exe" CALL Terminate
+
+$> WMIC PROCESS WHERE Name="explorer.exe" call SetPriority 64
+
+Identico a: 
+
+$> WMIC PATH Win32_Process WHERE Name="explorer.exe" call SetPriority 64`
+
 AUTOR
 -----
 
