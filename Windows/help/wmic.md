@@ -56,7 +56,98 @@ $> WMIC PROCESS WHERE Name="explorer.exe" call SetPriority 64
 
 Identico a: 
 
-$> WMIC PATH Win32_Process WHERE Name="explorer.exe" call SetPriority 64`
+$> WMIC PATH Win32_Process WHERE Name="explorer.exe" call SetPriority 64
+
+
+
+2.0             Data display:
+ 
+
+WMIC PROCESS WHERE "name like '%HOST%'"
+
+WMIC PATH Win32_Process WHERE "name like '%HOST%'"
+
+WMIC PROCESS WHERE “Name=svchost.exe” LIST Statistics
+
+WMIC PROCESS WHERE “Name=svchost.exe” LIST BrieF
+
+WMIC PROCESS WHERE (Name='svchost.exe') GET name, processid
+
+WMIC PROCESS WHERE “Name=svchost.exe” GET name,processid /VALUE
+
+WMIC PROCESS GET /FORMAT:htable
+
+WMIC PROCESS GET /FORMAT:”c:\windows\system32\wbem\htable.xsl” 
+
+WMIC PROCESS GET /FORMAT:hform 
+
+WMIC PROCESS GET /FORMAT:csv
+
+ 
+
+4.0      Data output:
+
+ 
+
+WMIC BIOS > mydata.txt
+
+WMIC OS >> mydata.txt
+
+WMIC /APPEND:mydata.txt PAGEFILE
+
+WMIC /OUTPUT:output.txt OS
+
+WMIC /OUTPUT:CLIPBOARD BIOS
+
+ 
+
+3.0             Data creation:
+
+ 
+
+WMIC /NAMESPACE:\\root\default PATH __Namespace CREATE Name=test
+
+ 
+
+4.0             Data deletion:
+
+ 
+
+WMIC /NAMESPACE:\\root\default PATH __Namespace WHERE Name="test" DELETE
+
+WMIC /NAMESPACE:\\root\subscription PATH __EventFilter WHERE __CLASS="__EventFilter" DELETE
+
+ 
+
+5.0             Security and connection:
+
+ 
+
+Delegate authority
+
+WMIC /node:"computer1" /IMPLEVEL:Delegate /AUTHORITY:"Kerberos:domain\computer1" OS
+
+ 
+
+WMIC /NODE:"computer1.domainofcomputer1.org" /AUTHLEVEL:Pktprivacy BIOS
+
+ 
+
+ 
+
+6.0             Batch scripting:
+
+ 
+
+WMIC.EXE /OUTPUT:WMICLASSES.txt /NAMESPACE:\\root\wmi PATH WDMClassesOfDriver GET Classname
+
+for /f "usebackq skip=1" %%I in (``type WMICLASSES.txt``) DO WMIC.exe /namespace:\\root\wmi PATH %%I
+
+ 
+
+WMIC PROCESS GET /FORMAT:"%windir%\system32\wbem\csv.xsl" >> c:\1.csv
+
+`
 
 AUTOR
 -----

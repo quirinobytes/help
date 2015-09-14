@@ -71,7 +71,100 @@ $> WMIC PROCESS WHERE Name="explorer\.exe" call SetPriority 64
 Identico a:
 .
 .P
-$> WMIC PATH Win32_Process WHERE Name="explorer\.exe" call SetPriority 64`
+$> WMIC PATH Win32_Process WHERE Name="explorer\.exe" call SetPriority 64
+.
+.P
+2\.0 Data display:
+.
+.P
+WMIC PROCESS WHERE "name like \'%HOST%\'"
+.
+.P
+WMIC PATH Win32_Process WHERE "name like \'%HOST%\'"
+.
+.P
+WMIC PROCESS WHERE “Name=svchost\.exe” LIST Statistics
+.
+.P
+WMIC PROCESS WHERE “Name=svchost\.exe” LIST BrieF
+.
+.P
+WMIC PROCESS WHERE (Name=\'svchost\.exe\') GET name, processid
+.
+.P
+WMIC PROCESS WHERE “Name=svchost\.exe” GET name,processid /VALUE
+.
+.P
+WMIC PROCESS GET /FORMAT:htable
+.
+.P
+WMIC PROCESS GET /FORMAT:”c:\ewindows\esystem32\ewbem\ehtable\.xsl”
+.
+.P
+WMIC PROCESS GET /FORMAT:hform
+.
+.P
+WMIC PROCESS GET /FORMAT:csv
+.
+.P
+4\.0 Data output:
+.
+.P
+WMIC BIOS > mydata\.txt
+.
+.P
+WMIC OS >> mydata\.txt
+.
+.P
+WMIC /APPEND:mydata\.txt PAGEFILE
+.
+.P
+WMIC /OUTPUT:output\.txt OS
+.
+.P
+WMIC /OUTPUT:CLIPBOARD BIOS
+.
+.P
+3\.0 Data creation:
+.
+.P
+WMIC /NAMESPACE:\eroot\edefault PATH __Namespace CREATE Name=test
+.
+.P
+4\.0 Data deletion:
+.
+.P
+WMIC /NAMESPACE:\eroot\edefault PATH __Namespace WHERE Name="test" DELETE
+.
+.P
+WMIC /NAMESPACE:\eroot\esubscription PATH \fBEventFilter WHERE\fRCLASS="__EventFilter" DELETE
+.
+.P
+5\.0 Security and connection:
+.
+.P
+Delegate authority
+.
+.P
+WMIC /node:"computer1" /IMPLEVEL:Delegate /AUTHORITY:"Kerberos:domain\ecomputer1" OS
+.
+.P
+WMIC /NODE:"computer1\.domainofcomputer1\.org" /AUTHLEVEL:Pktprivacy BIOS
+.
+.P
+6\.0 Batch scripting:
+.
+.P
+WMIC\.EXE /OUTPUT:WMICLASSES\.txt /NAMESPACE:\eroot\ewmi PATH WDMClassesOfDriver GET Classname
+.
+.P
+for /f "usebackq skip=1" %%I in (\fBtype WMICLASSES\.txt\fR) DO WMIC\.exe /namespace:\eroot\ewmi PATH %%I
+.
+.P
+WMIC PROCESS GET /FORMAT:"%windir%\esystem32\ewbem\ecsv\.xsl" >> c:\e1\.csv
+.
+.P
+`
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
