@@ -40,6 +40,9 @@ Recuperar informações sobre as HBA
 
    `$>wmic /namespace:\\root\WMI PATH MSFC_FCAdapterHBAAttributes`
 
+Remover um programa
+
+    `$> product where name="Adobe Reader X" call uninstall`
 
 AUTOR
 -----
