@@ -26,6 +26,13 @@ OPÇÕES
 * `PATH CLASS-NAME`:
   Usado para definir a classe usada para executar o comando que deseja as informações .
 
+* `product get name`:
+  Comando para exibir todos os programas instalados
+
+* `bios get serialnumber`:
+  Exibe o numero serial da máquina.
+
+
 EXEMPLOS
 --------
 
