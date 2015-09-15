@@ -34,6 +34,15 @@ OPÇÕES
 * `scrub rpool`:
   Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
 
+* `create mypool mirror /dev/da2 /dev/da3`:
+  Cria um 2 discos no formato *mirror*
+
+* `create mypool mirror /dev/da2 /dev/da3 mirror /dev/da4 /dev/da5`:
+  Cria dois mirrors somados de 2 discos cada. um mirror (da2,da3) mais outro mirror(da4,da5).
+
+* `create mypool raidz2 /dev/ada0p3 /dev/ada1p3 /dev/ada2p3 /dev/ada3p3 /dev/ada4p3 /dev/ada5p3`:
+  Cria um RAID Z2 com todos esses discos
+
 EXEMPLOS
 --------
 

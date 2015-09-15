@@ -37,6 +37,18 @@ Retirar um disco \fIdevice\fR do \fIPOOL\fR
 \fBscrub rpool\fR
 Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
 .
+.TP
+\fBcreate mypool mirror /dev/da2 /dev/da3\fR
+Cria um 2 discos no formato \fImirror\fR
+.
+.TP
+\fBcreate mypool mirror /dev/da2 /dev/da3 mirror /dev/da4 /dev/da5\fR
+Cria dois mirrors somados de 2 discos cada\. um mirror (da2,da3) mais outro mirror(da4,da5)\.
+.
+.TP
+\fBcreate mypool raidz2 /dev/ada0p3 /dev/ada1p3 /dev/ada2p3 /dev/ada3p3 /dev/ada4p3 /dev/ada5p3\fR
+Cria um RAID Z2 com todos esses discos
+.
 .SH "EXEMPLOS"
 Coloque os exemplos aqui:
 .
