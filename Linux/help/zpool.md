@@ -21,6 +21,7 @@ OPÇÕES
 ------
 
 * `attach <POOL> <DEVICE>`:
+  Adiciona um disco ao pool de discos.
 
 * `status -v <POOL>`:
   Exibe o status da `POOL`.
@@ -33,6 +34,7 @@ OPÇÕES
 
 * `scrub rpool`:
   Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
+  **recomenda-se fazer o *SCRUBING* pelo menos uma vez ao mês.**
 
 * `create mypool mirror /dev/da2 /dev/da3`:
   Cria um 2 discos no formato *mirror*
@@ -46,17 +48,41 @@ OPÇÕES
 * `clear <POOL>`:
   Limpa erros que por ventura ocorreram no disco.
 
+* `create healer mirror /dev/ada0 /dev/ada1`:
+  Esse comando permite criar um SELF-HEALER, auto-cura, isso permite que o próprio sistema faça a checagem dos checksums dos blocks, quando esse não bate ele automaticamente recupera as informações do disco.
+
+* `export <HEALER>`:
+  Esse comando permite que o *HEALER* seja exportado.
+
+* `status <HEALER>`:
+  Exibe o status do *HEALER*.
+
+* `scrub <HEALER>`:
+  Faz o scrub do *HEALER*.
+
+* `clear <HEALER>`:
+  Faz a limpeza dos erros no *HEALER*
+
+
+* `export <POOL>`:
+  Faz o export da POOL
+
+* `import`:
+  Exibe os possíveis pools não utilizados e que podem ser importados.
+
+* `import -o altroot=/mnt mypool`:
+  Faz o import do POOL em um diretório alternativo de root
+
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Exibir as informações do pool:
 
-   `$> date '%Y/%m/%d'`
+   `$> zpool status -v`
 
 
 ARQUIVOS
 --------
-
 
 */etc/foo.conf*
   The system wide configuration file. See foo(5) for further details.

@@ -18,8 +18,8 @@
 .SH "OPÇÕES"
 .
 .TP
-\fBattach <POOL> <DEVICE>\fR:
-
+\fBattach <POOL> <DEVICE>\fR
+Adiciona um disco ao pool de discos\.
 .
 .TP
 \fBstatus \-v <POOL>\fR
@@ -35,7 +35,7 @@ Retirar um disco \fIdevice\fR do \fIPOOL\fR
 .
 .TP
 \fBscrub rpool\fR
-Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
+Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS \fBrecomenda\-se fazer o \fISCRUBING\fR pelo menos uma vez ao mês\.\fR
 .
 .TP
 \fBcreate mypool mirror /dev/da2 /dev/da3\fR
@@ -53,11 +53,43 @@ Cria um RAID Z2 com todos esses discos
 \fBclear <POOL>\fR
 Limpa erros que por ventura ocorreram no disco\.
 .
+.TP
+\fBcreate healer mirror /dev/ada0 /dev/ada1\fR
+Esse comando permite criar um SELF\-HEALER, auto\-cura, isso permite que o próprio sistema faça a checagem dos checksums dos blocks, quando esse não bate ele automaticamente recupera as informações do disco\.
+.
+.TP
+\fBexport <HEALER>\fR
+Esse comando permite que o \fIHEALER\fR seja exportado\.
+.
+.TP
+\fBstatus <HEALER>\fR
+Exibe o status do \fIHEALER\fR\.
+.
+.TP
+\fBscrub <HEALER>\fR
+Faz o scrub do \fIHEALER\fR\.
+.
+.TP
+\fBclear <HEALER>\fR
+Faz a limpeza dos erros no \fIHEALER\fR
+.
+.TP
+\fBexport <POOL>\fR
+Faz o export da POOL
+.
+.TP
+\fBimport\fR
+Exibe os possíveis pools não utilizados e que podem ser importados\.
+.
+.TP
+\fBimport \-o altroot=/mnt mypool\fR
+Faz o import do POOL em um diretório alternativo de root
+.
 .SH "EXEMPLOS"
-Coloque os exemplos aqui:
+Exibir as informações do pool:
 .
 .P
-\fB$> date \'%Y/%m/%d\'\fR
+\fB$> zpool status \-v\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
