@@ -73,6 +73,12 @@ OPÇÕES
 * `import -o altroot=/mnt mypool`:
   Faz o import do POOL em um diretório alternativo de root
 
+* `history`:
+
+* `upgrade`:
+
+* `iostat`:
+
 EXEMPLOS
 --------
 
