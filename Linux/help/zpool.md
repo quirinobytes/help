@@ -43,6 +43,9 @@ OPÇÕES
 * `create mypool raidz2 /dev/ada0p3 /dev/ada1p3 /dev/ada2p3 /dev/ada3p3 /dev/ada4p3 /dev/ada5p3`:
   Cria um RAID Z2 com todos esses discos
 
+* `clear <POOL>`:
+  Limpa erros que por ventura ocorreram no disco.
+
 EXEMPLOS
 --------
 
@@ -74,10 +77,22 @@ DIAGNOSTICS
 
 Criei um script para fazer o scrub do ZFS, está na pasta de CDSHELL/script/ZFS
 
-**Bad magic number.**
-  The input file does not look like an archive file.
+*DEGRADED*
 
-**Old style baz segments.**
+Quando um disco entra no modo **DEGRADED** é possível substitui-lo com o seguinte comando:
+`$> zpool replace mypool 316502962686821739 ada2p3`   onde esse numero é o numero que aparece no disco zuado, quando executado zpool status
+
+`$> zpool status`
+ NAME                    STATE     READ WRITE CKSUM
+        mypool                  DEGRADED     0     0     0
+          mirror-0              DEGRADED     0     0     0
+            ada0p3              ONLINE       0     0     0
+            316502962686821739  UNAVAIL      0     0     0  was /dev/ada1p3
+
+*ONLINE*
+  Significa que o disco está ONLINE, e sem problemas de replicação.
+
+*UNAVAIL*
   `foo` can only handle new style baz segments. COBOL object libraries are not
   supported in this version.
 

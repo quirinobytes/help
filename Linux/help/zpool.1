@@ -49,6 +49,10 @@ Cria dois mirrors somados de 2 discos cada\. um mirror (da2,da3) mais outro mirr
 \fBcreate mypool raidz2 /dev/ada0p3 /dev/ada1p3 /dev/ada2p3 /dev/ada3p3 /dev/ada4p3 /dev/ada5p3\fR
 Cria um RAID Z2 com todos esses discos
 .
+.TP
+\fBclear <POOL>\fR
+Limpa erros que por ventura ocorreram no disco\.
+.
 .SH "EXEMPLOS"
 Coloque os exemplos aqui:
 .
@@ -68,10 +72,19 @@ $ zfs set compression=on mysqlpool $ zfs set dedup=on mysqlpool $ zfs set atime=
 Criei um script para fazer o scrub do ZFS, está na pasta de CDSHELL/script/ZFS
 .
 .P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
+\fIDEGRADED\fR
 .
 .P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+Quando um disco entra no modo \fBDEGRADED\fR é possível substitui\-lo com o seguinte comando: \fB$> zpool replace mypool 316502962686821739 ada2p3\fR onde esse numero é o numero que aparece no disco zuado, quando executado zpool status
+.
+.P
+\fB$> zpool status\fR NAME STATE READ WRITE CKSUM mypool DEGRADED 0 0 0 mirror\-0 DEGRADED 0 0 0 ada0p3 ONLINE 0 0 0 316502962686821739 UNAVAIL 0 0 0 was /dev/ada1p3
+.
+.P
+\fIONLINE\fR Significa que o disco está ONLINE, e sem problemas de replicação\.
+.
+.P
+\fIUNAVAIL\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
 .
 .SH "COMENTARIOS"
 Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
