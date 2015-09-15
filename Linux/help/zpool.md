@@ -34,7 +34,6 @@ OPÇÕES
 * `scrub rpool`:
   Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
 
-
 EXEMPLOS
 --------
 
@@ -56,14 +55,15 @@ ARQUIVOS
 ENVIRONMENT
 -----------
 
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
+$ zfs set compression=on mysqlpool
+$ zfs set dedup=on mysqlpool
+$ zfs set atime=off mysqlpool
+
 
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
+Criei um script para fazer o scrub do ZFS, está na pasta de CDSHELL/script/ZFS
 
 **Bad magic number.**
   The input file does not look like an archive file.
