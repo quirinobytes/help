@@ -78,6 +78,7 @@ OPÇÕES
 * `upgrade`:
 
 * `iostat`:
+  Exibe informaações do tráfego de dados nos dispositivos do pool.
 
 EXEMPLOS
 --------
