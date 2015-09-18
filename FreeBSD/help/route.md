@@ -21,17 +21,17 @@ O comando e o mesmo que  *netstat -r*, porem e necessario ser executado como roo
 OPCOES
 ------
 
-* `-b`:
+* `-4`:
   Do not write "busy" to stdout while processing.
 
-* `-c` *config-file*:
+* `-6` *config-file*:
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
 
-* `-a`:
+* `-n`:
   In addition to the baz segments, also parse the blurfl headers.
 
-* `-r`:
+* `-q`:
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
   of virtual memory.
 
@@ -44,7 +44,9 @@ EXEMPLOS
 
 * Mostrar as rotas:
 
-   `$> route show`
+   `$> netstat -nr`
+
+
 
 
 ARQUIVOS
@@ -57,15 +59,15 @@ ARQUIVOS
 ENVIRONMENT
 -----------
 
-Para habilitar o roteamento de pacotes pelo kernel no OpenBSD faa assim:
+Para habilitar o roteamento de pacotes pelo kernel no FreeBSD faça assim:
 
 - ...
 
 COMENTARIOS
 -----------
 
-Coloque seus comentios aqui...
-<- Tag para comentrios na Man Page, juro, n sai nada.>
+Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, nao sai nada.>
 
 AUTOR
 -----
