@@ -1,0 +1,40 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "LVCREATE" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBlvcreate\fR \- lvcreate cria Volume Logicos
+.
+.SH "NOME"
+\fBlvcreate\fR \- lvcreate usado para criar Volumes Lógicos em cima dentro de Volume Groups\.
+.
+.SH "SYNOPSIS"
+\fBlvcreate\fR [\fB\-opcoes\fR] [\fB\-n\fR \fILOGICAL\-VOLUME\-NAME\fR ] \fIvolume_groups\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBlvcreate\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-l 100%FREE\fR
+Usa 100% do espaço livre para criar o Volume Lógico\.
+.
+.SH "EXEMPLOS"
+Criar o volume lógico com 100% do espaço livre no VG:
+.
+.P
+\fB$> lvcreate VOLUME_GROUP \-L 100%FREE \-n LOGICAL_VOL_NAME\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
+.
+.P
+\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
