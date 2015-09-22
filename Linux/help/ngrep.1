@@ -1,0 +1,57 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "NGREP" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBngrep\fR \- Network Grep
+.
+.SH "NOME"
+\fBngrep\fR \- usado para filtrar o conteúdo dos pacotes de rede\.
+.
+.SH "SYNOPSIS"
+\fBngrep\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBngrep\fR é um programa usado para inspecionar os pactoes do tráfego de rede, com ele é possível fazer filtros BPF para criar regras para filtro\. o Ngrep é um poderoso programa para sniffar a rede\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-nn\fR
+Não realizar as traduções para os endereços de nome de host(FQDN), nem as traduções de número de porta\.
+.
+.TP
+\fB\-vv\fR \fIconfig\-file\fR
+Nervose VERBOSE, ou seja com bastante informações de saída\.
+.
+.TP
+\fB\-d\fR
+Utilizar a seguinte interface(Device)
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+Verificar os pacotes da interface VPN (tun0):
+.
+.P
+\fB$> ngrep \-nnvv \-eq \-d tun0\fR
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBPF\fR Os famosos pacotes BPF, são usados para criar regras avançadas para filtrar os pacotes de rede\.
+.
+.P
+veja mais com: \fB$> miniman BPF\fR
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Fazer Filtros BPF são extremamente importantes para um bom troubleshooting\.>
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+tcpdump(1), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
