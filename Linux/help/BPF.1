@@ -1,0 +1,46 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "BPF" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBBPF\fR \- BPF Berkley Packge Filter
+.
+.SH "NOME"
+\fBBPF\fR \- BPF Filtro de Pacotes da universidade de Berkley
+.
+.SH "SYNOPSIS"
+\fBBPF\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBBPF\fR é muito utilizado para realizar filtros de tráfego de rede em interfaces, aceita vários tipos de filtros, desde os mais simples até filtros com lógicas complexas até de entender\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fBhost A\.B\.C\.D\fR
+Filtro para pacotes com IP tal, tanto origem quanto destino\.
+.
+.TP
+\fBip\fR:
+
+.
+.TP
+\fBtcp[13]==2\fR
+Filtro para Pacotes SYN\.
+.
+.TP
+\fBport [1\-65536]\fR
+Filtra pacotes com partas tal, pode se usar mais de uma: 10\-15,22
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$>host 192\.168\.0\.1 and host 192\.168\.0\.254 and tcp dport 22\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
