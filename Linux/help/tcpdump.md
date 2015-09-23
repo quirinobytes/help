@@ -42,7 +42,7 @@ EXEMPLOS
 
 Exibir conteúdo de pacotes UPnP Entertaiment Service(UDP/239.255.255.250:1900).
 
-   `$> tcpdump -Ann -i eth0 host 239.255.255.250`
+   `$> tcpdump -Annvi -i eth0 host 239.255.255.250`
 
 
 ARQUIVOS
