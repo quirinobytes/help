@@ -24,9 +24,8 @@ OPÇÕES
 * `ip neigh show`:
   Mostra seus vizinhos
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
+* `ip -6 route`:
+  Usado para exibir roteador IPv6.
 
 * `-a`:
   In addition to the baz segments, also parse the blurfl headers.
