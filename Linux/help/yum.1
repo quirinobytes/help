@@ -1,0 +1,64 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "YUM" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fByum\fR \- yum Gerenciador de Pacotes do RedHat
+.
+.SH "NOME"
+\fByum\fR \- yum adiciona/exclui/manutenção de pacotes RedHat
+.
+.SH "SYNOPSIS"
+\fByum\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fByum\fR é um aplicativo para gerenciar pacotes no Linux RedHat, faz instalação, desinstalação, atualização de pacotes, mantém a lista de repositórios, faz a gerencia de dependências na instalação\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fBrepolist\fR
+Exibir a lista de repositórios\.
+.
+.TP
+\fBremove\fR \fIPACOTE\fR
+Use the alternate system wide \fIconfig\-file\fR instead of \fI/etc/foo\.conf\fR\. This overrides any \fBFOOCONF\fR environment variable\.
+.
+.TP
+\fBupdate\fR
+Faz o update da base de dados dos \fBPACOTES\fR
+.
+.TP
+\fBinstall\fR \fIPACOTE\fR
+Faz a instalação do pacote no sistema\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> date \'%Y/%m/%d\'\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/yum\.repos\.d/\fR Dirétório dos repositórios
+.
+.P
+\fI/etc/yum\.conf\fR Arquivo de configuração do YUM\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+\fBUsando PROXY\fR Dados necessário para usar PROXY para fazer YUM\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
