@@ -32,12 +32,15 @@ OPÇÕES
 * `install` *PACOTE*:
   Faz a instalação do pacote no sistema.
 
+* `--enablerepo=epel`:
+  Habilita o funcionamento do repositório.
+
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Desabilitar o repositorio epel e instalar o zabbix.
 
-   `$> date '%Y/%m/%d'`
+   `$> yum --enablerepo=epel install zabbix`
 
 
 ARQUIVOS

@@ -33,11 +33,15 @@ Faz o update da base de dados dos \fBPACOTES\fR
 \fBinstall\fR \fIPACOTE\fR
 Faz a instalação do pacote no sistema\.
 .
+.TP
+\fB\-\-enablerepo=epel\fR
+Habilita o funcionamento do repositório\.
+.
 .SH "EXEMPLOS"
-Coloque os exemplos aqui:
+Desabilitar o repositorio epel e instalar o zabbix\.
 .
 .P
-\fB$> date \'%Y/%m/%d\'\fR
+\fB$> yum \-\-enablerepo=epel install zabbix\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/yum\.repos\.d/\fR Dirétório dos repositórios
