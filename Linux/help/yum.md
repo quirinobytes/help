@@ -35,6 +35,9 @@ OPÇÕES
 * `--enablerepo=epel`:
   Habilita o funcionamento do repositório.
 
+* `yum repolist disabled`:
+  Exibir os repositórios desabilitados.
+
 EXEMPLOS
 --------
 
