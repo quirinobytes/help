@@ -25,7 +25,7 @@ OPÇÕES
 - MODE:
 
 * `discovery`:
-  Usado para descobrir os targets iqn.
+  Usado para descobrir(MOSTRAR) os targets iqn, ja encontrados.
 
 * `node`:
   Usado para se tornar ou nao um no que usa o Target IQN ou nao usa.
@@ -33,10 +33,10 @@ OPÇÕES
 - OPCOES:
 
 * `-t st` :
-  Usado para .
+  Usado para enviar do SENDTARGETS, para descobrir as informacoes do STORAGE.
 
 * `-p`:
-  IP do Storage ou servidor de ISCSI.
+  IP do PORTAL do Storage ou o servidor de ISCSI.
 
 * `--portal <IP>`: 
    Usado para indicar o endereço IP do servidor que tem o Portal para conexão.
@@ -50,6 +50,10 @@ OPÇÕES
 
 * `--targetname <IQN>`:
    Usado para indicar o nome do target IQN a ser utilizado, use o modo de discovery unido a opção de 
+
+
+* `-o delete -p PORTAL:3260`:
+  Apagar um target portal
 
 
 EXEMPLOS
@@ -67,14 +71,18 @@ O retorno é algo parecido com isso:
 
 Para logar em um target e poder usa-lo.
 
-    `$ iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --login `
+    `$> iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --login `
 o retorno é algo parecido com isso:`
 Logging in to [iface: default, target: iqn.2007-09.com.google.www:disk0, portal: 192.168.1.250,3260] (multiple)
 Login to [iface: default, target: iqn.2007-09.com.google.www:disk0, portal: 192.168.1.250,3260] successful.
 `
 
 Para deslogar para mandar o logout no final
-    `$ iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --logout `
+    `$> iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --logout `
+
+Apagar um Portal ja cadastrado:
+    `$> iscsiadm -m discovery -o delete -p 192.168.1.30:3260`
+
 
 
 AUTOR
