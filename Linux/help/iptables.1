@@ -1,0 +1,90 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "IPTABLES" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBiptables\fR \- iptables Firewall
+.
+.SH "NOME"
+\fBiptables\fR \- iptables para gerenciar o Firewall do Linux
+.
+.SH "SYNOPSIS"
+\fBiptables\fR [\fB\-OPCOES\fR] [\fB<\fR \fIiptables\-savefile\fR ]
+.
+.SH "DESCRIÇÃO"
+\fBiptables\fR é o firewall do linux, e com esse comando pode\-=se criar, ver e excluir regras de firewall\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-L\fR
+Usado para listar as regras para a tabela informada, usa tabela FILTER como pradão\.
+.
+.TP
+\fB\-t nat\fR \fIconfig\-file\fR
+Informa para usar a tabela \fInat\fR ao inves da \fIfilter\fR\.
+.
+.TP
+\fB\-t mangle\fR
+Informa para usar a tabela \fImangle\fR ao inves da \fIfilter\fR\.
+.
+.TP
+\fB\-F\fR
+Faz a limpeza das tabelas\. Zera as regras\.
+.
+.TP
+\fB\-P CHAIN POLICE_NAME\fR
+Usado para definir a politica da CHAIN\. Por exemplo DROP ou ACCEPT\.
+.
+.SH "EXEMPLOS"
+Definir a politica restritiva,i ou seja entrada como DROP\.
+.
+.P
+\fB$> iptables \-P INPUT DROP\fR
+.
+.P
+Aumentar o TTL do pacote que for pre roteado e vindo de eth0 em +1 salto, pode\-se usar 2,10, qtos quizer até 256 se nao me engano\.
+.
+.IP "" 4
+.
+.nf
+
+`$> iptables \-t mangle \-A PREROUTING \-i eth0 \-d 239\.255\.255\.250 \-j TTL –ttl\-inc 1`
+.
+.fi
+.
+.IP "" 0
+.
+.SH "ARQUIVOS"
+\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
+.
+.P
+\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+Os seguintes programas podem ser usados para diagnosticos de rede e seus erros e saídas vao direto para \fIstderr\fR:
+.
+.P
+\fBtcpdump\fR Pode ser usado para inpecionar os pacotes da rede e facilitar a resolução de problemas\.
+.
+.P
+\fBngrep\fR Como \fBtcpdump\fR também pode ser usado para solucionar problemas de rede, e também para sniffar pacotes de rede inspecionando seu conteúdo\. Necessário ser root\.
+.
+.P
+\fBnetstat \-anutp | grep SYN\fR Esse comando mágico pode ser usado para descobrir problemas de conexão, onde existe um CLIENT\-SERVER e que alguma coisa nao acontece\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
