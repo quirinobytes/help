@@ -40,8 +40,9 @@ Criar uma rede Ad Hoc no Windows 8 e iniciá-la:
 
    `$> netsh wlan set hostednetwork mode=allow ssid=NomedaRede key=SuaSenha'`
    `$> netsh wlan start hostednetwork'`
+   `$> netsh wlan stop hostednetwork'`
 
-
+Coloque outros emails aqui:
 
 
 ARQUIVOS
