@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "WMIC" "1" "September 2015" "" ""
+.TH "WMIC" "1" "January 2016" "" ""
 .
 .SH "NAME"
 \fBwmic\fR \- wmic Windows Management Intrumentation Command
@@ -34,6 +34,12 @@ Comando para exibir todos os programas instalados
 Exibe o numero serial da máquina\.
 .
 .SH "EXEMPLOS"
+Recuperar todos os programas e versão instalados no computador
+.
+.P
+\fB$> wmic product get name,version /format:htable >> x:\e%computername%\.html\fR
+.
+.P
 Recuperar informações sobre as HBA
 .
 .P

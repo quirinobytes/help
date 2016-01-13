@@ -36,6 +36,11 @@ OPÇÕES
 EXEMPLOS
 --------
 
+Recuperar todos os programas e versão instalados no computador
+
+`$> wmic product get name,version /format:htable >> x:\%computername%.html`
+
+
 Recuperar informações sobre as HBA
 
    `$>wmic /namespace:\\root\WMI PATH MSFC_FCAdapterHBAAttributes`
