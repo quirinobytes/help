@@ -38,6 +38,7 @@ EXEMPLOS
 
 Executar o comando em uma rede inteira 192.168.1.0/24
  `$> (FOR /L %s IN (1,1,254) DO wmic /node:192.168.0.%s /user:administrator /password:pass bios get serialnumber) >> c:\results.txt`
+ `$> wmic /node:@nodes.txt /user:administrator /password:mypassword /output:out.csv bios get serialnumber /format:csv`
 
 Executar o comando para um arquivo de servidores.txt
  `$> (FOR /L %s IN (1,1,254) DO wmic /node:@servidorex.txt /user:administrator /password:pass bios get serialnumber) >> c:\results.txt`
