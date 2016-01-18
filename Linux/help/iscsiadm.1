@@ -23,7 +23,7 @@ MODE:
 .
 .TP
 \fBdiscovery\fR
-Usado para descobrir os targets iqn\.
+Usado para descobrir(MOSTRAR) os targets iqn, ja encontrados\.
 .
 .TP
 \fBnode\fR
@@ -35,11 +35,11 @@ OPCOES:
 .
 .TP
 \fB\-t st\fR
-Usado para \.
+Usado para enviar do SENDTARGETS, para descobrir as informacoes do STORAGE\.
 .
 .TP
 \fB\-p\fR
-IP do Storage ou servidor de ISCSI\.
+IP do PORTAL do Storage ou o servidor de ISCSI\.
 .
 .TP
 \fB\-\-portal <IP>\fR
@@ -56,6 +56,10 @@ Usado para fazer o logout no target iSCSI, dessa forma o disco é removido do SO
 .TP
 \fB\-\-targetname <IQN>\fR
 Usado para indicar o nome do target IQN a ser utilizado, use o modo de discovery unido a opção de
+.
+.TP
+\fB\-o delete \-p PORTAL:3260\fR
+Apagar um target portal
 .
 .SH "EXEMPLOS"
 Para descobrir os targets IQN que existem para determinado portal:
@@ -76,7 +80,7 @@ Para logar em um target e poder usa\-lo\.
 .
 .nf
 
-`$ iscsiadm \-m node \-\-targetname "iqn\.2007\-09\.com\.google\.www:disk0" \-\-portal "192\.168\.1\.250:3260" \-\-login `
+`$> iscsiadm \-m node \-\-targetname "iqn\.2007\-09\.com\.google\.www:disk0" \-\-portal "192\.168\.1\.250:3260" \-\-login `
 .
 .fi
 .
@@ -86,7 +90,10 @@ Para logar em um target e poder usa\-lo\.
 o retorno é algo parecido com isso:\fBLogging in to [iface: default, target: iqn\.2007\-09\.com\.google\.www:disk0, portal: 192\.168\.1\.250,3260] (multiple) Login to [iface: default, target: iqn\.2007\-09\.com\.google\.www:disk0, portal: 192\.168\.1\.250,3260] successful\.\fR
 .
 .P
-Para deslogar para mandar o logout no final \fB$ iscsiadm \-m node \-\-targetname "iqn\.2007\-09\.com\.google\.www:disk0" \-\-portal "192\.168\.1\.250:3260" \-\-logout\fR
+Para deslogar para mandar o logout no final \fB$> iscsiadm \-m node \-\-targetname "iqn\.2007\-09\.com\.google\.www:disk0" \-\-portal "192\.168\.1\.250:3260" \-\-logout\fR
+.
+.P
+Apagar um Portal ja cadastrado: \fB$> iscsiadm \-m discovery \-o delete \-p 192\.168\.1\.30:3260\fR
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR

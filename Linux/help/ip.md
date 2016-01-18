@@ -1,32 +1,31 @@
-model(1) -- model para minhas man pages v1.0
+ip(1) -- ip para minhas man pages v1.0
 ===============================================
 
 NOME
 ----
 
-`model` - Model de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
+`ip` - ip poderoso comando para administrar as config de IP.
 
 SYNOPSIS
 --------
 
-`model` [`-bar`] [`-c` *config-file* ] *file* ...
+`ip` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`model` é um documento escrito para facilitar a crição de documentos a partir de um template.
+`ip` é um documento escrito para facilitar a crição de documentos a partir de um template.
 Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
 Necessita Ruby >= 2.0 com Mustache para funcionar..
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
+* `ip neigh show`:
+  Mostra seus vizinhos
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
+* `ip -6 route`:
+  Usado para exibir roteador IPv6.
 
 * `-a`:
   In addition to the baz segments, also parse the blurfl headers.
@@ -92,5 +91,5 @@ Rafael Quirino - <quirinobytes (a) gmail com>
 VEJA SOBRE
 ----------
 
-help(5), miniman(1), info(1) [Windows Man Page Howto](
+ronn(5), markdown(1), txt2tags(1) [Linux Man Page Howto](
 http://www.schweikhardt.net/man_page_howto.html)

@@ -9,14 +9,12 @@ NOME
 SYNOPSIS
 --------
 
-`nslookup` [`-bar`] [`-c` *config-file* ] *file* ...
+`nslookup` [`/OPCOES`] [`server` *SERVER-IP* ] *hostname* 
 
 DESCRIÇÃO
 ---------
 
-`nslookup` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`nslookup` é um aplicativo usado para enviar Querys de hosts aos servidores de DNS.
 
 OPÇÕES
 ------
@@ -26,7 +24,6 @@ OPÇÕES
 
 * `debug`:
   Seleciona o modo de debug para vizualizar o MAXIMO de INFORMACOES de DEBUG.
-
 
 * `set q=A`:
   Seleciona o modo de visuação de retorno tipo ADDRESS.
@@ -40,7 +37,7 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Questionamento um server especifico:
 
    `$> nslookup server 200.204.0.10`
 	> set q=mx

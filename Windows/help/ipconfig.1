@@ -1,0 +1,75 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "IPCONFIG" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBipconfig\fR \- ipconfig Visualizar configurações de Rede\.
+.
+.SH "NOME"
+\fBipconfig\fR \- ipconfig Exibir e alterar algumas configurações de rede\.
+.
+.SH "SYNOPSIS"
+\fBipconfig\fR [\fB/OPCOES\fR] [`` ]
+.
+.SH "DESCRIÇÃO"
+\fBipconfig\fR é um utilitário para gerenciar e exibir as confiruações de rede\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB/flushdns\fR
+Apaga a tabela de Cache de DNS no sistema local\.
+.
+.TP
+\fB/registerdns\fR
+Registrar o servidor de DNS\.
+.
+.TP
+\fB/renew\fR \fICONEXAO_LOCAL\fR
+Renovar a conexão para a interface especificada\.
+.
+.TP
+\fB/renew_all\fR
+Renovar a conexão para todas as interfaces\.
+.
+.TP
+\fB/release\fR
+Liberar a conexão para a interface especificada\.
+.
+.TP
+\fB/release_all\fR
+Liberar a conexão para todas as interfaces\.
+.
+.SH "EXEMPLOS"
+Limpar cache de DNS\.
+.
+.P
+\fB$> ipconfig /flushdns\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/resolv\.conf\fR
+.
+.P
+Nao existe um arquivo resolv\.conf como no caso do Windows\.
+.
+.P
+\fI/Windows/System32/drivers/etc/hosts\fR Arquivo de tradução direta para hosts no Windows\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+\fBnslookup\fR Ferramenta usada para realizar o troubleshooting de problemas na resolução de nomes\. \fBminiman nslookup\fR para maiores informações\.
+.
+.P
+\fBping\fR Ferramenta usada para realizar resolução de problemas de rede\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+nslookup(5), ping(1), traceroute(1) Windows Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

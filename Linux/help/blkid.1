@@ -1,0 +1,56 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "BLKID" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBblkid\fR \- blkid mostra identificador de blocos
+.
+.SH "NOME"
+\fBblkid\fR \- blkid mostra do tipo do filesystem do sistema de blocos e o ID\.\.
+.
+.SH "SYNOPSIS"
+\fBblkid\fR [\fB\-OPCOES] [\fR\fI/dev/disco\fR` ]
+.
+.SH "DESCRIÇÃO"
+\fBblkid\fR é um aplicativo para exibir o tipo do file system do dispositivo de blocos, e seu \fIID\fR\.
+.
+.SH "OPÇÕES"
+.
+.IP "\(bu" 4
+\fB\-o <FORMATO>\fR: Onde o FORMATO pode ser:
+.
+.IP "\(bu" 4
+value
+.
+.IP "\(bu" 4
+device
+.
+.IP "\(bu" 4
+list
+.
+.IP "\(bu" 4
+udev
+.
+.IP "\(bu" 4
+export
+.
+.IP "\(bu" 4
+full
+.
+.IP "\(bu" 4
+\fB\-p\fR: fazer o probing a baixo\-nivel logico de superblocks, bypass cache\.
+.
+.IP "" 0
+.
+.SH "EXEMPLOS"
+Consultar o tipo do filesystem do disco /dev/sda
+.
+.P
+\fB$> blkid /dev/sda\'\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "WMIC" "1" "September 2015" "" ""
+.TH "WMIC" "1" "January 2016" "" ""
 .
 .SH "NAME"
 \fBwmic\fR \- wmic Windows Management Intrumentation Command
@@ -34,6 +34,18 @@ Comando para exibir todos os programas instalados
 Exibe o numero serial da máquina\.
 .
 .SH "EXEMPLOS"
+Executar o comando em uma rede inteira 192\.168\.1\.0/24 \fB$> (FOR /L %s IN (1,1,254) DO wmic /node:192\.168\.0\.%s /user:administrator /password:pass bios get serialnumber) >> c:\eresults\.txt\fR \fB$> wmic /node:@nodes\.txt /user:administrator /password:mypassword /output:out\.csv bios get serialnumber /format:csv\fR
+.
+.P
+Executar o comando para um arquivo de servidores\.txt \fB$> (FOR /L %s IN (1,1,254) DO wmic /node:@servidorex\.txt /user:administrator /password:pass bios get serialnumber) >> c:\eresults\.txt\fR
+.
+.P
+Recuperar todos os programas e versão instalados no computador
+.
+.P
+\fB$> wmic product get name,version /format:htable >> x:\e%computername%\.html\fR
+.
+.P
 Recuperar informações sobre as HBA
 .
 .P
@@ -42,15 +54,8 @@ Recuperar informações sobre as HBA
 .P
 Remover um programa
 .
-.IP "" 4
-.
-.nf
-
-`$> product where name="Adobe Reader X" call uninstall`
-.
-.fi
-.
-.IP "" 0
+.P
+\fB$> product where name="Adobe Reader X" call uninstall\fR
 .
 .P
 Exemplo de como Iniciar e Terminar um processo

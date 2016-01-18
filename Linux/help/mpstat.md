@@ -92,5 +92,5 @@ Rafael Quirino - <quirinobytes (a) gmail com>
 VEJA SOBRE
 ----------
 
-help(5), miniman(1), info(1) [Windows Man Page Howto](
+ronn(5), markdown(1), txt2tags(1) [Linux Man Page Howto](
 http://www.schweikhardt.net/man_page_howto.html)

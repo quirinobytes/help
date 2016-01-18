@@ -1,29 +1,28 @@
-model(1) -- model para minhas man pages v1.0
+doveadm(1) -- doveadm Gerenciador do Dovecot
 ===============================================
 
 NOME
 ----
 
-`model` - Model de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
+`doveadm` - doveadm é utilizado para realizara as tarefas de administração do Dovecot. Testar autenticação, contas, acessos, ver email, etc.
+
 
 SYNOPSIS
 --------
 
-`model` [`-bar`] [`-c` *config-file* ] *file* ...
+`doveadm` [`comando <OPCAO>`] [`-u` *email@dominio* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`model` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`doveadm` é um comando para administração do Dovecot, com ele é possível realizar tarefas de testes de usuário, quota, autenticação, etc.
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
-
+* `quota -user email@dominio`:
+  Exibe as informações de quota para o email acima.
+  
 * `-c` *config-file*:
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
@@ -92,5 +91,5 @@ Rafael Quirino - <quirinobytes (a) gmail com>
 VEJA SOBRE
 ----------
 
-help(5), miniman(1), info(1) [Windows Man Page Howto](
+ronn(5), markdown(1), txt2tags(1) [Linux Man Page Howto](
 http://www.schweikhardt.net/man_page_howto.html)

@@ -1,22 +1,20 @@
-model(1) -- model para minhas man pages v1.0
+netsh (1) -- netsh do windows 
 ===============================================
 
 NOME
 ----
 
-`model` - Model de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
+`netsh` - netsh usado para executar ações a nível de rede no Windows..
 
 SYNOPSIS
 --------
 
-`model` [`-bar`] [`-c` *config-file* ] *file* ...
+`netsh` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`model` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`netsh` é um comando que pode realizar uma série de ações a nível de rede, exemplo criar roteamento entre portas, criar uma rede AD HOC.
 
 OPÇÕES
 ------
@@ -38,9 +36,13 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Criar uma rede Ad Hoc no Windows 8 e iniciá-la:
 
-   `$> date '%Y/%m/%d'`
+   `$> netsh wlan set hostednetwork mode=allow ssid=NomedaRede key=SuaSenha'`
+   `$> netsh wlan start hostednetwork'`
+   `$> netsh wlan stop hostednetwork'`
+
+Coloque outros emails aqui:
 
 
 ARQUIVOS
