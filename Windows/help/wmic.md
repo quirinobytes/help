@@ -36,18 +36,24 @@ OPÇÕES
 EXEMPLOS
 --------
 
+Executar o comando em uma rede inteira 192.168.1.0/24
+ `$> (FOR /L %s IN (1,1,254) DO wmic /node:192.168.0.%s /user:administrator /password:pass bios get serialnumber) >> c:\results.txt`
+
+Executar o comando para um arquivo de servidores.txt
+ `$> (FOR /L %s IN (1,1,254) DO wmic /node:@servidorex.txt /user:administrator /password:pass bios get serialnumber) >> c:\results.txt`
+
 Recuperar todos os programas e versão instalados no computador
 
-`$> wmic product get name,version /format:htable >> x:\%computername%.html`
+ `$> wmic product get name,version /format:htable >> x:\%computername%.html`
 
 
 Recuperar informações sobre as HBA
 
-   `$>wmic /namespace:\\root\WMI PATH MSFC_FCAdapterHBAAttributes`
+ `$>wmic /namespace:\\root\WMI PATH MSFC_FCAdapterHBAAttributes`
 
 Remover um programa
 
-    `$> product where name="Adobe Reader X" call uninstall`
+ `$> product where name="Adobe Reader X" call uninstall`
 
 Exemplo de como Iniciar e Terminar um processo
 
