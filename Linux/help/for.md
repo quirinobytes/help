@@ -38,6 +38,22 @@ Coloque os exemplos aqui:
    `$> for ((c=0;$c>10;$c++)) do echo $c ; done `
 
 
+`$> for ((i=1, j=10; i <= 5 ; i++, j=j+5))
+do
+ echo "Number $i: $j"
+done
+`
+
+Usando Range Incremental:
+
+`$> for num in {1..10..2}
+do
+ echo "Number: $num"
+done`
+
+
+
+
 AUTOR
 -----
 
