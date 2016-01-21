@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "WGET" "1" "August 2015" "" ""
+.TH "WGET" "1" "January 2016" "" ""
 .
 .SH "NAME"
 \fBwget\fR \- wget cliente html para linha de comando
@@ -48,7 +48,9 @@ Usado para forçar manter as sessões de cookie\.
 \fB\-\-no\-check\-certificate\fR
 Usado para NÃO chegar se o certificado é falso\.
 .
-.SH "EXEMPLOS"
+.TP
+\fB\-O \-\fR
+usado para fazer o \fIDUMP\fR na própria tela EXEMPLOS
 .
 .IP "1." 4
 Exemplo de Wget SSO_TOKEN=\fBecho $SSO_RESPONSE| cut \-d \'=\' \-f 2|cut \-d \' \' \-f 1\fR SSO_SERVER=\fBecho $SSO_RESPONSE| cut \-d \' \' \-f 2|cut \-d \'/\' \-f 1,2,3\fR SSO_AUTH_URL=/sso/auth AUTH_DATA="ssousername=$SSO_USERNAME&password=$SSO_PASSWORD&site2pstoretoken=$SSO_TOKEN"

@@ -50,6 +50,10 @@ Aumentar o TTL do pacote que for pre roteado e vindo de eth0 em +1 salto, pode-s
 ARQUIVOS
 --------
 
+Esse comando dropa as conexoes que ja existem ESTABLISHED através do firewall.
+`> sysctl -w net.netfilter.nf_conntrack_skip_filter=0`
+
+
 
 */etc/foo.conf*
   The system wide configuration file. See foo(5) for further details.

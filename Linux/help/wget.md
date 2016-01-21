@@ -42,6 +42,8 @@ OPÇÕES
 * `--no-check-certificate`:
   Usado para NÃO chegar se o certificado é falso.
 
+* `-O -` :
+  usado para fazer o *DUMP* na própria tela
 EXEMPLOS
 --------
 
