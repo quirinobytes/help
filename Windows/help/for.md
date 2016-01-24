@@ -30,6 +30,18 @@ Coloque os exemplos aqui:
    `$> for /f %x in ('some command') do ... `
 
 
+`$> FORFILES /P C:\WINDOWS /S /M DNS *.*`
+`$> FORFILES /S /M *.txt /C "cmd /c type @file | more"`
+`$> FORFILES /P C:\ /S /M *.bat`
+`$> FORFILES /D -30 /M *.exe
+        /C "cmd /c echo @path 0x09 was changed 30 days ago"`
+`$> FORFILES /D 01/01/2001
+             /C "cmd /c echo @fname is new since Jan 1st 2001"`
+`$> FORFILES /D +24/7/2013 /C "cmd /c echo @fname is new today"`
+`$> FORFILES /M *.exe /D +1`
+`$> FORFILES /S /M *.doc /C "cmd /c echo @fsize"`
+`$> FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"`
+
 ARQUIVOS
 --------
 

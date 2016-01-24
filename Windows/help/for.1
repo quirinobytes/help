@@ -23,6 +23,9 @@ Coloque os exemplos aqui:
 .P
 \fB$> for /f %x in (\'some command\') do \.\.\.\fR
 .
+.P
+\fB$> FORFILES /P C:\eWINDOWS /S /M DNS *\.*\fR \fB$> FORFILES /S /M *\.txt /C "cmd /c type @file | more"\fR \fB$> FORFILES /P C:\e /S /M *\.bat\fR \fB$> FORFILES /D \-30 /M *\.exe /C "cmd /c echo @path 0x09 was changed 30 days ago"\fR \fB$> FORFILES /D 01/01/2001 /C "cmd /c echo @fname is new since Jan 1st 2001"\fR \fB$> FORFILES /D +24/7/2013 /C "cmd /c echo @fname is new today"\fR \fB$> FORFILES /M *\.exe /D +1\fR \fB$> FORFILES /S /M *\.doc /C "cmd /c echo @fsize"\fR \fB$> FORFILES /M *\.txt /C "cmd /c if @isdir==FALSE notepad\.exe @file"\fR
+.
 .SH "ARQUIVOS"
 .
 .SH "ENVIRONMENT"
