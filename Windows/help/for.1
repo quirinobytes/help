@@ -27,6 +27,9 @@ Coloque os exemplos aqui:
 \fB$> FORFILES /P C:\eWINDOWS /S /M DNS *\.*\fR
 .
 .P
+Renomear varios arquivos para tudo \.txt: \fB$> FORFILES /M *\.* /C "cmd /c move @file @file\.txt"\fR
+.
+.P
 \fB$> FORFILES /S /M *\.txt /C "cmd /c type @file | more"\fR
 .
 .P

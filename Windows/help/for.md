@@ -32,6 +32,9 @@ Coloque os exemplos aqui:
 
 `$> FORFILES /P C:\WINDOWS /S /M DNS *.*`
 
+Renomear varios arquivos para tudo .txt:
+`$> FORFILES /M *.* /C "cmd /c move @file @file.txt"`
+
 `$> FORFILES /S /M *.txt /C "cmd /c type @file | more"`
 
 `$> FORFILES /P C:\ /S /M *.bat`
@@ -49,6 +52,8 @@ Coloque os exemplos aqui:
 `$> FORFILES /S /M *.doc /C "cmd /c echo @fsize"`
 
 `$> FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"`
+
+
 
 ARQUIVOS
 --------
