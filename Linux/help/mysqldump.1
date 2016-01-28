@@ -1,0 +1,35 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "MYSQLDUMP" "1" "January 2016" "" ""
+.
+.SH "NAME"
+\fBmysqldump\fR \- mysqldump para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBmysqldump\fR \- mysqldump faz o dump da database MySQL
+.
+.SH "SYNOPSIS"
+\fBmysqldump\fR [\fB\-options\fR] [\fIdatabase\fR ] > \fIfile\-mysql\.dump\fR
+.
+.SH "DESCRIÇÃO"
+\fBmysqldump\fR usado para realizar uma série de comandos sobre dump da database\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-u usuario\fR
+Usado para indicar o usuário a se conectar no banco\.
+.
+.TP
+\fB\-p\fR [\fIconfig\-file\fR]
+Usado para definir a senha a ser utilizada, senha pode ser digitada\. [opcional]
+.
+.SH "EXEMPLOS"
+Fazendo o dump da database com o usuário root e a senha 123mudar, salvando no arquivo\.mysql\.dump\. \fB$> mysqldump \-uroot \-p123mudar database > arquivo\.mysql\.dump\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+mysql(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
