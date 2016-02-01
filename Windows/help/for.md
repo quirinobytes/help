@@ -21,6 +21,7 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..
 OPÇÕES
 ------
 
+   `/c`: Equivalente ao wc do linux, conta as linhas. Ex: dir | for /v /c ""
 
 EXEMPLOS
 --------
