@@ -28,6 +28,9 @@ OPÇÕES
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
   of virtual memory.
 
+* `for file in *.txt ; do echo $file; done`:
+  Para todos os arquivos txt, exiba seus nomes, barabum!
+
 EXEMPLOS
 --------
 
