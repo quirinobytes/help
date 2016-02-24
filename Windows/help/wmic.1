@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "WMIC" "1" "January 2016" "" ""
+.TH "WMIC" "1" "February 2016" "" ""
 .
 .SH "NAME"
 \fBwmic\fR \- wmic Windows Management Intrumentation Command
@@ -34,6 +34,12 @@ Comando para exibir todos os programas instalados
 Exibe o numero serial da máquina\.
 .
 .SH "EXEMPLOS"
+wmic useraccount where (name=\'administrator\' and domain=\'%computername%\') get name,sid Get SID for the domain administrator
+.
+.P
+wmic useraccount where (name=\'administrator\' and domain=\'%userdomain%\') get name,sid
+.
+.P
 Executar o comando em uma rede inteira 192\.168\.1\.0/24 \fB$> (FOR /L %s IN (1,1,254) DO wmic /node:192\.168\.0\.%s /user:administrator /password:pass bios get serialnumber) >> c:\eresults\.txt\fR \fB$> wmic /node:@nodes\.txt /user:administrator /password:mypassword /output:out\.csv bios get serialnumber /format:csv\fR
 .
 .P
