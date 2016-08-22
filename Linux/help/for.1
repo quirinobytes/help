@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "FOR" "1" "August 2015" "" ""
+.TH "FOR" "1" "August 2016" "" ""
 .
 .SH "NAME"
 \fBfor\fR \- for para minhas man pages v1\.0
@@ -10,7 +10,7 @@
 \fBfor\fR \- Criar estrutura de repeticao\.
 .
 .SH "SYNOPSIS"
-\fBfor\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+\fBfor <iteração> in <lista>; do bloco de codigos/comando done\fR
 .
 .SH "DESCRIÇÃO"
 \fBfor\fR pode ser utilizado para criar estruturas de repetição, normalmente utilizado em problemas que necessitam um ciclo de repetição com controle\.
@@ -18,12 +18,16 @@
 .SH "OPÇÕES"
 .
 .TP
-\fBfor ((c=0;$c>10;$c++)) do echo $c ; done\fR
+\fBfor ((c=0;$c>10;c++)) do echo $c ; done\fR
 In addition to the baz segments, also parse the blurfl headers\.
 .
 .TP
-\fBfor i in\fRseq 1 2 10\fB; do echo $i ; done\fR
+\fBfor i in $(seq 1 2 10); do echo $i ; done\fR
 Recursive mode\. Operates as fast as lightning at the expense of a megabyte of virtual memory\.
+.
+.TP
+\fBfor file in *\.txt ; do echo $file; done\fR
+Para todos os arquivos txt, exiba seus nomes, barabum!
 .
 .SH "EXEMPLOS"
 Coloque os exemplos aqui:
@@ -33,6 +37,15 @@ Coloque os exemplos aqui:
 .
 .P
 \fB$> for ((c=0;$c>10;$c++)) do echo $c ; done\fR
+.
+.P
+\fB$> for ((i=1, j=10; i <= 5 ; i++, j=j+5)) do echo "Number $i: $j" done\fR
+.
+.P
+Usando Range Incremental:
+.
+.P
+\fB$> for num in {1\.\.10\.\.2} do echo "Number: $num" done\fR
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
