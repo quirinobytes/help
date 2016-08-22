@@ -21,7 +21,7 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
-* `for ((c=0;$c>10;$c++)) do echo $c ; done`:
+* `for ((c=0;$c>10;c++)) do echo $c ; done`:
   In addition to the baz segments, also parse the blurfl headers.
 
 * `for i in $(seq 1 2 10); do echo $i ; done`:
