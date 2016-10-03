@@ -1,15 +1,10 @@
-puppet(1) -- puppet para minhas man pages v1.0
+puppet(1) -- puppet usado para orquestrar servidores em ambientes de produção.
 ===============================================
-
-NOME
-----
-
-`puppet` - puppet Esse programa é utilizado para orquestrar nos de ambientes de computadores.
 
 SYNOPSIS
 --------
 
-`puppet` [`-bar`] [`-c` *config-file* ] *file* ...
+`puppet` [`ACAO`] [`--opcoes` `-c ` *config-file* ] *comando* ...
 
 DESCRIÇÃO
 ---------
@@ -21,35 +16,28 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
+* `-t`:
+  Fazer um teste.
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
+* `--server` *hostname*:
+  Usa o servidor indicado para conectar.
 
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
-
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `--environment *AMBIENTE*`:
+  Define o ambiente a ser utilizado devel, homol, production
 
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
-
-    - Exibir os cerificados
+    Exibir os cerificados:
    `$> puppet cert --list --all`
 
-    - Testar conexao com servidor.com.br
+    Testar conexao com servidor.com.br:
    `$> puppet agent --server servidor.com.br --test`
 
-    - Executar servidor no modo debug
+    Executar servidor no modo debug:
    `$> puppet master --no-daemonize -debug`
 
-    - Verificar se o arquivo esta configurado corretamente, e sem erros aparentes.
+    Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
    `$> puppet parser validate site.pp`
 
 

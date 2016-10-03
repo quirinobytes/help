@@ -1,10 +1,6 @@
-model(1) -- model para minhas man pages v1.0
+model(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
 ===============================================
 
-NOME
-----
-
-`model` - Model de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
 
 SYNOPSIS
 --------
