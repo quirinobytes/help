@@ -1,0 +1,82 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "CDSHELL" "1" "September 2015" "" ""
+.
+.SH "NAME"
+\fBcdshell\fR \- cdshell para minhas man pages v1\.0
+.
+.SH "NOME"
+\fBcdshell\fR \- cdshell usado para criar as man pages e padronizar o uso do screen, com atalhos e vi com atalhos, alem do alias, export e seu enviroment melhorado, pelo menos na minha opniao, teste de descubra! ;)
+.
+.SH "SYNOPSIS"
+\fBcds\fR
+.
+.SH "DESCRIÇÃO"
+\fBcds\fR é um icomando que já entra dentro do diretório do CDSHELL, onde quer que ele esteja instalado, pois existe uma variável CDSHELL setada no seu bash\. também é usado para criar suas próprias man pages, chamadas miniman, após instalar, digite miniman ls por exemplo para ver o miniman do comando ls\. Usado para instalar os pacotes básicos de admin/troubleshoting, redes, management\. etc\.
+.
+.P
+\fBminiman\fR o \fBminiman\fR é um comando para chamar seus minimans e os próprios minimans que já existem\.
+.
+.P
+Tente executar o comando \fIminiman \-ls\fR para ver os possíveis minimans disponíveis\.
+.
+.P
+Para ver o miniman do comando \fBroute\fR tente:
+.
+.P
+\fIminiman route\fR
+.
+.SH "EXEMPLOS"
+Entrar dentro do diretório do cdshell:
+.
+.P
+\fB$> cds\fR
+.
+.P
+Ver o miniman do comando if:
+.
+.P
+\fB$> miniman if\fR
+.
+.P
+Instalar o CDSHELL:
+.
+.P
+\fB$>cd shell; \./install\fR
+.
+.SH "ARQUIVOS"
+\fI~/cdshell\fR
+.
+.P
+Esse é o diretrório que reside todos os arquivos do \fBCDSHELL\fR\.
+.
+.P
+\fI~/\.alias\fR Esse é o arquivo onde ficam suas configurações de alias, após executar \./install, tudo é instalado\.\.
+.
+.P
+\fI~/\.export\fR Esse arquivo ficam as variáveis que precisam ser exportadas\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBad magic number\.\fR The input file does not look like an archive file\.
+.
+.P
+\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
