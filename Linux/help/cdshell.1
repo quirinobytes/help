@@ -1,16 +1,13 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "CDSHELL" "1" "September 2015" "" ""
+.TH "CDSHELL" "1" "October 2016" "" ""
 .
 .SH "NAME"
-\fBcdshell\fR \- cdshell para minhas man pages v1\.0
-.
-.SH "NOME"
-\fBcdshell\fR \- cdshell usado para criar as man pages e padronizar o uso do screen, com atalhos e vi com atalhos, alem do alias, export e seu enviroment melhorado, pelo menos na minha opniao, teste de descubra! ;)
+\fBcdshell\fR \- O cdshell é usado para criar as man pages e padronizar o uso do screen, com atalhos e vi com atalhos, alem do alias, export e seu enviroment melhorado, pelo menos na minha opniao, teste de descubra! ;)
 .
 .SH "SYNOPSIS"
-\fBcds\fR
+\fBcdshell\fR [\'\-v\'] [\fIOpcoes\fR]
 .
 .SH "DESCRIÇÃO"
 \fBcds\fR é um icomando que já entra dentro do diretório do CDSHELL, onde quer que ele esteja instalado, pois existe uma variável CDSHELL setada no seu bash\. também é usado para criar suas próprias man pages, chamadas miniman, após instalar, digite miniman ls por exemplo para ver o miniman do comando ls\. Usado para instalar os pacotes básicos de admin/troubleshoting, redes, management\. etc\.
@@ -27,6 +24,22 @@ Para ver o miniman do comando \fBroute\fR tente:
 .P
 \fIminiman route\fR
 .
+.SH "OPÇÕES"
+.
+.IP "\(bu" 4
+\fB\-\-help\fR: Do not write "busy" to stdout while processing\.
+.
+.IP "\(bu" 4
+\fBinstall\fR Instala o CDSHELL no seu ambiente\.
+.
+.IP "\(bu" 4
+\fB\-i\fR: O mesmo que \fIinstall\fR Instala o CDSHELL no seu ambiente\.
+.
+.IP "\(bu" 4
+\fB\-v\fR: Exibe a versão do comando cdshell, nao do pacote CDSHELL\.
+.
+.IP "" 0
+.
 .SH "EXEMPLOS"
 Entrar dentro do diretório do cdshell:
 .
@@ -34,16 +47,16 @@ Entrar dentro do diretório do cdshell:
 \fB$> cds\fR
 .
 .P
-Ver o miniman do comando if:
+Ver o miniman do comando cdshell:
 .
 .P
-\fB$> miniman if\fR
+\fB$> miniman cdshell\fR
 .
 .P
 Instalar o CDSHELL:
 .
 .P
-\fB$>cd shell; \./install\fR
+\fB$> cdshell install\fR
 .
 .SH "ARQUIVOS"
 \fI~/cdshell\fR
@@ -57,23 +70,20 @@ Esse é o diretrório que reside todos os arquivos do \fBCDSHELL\fR\.
 .P
 \fI~/\.export\fR Esse arquivo ficam as variáveis que precisam ser exportadas\.
 .
+.P
+\fI~/\.screenrc\fR Esse arquivo mantém as personalização do screenrc\.
+.
 .SH "ENVIRONMENT"
-\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+\fBF4\fR Fechar a janela no screenrc\. \fBF5\fR Cortar janela horizontal\. \fBF6\fR Cortar janela vertical\. \fBF7\fR Diminuir a janela atual \fBF8\fR Aumentar janela atual \. \fBF9\fR Navegar entre as janelas, espécie de TAB pro screenrc\. \fBSHIFT+F9\fR Matar a janela atual\. \fBF10\fR Usado para salvar no VI, e sair no MC\. \fBF11\fR Usado para fazer DEPLOY, executa o conteúdo do arquivo $CDSHELL/linux/deployF11\.sh \fBCrtl+A R\fR De dentro do screen: Usado para salvar e ja recarrecar o arquivo de \.screenrc de dentro dele mesmo, otimo para testar as modificação sem precisar ficar recarregando sempre\.
 .
 .SH "DIAGNOSTICS"
-The following diagnostics may be issued on stderr:
-.
-.P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
-.
-.P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+Em caso de problema é feita uma cópia dos arquivos que são sobrescritos na instalação no diretório de backup => $CDSHELL/backup
 .
 .SH "COMENTARIOS"
-Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+Qualquer dúvida ou sugestão, fique a vontade para entrar em contato quirinobytes@gmail\.com
 .
 .SH "BUGS"
-The command name should have been chosen more carefully to reflect its purpose\.
+Problemas e BUGS, por gentileza enviar para quirinobytes@gmail\.com
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR

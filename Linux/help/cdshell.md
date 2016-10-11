@@ -1,15 +1,11 @@
-cdshell(1) -- cdshell para minhas man pages v1.0
+cdshell(1) -- O cdshell é usado para criar as man pages e padronizar o uso do screen, com atalhos e vi com atalhos, alem do alias, export e seu enviroment melhorado, pelo menos na minha opniao, teste de descubra! ;)
 ===============================================
 
-NOME
------
-
-`cdshell` - cdshell usado para criar as man pages e padronizar o uso do screen, com atalhos e vi com atalhos, alem do alias, export e seu enviroment melhorado, pelo menos na minha opniao, teste de descubra! ;)
 
 SYNOPSIS
 --------
 
-`cds`
+`cdshell` ['-v'] [*Opcoes*]
 
 DESCRIÇÃO
 ---------
@@ -27,6 +23,22 @@ Para ver o miniman do comando **route**  tente:
 *miniman route*
 
 
+OPÇÕES
+------
+
+* `--help`:
+  Do not write "busy" to stdout while processing.
+
+* `install` 
+  Instala o CDSHELL no seu ambiente.
+
+* `-i`:
+  O mesmo que *install* Instala o CDSHELL no seu ambiente.
+
+* `-v`:
+  Exibe a versão do comando cdshell, nao do pacote CDSHELL.
+
+
 EXEMPLOS
 --------
 
@@ -34,18 +46,17 @@ Entrar dentro do diretório do cdshell:
 
    `$> cds`
 
-Ver o miniman do comando if:
+Ver o miniman do comando cdshell:
 
-   `$> miniman if`
+   `$> miniman cdshell`
 
 Instalar o CDSHELL:
 
-   `$>cd shell; ./install`
+   `$> cdshell install`
 
 
 ARQUIVOS
 --------
-
 
 *~/cdshell*
 
@@ -57,38 +68,50 @@ Esse é o diretrório que reside todos os arquivos do **CDSHELL**.
 *~/.export*
   Esse arquivo ficam as variáveis que precisam ser exportadas.
 
+*~/.screenrc*
+  Esse arquivo mantém as personalização do screenrc.
+
 
 
 ENVIRONMENT
 -----------
 
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
+`F4`
+  Fechar a janela no screenrc.
+`F5`
+  Cortar janela horizontal.
+`F6`
+  Cortar janela vertical.
+`F7`
+  Diminuir a janela atual
+`F8`
+  Aumentar janela atual .
+`F9`
+  Navegar entre as janelas, espécie de TAB pro screenrc.
+`SHIFT+F9`
+  Matar a janela atual.
+`F10`
+  Usado para salvar no VI, e sair no MC.
+`F11`
+  Usado para fazer DEPLOY, executa o conteúdo do arquivo $CDSHELL/linux/deployF11.sh
+`Crtl+A R`
+  De dentro do screen: Usado para salvar e ja recarrecar o arquivo de .screenrc de dentro dele mesmo, otimo para testar as modificação sem precisar ficar recarregando sempre.
+
 
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
-
-**Bad magic number.**
-  The input file does not look like an archive file.
-
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
+Em caso de problema é feita uma cópia dos arquivos que são sobrescritos na instalação no diretório de backup => $CDSHELL/backup
 
 COMENTARIOS
 -----------
 
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
+Qualquer dúvida ou sugestão, fique a vontade para entrar em contato quirinobytes@gmail.com
 
 BUGS
 ----
 
-The command name should have been chosen more carefully to reflect its
-purpose.
+Problemas e BUGS, por gentileza enviar para quirinobytes@gmail.com
 
 AUTOR
 -----
