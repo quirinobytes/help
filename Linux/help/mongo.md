@@ -21,21 +21,17 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Usar Base da dados ['carros']:
+		- Usar Base da dados *carros*:
+`use carros`
 
-	use carros 
+	- Exibir as collections, após escolher qual database quer:
+`show dbs`
 
-Exibir as collections, após escolher qual database quer:
+	- Igual a db.getCollectionNames()
+`show collections`
 
-	show dbs
-
-- igual a db.getCollectionNames()
-*show collections*
-
-
-- Após o primeiro passo, já poderemos inserir dados na nossa database faculdade e em qual collection eu desejar, lembrando que collection tem uma função parecida com as tabelas dos bancos relacionais.
-
-*db.collection.insert(json);*
+	- Após o primeiro passo, já poderemos inserir dados na nossa database faculdade e em qual collection eu desejar, lembrando que collection tem uma função parecida com as tabelas dos bancos relacionais.:
+`db.collection.insert(json);`
 
 
 ARQUIVOS
