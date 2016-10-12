@@ -1,20 +1,15 @@
-screen(1) -- screeno para minhas man pages v1.0
+screen(1) -- screen Para gerenciar as janelas.
 ===============================================
-
-NOME
-----
-
-`screen` - screeno de arquivo MarkDown para gerar Man Pages por Rafael Quirino.
 
 SYNOPSIS
 --------
 
-`screen` [`-bar`] [`-c` *config-file* ] *file* ...
+`scr` [`-ls`] [`-x` `-r ` *pid* ] -f *.screenrc-file*
 
 DESCRIÇÃO
 ---------
 
-`screen` é um programa do Rafael Quirino para abrir multiplas sessões de console em multiplas janelas,
+`screen` é um programa feito para abrir multiplas sessões de console em multiplas janelas,
 alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma 
 série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar
 a mesma sessão usando o mesmo usuário e senha.
@@ -58,6 +53,14 @@ ENVIRONMENT
 
 *~/.screenrc*
   O arquivo mágico de configurção que todo admin pode usar. Veja screerc(5) para mais detalhes.
+
+BUGS
+----
+  Caso as quebras de linhas começarem a dar problema, tente:
+
+`$> termcapinfo xterm* ti@:te@`
+ou
+`$>bind 'set horizontal-scroll-mode off'` 
 
 
 AUTOR
