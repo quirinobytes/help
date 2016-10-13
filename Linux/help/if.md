@@ -20,8 +20,8 @@ OPÇÕES
 ------
 
 * `-n`:
-  Non-zero -> Teste se náo for nulo, veja se a var contém algo pelo menos.
-q
+  Non-zero -> Testar se a variável existe, se nao é nulo [NOT NULL].
+
 * `-z`:
   Verifica se a variável foi setada, pode até ser vazia.
 * `-e`:
