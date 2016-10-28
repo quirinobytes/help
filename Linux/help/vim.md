@@ -28,7 +28,7 @@ Para apagar todas as linhas em branco em um arquivo:
 
 Para apagar todas as linhas em branco em um arquivo:
 
-   `:G/^$/d'` => diz para procurar em todo o Arquivo(G) com linhas que casem com ^(Comeco) $(fim) juntos e apague-os (d).
+   `:g/^$/d'` => diz para procurar em todo o Arquivo(G) com linhas que casem com ^(Comeco) $(fim) juntos e apague-os (d).
 
 
 
