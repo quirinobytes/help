@@ -12,11 +12,24 @@ DESCRIÇÃO
 
 `vim` Usado para editar arquivos.
 
-OPÇÕES
+COMANDOS
 ------
 
-* `-f` *file* :
-   usar o seguinte arquivo de (vimrc) *file* 
+* `i` :
+   Entra no modo Inserir dados(INSERT).
+
+* `gg` :
+	Ir par ao inicio do arquivo, (ggi-> vai pro inicio ja inserindo)
+
+* `GG` :
+	Ir par ao fim do arquivo:
+
+* `yy` :
+	Copia linha.
+
+* `dd` :
+	Apagar linha.
+
 
 EXEMPLOS
 --------
