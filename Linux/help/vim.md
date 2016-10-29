@@ -30,6 +30,7 @@ Para apagar todas as linhas em branco em um arquivo:
 
    `:g/^$/d'` => diz para procurar em todo o Arquivo(G) com linhas que casem com ^(Comeco) $(fim) juntos e apague-os (d).
 
+   `:30,$s/^/\/\/`  => da linha 30 ate o final($), substitua(s) tudo que for (/) começo de linha(^) por(/) comentário(//) escapado né(\/\/) claro! 
 
 
 ARQUIVOS
