@@ -54,6 +54,10 @@ Instalar o CDSHELL:
 
    `$> cdshell install`
 
+Verficar os processos ja filtrando(process grep)
+
+	`$> pg processo`
+
 
 ARQUIVOS
 --------
