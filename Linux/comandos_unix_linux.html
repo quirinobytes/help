@@ -1,0 +1,1840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-1.dtd">
+<!-- saved from url=(0046)http://urs.bira.nom.br/informatica/comando.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Comandos do Unix / Linux</title>
+
+<meta http-equiv="content-language" content="pt-br">
+<meta name="robots" content="index,follow">
+<meta name="Author" content="Ubiratan Rocha da Silva - urs.bira@uol.com.br">
+<meta name="generator" content="EditPad [pt] (Win98; I) [Explorer]">
+<meta name="keywords" content="Unix, unix, Linux, linux, Shell, shell, Bash, bash, Bourne, Korn, C, Script, script, Comando, comando, Programa, programa, Programação, programação, Editor, editor, VI, vi, VIM, vim, sed, cut, awk, tr">
+<meta name="description" content="Informações Comandos Linux/Unix e Shell Script">
+<link type="text/css" href="./Comandos do Unix _ Linux_files/so_style.css" rel="stylesheet">
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body>
+<a target="_blank" href="http://urs.bira.nom.br/index.htm"><img src="./Comandos do Unix _ Linux_files/banner_so.jpg" border="0" alt="Retorna para a página principal urs.bira"></a>
+<h2>Comandos do Unix / Linux </h2>
+<div id="topemail">
+<table border="0">
+<tbody><tr>
+<td>
+<a href="mailto:urs.bira@uol.com.br">urs.bira@uol.com.br</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+<hr>
+<div class="rodape1"><a href="javascript:self.print()"><img src="./Comandos do Unix _ Linux_files/imprime.gif" alt="Imprimir esta página" width="80" height="30"></a>
+<a href="http://urs.bira.nom.br/"><img src="./Comandos do Unix _ Linux_files/home.gif" alt="Home page de Ubiratan" width="80" height="20"></a>
+<a href="JavaScript:history.back(1)"><img src="./Comandos do Unix _ Linux_files/voltar.gif" alt="Voltar à página anterior" width="80" height="20"></a></div>
+<div id="tabcomandos"></div>
+<h4>Índice de comandos do Linux / Unix</h4>
+<table border="0" bgcolor="white">
+<tbody><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#lstcmdlinux">comandos</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#apropos">apropos</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#awk">awk</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#basename">basename</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#bc">bc</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cat">cat</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cd">cd</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#chmod">chmod</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cp">cp</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cpio">cpio</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cron">cron</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#csplit">csplit</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cu">cu</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cut">cut</a></td>
+<td></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#date">date</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#du">du</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#df">df</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#dialog">dialog</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#diff">diff</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#do">do</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#echo">echo</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ed">ed</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#el">el</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#eval">eval</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#exit">exit</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#export">export</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#expr">expr</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#fgrep">fgrep</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#find">find</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#fmt">fmt</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#fold">fold</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#for">for</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#foreach">foreach</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ftp">ftp</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#grep">grep</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#gzip">gzip</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#head">head</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#history">history</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#if">if</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#join">join</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#less">less</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#let">let</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ln">ln</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#login">login</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#logout">logout</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#lp">lp</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ls">ls</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#mail">mail</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#makewhatis">makewhatis</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#man">man</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#mkdir">mkdir</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#more">more</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#mounted">mounted</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#mv">mv</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#m4">m4</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#paste">paste</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#perl">perl</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#pr">pr</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#printf">printf</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#prompt">prompt</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ps">ps</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#pwd">pwd</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#random">random</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#read">read</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#repeat">repeat</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#rev">rev</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#rgrep">rgrep</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#rlogin">rlogin</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#rm">rm</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#rmdir">rmdir</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#scale">scale</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#scp">scp</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#sed">sed</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#send">send</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#set">set</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#setenv">setenv</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#setterm">setterm</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#shift">shift</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#shred">shred</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#sort">sort</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#split">split</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ssh">ssh</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#stop">stop</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#stty">stty</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#switch">switch</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tac">tac</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tail">tail</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tar">tar</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#telnet">telnet</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#test">test</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#time">time</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tput">tput</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#top">top</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tr">tr</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#trap">trap</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ulimit">ulimit</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#umask">umask</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#unalias">unalias</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uniq">uniq</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#unlimit">unlimit</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#unset">unset</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#unsetenv">unsetenv</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#until">until</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uucp">uucp</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uupick">uupick</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uustat">uustat</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uuto">uuto</a></td>
+</tr><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#uux">uux</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi">vi</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vim">vim</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#wait">wait</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#wc">wc</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#whatis">whatis</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#which">which</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#while">while</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#xargs">xargs</a></td>
+</tr>
+</tbody></table>
+<div id="tabela2"><table border="0">
+<tbody><tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#distlinux">Distruibuíções Linux e sites especiais</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tput">Funções do tput</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#tabcomandos">Índice de alguns comandos do UNIX/LINUX</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#ceshell">Comandos embutidos do Shell</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#varhell">Variáveis do Shell</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#manvarhell">Manipulando variáveis</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#otc">Operadores de Teste Comuns</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#cn">Comparações Numericas</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#res">Redirecionamento de Entrada e Saida</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi1">Alguns comandos do editor VI</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi2">Configuração do VI</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi3">Situações com o VIM</a></td>
+</tr>
+<tr>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi4">Edição múltiplas com o VI/VIM</a></td>
+<td><a href="http://urs.bira.nom.br/informatica/comando.htm#vi4">VI/VIM para examinar diferenças</a></td>
+</tr>
+</tbody></table>
+</div>
+<div id="distlinux"><h4>Algumas distribuições Linux e sites especiais</h4></div>
+<span style="font-size:12px;">
+<table bgcolor="silver">
+<tbody><tr>
+<td><a href="http://www.linux.org/">www.linux.org</a></td>
+<td><a href="http://www.redhat.com/">www.redhat.com</a></td>
+<td><a href="http://www.knoppix.org/">www.knoppix.org</a> Roda direto do CD</td>
+</tr><tr>
+<td><a href="http://www.mandrakelinux.com/pt-PT">www.mandrakelinux.com/pt-PT</a></td>
+<td><a href="http://www.suse.com/">www.suse.com</a> Versão que roda direto do CD <a href="http://www.suse.de/">http://www.suse.de</a></td>
+<td><a href="http://www.slackware-brasil.com.br/">www.slackware-brasil.com.br</a></td>
+</tr><tr>
+<td><a href="http://www.debian.org.br/">http://www.debian.org.br</a></td>
+<td><a href="http://www.guiadohardware.net/gdhpress/kurumin">www.guiadohardware.net/gdhpress/kurumin</a></td>
+<td><a href="http://www.kalangolinux.org/">www.kalangolinux.org</a></td>
+</tr>
+</tbody></table>
+<table bgcolor="#febddf">
+<tbody><tr>
+<td><a href="http://www.cipsga.org.br/">www.cipsga.org.br</a></td>
+<td><a href="http://br-linux.org/">br-linux.org</a></td>
+<td><a href="http://www.vivaolinux.com.br/">www.vivaolinux.com.br</a></td>
+</tr><tr>
+<td><a href="http://www.guiafoca.org/">www.guiafoca.org</a> Guias on-line:
+<a href="http://www.guiafoca.org/guia/iniciante/index.htm">Iniciante</a>, 
+<a href="http://www.guiafoca.org/guia/intermediario/index.htm">Intermediário</a>, 
+<a href="http://www.guiafoca.org/guia/inic_interm/index.htm">Inic e Interm.</a>, 
+<a href="http://www.guiafoca.org/guia/avancado/index.htm">Avançado</a></td>
+</tr><tr>
+<td><a href="http://aurelio.net/">aurelio.net</a> Tudo sobre shell, sed e vi; <a href="http://aurelio.net/shell/canivete.html">canivete</a></td>
+</tr></tbody></table>
+</span>
+<div id="lstcmdlinux"></div><h4>Lista de alguns comandos do UNIX / Linux</h4>
+<ul>
+<div id="which"></div>
+<li>which    - Mostra o caminho completo de um comando/script.<br> Ex.: which cat<br>Mostra /bin/cat <br><br></li>
+<div id="basename"></div>
+<li>basename - Mostra o nome base do comando/script.<br> Ex.: basename cat<br>Mostra apenas cat <br><br></li>
+<div id="whatis"></div>
+<li>whatis   - Mostra a definição do comando.<br> Ex.: whatis cat<br>Mostra: cat                  (1)  - concatenate files and print on the standard output <br><br></li>
+<div id="apropos"></div>
+<li>apropos  - Mostra todos os comandos que contenha a palavra informada<br> Ex.: apropos whatis<br>Mostra:<br>apropos              (1)  - search the whatis database for strings<br>makewhatis           (8)  - Create the whatis database<br>whatis               (1)  - search the whatis database for complete words <br><br></li>
+<div id="cd"></div>
+<li>cd       - mudar de diretório<br><br></li>
+<div id="ls"></div>
+<li>ls       - listar o conteúdo do diretório<br>O comando dircolors é o setup de cores do ls.<br>
+               Pode-se ter no home o arquivo .coloursrc com suas próprias definições<br>
+               Para criar o .coloursrc execute: cd ; dircolors -p &gt; .coloursrc <br>
+               Para atualizar os valores deve-se regravar a variável LS_COLORS com: eval `dircolors .coloursrc` colocar este comando em .bashrc<br>
+               Pode-se ver o valor de LS_COLORS com: echo $LS_COLORS<br>
+               <a href="http://br.tldp.org/projetos/howto/arquivos/html/Colour-ls/Colour-ls.pt_BR.html#toc82">Leia aqui sobre configurações de cores do ls</a><br>
+               <a href="http://aurelio.net/shell/canivete.html">Letras identificadoras dos arquivos no ls</a><br>
+<br><br></li>
+<div id="pwd"></div>
+<li>pwd      - imprimir o diretório de trabalho<br><br></li>
+<div id="mkdir"></div>
+<li>mkdir    - criar um novo diretório<br><br></li>
+<div id="rmdir"></div>
+<li>rmdir    - remover um diretório existente (se estiver vazio)<br><br></li>
+<div id="cat"></div>
+<li>cat      - concatenar arquivo(s)<br>
+               <code>cat -n arquivo.txt</code> # Numera todas as linhas <br>
+               <code>cat -b arquivo.txt</code> # Numera todas as linhas, exceto as vazias<br><br>
+         <em>Obsereve este tipo de substituicao</em>: <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux2">[²]</a><br><br>
+         <code>cp ~/.emacs{,.bak}</code>  #e equivalente a escrever:<br>
+         <code>cp ~/.emacs ~/.emacs.bak</code><br>
+         O bash faz a substituicao do que esta antes da virgula pelo<br>
+         nome do arquivo e completa com o que esta depois.<br>
+         <code>cat arq{1,2,3} &gt; arq.final</code>       #Ou seja, o equivalente a <br>
+         <code>cat arq1 arq2 arq3 &gt; arq.final</code><br>
+         Agora o mesmo usando o less:<br>
+         <code>less /usr/doc/{emacs-20.7/{NEWS,README},ed-0.2/NEWS,gnupg-1.0.1/{README,COPYING}}</code><br>
+         Que seria expandido para:<br>
+         <code>less /usr/doc/emacs-20.7/NEWS /usr/doc/emacs-20.7/README (quebra de linha aqui)<br>
+         /usr/doc/ed-0.2/NEWS /usr/doc/gnupg-1.0.1/README /usr/doc/gnupg-1.0.1/COPYING<br></code><br></li>
+<div id="tac"></div>
+<li>tac    - Mostra o conteúdo de um arquivo binário ou texto (como o cat),  só que em ordem inversa.<br><br></li>
+<div id="more"></div>
+<li>more   - efetua paginação de dados<br><br></li>
+<div id="less"></div>
+<li>less   - efetua paginação de um arquivo, mas permite efetuar buscas de strings<br>
+         utilizando a / como no editor vi<br><br></li>
+<div id="cp"></div>
+<li>cp     - copiar arquivo(s)<br><br></li>
+<div id="find"></div>
+<li>find   - Localizar arquivos<br><br>
+             <code>find . -exec chgrp literatura {} \;</code> <br>
+             <code>find . -ok chgrp literatura {} \;</code>   <span class="obs">(pede confirmação antes de executar)</span><br>
+             <code>find . -print | cpio -pdvucB /oracle/prg/objora</code><br>
+             <code>find / -name '*.bak' -exec gzip {} \;</code><br>
+             <code>find .  -print -exec touch -t 0808250000 {} \;</code> - <span class="obs">troca a data de modificação para 25/08/2008 00:00 de todos os arquivos</span><br>
+             <code>find . -name "*.htm"  -print -exec touch -t 0808250000 {} \;</code> <span class="obs">idem ao anterior, só que para arquivos *.htm</span><br>
+             <code>find . -name "file*"</code><span class="obs">procura por arquivos iniciados por file minúsculo</span><br>
+             <code>find . -iname "file*"</code><span class="obs">procura por arquivos iniciados por file ou FILE</span><br>
+             <code>find . -name "resumo*" -type f</code><span class="obs"> procura por arquivos normais (type f)</span> as opções de -type são:<br>
+             <span class="obs">f (arquivos normais), l (links simbólicos), d (diretórios), b (dispositivos de bloco), p (pipes nomeados), c (dispositivos de caractere), s (soquetes).</span><br><br>
+             <code>gzip 'find / -name '*.bak' -exec -print'</code><br>
+             <code>gzip $(find / -name '*.bak' -exec -print)</code><br><br></li>
+<div id="ln"></div>
+<li>ln     - ligar dois nomes a um arquivo (link)<br><br></li>
+<div id="mv"></div>
+<li>mv     - mover/renomear arquivo(s)<br> <a href="http://urs.bira.nom.br/informatica/script.htm#renomear">Exemplo de script</a> - <span class="obs">usando mv para renomear de maiúsculo para minúsculo</span><br>
+             veja exemplos <a href="http://urs.bira.nom.br/informatica/comando.htm#xargs">xargs</a><span class="obs"> para renomear vários arquivos de vez usando  juntamente com o mv</span><br><br></li>
+<div id="m4"></div>
+<li>m4     - Substitui strings contidas em um arquivo de entrada pelos parametros passados.
+<p style="border: solid blue;  border-width: 2px; padding:15px; margin-right: 50pt; margin-left: 50pt;font-family: courier; color: purple;  background: lavender">
+Suponha o arquivo carta.txt a seguir:<br><br>
+CIDADE, DATA<br><br>
+Caro QUEM<br><br>
+O numero do protocolo do arquivo enviado foi COD.<br>
+Valor a ser pago  : VLR<br>
+Formato do arquivo: TIPO<br><br>
+Cordialmente,<br><br>
+bira<br><br>
+Se executarmos o comando:<br><br>
+<code>m4 -DCIDADE=Salvador -DDATA=11/11/08 -DQUEM=IVAN -DCOD=7675 -DVLR=324,55 -DTIPO=ISAM carta.txt</code><br><br>
+Resultará em:<br><br>
+Salvador, 11/11/08<br><br>
+Caro IVAN<br><br>
+O numero do protocolo do arquivo enviado foi 7675.<br>
+Valor a ser pago  : 324,55<br>
+Formato do arquivo: ISAM<br><br>
+Cordialmente,<br><br>
+bira<br>
+<span class="obs"> </span><br><br></p></li>
+<p></p>
+<div id="rm"></div>
+<li>rm     - remover arquivo(s)<br><br>
+             veja exemplos <a href="http://urs.bira.nom.br/informatica/comando.htm#xargs">xargs</a><span class="obs"> para remover vários arquivos de vez usando juntamente com o rm</span><br><br></li>
+<div id="split"></div>
+<li>split  - separar um arquivo em n pedaços de linha<br><br>
+         <code>split 100 bira.txt</code> #separa o arquivo bira.txt em arquivos com 100 linhas cada.<br>
+         <code>split -b 1440Kb arquivo_grande.xyz</code> #divide o arquivo em arquivos de 1.440byte (um disquete)<br>
+         <code>split -b 20m videoclip.avi</code> #divide o arquivo em pedaços de 20 Megabytes<br><br></li>
+<div id="csplit"></div>
+<li>csplit - separar um arquivo com base em argumentos<br>
+         O comando csplit diferente de split pode efetuar a separação sempre que encontrar<br>
+         uma combinação entre seus argumentos e o conteúdo do arquivo:<br>
+         Suponha o arquivo livro.txt com o seguinte conteúdo:<br>
+         A Introducao<br>
+         B Dedicatoria<br>
+         CAPITULO 1<br>
+         Linha 1A1<br>
+         Linha 2A1<br>
+         Linha 3A1<br>
+         CAPITULO 2<br>
+         Linha 1A2<br>
+         Linha 2A2<br>
+         CAPITULO 3<br>
+         Linha 1A3<br>
+         Linha 2A3<br>
+         Neste arquivo há 3 capítulos se desejar criar um arquivo para cada capítulo execute<br>
+         o comando:<br>
+         <code>csplit -f capit livro.txt "/CAPITULO/" {2}</code><br>
+         O valor {2} representa a quantidade máxima de arquivos a ser criada, como são 3 capítulos<br>
+         informamos {2} pois a quantidade máxima de arquivo é computada somando-se o informado + 1<br> 
+         Quando não souber a quantidade exata de capítulos utilize a opção -k e informe um número entre
+         {} que você tenha certeza que seja maior que a quantidade de capítulos.<br>
+         <code>csplit -k -f capit livro.txt "/CAPITULO/" {9}</code><br>
+         Estes dois exemplos criarão os arquivos capit00, capit01, capit02, capit03, sendo que o capit00<br>
+         refere-se a tudo que estava antes de CAPITULO 1<br><br></li>
+<div id="top"></div>
+<li>top  - Mostra os processos em execução na CPU<br><br>
+<p style="border: solid blue;  border-width: 2px; padding:15px; margin-right: 50pt; margin-left: 50pt;font-family: courier; color: black;  background: lavender">
+</p><table border="1" bgcolor="silver">
+<tbody><tr>
+</tr><tr><td>Coluna</td><td>Descrição</td></tr>
+<tr><td>PID</td><td>O ID do processo</td></tr>
+<tr><td>USER </td><td>O usuário que executa o processo</td></tr>
+<tr><td>PRI </td><td>A prioridade do processo</td></tr>
+<tr><td>NI</td><td>O valor bom: quanto maior o valor, menor a prioridade da tarefa</td></tr>
+<tr><td>SIZE </td><td>Memória usada por esse processo (código+dados+pilha)</td></tr>
+<tr><td>RSS </td><td>A memória física usada por esse processo</td></tr>
+<tr><td>SHARE </td><td>A memória compartilhada usada por esse processo</td></tr>
+<tr><td>STAT </td>
+<td>O status desse processo, mostrado em código. Alguns códigos de status principais são:<br>
+<span class="obs">
+R = Em execução
+S = Em hibernação
+Z = Zumbi
+T = Interrompido 
+</span>
+Também é possível ver o segundo e terceiro caracteres, que indicam:
+<span class="obs">
+W – Processo permutado
+N – Valor bom positivo</span> </td></tr>
+<tr><td>%CPU </td><td>A porcentagem da CPU usada por esse processo</td></tr>
+<tr><td>%MEM </td><td>A porcentagem de memória usada por esse processo</td></tr>
+<tr><td>TIME </td><td>O tempo total de CPU usado por esse processo</td></tr>
+<tr><td>CPU </td><td>Se este é um sistema de múltiplos processadores, esta coluna indica o ID da CPU em que esse processo está sendo executado.</td></tr>
+<tr><td>COMMAND</td><td>O comando emitido por esse processo</td></tr>
+
+</tbody></table>
+<br><br>com top em execução as letras abaixo quando pressionadas ativam ou desativam dados apresentados:<br><br>
+l = Ativa/Desativa a primeira linha do load average<br>
+t = Ativa/Desativa as duas linhas seguintes sobre processos e a CPU<br>
+m = Ativa/Desativa as últimas linhas sobre memória e SWAP<br>
+M = Ordena os processos por quem estiver mais usando a memória<br>
+<br><br>Algumas opções importantes deste comando:<br><br>
+<code>top -d 1 </code><span class="obs"> Define o tempo de atualização em 1 segundo</span><br>
+<code>top -p1738 -p1739</code><span class="obs"> Mostra apenas os processos 1738 e 1739</span><br><br>
+Observação: o comando snice alterar a prioridade de um processo.
+<br><br>
+<p></p>
+</li>
+<div id="tr"></div>
+<li>tr   - tradutor, funciona como um filtro substiuindo as ocorrências de caracteres em um arquivo texto.<br>
+         <code>cat manual.txt | tr aeiou 12345</code> # substitui a letra a por 1, e por 2, i por 3, o por 4 e u por 5<br><br></li>
+<div id="uptime"></div>
+<li>uptime - Mostra a quanto tempo o sistema esta ativo, a quantidade de usuários ativos e o load average veja mais no comando top.<br><br></li>
+<div id="fold"></div>
+<li>fold <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>  -<br>
+         Por exemplo: fold -w 30 -s meuarquivotexto &gt; novoarquivotexto <br>
+         Quebra as linhas do arquivo texto meuarquivotexto de forma que haja 30<br>
+         caracteres por linha. A linha é quebrada nos espaços.<br>
+         A saída vai para novoarquivotexto.<br><br></li>
+<div id="fmt"></div>
+<li>fmt  <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>  -<br>
+         Por exemplo: fmt -w 75 meuarquivotexto &gt; novoarquivotexto <br>
+         Formata as linhas no arquivo texto para a largura de de 75 caracteres.<br>
+         Quebra linhas compridas e junta linhas curtas de acordo com o requerido mas não<br>
+         remove linhas vazias.<br><br></li>
+<div id="nl"></div>
+<li>nl   <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>  -<br>
+         Por exemplo: nl meuarquivo &gt; meuarquivocomlinhasnumeradas <br>
+         Numera as linhas no arquivo meuarquivo Coloca a saída no arquivo<br>
+         meuarquivocomlinhasnumeradas.<br><br></li>
+<div id="rev"></div>
+<li>rev  <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>  -<br>
+         Por exemplo: rev nomedoarquivo &gt; nomedoarquivo1 <br>
+         Mostra o arquivo   nomedoarquivo, cada linha na ordem reversa.<br>
+         No exemplo acima, a saída é dirigida para nomedoarquivo1.<br><br></li>
+<div id="shred"></div>
+<li>shred  <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a> -<br>
+         Por exemplo: shred nomedearquivo <br>
+         Repetidamente regrava o conteúdo do arquivo nomedearquivo com lixo, de forma que<br>
+         ninguém será capaz de ler o seu conteúdo original novamente.<br><br></li>
+<div id="des"></div>
+<li>des  <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>  -<br>
+         Por exemplo: <code>des -e arquivo arquivo_criptografado</code> <br>
+         (="Padrão de criptografia de dados") Criptografa arquivo.<br>
+         Será solicitada você uma chave que o programa usará para a criptografia.<br>
+         A saída vai para arquivo_criptografado. Para descriptografar use <br>
+         <code>des -d arquivocriptografado arquivo_descriptografado</code>.<br><br></li>
+<div id="awk"></div>
+<li>awk    - linguagem de processamento e procura de padroes<br>
+             Alguns exemplos para entender o poder do awk:<br><br>
+             <code>cat nomedoarquivo | gawk '/vento/ {print}'</code> #Para mostra as linhas que contenham o string "vento".<br><br>
+             O que torna o awk mais poderoso que o sed são as operações sobre campos. $1 significa "o primeiro campo", $2 significa o "segundo campo", etc. $0 significa a "linha inteira".<br>
+             A variável NF significa número de campos. Quando precedida por "$" indica o último campo.<br>
+             <code>awk '{print $NF}' arquivo.exemplo</code> # $NF imprime o último campo.<br>
+             <code>awk '{print NF}' arquivo.exemplo</code> # imprimi a contagem do numero de campos.<br>
+             <code>awk -F: 'NF &gt; 10 {print}' arquivo.exemplo</code> # imprimi apenas as linhas que contenham mais de dez campos.<br>
+             <code>awk -F: 'NF == 10 {print}' arquivo.exemplo</code> # imprimi apenas as linhas que possuam exatamente 10 campos.<br>
+             <code>awk 'END {print NR}' arquivo.txt</code> # Contar quantas linhas um determinado arquivo tem.
+             <code>awk 'NR == 30' arquivo.txt</code> #  Para ler apenas 30a. linha<br><br>
+             O próximo exemplo extrai os campos 3 e 2 das linhas que contem "1024" e os mostra com os títulos "Nome" and "ID" : <br><br>
+             <code>cat nomedoarquivo | gawk '/1024/ {print "Nome: " $3 "ID: " $2}' &gt; novoarquivo</code><br><br>
+             Neste exemplo mudamos o delimitador para ":" com a opção -F<br>
+             <code>awk -F":" '{ print "username: " $1 "\t\tuid:" $3 }' /etc/passwd</code><br><br>
+             <code>cat /etc/passwd | awk -F":" '{print $1"\t-&gt;\t",$5}' | sort +2 &gt;relatorio.txt</code><br><br>
+             <code>ls -l | awk '{print "cp",$9,$9 ".bck"}' &gt; backup.sh</code> # usando a saída do ls pega o campo 9 que é o nome do arquivo e joga para o arquivo backup.sh linhas contendo: <code>cp arquivo.etx arquivo.ext.bak</code><br><br>
+             O terceiro exemplo procura e mostra linhas com o terceiro campo igual a "peter" ou que contenham o string "marie":<br>
+             <code>cat nomedoarquivo | gawk '$3 == "peter" || $3 ~ /marie/ '</code><br>
+             <code>cal | awk '/We/ || /17/ {print $0}'</code> # filtra a saída do calendário do mês corrente, mostrando apenas a abreviação dos nomes dos dias da semana e abaixo a linha que contém o dia de número 17<br> 
+             Para entender o ultimo comando, eis aqui uma lista dos testes lógicos em gawk:<br>
+             == igual,             != diferente,<br>
+             &lt; menor que,             &gt; maior que,<br>
+             &lt;= menor ou igual a,             &gt;=  maior ou igual a,<br>
+             ~ procurar por uma expressão regular,<br>
+             !~  que sejam diferente de uma expressão regular,<br>
+             ||  OU lógico,<br>
+             &amp;&amp;  E lógico,<br>
+             ! negação lógica.<br>
+             <br><br>Veja o awk com cara de linguagem de programação<br><br>
+             <code>awk '{ if (length($0) &gt; max) max = length($0) } END { print max }' arq.txt</code> #Mostra o tamanho da maior linha do arquivo<br>
+             <code>awk 'NF &gt; 0' arq.txt</code> # mostra as linhas do arquivo, exceto as vazias ou as somente com espaços em branco.<br>
+             <code>awk 'BEGIN { for (i = 1; i &lt;= 7; i++) print int(101 * rand()) }'</code> # mostra 7 números aleatóriamente entre 0 e 100<br>
+             <code>ls -l FILES | awk '{ x += $5 } ; END { print "total bytes: " x }'</code> # mostra o total de bytes dos arquivos listados por ls -l somando o quinto campo<br>
+             <code>awk -F: '{ print $1 }' /etc/passwd | sort</code> # mostra em ordem alfabetica o nomes do usuários do /etc/passwd<br>
+             <code>awk 'END { print NR }' arq.txt</code> #mostra a quantidade de linhas de arq.txt<br>
+             <code>awk 'NR % 2 == 0' arq.txt</code> #mostra as linhas alternadamente, não mostra a linha 1, mostra a 2    , não mostra a 3, ...<br>
+             <code>awk 'NR % 2 == 1' arq.txt</code> #mostra as linhas alternadamente, mostra a linha 1    , não mostra a 2, mostra a 3    , ...<br>
+             <code>awk '{ print $3 }' &lt; lista.txt</code> # mostra a coluna 3<br>
+             <code>awk '($1=="Ivan") { print }' &lt; lista.txt</code> # Se o valor da coluna 1 for Ivan mostra as linha todas<br>
+             <code>awk '($2=="Diana") { print $3,$4 }' &lt; lista.txt</code> # Se o valor da coluna 2 for Diana mostra a coluna 3 e 4<br>
+             Suponha um diretório contedo alguns arquivos cuja lista esta representada abaixo por uma saída do comando <code>ls -l</code>:
+<blockquote><pre class="fundobranco"><code>
+-rwxrwxrwx    1 bira     literatura      11537 Jan  9 11:41 GRGR0405
+-rwxr-xr-x    1 bira     literatura       1086 Jan 15 11:42 RECIBO.REL
+-rw-r--r--    1 bira     literatura       2279 Jan 13 11:56 content.xml
+-rwxr-xr-x    1 bira     literatura       3301 Jan 15 10:24 manual.txt
+-rw-r--r--    1 bira     literatura        922 Jan  9 14:32 meta.xml
+-rw-r--r--    1 bira     literatura        119 Jan 16 11:31 texto.txt
+</code></pre></blockquote>
+Executando o comando:<br><code>ls -l | awk '{print "Dono: " $3 "\tTamanho: "$5 "\tNome: " $9}'</code> gera a seguinte saída:<br>
+<blockquote><pre class="fundobranco"><code>
+Dono:   Tamanho:        Nome:
+Dono: bira      Tamanho: 11537  Nome: GRGR0405
+Dono: bira      Tamanho: 1086   Nome: RECIBO.REL
+Dono: bira      Tamanho: 2279   Nome: content.xml
+Dono: bira      Tamanho: 3301   Nome: manual.txt
+Dono: bira      Tamanho: 922    Nome: meta.xml
+Dono: bira      Tamanho: 119    Nome: texto.txt
+</code></pre></blockquote>
+</li>
+<div id="cut"></div>
+<li>cut    - seleciona colunas<a id="trcutsed"></a><br><br>
+         <code>cut -c 10-10 arq.txt</code> # mostra da 10 a trigésima coluna do arquivo<br>
+         <code>cut -c 5,7,10-15 arq.txt</code> # mostra a quinta, a sétima e décima a décima-quinta coluna<br>
+         <code>#Funcao : Exemplo de utilizacao do comando tr, cut e sed<br>
+         #         tr deixa apenas um espaco em branco, eliminando os<br>
+         #            demais que normalmente sao gerados pelo ls<br>
+         #         cut utiliza o espaco em branco como delimitador de<br>
+         #             campo e seleciona os campos de 3 a 9<br>
+         #         sed substitui os espacos em branco por tab<br>
+         #-----------------------------------------------------------<br>
+         tput clear<br>
+         echo " `date`        Em: `pwd`"<br>
+         echo "Dono    Grupo  Bytes    Mes     Dia     Ano/H   Nome do arquivo"<br>
+         echo "---------------------------------------------------------------"<br>
+         ls -lSr | tr -s " " | cut -d " " -f3-9 | sed -e 's/ /\t/g'<br>
+         echo "---------------------------------------------------------------"<br>
+         # Fim do script</code><br><br></li>
+<div id="diff"></div>
+<li>diff   - compara e seleciona diferenças em dois arquivos<br><br></li>
+<div id="fgrep"></div>
+<li>fgrep   - seleciona linhas que correspondam a um padrão<br>
+<code>fgrep -l animal *.txt | vi -</code>    - Abre no vi um novo arquivo contendo os nomes dos arquivos que contenham a palavra animal em seu conteúdo.<br>
+<code>vi `fgrep -l animal *.txt`</code>      - Diferentemente do anterior, este comando abre os arquivos que contém a palavra animal em seu conteúdo.<br>
+<br><br></li>
+<div id="grep"></div>
+<li>grep   - seleciona linhas<br>
+             <code>grep -v int</code> (se não tiver)<br>
+             <code>grep -w casa</code> (expressão exata)<br>
+             <code>grep usuario /etc/passwd || echo "usuário inexistente"</code><br>
+             <code>rgrep -r my_word . | more</code> # este é a opção recursiva de grep<br><br></li>
+<div id="head"></div>
+<li>head   - seleciona linhas de cabeçalho<br><br></li>
+<div id="line"></div>
+<li>line   - le a primeira linha<br><br></li>
+<div id="perl"></div>
+<li>perl   - 
+             <code>perl -i -p -e 's/caixas/malas/g;' grave.txt</code> # substitui todas as ocorrências de caixas por malas.<br>
+             <code>perl -i.bak -p -e 's/caixas/malas/g;' grave.txt</code> # Igual ao anterior só que a opção -i.bak cria um backup de grave.txt como grave.txt.bak<br>
+             Para confirmar que os scripts awk podem ser reescritos em perl, veja o exemplo:<br><br>
+             <code>awk '($2=="1957") { print $3 }' | arquivo.txt</code><br><br>
+             é equivalente a qualquer uma das seguintes linhas:<br><br>
+             <code>perl -ne '@f=split; if ($f[1] eq "1957") { print "$f[2]\n"}' | arquivo.txt</code><br>
+             <code>perl -ne 'if ((@f=split)[1] eq "1957") { print "$f[2]\n"}' | arquivo.txt</code><br>
+             <code>perl -ne '@f=split; print $f[2] if ( $f[1]==1957 )' | arquivo.txt</code><br>
+             <code>perl -lane 'print $F[2] if $F[1] eq "1957"' | arquivo.txt</code><br>
+             <code>perl -lane 'print$F[2]if$F[1]eq"1957"' | arquivo.txt</code> # Esta linha é igual à de cima, como no perl pode-se remover todos os espaços dos argumentos<br><br></li>
+<div id="sed"></div>
+<li>sed    - editor de fluxos de textos (Stream EDitor)<br><br>
+             Entenda este proderoso comando vendo os exemplos abaixo:<br><br>
+             <code>cat texto.txt | sed p</code><br> recebe de cat o conteúdo de texto.txt e aplica
+             a opção p que duplica cada linha do texto. Isso ocorre porque o sed já tem por padrão imprimir os dados na saída padrão, como usamos a opção p, ele imprime duas vezes.<br><br>
+             <code>sed -n p texto.txt</code><br> A opção -n faz com que o sed não imprima sa saída padrão e a opção p imprime cada linha fazendo com que cada linha seja impressa apenas uma vez.<br><br>
+             <code>sed -n 5p texto.txt</code><br> imprime apenas a linha 5 de texto.txt. Nesta opção o número da linha é um endereço que diz ao sed onde aplicar o comando, este endereço também pode ser passado como parte do conteúdo da linha entre /barras/<br><br>
+             <code>sed '5d' texto.txt</code> = passando o endereço como sendo o número da linha, apagará a linha 5 com a opção d.<br>
+             <code>sed '/modelo/d' texto.txt</code> = passando o endereço com um conteúdo da linha, apagará todas as linhas que tenham a palavra modelo.<br>
+             Este último comando seria como se você tivesse usado o grep <code>grep -v modelo texto.txt</code><br>
+             <code>sed '5,10d' texto.txt</code> = aparará das linhas 5 até a 10<br>
+             <code>sed '5,/modelo/d' texto.txt</code> = apagrá da linha 5 até a linha que tiver a palavra modelo.<br>
+             <code>sed '/modelo/,+3d' texto.txt</code> = apaga a linha que contá a palavra modelo e as 3 seguintes.<br>
+             <code>sed 'd' texto.txt</code> = se não informar nenhum endereço aplica o comando no arquivo todos, neste caso apagará todas as linhas do arquivo.<br>
+             <h5>Exemplos do sed com o comando cut e com o cat</h5>
+             <a href="http://urs.bira.nom.br/informatica/comando.htm#trcutsed">Veja exemplo de script com sed no comando cut</a><br>
+             <a href="http://urs.bira.nom.br/informatica/script#sed001">Veja o uso do sed em um exemplo junto com o cat</a><br>
+             <code>cat nomedoarquivo | sed '/.*o$/d' &gt; novoarquivo</code><br>
+             Neste exemplo, as linhas terminado com um "o" serão deletadas. Foi utilizada uma expressão regular para casar com qualquer string seguido por um "o" e o fim da linha. A saída (isto é, todas as linhas exceto aquelas terminadas com "o") é direcionada para novoarquivo.<br><br>
+
+             <h5>Exemplos do sed com o comando df</h5>
+             Suponha que em certo servidor o resultado do comando df -h seja:<br>
+             <table>
+             <tbody><tr><td>Filesystem            </td><td>Size  </td><td>Used </td><td>Avail </td><td>Use% </td><td>Mounted on</td></tr>
+             <tr><td>/dev/sda1             </td><td>2.9G  </td><td>2.4G </td><td> 351M </td><td> 88% </td><td>/</td></tr>
+             <tr><td>none                  </td><td>499M  </td><td>   0 </td><td> 498M </td><td>  0% </td><td>/dev/shm</td></tr>
+             <tr><td>/dev/sda2             </td><td> 63G  </td><td> 48G </td><td>  12G </td><td> 80% </td><td>/literatura</td></tr>
+             </tbody></table>
+             E você deseja pegar apenas o valor 80 da coluna Use% da partição /literatura<br>
+             Então execute o comando:<br>
+             <code>df -h | tail + 2 | tr -s " " | cut -d " " -f5 | grep literatura | sed -e 's/%//'</code><br>
+             Explicando: o tail elimina o cabeçalho<br>
+                         o tr deixa apenas um espaço em branco eliminando os excedente<br>
+                         o cut usa como delimitador o espaço em branco " " e pega o campo 5<br>
+                         o grep pega somente a linha onde haja o nome literatura<br>
+                         e o sed troca o sinal de % por nada, deleta ele.<br><br>
+Fonte: <a href="http://aurelio.net/sed/sed-HOWTO">aurelio.net/sed/sed-HOWTO</a><br><br>
+             <h5>Interrompendo o processamento</h5>
+             <code>sed '10q' texto.txt</code> = mostra o arquivo até a linha 10 depois para.<br>
+             <code>sed '/^$/q' texto.txt</code> = mostra o arquivo parando na primeira linha em branco que achar.<br>
+
+             <h5>Invertendo a lógica</h5>
+             <code>sed -n '1,10p'</code> = imprima apenas da linha 1 até a 10<br>
+             <code>sed '11,$d'</code>    = apague da linha 11 até o final<br>
+             Usa-se o caracter ! com o significado de não execute o comando:<br>
+             <code>sed '1,10!d'</code>    = NãO apague da linha 1 até a 10 (ou seja, apague as outras)<br>
+             <code>sed -n '11,$!p'</code> = NãO imprima da linha 11 até o final (ou seja, imprima as outras)<br>
+
+             <h5>Vários comandos de uma vez</h5>
+             Para utilizar vários comandos utiliza-se o ponto e vrigula:<br>
+             <code>sed '5d;10d;/modelo/d' texto.txt</code> = apaga da linha 5 a 10 e as que contém a palavra modelo<br>
+             <code>sed -e '1i começo de tudo' -e '5d' texto.txt</code> = insere a frase começo de tudo antes da primeira linha e apaga a quinta linha do arquivo texto.txt, sendo separados por -e. <br><br>
+
+             <h5>Aspas simples ou aspas duplas</h5>
+             É sempre bom colocar os parametros do sed entre aspas simples, para evitar que o shell os interprete erroneamente:<br>
+             <code>sed 'p' texto.txt</code><br>
+             <code>sed 's/isso/aquilo/' texto.txt</code><br>
+             Exceto quando existir algo que deva ser interpretado, uma variável por exemplo:<br>
+             <code>sed "s/$HOME/aquilo/" texto.txt</code><br><br>
+
+             <h5>Delimitadores</h5>
+             O delimitador padrão é a /, mas se o que tiver que ser substituído também contém uma barra ela deve ser escapada com a barra invertida \<br>
+             <code>sed 's/\/usr\/local\/bin/\/usr\/bin/' texto.txt</code><br>
+             <code>sed '/\/usr\/local\/bin/d' texto.txt</code><br>
+             Para evitar ficar escapando as barras podemos definir outro delimitados, no exemplo abaixo foi os mesmos comandos acima foram escritos usando a virgula:<br>
+             <code>sed 's,/usr/local/bin,/usr/bin,' texto.txt</code><br>
+             <code>sed '\,/usr/local/bin,d' texto.txt</code><br>
+
+             <h5>Ignorar maiúsculas e minúsculas</h5>
+             <code>sed '/root/Id' texto.txt</code> #a opção I ignorar maiúsculas e minúscualas<br>
+             <code>sed 's/root/administrador/Ig' texto.txt</code> #substitui a palavra root por administrador ignorando maiúsculas e minúscualas<br>
+
+             <h5>Lendo e gravando em arquivos externos </h5>
+             <code>sed -e '1r cabecalho.txt' -e '$r rodape.txt' texto.txt</code> # a opção r inclui cabecalho.txt depois da linha 1 e rodape.txt após a última linha.<br>
+
+             <h5>Gravando arquivos</h5>
+             <code>grep 'modelo' texto.txt &gt; modelo.txt</code> # este comando pode ser substituido pelo sed se utilizarmos a opção w:<br>
+             <code>sed '/modelo/w modelo.txt' texto.txt</code> # grava no arquivo modelo.txt as linhas que contém a palavra modelo.<br>
+
+             <h5>Substituição Simples</h5>
+             <code>sed 's/&lt;table bgcolor="#EEFFFF"&gt;/&lt;table&gt;/g' z.htm</code><br>
+             Este recurso de substituir pelo conteúdo de um arquivo é necessário quando o texto a ser incluído é longo ou será executado diversas vezes, caso cotrário o comando acima poderia ser efetuado utilizando apenas a opção s do sed<br>
+
+             <h5>Substituindo um trecho de texto por outro</h5>
+             <code>sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c aqui tinha texto pré-formatado' texto.html</code><br>
+             Com a opção c o sed trocará todo texto que estiver entre &lt;pre&gt; e &lt;/pre&gt; inclusive eles pela frase <code>aqui tinha texto pré-formatado</code>.<br>
+             Suponha agora que tenhamos um arquivo chamado novo.txt com um texto de várias linhas nele, se executarmos o comando abaixo:<br>
+             <code>sed -e '/&lt;\/pre&gt;/r novo.txt' -e '/&lt;pre&gt;/,/&lt;\/pre&gt;/d' texto.html</code><br>
+             o sed deletará o trecho entre &lt;pre&gt; e &lt;/pre&gt; inclusive eles e colocará logo após o &lt;/pre&gt; o texto contido em novo.txt<br>
+             <a href="http://aurelio.net/sed/sed-HOWTO/sed-HOWTO-7.html">Veja mais em aurelio.net</a>
+
+             <h5>Substituindo por quebra de linha ou comentário</h5>
+             <code>sed 's/ /\n/g' texto.txt</code> #substitui todo espaço em branco por uma quebra de linha representada por \n.<br>
+             <code>sed 's/^/# /'  lista.txt</code> #torna cada linha um comentário<br><br>
+             Tomando isto como base, suponha que voce tenha um texto e deseja criar uma lista de todas as palavras usadas nele em ordem alfabetica, uma solução seria:<br><br>
+             <code>sed 's/ /\n/g' recibo.txt | sort -f | uniq -i &gt; recibo1.txt</code><br>
+             Explicando:<br>
+             o sed troca os espaços em branco por quebra de linha, colocando cada palavra em uma linha<br>
+             o sort coloca em ordem alfabetica, a opção -f é para ele ignorar maiúsculas e minúscualas<br>
+             o uniq retira as palavras duplicadas, a opção -i também é para ignorar maiúsculas e minúscualas<br>
+             e por último redirecionamos a saída para um novo arquivo.<br>
+
+             <h5>Incluindo texto de um arquivo após determinada linha de outro</h5>
+             Suponha que um arquivo z.htm que contenha em alguma parte a seguinte linha:<br>
+             <code>&lt;table align="right" bgcolor="#EEFFFF"&gt;</code><br>
+             e pretende-se acrescentar abaixo dela o conteúdo de um arquivo texto chamado novalinha.txt, o comando seria:<br>
+             <code>sed '/&lt;table align="right" bgcolor="#EEFFFF"&gt;/r novalinha.txt' z.htm</code><br>
+             Caso deseje-se apagar a linha do table após a inclusão seria ssim:<br>
+             <code>sed -e '/&lt;table bgcolor="#EEFFFF"&gt;/r novalinha.txt' -e '/&lt;table bgcolor="#EEFFFF"&gt;/d' z.htm</code><br>
+             <h5>Colocando comandos sed em um arquivo:</h5>
+             Cria-se um arquivo com um nome qualquer com os comandos dentro inclusive pode-se usar o caracter # para colocar comentários:<br>
+             # programa.sed: apaga algumas linhas<br>
+<br>
+             # apaga a 5ª linha<br>
+             5d<br>
+<br>
+             # apaga a 10ª linha<br>
+             10d<br>
+<br>
+             # apaga as linhas que contêm a palavra 'comando'<br>
+             /comando/d<br>
+<br>
+             Depois do arquivo programa.sed criado pode-se usá-lo aplicando o comando sed com a opção -f :<br>
+             <code>sed -f programa.sed texto.txt</code><br><br>
+             Outro exemplo substituindo um trecho de um arquivo pelo texto contido em outro:<br><br>
+             Suponha que o conteúdo do arquivo texto.html seja:<br>
+<code>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;center&gt;<br>
+Texto no centro<br>
+&lt;/center&gt;<br>
+&lt;pre&gt;<br>
+Texto fica na<br>
+     tela do jeito<br>
+que<br>
+foi digitado.<br>
+&lt;/pre&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</code>
+             E deseja-se substituir o conteúdo entre &lt;pre&gt; e &lt;/pre&gt; pela <i>frase aqui tinha texto pré-formatado</i><br>
+             Para isso criá-se um arquivo chamado comando.sed com o seguinte conteúdo:<br>
+<code>/&lt;pre&gt;/,/&lt;\/pre&gt;/c \</code><br>
+<code>aqui tinha texto pré-formatado</code><br>
+             Em seguida só executar o comando:<br>
+             <code>sed -f comandos.sed  texto.html</code><br>
+             E será gerado o código:<br>
+<code>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;center&gt;<br>
+Texto no centro<br>
+&lt;/center&gt;<br>
+aqui tinha texto pré-formatado<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</code>
+             <h5>Tornando arquivos sed executáveis</h5>
+             Ainda lembrando o exemplo citando anteriormente no Colocando comandos sed em um arquivo podemos usar a instrução #! que colocamos no início de um script para transformar nosso arquivo sed executável.<br>
+             Isso é possível porque da mesma forma que se colocar-mos #!/bin/sh em um script estamos dizendo ao bash para executar o script com o comando /bin/sh, podemos colocar na primeira linha do arquivo programa.sed<br>
+             a linha <code>#!/bin/sed -f</code>, isso fará com que o arquivo seja automaticamente processado com este comando. Claro que deve-se dar permissão com o chmod +x programa.sed antes.<br>
+             Depois é só executar: <br>
+             <code>./programa.sed texto.txt</code><br>
+             <code>cat texto.txt | ./programa.sed</code><br>
+             <h4>Conhecendo os registradores internos</h4>
+             Um exemplo só para não deixar em branco, melhor e ver em <a href="http://aurelio.net/sed/sed-HOWTO/sed-HOWTO-8.html#ss8.4">aurelio.net 8</a><br>
+             <code>sed '/root/H;$g' /etc/passwd</code><br>
+             A opção H adiciona as linhas que cotenha a palavra root no espaço reserva e recupera-as com a opção g na última linha $.<br>
+             <h5>Emulando outros comandos</h5>
+<blockquote><pre><code>
+comando      |  emulação
+-------------+----------------------------------------
+cat          |  sed :
+head         |  sed 10q
+grep         |  sed /padrão/!d
+grep -v      |  sed /padrão/d
+tac          |  sed 1!G;h;$!d
+tail -1      |  sed $!d
+tr A-Z a-z   |  sed y/ABCDEF...UVWXYZ/abcdef...uvwxyz/
+wc -l        |  sed -n $=      Fonte: <a href="http://aurelio.net/sed/sed-HOWTO/sed-HOWTO-7.html#ss7.6">aurelio.net</a>
+</code></pre></blockquote>
+             <h5>Comados do sed por categoria</h5>
+<blockquote><pre><code>
+                         informações =
+                          marcadores :
+                         comentários #
+                  comandos de edição s i c a y
+           comandos de registradores g G h H x
+               comandos de impressão p P l
+                 comandos de arquivo r w
+                       modificadores g i !
+                         separadores ; -e \n
+                   controle de fluxo b t d D n N q
+                            endereço // ,
+                         limitadores {} \(\)
+             registradores dinâmicos \1 \2 ... \9      Fonte: <a href="http://aurelio.net/sed/sed-HOWTO/sed-HOWTO-4.html#ss4.2">aurelio.net</a>
+</code></pre></blockquote>
+</li>
+<div id="tail"></div>
+<li>tail   - seleciona a parte final de um arquivo<br><br></li>
+<div id="uniq"></div>
+<li>uniq <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a>   -seleciona linhas únicas<br>
+         (=único) Elimina linhas duplicadas em uma entrada classificada.<br>
+         Por exemplo: sort meuarquivo | uniq <br><br></li>
+<div id="wc"></div>
+<li>wc     - conta caracteres, palavras ou linhas em um arquivo<br>
+             exemplo: <code>ls -l | wc -l</code>   #conta a quantidade de arquivos listados por ls<br><br></li>
+<div id="join"></div>
+<li>join <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a> - junta dois arquivos combinando linha por linha<br>
+         Por exemplo: join arquivo1 arquivo2 &gt; arquivo3 <br>
+         Junta linhas de dois arquivos em um campo comum.<br>
+         join é um paralelo com a operação de “join tables” de banco de dados,<br>
+         mas funciona em arquivos textos.  O padrão é juntar no primeiro campo<br>
+         da primeira tabela, e o delimitador default é o caracter espaço.<br>
+         Para ajustar os padrões, eu uso as opções que são descritas em man join. <br><br>
+         Exemplo: Se o conteúdo de arquivo1 era <br>
+         1 Barbara <br>
+         2 Peter <br>
+         3 Stan <br>
+         4 Marie <br>
+         e o do arquivo2 era: <br>
+         2 Dog <br>
+         4 Car <br>
+         7 Cat <br>
+         o arquivo resultante arquivo3 seria: <br>
+         2 Peter Dog <br>
+         4 Marie Car<br><br><br></li>
+<div id="paste"></div>
+<li>paste  <a href="http://urs.bira.nom.br/informatica/comando.htm#onlinux">[¹]</a> - anexa múltiplos arquivos coluna por coluna<br>
+         Por exemplo: paste arquivo1 arquivo2 &gt; arquivo3 <br>
+         Combina dois ou mais arquivos textos em linhas usando o Tab como delimitador<br>
+         use a opção "d=" para especificar seu próprio delimitador. <br>
+         Exemplo. Se o conteúdo do arquivo1 era: <br>
+         1 <br>
+         2 <br>
+         3 <br>
+         e o do arquivo2 era: <br>
+         a <br>
+         b <br>
+         c <br>
+         d <br>
+         o arquivo resultante arquivo3 seria: <br>
+         1    a <br>
+         2    b <br>
+         3    c <br>
+              d<br><br>
+         Com <code>paste -s arquivo1 arquivo2</code> a saída será<br>
+         1  2  3<br>
+         a  b  c  d<br><br>
+         Com <code>paste -s -d";" arquivo1 arquivo2</code> a saída será:<br>
+         1;2;3<br>
+         a;b;c;d<br><br></li>
+<div id="sort"></div>
+<li>sort   - ordena e combina múltiplos arquivos<br><br></li>
+<div id="pr"></div>
+<li>pr     - formata e imprime arquivos<br>
+             <code>relat="arquivo.txt" ; numero=132 ; impres="contab"</code><br>
+             <code>pr -t +$número $relat | lp -oc -d$impres -opr</code><br>
+             Inicia a impressão do arquivo.txt após a página 132 na impressora contab.<br><br></li>
+<div id="lp"></div>
+<li>lp     - imprime na impressora do sistema<br><br></li>
+<div id="chmod"></div>
+<li>chmod  - altera o modo de segurança em um arquivo ou diretório<br><br></li>
+<div id="umask"></div>
+<li>umask  - define o modo de segurança default<br>
+             umask 002  - define como o usuário ira criar os arquivos (por no profile)<br><br></li>
+<div id="bc"></div>
+<li>bc     - <div id="calcbin">Calculadora binária (é uma linguagem para cálculos)</div><br>
+              <p style="border: solid green;  border-width: 2px;">
+              Comandos definidos em bc:<br><br>
+              Adição, subtração, multiplicação, divisão. <br>
+              % (resto da divisão) <br>
+              ^ (potenciação) <br>
+              sqrt(x) (raiz quadrada de x) <br><br>
+              Se entrar com bc -l há também os comandos:<br><br>
+              s(x): o seno de x (x em radianos) <br>
+              c(x): o cosseno de x (x em radianos) <br>
+              a(x): o inverso da tangente de x (retorna radianos). (Veja um exemplo com o valor de pi)<br>
+              Se y = tangente de x (tg x), a(y) = x <br>
+              l(x): o logaritmo natural de x. (ln x) <br>
+              e(x): a função exponencial ( e^x ) (exp x) <br><br>
+              last (último resultado) pode-se usar o caracter "." (ponto) também<br><br>
+              se você entrar com bc e digitar 2/3 aparecerá o resultado como 0<br>
+              se você entrar com bc -l e digitar 2/3 aparecerá o resultado como .66666666666666666666<br>
+              se você entrar com bc ou bc -l e digitar scale=3 e em seguida 2/3 aparecera .666<br><br>
+              Pode-se usar obase e ibase para mudar a base numérica:<br>
+              <code>echo "obase=2 ; 11" | bc</code> # resultará em 1011 pois convertemos o numero 11 em base decimal para binário<br>
+              <code>echo "ibase=2 ; 11" | bc</code> # resultará em 3    pois convertemos o número 11 em binário para decimal<br>
+              podemos usar todas as bases: 2 (binário) 8(octal) 10(decimal) 16(hexadecimal)... etc<br><br>
+              Podemos usar: <code>z=$(echo "100 * 2" | bc ) ; echo $z</code>   # para atribuirmos um valor a z<br>
+              Poderia ser : <code>z=`echo "100 * 2" | bc` ; echo $z</code>     # para atribuirmos um valor a z<br>
+              Podemos usar: <code>echo "100 * 2" | bc</code>                   # para ver o valor diretamente<br>
+              Um exemplo bem interessante que consta no manul e bc (man bc) é esse de calcular pi<br>
+              <code>pi=$(echo "scale=10; 4*a(1)" | bc -l)</code><br>
+              Um exemplo meu é o de calcular a proporção áurea, razão áurea ou número de ouro<br>
+              <code>numero_de_ouro=$(echo "scale=10 ; (1 + sqrt(5)) / 2" | bc -l)</code><br>
+              Em ambos os casos basta variar o valor de scale para conseguir os números com mais casas decimais<br><br>
+              <a href="http://www.vivaolinux.com.br/artigos/verArtigo.php?codigo=4720&amp;pagina=1"> Veja mais sobre bc...</a><br><br>
+              <a href="http://urs.bira.nom.br/informatica/lua.htm">Para mais calculos veja a linguagem de programação lua</a><br><br>
+              </p>
+<br><br></li>
+<div id="scale"></div>
+<li>scale - Determinar o número de casas decimais. <br>
+<code>echo "scale=1; (25 / 3) + 20" | bc</code><br>
+Resultado: 28.3<br><br><br></li>
+<div id="ssh"></div>
+<li>ssh -  Para efetuar login via ssh<br>
+<code>ssh root@200.223.79.179</code><br></li>
+<div id="telnet"></div>
+<li>telnet - Para efetuar login via telnet<br>
+        <code>telnet 192.168.0.10</code> (servidor de dados)<br>
+        <code>telnet 192.168.0.1</code>  (servidor de e-mail)<br><br></li>
+<div id="scp"></div>
+<li>scp Copiar arquivo de seu micro para outro remoto via scp<br>
+        <code>scp resofc.zip root@192.168.5.1:/literatura/dat0/temp</code><br><br></li>
+<div id="cron"></div>
+<li>cron - Agenda tarefas<br>
+<table class="mudatr">
+<tbody><tr><td><code>atributos do cron (crontab)</code></td></tr>
+<tr><td>minuto (0-59)</td><td>hora (0-23)</td><td>dia do mes (0-31)</td><td>mes (1-12)</td><td>dia da semana (0-6)</td></tr>
+<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><td colspan="5">-l usuário -- lista as tarefas agendadas para o usuário</td></tr>
+<tr><td colspan="5">-e usuário -- edita o agendador</td></tr>
+<tr><td colspan="5">-d usuário -- apaga o arquivo do usuário</td></tr>
+<tr><td colspan="5">-c diretório -- especifica um diretório para o Crontab</td></tr>
+<tr><td colspan="5"><code>Exemplo: 30 14 * * Fri /bin/mail -s "TGIF" bira@teste.ok%RECEBIDO%%ok.</code></td></tr>
+<tr><td colspan="5">Exemplos de <a href="http://pt.wikipedia.org/wiki/Crontab">Wikipedia</a></td></tr>
+<tr><td colspan="5"><code>  00 * * * * /bin/script               </code>Todo dia de hora em hora (hora cheia)</td></tr>
+<tr><td colspan="5"><code>  00-59/5 * * * * /bin/script          </code>De cinco em cinco minutos todos os dias (note a divisão por 5 do intervalo 00-59)</td></tr>
+<tr><td colspan="5"><code>  15 10,12,16,18,22 * * * /bin/script  </code>Nas seguintes horas: 10, 12, 16, 18, 22 aos 15 minutos da hora</td></tr>
+<tr><td colspan="5"><code>  25 19 01-05 * * /bin/script          </code>Nos primeiros cinco dias do mês às 19:25</td></tr>
+<tr><td colspan="5"><code>  00 00,12 * * 1-5 /bin/script         </code>De segunda a sexta ao meio-dia e a meia-noite</td></tr>
+<tr><td colspan="5"><code>  00 2 * * mon,wed,fri /bin/script     </code>Script rodar Segunda,Quarta,Sexta às 2 horas</td></tr>
+<tr><td colspan="5"><code>  00 3 * * tue,thu /bin/script         </code>Script para rodar Terça,Quinta às 3 horas</td></tr>
+
+</tbody></table></li>
+<br><br>
+<div id="cpio"></div>
+<li>cpio  copia entrada/saída<br><br>
+    <code>Find . -print | cpio -ovcB &gt; /dev/rmt/qbkpt</code>   Levanta<br><br>
+    <code>cpio -itv &lt; /dev/rmt/qbkpt</code>                    Ler<br><br>
+    <code>cpio -icvumdB &lt; /dev/rmt/qbkpt</code>                Baixar<br><br>
+    <code>cpio -icvumdB &lt; "*TRS*"/dev/rmt/qbkpt</code>         Baixar<br><br>
+    <code>cpio -itvB &lt; /dev/rmt/0b</code>                      Ler fita Dat<br><br>
+    <code>cpio -icvB &lt; /dev/rmt/0b</code>                      Baixar fita Dat<br><br></li>
+<div id="tar"></div>
+<li>tar   - empacotador de arquivos<br>
+    <code>tar -zcvf arqdestino.tar.gz arqorigem</code>  # Comando para empacotar compactando com gzip<br>
+    <code>tar -zxvf arquivo.tar.gz -C /tmp</code>       # Comando para desempacotar o -C /tmp informa o destino dos arquivos extraídos, se for omitido salva a partir do diretório corrente<br>
+    Saiba mais sobre o tar em <a href="http://www.zago.eti.br/tar.html">tar.html</a> ou <a href="http://www.zago.eti.br/tar.txt">tar.txt</a><br><br>
+<br></li>
+<div id="cu"></div>
+<li>cu    chama outro sistema UNIX<br><br></li>
+<div id="ftp"></div>
+<li>ftp   programa de transferência de arquivo (rede)<br><br></li>
+<div id="mail"></div>
+<li>mail   correio eletrônico<br><br></li>
+<div id="rjestatstatus"></div>
+<li>rjestatstatus da entrada remota de job (RJE)<br><br></li>
+<div id="send"></div>
+<li>send   - submissão de job em RJE<br><br></li>
+<div id="rlogin"></div>
+<li>rlogin conexão remota a um sistema na rede<br><br></li>
+<div id="uucp"></div>
+<li>uucp   - programa de comunicação UNIX-a-UNIX<br><br></li>
+<div id="uustat"></div>
+<li>uustat - status de uucp<br><br></li>
+<div id="uuto"></div>
+<li>uuto   - copia de arquivo uucp<br><br></li>
+<div id="uupick"></div>
+<li>uupick - Seleção de arquivo uucp<br><br></li>
+<div id="uux"></div>
+<li>uux    - execução de comando UNIX-a-UNIX<br><br></li>
+<div id="dialog"></div>
+<li>dialog - mostra caixas de dialogo <a href="http://urs.bira.nom.br/informatica/script.htm#dialog">Veja exemplos de script com este comando</a><br><br></li>
+<div id="setterm"></div>
+<li>setterm - muda atributos do terminal<br \="">Exemplo: setterm -foreground white -background blue -store<br><br></li>
+<div id="stty"></div>
+<li>stty - define o modo de operacao do terminal.</li>
+<p style="border: solid blue;  border-width: 2px; padding:15px; margin-right: 50pt; margin-left: 50pt;font-family: courier; color: purple;  background: lavender">
+     -a exibe toda a configuracao atual<br>
+     <code>stty -a | grep intr</code><br><br>
+Veja um exemplo de script que simula um login Linux:<br><br>
+<code>
+#!/bin/bash<br>
+# Simula um login inclusive ocultando a digitacao da senha<br>
+# Autor urs.Bira (urs.bira@uol.com.br)<br>
+# Este script deve ser utilizado de forma etica<br>
+tput clear<br>
+old=`stty -g`   # Salva a configuracao atual do terminal<br>
+# Frases para simular texto de entrada do login Linux Red Hat<br>
+printf "Red Hat Linux release 9 (Shrike)\n"<br>
+printf "Kernel 2.4.20-8 on an i686\n"<br>
+# Funcao login que solicitara usuario e senha<br>
+login ()<br>
+{<br>
+printf "login: " ; read v_usu<br>
+stty -echo intr '^a' # Inibi a exibicao de caracteres no monitor<br>
+printf "Password: " ; read v_sen<br>
+stty $old            # Retorna as configuracoes do terminal que foram salvas<br>
+}<br>
+login  # Chama a funcao login<br>
+printf "\nLogin incorrect\n\n" # Simula que errou a senha<br>
+login  # Chama a funcao login<br>
+# Pega o ip de who am i , no sexto campo e eliminando os parenteses e brancos<br>
+ip=`who am i | tr -s " " | cut -d " " -f6 | tr  "(" " " | tr ")" " "`<br>
+# Mostra a mensagem de ultimo login pegando o dia e mes atuais<br>
+printf "\nLast login: `date "+%a"` `date "+%b"` `date "+%e"` 10:16:23 from ${ip}\n"<br>
+</code>
+</p>
+<div id="tput"></div>
+<li>tput - altera o modo de exibicao de dados do monitor , tipo de cursor</li>
+<p style="border: solid blue;  border-width: 2px; padding:15px; margin-right: 50pt; margin-left: 50pt; color: purple;  background: silver">
+<code>bel              </code>gera o caracter "bel" do terminal<br>
+<code>blink            </code>mostra piscante<br>
+<code>bold             </code>mostra negrito<br>
+<code>clear            </code>apaga a tela<br>
+<code>cols             </code>ecoa numeor de colunas na tela<br>
+<code>cup l c          </code>move cursor para linha l coluna c<br>
+<code>dim              </code>escurece a tela<br>
+<code>ed               </code>apaga ate o fim da tela<br>
+<code>el               </code>apaga ate o final da linha<br>
+<code>lines            </code>ecoa numero de linhas na tela<br>
+<code>smso             </code>inicia modo de destaque<br>
+<code>rmso             </code>termina modo de destaque<br>
+<code>smul             </code>inicia modo sublinhado<br>
+<code>rmul             </code>termina modo sublinhado<br>
+<code>rev              </code>reverte o video (preto sobre branco)<br><br>
+<code>tput smacs       </code><br>
+<code>tput bold        </code><br>
+<code>tput blink ou rev</code><br>
+<code>tput sgr0        </code> (normal) <br><br>
+<code>tput smso        </code> (negrito)<br>
+<code>tput rmso        </code> (normal) <br><br>
+<code>tput 10 8        </code> (posiciona o cursor na linha 10 coluna 8<br><br>
+Podemos utilizar :<br><br>
+<code>fonte_negrito=`tput smso`<br>
+fonte_normal=`tput rmso`<br>
+echo "${fonte_negrito}texto em negrito${fonte_normal}"<br><br>
+</code>
+Pode-se usar também o comando setterm para mudar atributos de cor:<br>
+<code>setterm -foreground white -background blue -store</code><br>
+No manual do tput há o seguinte exemplo que pode ser digitado na linha de comando do shell:<br><br>
+
+bira&gt; <code>tput -S &lt;&lt;!</code><br>
+bira&gt; <code>clear</code><br>
+bira&gt; <code>cup 10 10</code><br>
+bira&gt; <code>bold</code><br>
+bira&gt; <code>!</code><br><br>
+Veja um exemplo de scripr utilizando os recursos do tput:<br><br>
+<code>
+#!/bin/bash<br>
+# Cria o efeito de que esta limpando a tela de baixo para cima<br>
+# Autor: urs.bira (urs.bira@uol.com.br)<br>
+lintel=`tput lines` #Pega o valor da ultima linha do terminal<br>
+# Um loop que vai da ultima linha da tela ate a linha 0<br>
+for((linhas=${lintel}; linhas &gt;= 0; linhas--));<br>
+do                   # Inicio do loop<br>
+# Cria um efeito de uma linha colorida diferente a cada vez que executa<br>
+segundo=`date "+%S"` # Pega o valor dos segundos<br>
+cor=${segundo:1:2}   # Pega o segundo digito do segundo<br>
+tput cup ${linhas} 0 ; printf "\033[4${cor};3${cor};1m<br>
+urs.biraurs.biraurs.biraurs.biraurs.biraurs.biraurs.biraurs.biraurs.biraurs.bira<br>
+\033[0m"<br>
+tput cup ${linhas} 0 # posiciona na ultima linha e coluna 0<br>
+tput ed              # limpa ate o final da linha<br>
+done                 # Fim do loop<br>
+tput cup 0 0         # posiciona o cursor na linha 0 coluna 0<br>
+tput rev             # Mostra em video reverso<br>
+printf "\t\t`date "+%D %R"`\t`pwd`\n" # Mostra data, hora e pasta atual<br>
+tput rmso            # Mostra normal<br>
+tput el              # Limpa ate o fim da linha caso a linha acima ultrapasse.<br>
+</code>
+</p>
+<div id="xargs"></div>
+<li>xargs - recebe da entrada padrão ou de um comando transformando cada entrada recebida em argumento para outro comando.
+            Na prática ele permite que se execute um comando com o resultado do comando anterior.
+<p style="border: solid blue;  border-width: 2px; padding:15px; margin-right: 50pt; margin-left: 50pt; color: purple;  background: #adfcde">
+Veja abaixo exemplos práticos da utilização do poderoso xargs:
+<br><br><code>file -Lz * | grep ASCII | cut -d":" -f1 | xargs ls -ltr</code><br><br>
+Explicando: o comando file verifica o tipo de cada arquivo o grep
+seleciona apenas aqueles que sejam "ASCII", o cut pega o primeiro campo que são delimitados por ":" o xargs passa para o ls -ltr 
+estes nomes como se escrevessemos ls -ltr nome1.txt nome2.txt nome3.txt..
+<br><br><code>file * | grep ASCII | cut -d":" -f1  | xargs wc -l</code> ou dessa outra forma<br>
+<code>wc -l ‘file * | grep ASCII | cut -d":" -f1‘</code><br><br>
+Conta quantas linhas tem cada arquivo ASCII que estiver na pasta, gera uma lista assim:<br><br>
+ 111 capa_manual_linux.txt<br>
+ 757 capitulo_III_manual.txt<br>
+ 390 capitulo_II_manual.txt<br>
+ 214 capitulo_I_manual.txt<br>
+1472 total<br>
+<br><br><code>ls | xargs -t -i mv {} {}.bak</code><br><br>
+Renomeia todos os arquivos da pasta acrescentando a extensão .bak ao final do nome.  [ <span style="background-color:#FFFFCC"><a href="http://urs.bira.nom.br/informatica/comando.htm#tabcomandos">Retorna para lista de comandos</a></span> ]<br><br>
+Mostrará e executrá as linhas abaixo:<br>
+<code>mv capa_manual_linux.txt capa_manual_linux.txt.bak<br>
+mv capitulo_III_manual.txt capitulo_III_manual.txt.bak<br>
+mv capitulo_II_manual.txt capitulo_II_manual.txt.bak<br>
+mv capitulo_I_manual.txt capitulo_I_manual.txt.bak</code><br><br>
+<code>-i</code> determina a substituição de <code>{}</code> pelo nome de cada arquivo.<br>
+<code>-t</code> mostra o comando antes de executá-lo.<br>
+<br><br><code>file * | grep ASCII | cut -d":" -f1 | xargs vi</code><br><br>
+Edita os arquivos um a um com o vi
+<br><br><code>file * | grep ASCII | cut -d":" -f1 | xargs -p vi</code><br><br>
+É como o anterior só que acrescetando a opção <code>-p</code> ele pergunta antes de executar o vi (responde y ou n)<br>
+Um caso particular é quando o resultado passado para xargs não gera nenhum valor, nestes casos podemos tratar usando<br>
+<code>-r</code> que encerra o comando sem executar nada. Exemplo:<br>
+<code>file * | grep XGVGXGVG | cut -d":" -f1 | xargs -t -r wc -l</code><br>
+Este comando não executará nada. mas se colocar como abaixo sem o <code>-r</code>:<br>
+<code>file * | grep XGVGXGVG | cut -d":" -f1 | xargs -t wc -l</code><br>
+mesmo não havendo arquivos tipo XGVGXGVG ele mostrará como resultado as linhas:<br>
+<code>wc -l</code><br>
+0<br>
+<br><br><code>file * | grep ASCII | cut -d":" -f1 | xargs -t -n2 ls -ltr</code><br><br>
+<code>-n</code> limita a quantidade de argumentos por linha, neste exemplo serão passados de 2 em 2 como mostrado abaixo:<br><br>
+<code>ls -ltr c_manual_linux.txt cap_III_manual.txt</code><br><br>
+-rw-r--r--    1 bira     literatura      25738 Jan  2 08:53 cap_III_manual.txt<br>
+-rw-r--r--    1 bira     literatura        999 Jan  2 09:44 c_manual_linux.txt<br><br>
+<code>ls -ltr cap_II_manual.txt cap_I_manual.txt</code><br><br>
+-rw-r--r--    1 bira     literatura       7276 Jan  2 08:52 cap_I_manual.txt<br>
+-rw-r--r--    1 bira     literatura      13260 Jan  2 08:53 cap_II_manual.txt<br>
+</p>
+</li></ul>
+
+<div id="ceshell"><table bgcolor="#dfefde" border="0">
+<tbody><tr><td colspan="3" class="tdazul">Comandos embutidos do Shell</td></tr>
+<tr><td>Shell Bourne/Korn               </td><td>Shel C  </td><td>Descrição</td></tr>
+<tr><td>    :                           </td><td>:       </td><td>- comando nulo</td></tr>
+<tr><td>                                </td><td><div id="alias">alias</div>   </td><td>- cria um apelido de nome de comando </td></tr>
+<tr><td>                                </td><td>        </td><td>  (alias dir `ls -l`)</td></tr>
+<tr><td>                                </td><td>bg      </td><td>- roda o comando corrente no segundo plano</td></tr>
+<tr><td>    break                       </td><td><div id="break">break</div>   </td><td>- sai do laço for ou while</td></tr>
+<tr><td>                                </td><td><div id="breaksw">breaksw</div> </td><td>- sai de um switch</td></tr>
+<tr><td>    cd                          </td><td>        </td><td>- muda de diretório</td></tr>
+<tr><td>    <div id="continue">continue</div>                    </td><td>        </td><td>- continua interação do laço for ou while</td></tr>
+<tr><td>                                </td><td><div id="depault">default</div> </td><td>- caso default em switch</td></tr>
+<tr><td>                                </td><td><div id="dirs">dirs</div>    </td><td>- imprime pilha de diretório</td></tr>
+<tr><td>                                </td><td><div id="echo">echo</div>    </td><td>- escreve argumentos em stdout</td></tr>
+<tr><td>                                </td><td>      </td><td>-n não gera avanço de linha</td></tr>
+<tr><td>                                </td><td>      </td><td>E podemos utilizar as seguintes sequências </td></tr>
+<tr><td>                                </td><td>      </td><td>de escape</td></tr>
+<tr><td>                                </td><td>      </td><td>\\b retrocesso            ( equivale a CTRL H )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\f alimentação de pagina ( equivale a CTRL L )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\n avanco de linha       ( equivale a CTRL J )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\r carriae return        ( equivale a CTRL R )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\t tab                   ( equivale a CTRL I )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\\ barra invertida       ( equivale a \ )</td></tr>
+<tr><td>                                </td><td>      </td><td>\\xxx valor octal -&gt; ascii</td></tr>
+<tr><td>                                </td><td>      </td><td>\\c não termina com o alimentador de linha</td></tr>
+<tr><td>                                </td><td>      </td><td><i>\\N Null Character </i> +</td></tr>
+<tr><td>                                </td><td>      </td><td><i>\\d Delay 2 seconds</i> |Estes não são do Shell C</td></tr>
+<tr><td>                                </td><td>      </td><td><i>\\s space Character</i> +</td></tr>
+<tr><td>    <div id="eval">eval</div>   </td><td>      </td><td>  - avalia e executa argumentos</td></tr>
+<tr><td>                                </td><td>      </td><td>#Para forçar a execução de uma variável utiliza-se </td></tr>
+<tr><td>                                </td><td>      </td><td>eval</td></tr>
+<tr><td>                                </td><td>      </td><td>set v_ler = "cat bira.txt"</td></tr>
+<tr><td>                                </td><td>      </td><td>eval v_ler  (O shell retornara o resultado de cat bira.txt)</td></tr>
+<tr><td>                                </td><td>      </td><td>
+Se o conteúdo de bira.txt for:<br>
+<code>#-----------------------------------------<br>
+# Observe que as linhas terminam com ponto e vírgula<br>
+date ;<br>
+echo -n "Digite valor: " ;<br>
+read u ;<br>
+echo "Valor digitado foi $u"<br>
+#-----------------------------------------<br></code>
+<code>eval "cat bira.txt"</code> mostrará o conteúdo do arquivo<br>
+<code>v_ler="cat bira.txt" ; eval $v_ler</code> mostrará o conteúdo do arquivo<br>
+<code>v_ler="cat bira.txt" ; $v_ler</code> também mostrará o conteúdo do arquivo<br>
+<code>eval `cat bira.txt`</code> executará os comandos contidos no arquivo (no final de cada linha deve haver um ;)<br>
+<code>v_ler=`cat bira.txt` ; eval $v_ler</code> também executará os comandos (mesma observação do anterior)<br>
+<code>v_ler=`cat bira.txt` ; $v_ler</code> Ocorrerá mensagem de erro<br>
+</td></tr>
+<tr><td>exec                            </td><td>      </td><td>- executa os argumentos</td></tr>
+<tr><td><div id="exit">exit</div>       </td><td>exit    </td><td>- sai do programa de shell</td></tr>
+<tr><td><div id="export">export</div>   </td><td>        </td><td>- cria uma variável global</td></tr>
+<tr><td>                                </td><td>fg      </td><td>- traz um comando para o primeiro plano</td></tr>
+<tr><td><a href="http://urs.bira.nom.br/informatica/script.htm#for">for</a></td><td>foreach </td><td>- executa laço foreach</td></tr>
+<tr><td>                                </td><td>glob    </td><td>- realiza expansão de nome de arquivo</td></tr>
+<tr><td>                                </td><td>goto    </td><td>- vai ate um rótulo dentro do programa do shell</td></tr>
+<tr><td>                                </td><td><div id="history">history</div> </td><td>- mostra lista de comandos executados gravados no historico</td></tr>
+<tr><td><div id="if">if</div>           </td><td>if      </td><td>- decisão if-then-else</td></tr>
+<tr><td>                                </td><td>jobs    </td><td>- lista tarefas ativas</td></tr>
+<tr><td>                                </td><td><div id="kill">kill</div>    </td><td>- elimina uma tarefa - <a href="http://urs.bira.nom.br/informatica/script.htm#kill">Exemplo de script matar_processo</a></td></tr>
+<tr><td>                                </td><td><div id="skill">Skill</div></td><td>- Congela sem encerrar a tarefa<br>
+skill -STOP 19573 = Congela o processo<br>
+skill -CONT 19573 = Descongela o processo<br>
+</td></tr>
+<tr><td>                                </td><td>        </td><td>- Para ver o número do processo corrente é , echo $$.</td></tr>
+<tr><td>                                </td><td>        </td><td>- Se o processo for o último colocado em segundo plano(background), echo $! mostra o número dele.</td></tr>
+<tr><td>                                </td><td><div id="limit">limit</div>   </td><td>- limita o uso de recurso de uma tarefa</td></tr>
+<tr><td>                                </td><td><div id="login">login</div>   </td><td>- termina o shel e ativa login</td></tr>
+<tr><td>                                </td><td><div id="logout">logout</div>  </td><td>- termina a conexão de um shell</td></tr>
+<tr><td><div id="newgrp">newgrp</div>   </td><td>        </td><td>- passa para um novo grupo de usuário</td></tr>
+<tr><td>                                </td><td><div id="nice">nice</div>    </td><td>- muda a prioridade de um comando</td></tr>
+<tr><td>                                </td><td><div id="nohup">nohup</div>   </td><td>- ignora hung ups</td></tr>
+<tr><td>                                </td><td><div id="notify">notify</div>  </td><td>- notifica ao usuário quando o status de uma tarefa  mudar</td></tr>
+<tr><td>                                </td><td><div id="onintr">onintr</div>  </td><td>- controla o processamento do shell na interrupção</td></tr>
+<tr><td>                                </td><td><div id="popd">popd</div>    </td><td>- retira da pilha de diretório</td></tr>
+<tr><td>                                </td><td><div id="pushd">pushd</div>   </td><td>- coloca um diretório na pilha</td></tr>
+<tr><td><div id="read">read</div>       </td><td>        </td><td>- le um linha de stdin</td></tr>
+<tr><td><div id="readonly">readonly</div>       </td><td>        </td><td>- muda uma variável para somente leitura</td></tr>
+<tr><td>                                </td><td><div id="repeat">repeat</div>  </td><td>- repete um comando n vezes</td></tr>
+<tr><td><div id="select">select</div>   </td><td>        </td><td>- Cria um menu <a href="http://urs.bira.nom.br/informatica/script.htm#select">Veja exemplo de script</a> <a href="http://urs.bira.nom.br/informatica/script.htm#select1">Exemplo 2</a></td></tr>
+<tr><td>set                             </td><td>        </td><td>- define variáveis de ambiente do shell</td></tr>
+<tr><td>                                </td><td>        </td><td>- <a href="http://urs.bira.nom.br/informatica/script.htm#set">Clique aqui para entender o set</a></td></tr>
+<tr><td>                                </td><td><div id="set">set</div>     </td><td>- define uma variável local no shell C</td></tr>
+<tr><td>                                </td><td><div id="setenv">setenv</div>  </td><td>- define uma variável global no shell C</td></tr>
+<tr><td>shift                           </td><td><div id="shift">shift</div>   </td><td>- desloca os parametros do Shell $* ou $argv</td></tr>
+<tr><td>                                </td><td><div id="source">source</div>  </td><td>- le e executa um arquivo</td></tr>
+<tr><td>                                </td><td><div id="stop">stop</div>    </td><td>- para um processo em segundo plano</td></tr>
+<tr><td>                                </td><td><div id="suspend">suspend</div> </td><td>- para o Shell</td></tr>
+<tr><td>                                </td><td><div id="switch">switch</div>  </td><td>- decisa case</td></tr>
+<tr><td><div id="test">test</div>       </td><td>        </td><td>- avalia expressões condições <a href="http://urs.bira.nom.br/informatica/script.htm#obstest">Veja exemplificação e comentário</a></td></tr>
+<tr><td><div id="times">times</div>     </td><td><div id="time">time</div>    </td><td>- mostra tempos de execução</td></tr>
+<tr><td><div id="trap">trap        </div></td><td>        </td><td>- gerencia signals de execução</td></tr>
+<tr><td>                                </td><td>        </td><td>
+<code># Se digitar Ctrl C apresenta mensagem. So sai com Ctrl \ <br \="">
+echo "teste de captura do sinal intr"<br \="">
+trap "echo recebido interrupt" 02<br \="">
+while :<br \="">
+do<br \="">
+   :<br \="">
+done<br \="">
+trap 02</code>
+</td></tr>
+</tbody></table>
+<div id="tabtrap"><table border="0">
+<tbody><tr><td colspan="3" align="center">Tabela de sinais do trap</td></tr>
+<tr><td>    0  Termino normal     </td><td>  7  Instrução EMT              </td><td>  14 Alarme do relogio     </td></tr>
+<tr><td>    2  Interrupção (break)</td><td>  9  Corte não apanhado         </td><td>  16 Definido pelo usuário </td></tr>
+<tr><td>    3  Termino (quit)     </td><td>  10 Erro de barramento         </td><td>  17 Definido pelo usuário </td></tr>
+<tr><td>    4  Instrução ilegal   </td><td>  11 Violação de segmentação    </td><td>  18 Morte processo-filho  </td></tr>
+<tr><td>    5  Armadilha de trace </td><td>  12 Erro de chamada do sistema </td><td>  19 Falta de energia      </td></tr>
+<tr><td>    6  Instrução IOT      </td><td>  13 Conduto não terminado      </td><td>                           </td></tr>
+<tr><td colspan="3" align="center">Ex.: trap (rm *.tmp;exit 1) 1 2 3 14 15</td></tr>
+</tbody></table></div>
+<table>
+<tbody><tr><td>Shell Bourne/Korn               </td><td>Shel C  </td><td>Descrição</td></tr>
+<tr><td><div id="ulimit">ulimit</div>       </td><td>        </td><td>- limita tamanhos de arquivo gravados por processo-filho</td></tr>
+<tr><td><div id="umask">umask</div>         </td><td>        </td><td>- define segurança default para arquivos e diretórios</td></tr>
+<tr><td>                                    </td><td><div id="unalias">unalias</div> </td><td>- descarta apelidos</td></tr>
+<tr><td>                                    </td><td><div id="unlimit">unlimit</div> </td><td>- remove limitações sobre os recursos</td></tr>
+<tr><td>                                    </td><td><div id="unset">unset</div>   </td><td>- desativa uma variável local</td></tr>
+<tr><td>                                    </td><td><div id="unsetenv">unsetenv</div></td><td>- desativa uma variável global</td></tr>
+<tr><td><div id="until">until</div>              </td><td>        </td><td>- laço UNTIL</td></tr>
+<tr><td><div id="wait">wait</div>               </td><td>        </td><td>- espera um processo em segundo plano ser completado</td></tr>
+<tr><td><div id="while"></div><a href="http://urs.bira.nom.br/informatica/script.htm#while">while</a></td><td>while   </td><td>- laço WHILE</td></tr>
+<tr><td>                                    </td><td>%job    </td><td>- traz uma tarefa em segundo plano para o primeiro</td></tr>
+<tr><td><div id="expr">expr</div>                                </td><td>@       </td><td>- mostra ou define variáveis do Shell</td></tr>
+<tr><td></td><td></td><td>if expr $a = $b</td></tr>
+<tr><td></td><td></td><td>if expr "${nome}" = "Bira"</td></tr>
+<tr><td></td><td></td><td>a=`expr $a + 1`</td></tr>
+<tr><td></td><td></td><td>a=`expr "$a" + 1`</td></tr>
+<tr><td></td><td></td><td>count=`expr "$count" + 1`</td></tr>
+<tr><td></td><td></td><td>expr index abcdef c  #posição de c na lista</td></tr>
+<tr><td></td><td></td><td> </td></tr>
+<tr><td></td><td></td><td>Para executar operações matematicas utilize expr</td></tr>
+<tr><td></td><td></td><td>foo=`expr $foo + 1` #soma um à variável foo</td></tr>
+<tr><td></td><td></td><td>expr 2 + 5 \* 1 ( O shell retornara 7)</td></tr>
+<tr><td></td><td></td><td>expr length "Casa"</td></tr>
+<tr><td></td><td></td><td>Saída: 4</td></tr>
+<tr><td></td><td></td><td>Os operadores sao: + adição  - subtração  / divisão  \* multiplicação  % resto<br>
+<a href="http://urs.bira.nom.br/informatica/comando.htm#calcbin">Para mais calculos veja a calculadora binária bc</a>
+</td></tr>
+</tbody></table></div>
+<div id="varhell"><table width="100%">
+<tbody><tr><td colspan="3" class="tdazul">Variáveis do Shell</td></tr>
+<tr><td>Shell Bourne/Korn           </td><td>Shel C  </td><td>Descrição</td></tr>
+<tr><td>CDPATH              </td><td>cdpath     </td><td>- procura caminho para cd</td></tr>
+<tr><td>                    </td><td>cwd        </td><td>- nome do caminho completo do diretório corrente</td></tr>
+<tr><td>HOME                </td><td>home       </td><td>- nome do caminho do diretório de conexão do usuário</td></tr>
+<tr><td>PATH                </td><td>path       </td><td>- o caminho de pesquisa do Shell para os comandos</td></tr>
+<tr><td>PS1                 </td><td>prompt     </td><td>- a cadeia de prompt primaria "$" para sistemas Shell</td></tr>
+<tr><td>                    </td><td>           </td><td>  Bourne/Korn "hostname%" para sistemas Shell C</td></tr>
+<tr><td>                    </td><td>           </td><td>  "#" para superusuário</td></tr>
+<tr><td>                    </td><td>           </td><td>  </td></tr>
+<tr><td>                    </td><td>           </td><td>  \w	 current working directory</td></tr>
+<tr><td>                    </td><td>           </td><td>  \W	 last element of current working directory</td></tr>
+<tr><td>                    </td><td>           </td><td>  \u	 user name</td></tr>
+<tr><td>                    </td><td>           </td><td>  \h	 host name</td></tr>
+<tr><td>                    </td><td>           </td><td>  \d	 current date</td></tr>
+<tr><td>                    </td><td>           </td><td>  \t 	 current time</td></tr>
+<tr><td>                    </td><td>           </td><td>  Exemplo:<br>export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]"</td></tr>
+<tr><td>PS2                 </td><td>           </td><td>- a cadeia de prompt secundaria</td></tr>
+<tr><td>IFS                 </td><td>           </td><td>- separadores de campo internos </td></tr>
+<tr><td>                    </td><td>           </td><td>  (espacos, tab, nova linha)</td></tr>
+<tr><td>                    </td><td>history    </td><td>- número de comandos guardados pela historia</td></tr>
+<tr><td>                    </td><td>ignoreeof  </td><td>- ignora fim de arquivo</td></tr>
+<tr><td>                    </td><td>noclobber  </td><td>- não grava sobre arquivos existentes</td></tr>
+<tr><td>                    </td><td>noglob     </td><td>- inibe a expansão do nome de arquivo</td></tr>
+<tr><td>$#                  </td><td>$#argv     </td><td>- número de argumentos posicionais</td></tr>
+<tr><td>$0                  </td><td>$0         </td><td>- nome do comando</td></tr>
+<tr><td>$1,$2...            </td><td>$1,$2...   </td><td>- argumentos posicionais</td></tr>
+<tr><td>                    </td><td>$argv[n]   </td><td>- argumentos posicionais</td></tr>
+<tr><td>$*                  </td><td>$*,$argv[*]</td><td>- $1,$2...</td></tr>
+<tr><td>$@                  </td><td>           </td><td>- $1,$2...</td></tr>
+<tr><td>$-                  </td><td>           </td><td>- opções de Shell do comando set</td></tr>
+<tr><td>$?                  </td><td>$status    </td><td>- codigo de retorno do último comando</td></tr>
+<tr><td>$$                  </td><td>$$         </td><td>- número de processo do comando corrente <a href="http://urs.bira.nom.br/informatica/comando.htm#kill">Ver comando kill</a></td></tr>
+<tr><td>                    </td><td>           </td><td>&gt; temp$$ cria um arquivo com o nome temp+número do </td></tr>
+<tr><td>                    </td><td>           </td><td>processo</td></tr>
+<tr><td>$!                  </td><td>$!         </td><td>- número de processo do último comando em segundo plano <a href="http://urs.bira.nom.br/informatica/comando.htm#kill">Ver comando kill</a></td></tr>
+<tr><td>RANDOM              </td><td>           </td><td>- Gera números randômicos: echo $RANDOM mostrará um número gerado aleatóriamente </td></tr>
+</tbody></table></div>
+<div id="manvarhell"><table width="100%"><tbody><tr><td class="tdamarelo">Manipulando variáveis</td></tr></tbody></table>
+As variáveis do sistema servem para armazenar algum valor (como toda variável),<br>
+mas existem alguns recursos interessantes e úteis no modo de usar tais variáveis.<br>
+O que aprendemos em alguns tutoriais, é que para declarar uma variável do sistema, fazemos: <br>
+<br>
+<code>NOME="VALOR"</code> # Aqui podemos usar valores de outras variáveis<br>
+<code>NOME='VALOR'</code> # NOME terá o valor igual a VALOR<br>
+<code>NOME=`COMANDO`</code> # NOME terá o valor da saída de comando <br>
+<br>
+Isto é o básico, agora teremos algumas coisas mais interessantes: <br>
+<br>
+<br>
+Exemplo de definicioes de outras variáveis:<br>
+<br>
+<code>mes_atual=`date '+%m'`</code>   grava o mes (%m) atual (01-12) na variável<br>
+<code>agora=`date +"%H:%M:%S"` ; echo $agora</code>   resulta em 15:48:55<br>
+para ler use <code>echo ${mes_atual}</code> as chaves sao para evitar erros<br>
+Os caracteres (') delimitando o comando date e o acento grave ou aspas duplas, com eles<br>
+o Shell executa o comando em subshell e substitui o valor resultante no lugar do comando<br>
+A variável <code>PS1="logname&gt;"</code>       o prompt fica o nome do login do usuário<br>
+se colocada assim: <code>PS1=`(#$PWD)--&gt;`</code>  funciona como prompt $p$g<br><br>
+</div>
+<table class="fundobranco">
+<tbody><tr><td>Ação</td><td>Comando</td><td>Saída</td></tr>
+<tr class="fundoamarelo">
+<td>1. Retirar a parte final da string</td>
+<td><code>VAR="minha_foto.jpeg"</code><br> <code>echo ${VAR%.jpeg}</code></td>
+<td>minha_foto</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Como podemos ver, ".jpeg" será excluído. Indicamos o que será excluído depois do caracter '%'.</td>
+</tr><tr class="fundoamarelo">
+<td>2. Retirar a parte inicial da string</td>
+<td><code>VAR="http://www.linux.com.br"</code><br><code>echo ${VAR#http://}</code></td>
+<td>www.linux.com.br</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Indicamos o que será excluído depois do caracter '#'</td>
+</tr><tr class="fundoamarelo">
+<td>3. Mostrar tudo após uma posição</td>
+<td><code>VAR="http://www.g00gle.com</code>"<br><code>echo ${VAR:7}</code></td>
+<td>www.g00gle.com</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Depois do ':' indicamos o índice. Como é em C, o primeiro índice é 0, o<br>segundo é 1 ..., o oitavo é 7 ... etc.</td>
+</tr>
+<tr class="fundoamarelo">
+<td>4. Mostrar entre alguns caracteres</td>
+<td><code>VAR="123456789"</code><br><code>echo ${VAR:2:5}</code></td>
+<td>34567</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Primeiro, faz-se o índice 2, que começa no caracter '3'. No índice 5, a contagem já começa<br> no índice 2 (5 caracteres a partir do índice 2), aí morre no caracter '7'.</td>
+</tr>
+<tr class="fundoamarelo">
+<td>5. Elimina o caracter e tudo a ESQ.</td>
+<td><code>VAR="dominio@linux"</code><br><code>echo ${VAR#*@}</code></td>
+<td>linux</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Bom, aqui indicamos o caracter a ser deletado e tudo a sua esquerda, depois da string "#*".</td>
+</tr>
+<tr class="fundoamarelo">
+<td>6. Elimina o caracter e a DIR.</td>
+<td><code>VAR="dominio@linux"</code><br><code>echo ${VAR%@*}</code></td>
+<td>dominio</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Já aqui, indicamos o caracter a ser deletado e tudo a sua direita, entre a string "%*".</td>
+</tr>
+<tr class="fundoamarelo">
+<td>7. Excluir até um valor</td>
+<td><code>EXC=":senha"</code><br><code>VAR="root:senha:/bin/bash"</code><br><code>echo ${VAR%%$EXC*}</code></td>
+<td>root</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Como o exemplo 6 , só que podemos indicar strings ao invés de somente um caracter. <br>O que será excluído tem que ficar entre "%%" e '*'.</td>
+</tr>
+<tr class="fundoamarelo">
+<td>8. Excluir de um valor até o fim</td>
+<td><code>EXC="senha:"</code><br><code>VAR="root:senha:/bin/bash"</code><br><code>echo ${VAR##*$EXC}</code></td>
+<td>/bin/bash</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Como o exemplo 5, só que podemos indicar strings ao invés de somente um caracter.<br>O que será excluído deve ficar depois do "##*".</td>
+</tr>
+<tr class="fundoamarelo">
+<td>9. Troca de strings</td>
+<td><code>VAR="c1:c2:c3"</code><br><code>echo ${VAR/:/x}</code></td>
+<td><code>c1xc2:c3</code></td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Funciona como o comando sed. Troca a primeira ocorrência de ':' por 'x',<br> para trocar tudo:
+	  <code>echo ${VAR//:/x}</code>  Usa-se duas barras. <br>
+	  Nada impede de trocar por strings: <code>echo ${VAR//:/-CC-}</code> Saída: c1-CC-c2-CC-c3</td>
+</tr>
+<tr class="fundoamarelo">
+<td>10. Comprimento da variável</td>
+<td><code>VAR="tenho 19 caracteres"</code><br><code>echo ${#VAR}</code></td>
+<td>19</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Funciona como o comando expr lenght</td>
+</tr>
+<tr class="fundoamarelo">
+<td>11. Listar nomes de variáveis</td>
+<td><code>echo ${!va*}</code></td>
+<td>listar todas as variáveis que começam com "va"</td>
+</tr>
+<tr class="fundoamarelo">
+<td>12. Listar nomes de variáveis</td>
+<td><code>echo ${VAR:-"eu não existo"}</code></td>
+<td>eu não existo</td>
+</tr><tr>
+<td colspan="3" class="fundocinza">Se VAR for nula, mostra "eu não existo", se não for nula, mostra o conteúdo dela.</td>
+</tr>
+<tr class="fundoverde"><td colspan="3">Fonte: http://www.vivaolinux.com.br/dicas/verDica.php?codigo=7336</td></tr>
+</tbody></table>
+<div id="otc"><table class="fundobranco" width="100%">
+<tbody><tr><td colspan="3" align="center" class="fundoazclaro">Operadores de Teste Comuns</td></tr>
+<tr><td>Shell Bourne/Korn           </td><td>Shel C  </td><td>E verdadeira se...</td></tr>
+<tr><td>      -r arquivo         </td><td>-r arquivo     </td><td>existir arquivo legivel</td></tr>
+<tr><td>      -w arquivo         </td><td>-w arquivo     </td><td>existir arquivo gravavel</td></tr>
+<tr><td>      -x arquivo         </td><td>-x arquivo     </td><td>existir arquivo executavel</td></tr>
+<tr><td>      -b                 </td><td>-b             </td><td>existir arquivo especial de bloco</td></tr>
+<tr><td>      -c                 </td><td>-c             </td><td>existir arquivo especial de caracter</td></tr>
+<tr><td>      -d dir             </td><td>-d dir         </td><td>existir o diretório</td></tr>
+<tr><td>      -e                 </td><td>               </td><td>verdadeiro se o arquivo existir</td></tr>
+<tr><td>      -f                 </td><td>               </td><td>verdadeiro se o arquivo contem texto</td></tr>
+<tr><td>      -o                 </td><td>               </td><td>verdadeiro se o usuário for o dono</td></tr>
+<tr><td>      -s arquivo         </td><td>! -z arquivo   </td><td>arquivo existir e tiver dados</td></tr>
+<tr><td>                         </td><td>-z             </td><td>arquivo existir e não tiver dados</td></tr>
+<tr><td>      -z cadeia          </td><td>               </td><td>tamanho da cadeia = 0 arquivo vazio</td></tr>
+<tr><td>      -n cadeia          </td><td>               </td><td>tamanho da cadeia &gt; 0</td></tr>
+<tr><td>      cad1 = cad2        </td><td>==             </td><td>cadeia 1 igual a cadeia 2</td></tr>
+<tr><td>      cad1 != cad2       </td><td>!=             </td><td>cadeia 1 diferente a cadeia 2</td></tr>
+<tr><td>      "cadeia"           </td><td>               </td><td>cadeia não nula</td></tr>
+</tbody></table></div>
+<div id="cn"><table class="fundobranco" width="100%">
+<tbody><tr><td colspan="3" align="center" class="fundoazclaro">Comparações Numericas</td></tr>
+<tr><td>Shell Bourne/Korn           </td><td>Shel C  </td><td>Significa</td></tr>
+<tr><td>      -eq                </td><td>==             </td><td>igual (equal)</td></tr>
+<tr><td>      -ne                </td><td>!=             </td><td>diferente (not equal)</td></tr>
+<tr><td>      -gt                </td><td>&gt;          </td><td>maior que (greather than)</td></tr>
+<tr><td>      -ge                </td><td>&gt;=         </td><td>maior ou igual a (greater or equal)</td></tr>
+<tr><td>      -lt                </td><td>&lt;          </td><td>menor que (less than)</td></tr>
+<tr><td>      -le                </td><td>&lt;=         </td><td>menor ou igual a (less or equal)</td></tr>
+<tr><td>      !                  </td><td>!              </td><td>não</td></tr>
+<tr><td>      -a                 </td><td>&amp;&amp;     </td><td>e</td></tr>
+<tr><td>      -o                 </td><td>||             </td><td>ou</td></tr>
+<tr><td>      (...)              </td><td>(...)          </td><td>agrupamento para precedencia</td></tr>
+<tr><td>                         </td><td>Com variáveis internas</td><td></td></tr>
+<tr><td>                         </td><td>%              </td><td>modulo</td></tr>
+<tr><td>                         </td><td>++             </td><td>soma 1</td></tr>
+<tr><td>                         </td><td>--             </td><td>decrementa 1</td></tr>
+</tbody></table></div>
+<div id="res"><table class="fundobranco" width="100%">
+<tbody><tr><td colspan="3" align="center" class="fundoazclaro">Redirecionamento de Entrada e Saida</td></tr>
+<tr><td>Shell Bourne/Korn           </td><td>Shel C  </td><td>Ação</td></tr>
+<tr><td>&lt; arquivo               </td><td>&lt; arquivo           </td><td>toma stdin de um arquivo</td></tr>
+<tr><td>&gt; arquivo               </td><td>&gt; arquivo           </td><td>coloca stdout em um novo arquivo</td></tr>
+<tr><td>&gt;&gt; arquivo          </td><td>&gt;&gt; arquivo      </td><td>anexa a um arquivo existente (ou o cria)</td></tr>
+<tr><td>&lt;&lt; delimitador      </td><td>&lt;&lt; delimitador  </td><td>toma stdin do Shell ate o delimitador</td></tr>
+<tr><td>4&lt; arquivo              </td><td>                        </td><td>abre arquivo como descritor de arquivo 4</td></tr>
+<tr><td>&lt;&amp;4                 </td><td>                        </td><td>le do descritor de arquivo 4</td></tr>
+<tr><td>2&gt; arquivo              </td><td>                        </td><td>coloca o stderr em um novo arquivo</td></tr>
+<tr><td>&gt;&amp;3                     </td><td>                    </td><td>escreve no descritor de arquivo 3</td></tr>
+<tr><td>0&lt;&amp;4                    </td><td>                    </td><td>usa descritor de arquivo como stdin</td></tr>
+<tr><td>2&gt;&amp;1                    </td><td>&gt;&amp;          </td><td>reune stdout com stderr</td></tr>
+<tr><td>2&gt;&gt;&amp;1               </td><td>&gt;&gt;&amp;     </td><td>anexa stdout a stderr</td></tr>
+<tr><td>                            </td><td>&gt;!arquivo           </td><td>grava sobre noclobber e cria novo arquivo</td></tr>
+<tr><td>                            </td><td>&gt;&gt;!arquivo      </td><td>grava sobre noclobber e anexa a um novo arquivo</td></tr>
+<tr><td>&lt;&amp;-                     </td><td>&lt;&amp;-         </td><td>fecha descritor de arquivo 0 (stdin)</td></tr>
+<tr><td>2&gt;&amp;-                    </td><td>                    </td><td>fecha descritor de arquivo 2 (stderr)</td></tr>
+<tr><td>2|                          </td><td>                        </td><td>canaliza stderr para o próximo comando</td></tr>
+<tr><td>2&gt;&amp;1|                   </td><td>|&amp;              </td><td>reune stderr e stdin e canaliza os resultados</td></tr>
+</tbody></table></div>
+<div id="vi1"><table class="fundobranco">
+<tbody><tr><td colspan="3" align="center" class="fundoazclaro">Alguns comandos do editor vi do unix / linux</td></tr>
+<tr><td>Comando</td><td>Ação</td></tr>
+<tr><td>a        </td><td>-incluir apos a posição do cursor</td></tr>
+<tr><td>A        </td><td>-incluir apos o último caracter da linha atual</td></tr>
+<tr><td><code>:ln append<br>\escrever o texto aqui<br>.</code></td><td>adicionar texto em ln+1, ln é o número da linha, escrever o texto após o comando<br>(ponto solitário na última linha indica fim de comando) Fonte: (<a href="http://aurelio.net/doc/vim/vimcard.txt">vimcard.txt</a>)</td></tr>
+<tr><td><code>:ln insert<br>\escrever o texto aqui<br>.</code></td><td>adicionar texto em ln,  ln é o número da linha, escrever o texto após o comando <br>(ponto solitário na última linha indica fim de comando) Fonte: (<a href="http://aurelio.net/doc/vim/vimcard.txt">vimcard.txt</a>)</td></tr>
+<tr><td>b        </td><td>-move o cursor para o início da próxima palavra a esquerda</td></tr>
+<tr><td>B        </td><td>-idem ( b )</td></tr>
+<tr><td>C        </td><td>-substitui os caracteres da posição do cursor ao fim da linha atual, entra no modo de inserção</td></tr>
+<tr><td>cc       </td><td>-apaga todos os caracteres da linha atual e entra no modo de inserção</td></tr>
+<tr><td>cw       </td><td>-apagar até o fim da palavra e entrar no modo de inserção</td></tr>
+<tr><td>c$       </td><td>-apagar até o fim da linha e entrar no modo de inserção</td></tr>
+<tr><td>c^       </td><td>-apagar até o começo da linha e entrar no modo de inserção</td></tr>
+<tr><td>d$       </td><td>-apaga da posição do cursor ao fim da linha</td></tr>
+<tr><td>d^       </td><td>-apaga da posição do cursor ao início da linha</td></tr>
+<tr><td>(n)dl    </td><td>deleta um caracter sobre o cursor</td></tr>
+<tr><td>diB      </td><td>deleta interior de {}</td></tr>
+<tr><td>daB      </td><td>deleta interior de {} e {}</td></tr>
+<tr><td>dib      </td><td>deleta interior de ()</td></tr>
+<tr><td>dab      </td><td>deleta interior de () e ()</td></tr>
+<tr><td>(n)d)    </td><td>-deleta a próxima frase adjacente</td></tr>
+<tr><td>(n)d}    </td><td>-deleta o próximo parágrafo adjacente</td></tr>
+<tr><td>(n)d(    </td><td>-deleta a frase anterior adjacente</td></tr>
+<tr><td>(n)d{    </td><td>-deleta o parágrafo anterior adjacente</td></tr>
+<tr><td>dfc ou d(n)fc  </td><td>-deleta o texto até encontrar o primeiro caracter c após a posição inicial do cursor, incluindo o caracter</td></tr>
+<tr><td>dFc ou d(n)Fc  </td><td>-deleta o texto até encontrar o primeiro caracter c anterior a posição inicial do cursor, incluindo o caracter</td></tr>
+<tr><td>dtc ou d(n)tc  </td><td>-deleta o texto até encontrar o primeiro caracter c após a posição inicial do cursor, excluindo o caracter</td></tr>
+<tr><td>dTc ou d(n)Tc  </td><td>-deleta o texto até encontrar o primeiro caracter c anterior a posição inicial do cursor, excluindo o caracter</td></tr>
+<tr><td>(n)dd    </td><td>-deleta linha atual</td></tr>
+<tr><td>D        </td><td>-deleta os caracteres da posição do cursor ate o final da linha</td></tr>
+<tr><td>e        </td><td>-avanca o cursor para o final da próxima palavra </td></tr>
+<tr><td>ge       </td><td>-avanca o cursor para o final da palavra anterior</td></tr>
+<tr><td>E        </td><td>-avanca o cursor para o final da próxima palavra</td></tr>
+<tr><td>(n)f     </td><td>-procura pelo primeiro caracter digitado após (<em>ver uso com d</em>)</td></tr>
+<tr><td>         </td><td> ex.: ft -&gt; procura pela próxima letra t</td></tr>
+<tr><td>         </td><td> 3ft -&gt; procura pela terceira ocorrência da letra t</td></tr>
+<tr><td>(n)F     </td><td>-procura pelo primeiro caracter digitado antes (<em>ver uso com d</em>)</td></tr>
+<tr><td>g        </td><td>-move o cursor para o primeiro caracter da primeira linha do arquivo</td></tr>
+<tr><td>(n)G     </td><td>-move o cursor para o primeiro caracter da última linha do arquivo<br>ou até o número da linha informado.</td></tr>
+<tr><td>ga       </td><td>-mostra valor ASCII do caracter sob cursor</td></tr>
+<tr><td>gf       </td><td>-abre arquivo cujo nome está sob cursor</td></tr>
+<tr><td>guu      </td><td>-Estando sobre qualquer parte da palavra converte-a para minúsculo</td></tr>
+<tr><td>gUU      </td><td>-Converte-a para maiúsculo</td></tr>
+<tr><td>CTRL g   </td><td>-exibir informações sobre o arquivo atual</td></tr>
+<tr><td>gCTRL g   </td><td>-Exibe linha, coluna, palavras em relação 'a posição autal do cursor.<br>Col 1 of 216; Line 1 of 317; Word 1 of 8531; Byte 1 of 52612</td></tr>
+<tr><td>(n)h     </td><td>-move o cursor para o caracter a esquerda do cursor</td></tr>
+<tr><td>(n)H     </td><td>-move o cursor para a linha n do topo da janela, omitido n vai para o primeiro caracter da primeira linha da tela</td></tr>
+<tr><td>i        </td><td>-entra no modo de inserção a partir da posição do cursor</td></tr>
+<tr><td>I        </td><td>-entra no modo de inserção no início da linha atual</td></tr>
+<tr><td>(n)j     </td><td>-move o cursor uma linha para baixo</td></tr>
+<tr><td>J        </td><td>-move a linha abaixo do cursor para o final da linha atual</td></tr>
+<tr><td>gJ       </td><td>-move a linha abaixo do cursor para o final da linha atual sem espaços entre elas</td></tr>
+<tr><td>(n)K     </td><td>-move o cursor uma linha para cima</td></tr>
+<tr><td>(n)l     </td><td>-move o cursor para o caracter a direita do cursor</td></tr>
+<tr><td>(n)L     </td><td>-move o cursor para a linha n da base da janela, omitido n vai para o primeiro caracter da última linha da tela</td></tr>
+<tr><td>gm       </td><td>-move o cursor para o meio da linha atual</td></tr>
+<tr><td>M        </td><td>-move o cursor para a linha do meio da janela</td></tr>
+<tr><td>n        </td><td>-repete a última pesquisa da posição do cursor ao fim do arquivo</td></tr>
+<tr><td>N        </td><td>-repete a última pesquisa da posição do cursor ao início do arquivo</td></tr>
+<tr><td>         </td><td> vai para o próximo arquivo editado (edição multipla)</td></tr>
+<tr><td>(n)o     </td><td>-inseri linha abaixo da linha atual</td></tr>
+<tr><td>(n)O     </td><td>-inseri linha acima da linha atual</td></tr>
+<tr><td>p        </td><td>-recupera do buffer a linha salva com o comando yy depois da posição do cursor</td></tr>
+<tr><td>]p       </td><td>-recupera do buffer a linha salva com o comando yy depois da posição do cursor com o recuo ajustado</td></tr>
+<tr><td>gp       </td><td>-recupera do buffer a linha salva com o comando yy depois da posição do cursor, deixando o cursor depois do texto novo</td></tr>
+<tr><td>P        </td><td>-recupera do buffer a linha salva com o comando yy antes da posição do cursor</td></tr>
+<tr><td>[p       </td><td>-recupera do buffer a linha salva com o comando yy antes da posição do cursor com recuo ajustado</td></tr>
+<tr><td>gP       </td><td>-recupera do buffer a linha salva com o comando yy antes da posição do cursor, deixando cursor depois texto novo</td></tr>
+<tr><td>q:       </td><td>-edita o histórico da linha de comandos  
+</td></tr><tr><td>q?       </td><td>-edita o histórico de pesquisa 
+</td></tr><tr><td>q/       </td><td>-edita o histórico de pesquisa 
+</td></tr><tr><td>Q        </td><td>-sai do modo visual entra no modo linha a linha para retornar digite vi</td></tr>
+<tr><td>(n)r     </td><td>-substitui o caracter atual pelo próximo digitado</td></tr>
+<tr><td>(n)R     </td><td>-substitui todos os caracteres da posição do cursor ao final da linha</td></tr>
+<tr><td>s        </td><td>-substitui o caracter atual pelo próximo digito e entra modo inserção</td></tr>
+<tr><td>S        </td><td>-idem cc</td></tr>
+<tr><td>(n)t                </td><td>-procura pelo primeiro caracter digitado após, posicionando-se antes dele (<em>ver uso com d</em>)</td></tr>
+<tr><td>                    </td><td> ex.: tx -&gt; procura pela próxima letra x</td></tr>
+<tr><td>                    </td><td> 3tx -&gt; procura pela terceira ocorrência da letra t</td></tr>
+<tr><td>(n)T                </td><td>-procura pelo primeiro caracter digitado antes, posicionando-se antes dele (<em>ver uso com d</em>)</td></tr>
+<tr><td>u                   </td><td>-desfaz a última alteração efetuada na linha atual (<em> ver em modo visual tem outra função</em>)</td></tr>
+<tr><td>U                   </td><td>-desfaz todas as aterações efetuadas na linha atual (<em> ver em modo visual tem outra função</em>)</td></tr>
+<tr><td>Ctrl R              </td><td>-refazaz uma ação desfeita</td></tr>
+<tr><td>w                   </td><td>-move o cursor para o início da próxima palavra a direita do cursor</td></tr>
+<tr><td>W                   </td><td>-idem w</td></tr>
+<tr><td>(n)x                </td><td>-deleta o caracter a direita do cursor (delete)</td></tr>
+<tr><td>(n)xp               </td><td>-iverte posicionamento de caracteres</td></tr>
+<tr><td>(n)X                </td><td>-deleta o caracter a esquerda do cursor (backspace)</td></tr>
+<tr><td>(n)yy               </td><td>-salva no buffer a linha atual</td></tr>
+<tr><td>                    </td><td>ex.: 3yy salva no buffer a linhaa do cursor e duas abaixo</td></tr>
+<tr><td>                    </td><td> para copia-las em outro local, va ate o loval e digite p</td></tr>
+<tr><td>O                   </td><td>-move o cursor para o primeiro caracter da linha atual</td></tr>
+<tr><td>$                   </td><td>-move o cursor para o último caracter da linha atual</td></tr>
+<tr><td>/xxx                </td><td>-efetua pesquisa da posição do cursor ao fim do arquivo (xxx =texto)</td></tr>
+<tr><td>?xxx                </td><td>-efetua pesquisa da posição do cursor ao início do arquivo (xxx =texto)</td></tr>
+<tr><td>.                   </td><td>-repete o último comando executado</td></tr>
+<tr><td>:$                  </td><td>-idem G</td></tr>
+<tr><td>(n)|                </td><td>-Vai para a coluna n da linha</td></tr>
+<tr><td>{                   </td><td>-começo parágrafo anterior  (<em>ver uso com d</em>)</td></tr>
+<tr><td>}                   </td><td>-começo parágrafo posterior (<em>ver uso com d</em>)</td></tr>
+<tr><td>(                   </td><td>-começo sentença anterior   (<em>ver uso com d</em>)</td></tr>
+<tr><td>)                   </td><td>-começo sentença posterior  (<em>ver uso com d</em>)</td></tr>
+<tr><td>(n)&lt;&lt;       </td><td>-Desloca n linhas a esquerda</td></tr>
+<tr><td>(n)&gt;&gt;       </td><td>-Desloca n linhas a direita</td></tr>
+<tr><td>v                   </td><td>-Entra no modo visual</td></tr>
+<tr><td>o                   </td><td>-Estando em modo visual, alterna posição do cursor com início e fim do destaque</td></tr>
+<tr><td>gv                  </td><td>-Estando em modo visual, inicia destaque na area visual anterior</td></tr>
+<tr><td>aw                  </td><td>-Estando em modo visual, seleciona uma palavra</td></tr>
+<tr><td>as                  </td><td>-Estando em modo visual, seleciona uma sentença</td></tr>
+<tr><td>ap                  </td><td>-Estando em modo visual, seleciona um parágrafo</td></tr>
+<tr><td>ab                  </td><td>-Estando em modo visual, seleciona um bloco ( )</td></tr>
+<tr><td>aB                  </td><td>-Estando em modo visual, seleciona um bloco { }</td></tr>
+<tr><td>u                   </td><td>-Estando em modo visual, alterna texto selecionado para minúsculo.</td></tr>
+<tr><td>U                   </td><td>-Estando em modo visual, alterna texto selecionado para miúsculo.</td></tr>
+<tr><td>V                   </td><td>-Seleciona linha a linha, é só movimentar o cursor</td></tr>
+<tr><td>CTRL D CTRL U               </td><td>-rola meia página acima, abaixo</td></tr>
+<tr><td>CTRL F CTRL B               </td><td>-rola página acima, abaixo</td></tr>
+<tr><td>zt ou z[Enter]              </td><td>-põe linha atual topo da janela</td></tr>
+<tr><td>zz ou z                     </td><td>-põe linha atual centro da janela</td></tr>
+<tr><td>zb ou z-                    </td><td>-põe linha atual base da janela</td></tr>
+<tr><td>zh zl                       </td><td>-rola um caracter a direita, esquerda</td></tr>
+<tr><td>zH zL                       </td><td>-rola meia tela a direita, esquerda</td></tr>
+<tr><td>CTRL Ws ou :split[Enter]    </td><td>-divide janela em duas</td></tr>
+<tr><td>CTRL Wv ou :vsplit[Enter]   </td><td>-divide janela em duas</td></tr>
+<tr><td>CTRL Wn ou :new[Enter]      </td><td>-cria nova janela vazia</td></tr>
+<tr><td>CTRL Wo ou :on[Enter]       </td><td>-coloca janela atua em uma tela</td></tr>
+<tr><td>CTRL Wj CTRL Wk             </td><td>-move para janela abaixo, acima</td></tr>
+<tr><td>CTRL Ww CTRL W CTRL W       </td><td>-move para janela abaixo, acima (troca)</td></tr>
+<tr><td>CTRL A              </td><td>-Estando no modo de Inserção insere o texto inserido anteriormente.</td></tr>
+<tr><td>CTRL e              </td><td>-Estando no modo de Inserção copia a linha abaixo na linha atual caracter a caracter.</td></tr>
+<tr><td>CTRL E              </td><td>-Rola todo o texto para cima.</td></tr>
+<tr><td>CTRL Y              </td><td>-Rola todo o texto para baixo.</td></tr>
+<tr><td>CTRL XE             </td><td>-Estando no modo de Inserção rola todo o texto para cima.</td></tr>
+<tr><td>CTRL XY             </td><td>-Estando no modo de Inserção rola todo o texto para baixo.</td></tr>
+<tr><td>CTRL N              </td><td>-Estando no modo de Inserção completa o texto com palavra (pesquisa anterior).</td></tr>
+<tr><td>CTRL P              </td><td>-Estando no modo de Inserção completa o texto com palavra (pesquisa posterior).</td></tr>
+<tr><td>CTRL U              </td><td>-Estando no modo de Inserção apaga todos caracteres inseridos linha atual.</td></tr>
+<tr><td>CTRL W              </td><td>-Estando no modo de Inserção apaga palavra antes do cursor.</td></tr>
+<tr><td>CTRL T              </td><td>-Estando no modo de Inserção desloca à direita a largura 1 desloc.</td></tr>
+<tr><td>CTRL L              </td><td>-redesenha tela</td></tr>
+<tr><td>CTRL v              </td><td>-Seleciona bloco é só movimentar o cursor</td></tr>
+<tr><td>ggVG                </td><td>-Seleciona todo o arquivo</td></tr>
+<tr><td>:w                  </td><td>-grava o arquivo atual</td></tr>
+<tr><td>                    </td><td>   ex.: :w        -&gt; grava o arquivo atual</td></tr>
+<tr><td>                    </td><td>        :w teste  -&gt; grava o arquivo atual com o nome teste</td></tr>
+<tr><td>:e arq.txt          </td><td>-abre o arquivo arq.txt</td></tr>
+<tr><td>:sp                 </td><td>-abre o mesmo arquivo já aberto em outra janela</td></tr>
+<tr><td>:sp outroarq.txt    </td><td>-abre o arquivo outroarq.txt em outra janela</td></tr>
+<tr><td>:enew               </td><td>-abre o um novo arquivo</td></tr>
+<tr><td>:sp novoarq.txt     </td><td>-abre novoarq.txt em outra janela</td></tr>
+<tr><td>:w!                 </td><td>-força a gravação do arquivo atual</td></tr>
+<tr><td>:q                  </td><td>-sai do vi sem gravar</td></tr>
+<tr><td>:q!                 </td><td>-força a saída da edição atual</td></tr>
+<tr><td>:wq                 </td><td>-grava e sai da edição atual</td></tr>
+<tr><td>:wq!                </td><td>-força a gravação e a saída da edição atual</td></tr>
+<tr><td>ZZ                  </td><td>-Salva e sai sem precisar digitar os :</td></tr>
+<tr><td>/palavra            </td><td>-Procura palavra da posição do cursor para frente</td></tr>
+<tr><td>?palavra            </td><td>-Procura palavra da posição do cursor para trás</td></tr>
+<tr><td>/primeira\|segunda  </td><td>-Procura simultâneamente a palavra primeira e segunda</td></tr>
+<tr><td>%                   </td><td>-Digitado sobre um parentese, colchete ou cheve procura o seu correspondente.</td></tr>
+<tr><td>:%!xxd              </td><td>-Converte o arquivo para hexadecimal.</td></tr>
+<tr><td>:%!xxd -r           </td><td>-Converte o arquivo para decimal.</td></tr>
+<tr><td>:center             </td><td>-Centraliza texto</td></tr>
+<tr><td>:left               </td><td>-Alinha a esquerda</td></tr>
+<tr><td>:right              </td><td>-Alinha a direita</td></tr>
+<tr><td>:1,4 c 13           </td><td>-copia as linhas de 1 a 4 abaixo da linha 13</td></tr>
+<tr><td>:1,4 m 13           </td><td>-move as linhas de 1 a 4 para a linha 13</td></tr>
+<tr><td>:1,4 w teste        </td><td>-move as linhas de 1 a 4 no arquivo de nome teste</td></tr>
+<tr><td><code>1,10m$|g/Essas/ p   </code></td><td>-move as linhas de 1 a 10 para o final do arquivo e localiza as palavras Essas</td></tr>
+<tr><td><code>:1,10s/Essas/Aquelas/|1,10m$</code></td><td>-Substitui da linha 1 a 10 as palavras Essas por Aquelas e depois move as mesmas linhas para o fim do arquivo.</td></tr>
+<tr><td><code>:let i=0|%g/animal/let i=i+1</code><br><code>:echo i</code></td><td>-Conta as ocorrências da palavra animal e grava na variável i<br>echo i mostra o valor acumulado</td></tr>
+<tr><td><code>:g/azul/s//verde/g  </code></td><td>-substitui todas as ocorrências da palavra azul por verde</td></tr>
+<tr><td><code>:g/azul/s//verde/   </code></td><td>-substitui a primeira ocorrência em cada linha da palavra</td></tr>
+<tr><td>                    </td><td>   azul por verde</td></tr>
+<tr><td><code>:1,$s,^,rm          </code></td><td>Acrescenta rm no início de cada linha</td></tr>
+<tr><td><code>:1,$s,$,rm          </code></td><td>Acrescenta rm no final de cada linha</td></tr>
+<tr><td><code>:v/./.,/./-1join    </code></td><td>Para remover linhas em branco consecutivas de um arquivo</td></tr>
+<tr><td><code>:v/./d              </code></td><td>E para remover todas as linhas em branco de um arquivo</td></tr>
+<tr><td><code>:g/^$/d             </code></td><td>Idem ao anterior</td></tr>
+<tr><td><code>:g/^[ ^I]*$/d       </code></td><td>Para remover linhas em branco que nao sejam vazias, mas que contenham espaços ou tabulacoes, emitir o comando</td></tr>
+<tr><td><code>:s/velho/novo       </code></td><td>substitua a 1a ocorrência de velho por novo na linha corrente</td></tr>
+<tr><td><code>:% s/velho/novo/    </code></td><td>substitua em todo o arquivo (%) a 1a ocorrência de velho por novo em cada linha</td></tr>
+<tr><td><code>:% s/velho/novo/g   </code></td><td>substitua em todo o arquivo (%), todas (g) as ocorrências de velho por novo</td></tr>
+<tr><td><code>:% s/velho/novo/gc  </code></td><td>igual ao anterior, mas pedindo confirmação para cada substituição</td></tr>
+<tr><td><code>:5,7s/velho/novo    </code></td><td>substitui a palavra velho por novo que esteja entre a linha 5 e 7 inclusive</td></tr>
+<tr><td><code>:% s/^String[0-9]//gc</code></td><td>expressões regulares também funcionam, igual ao sed</td></tr>
+<tr><td><code>:% s/./\u&amp;/gc</code>       </td><td>converta para maiúsculas (\u) o 1o caracter (.) de cada linha (exclusiva vi/perl, no sed não funciona)</td></tr>
+<tr><td><code>~</code>                   </td><td>inverte minúscula para maiúscula e vice versa</td></tr>
+<tr><td><code>5~</code>                  </td><td>inverte 5 próximos</td></tr>
+<tr><td><code>g~$</code>                 </td><td>inverte até o fim da linha</td></tr>
+</tbody></table></div>
+<div id="vi2">
+<table class="fundobranco" width="100%">
+<tbody><tr><td colspan="3" align="center" class="fundoazclaro">Configuração do VI</td></tr>
+<tr><td>Comando</td><td>Ação</td></tr>
+<tr><td>:set                </td><td>- mostra a configuração atual do vi</td></tr>
+<tr><td>:set all            </td><td>- mostra todas as opções de configuração do vi</td></tr>
+<tr><td>:set number         </td><td>- mostra os números das linhas</td></tr>
+<tr><td>:set nonumber       </td><td>- não mostra os números das linhas</td></tr>
+<tr><td>:set magic<br>      </td><td>- Liga e desliga a interpretacao de caracteres magicos como [a-z] vai </td></tr>
+<tr><td>                    </td><td>  procurar pelo intervalo de a ate z com nomagic vai procurar pela string "[a-z]"</td></tr>
+<tr><td>                    </td><td>  E o meso que escapar com contrabarra \[a-z\]</td></tr>
+<tr><td>:ab xxx  texto       </td><td>  Toda vez que digitar xxx substitui por texto, veja exemplos:</td></tr>
+<tr><td>                    </td><td>  ab hr &lt;HR&gt;</td></tr>
+<tr><td>                    </td><td>  ab pp &lt;P&gt;</td></tr>
+<tr><td>                    </td><td>  ab ht &lt;HTML&gt;</td></tr>
+<tr><td>                    </td><td>  ab=abreviaçoes e coloca no .exrc</td></tr>
+<tr><td>:unab xxx            </td><td>  Retira a abreviação</td></tr>
+<tr><td><code>:map ,d :r!date&lt;cr&gt;</code></td><td>  Ao digitar ,d insere a data ao final do arquivo</td></tr>
+<tr><td><code>:map &lt;c-a&gt; iOla Mundo &lt;esc&gt;</code></td><td> Mapeia o CTRL A para incluir o texto Ola Mundo, saindo do modo de inserção com ESC</td></tr>
+<tr><td><code>:map &lt;F12&gt; ggVGg</code></td><td> Seleciona todo o arquivo</td></tr>
+<tr><td><code>:imap &lt;c-l&gt; &lt;esc&gt;&lt;right&gt;a</code></td><td> pular fora dos parênteses, colchetes e chaves</td></tr>
+<tr><td><code>:imap &lt;c-h&gt; &lt;esc&gt;&lt;left&gt;a </code></td><td> pular fora dos parênteses, colchetes e chaves</td></tr>
+<tr><td><code>:nmap &lt;c-b&gt; A&lt;CR&gt;&lt;Esc&gt;j  </code></td><td> Cria uma linha em branco abaixo da linha atual e vai para a próxima linha</td></tr>
+<tr><td><code>:nmap &lt;c-b&gt; o&lt;Esc&gt;j</code></td><td> Equivale ao anterior</td></tr>
+<tr><td><code>:map &lt;c-b&gt; &lt;esc&gt;mz:%s/\s\+$//g&lt;cr&gt;`z</code></td><td> Elimina os espaços em branco no final da linha</td></tr>
+<tr><td><a href="http://aurelio.net/doc/vim/vimrc-voyeg3r.txt">.vimrc</a></td><td> .vimrc do voyeg3r</td></tr>
+<tr><td><a href="http://aurelio.net/doc/vim/vimrc-ivan.txt">.vimrc</a></td><td>.vimrc do Ivan Carlos da Silva Lopes</td></tr>
+<tr><td><a href="http://aurelio.net/doc/vim/">http://aurelio.net/doc/vim</a></td><td>Aurelio sobre o vim</td></tr>
+</tbody></table></div>
+<table class="fundobranco" width="100%">
+<tbody><tr><td colspan="1" align="center" class="fundoazclaro">Configuração do VI (continuação)</td></tr>
+<tr><td>Explicações sobre .exrc e editar direto em uma linha</td></tr>
+<tr><td> o redirecionamento em linha de comando o vim tem a opção de abrir o que for redirecionado como se fosse um arquivo, basta acrescentar -, veja o exemplo:<code>ps aux | vim -</code></td></tr>
+
+<tr><td>    A variável exinit="set number redraw"     é utilizada para configuração do vi</td></tr>
+<tr><td>    Pode-se também configurar o vi pelo arquivo .exrc, por exemplo que programa em C</td></tr>
+<tr><td>    no linux poderia ter um .exrc com as seguintes linhas:</td></tr>
+<tr><td>	set autoindent</td></tr>
+<tr><td>	set shiftwidth=4</td></tr>
+<tr><td>        set backspace=2 (do linux)</td></tr>
+<tr><td>        set ruler       (do linux)</td></tr>
+<tr><td>    Pode-se ir direto para uma linha quando se edita um arquivo ex.:</td></tr>
+<tr><td>    vi +10 relat.rel (vai direto para a linha 10)</td></tr>
+</tbody></table>
+<div id="vi3"><table width="100%" class="fundobranco">
+<tbody><tr><td colspan="2" align="center" class="fundoazclaro">Situações com o VIM do Linux</td></tr>
+<tr><td>Comando</td><td>Ação</td></tr>
+<tr><td></td><td>Como o editor vi tem o .exrc o VIM tem o .vimrc para configurações</td></tr>
+<tr><td></td><td>chamado .vimrc localizado no diretório home do usuário.</td></tr>
+<tr><td>:set nocp            </td><td>- Modo "No compatible" . Valores padrão para algumas opções são adequados ao Vim, não Vi.</td></tr>
+<tr><td>:set nowrap          </td><td>- Desliga quebra de linhas. As linhas vao ficar longas, ultrapassando a margem direita.</td></tr>
+<tr><td>:set ruler           </td><td>- Mostra no rodape da tela a posição horizontal e vertical do cursor.</td></tr>
+<tr><td>:set ve=all          </td><td>- Permite mover com as setas para areas onde não tem texto.</td></tr>
+<tr><td>:set vb              </td><td>- Desliga o som de beep (no gvim a tela pisca quando houver erros).</td></tr>
+<tr><td>:set ignorecase (ic) </td><td>- Busca não diferencia maiusculas e minusculas.</td></tr>
+<tr><td>:set ai              </td><td>- Ao criar nova linha, usa indentação da linha anterior.</td></tr>
+<tr><td>:set visualbell     </td><td>- pisca a tela ao inves de bipar</td></tr>
+<tr><td>:set sw=1            </td><td>- ShiftWidth: número de colunas para o comando &gt;</td></tr>
+<tr><td>:set autowrite  (aw) </td><td>- salva a cada alteração</td></tr>
+<tr><td>:set hlsearch   (hls)</td><td>- ilumina a última procura</td></tr>
+<tr><td>:set ignorecase (ic) </td><td>- case insensitive na busca</td></tr>
+<tr><td>:set incsearch  (is) </td><td>- ilumina procura enquanto digita</td></tr>
+<tr><td>:set showmatch  (sm) </td><td>- mostra o casamento de {},[],()</td></tr>
+<tr><td>:set tabstop=4       </td><td>- Tabs são do tamanho de 4 espaços</td></tr>
+<tr><td>:set expandtab  (et) </td><td>- Tabs são convertidos para espaços</td></tr>
+<tr><td>:retab               </td><td>- converter os TABs ja existentes para espaços</td></tr>
+<tr><td>:set shiftwidth=4    </td><td>- Quando o "autoindent" faz um tab, ele é do tamanho de 4 espaços.</td></tr>
+<tr><td>:set softtabstop=4   </td><td>- Tecla Backspace volta 4 espaços quando estiver numa identação.</td></tr>
+<tr><td>:set backspace=indent,eol,start</td><td>- Tecla Backspace funciona sobre autoindents, quebra de linha,<br> e inicio de inserção.</td></tr>
+<tr><td>:set title           </td><td>- Mostra nome do arquivo no rodape da tela.</td></tr>
+<tr><td>:set ttyfast         </td><td>- Envia mais caracteres ao terminal, melhorando o redraw de janelas.</td></tr>
+<tr><td>:set background=dark </td><td>- Usa cores que ficam melhor com fundo preto, quando usando cores em edição de codigo fonte.</td></tr>
+<tr><td>:syntax on           </td><td>- Ativa as cores para edição de codigo fonte (syntax highlighting)</td></tr>
+<tr><td colspan="2" align="center" class="fundoamarelo">Fonte: http://www.onlinux.com.br/dicas/dicasinformatica/maisdicasvi.txt</td></tr>
+<tr><td colspan="2" align="center" class="fundoamarelo">Leia mais em http://www.zago.eti.br/script/vi.txt</td></tr>
+</tbody></table></div>
+<div id="vi4"><table width="100%" class="fundobranco">
+<tbody><tr><td colspan="2" align="center" class="fundoazclaro">Edição múltiplas de arquivos o VI/VIM do Linux</td></tr>
+<tr><td>Comando</td><td>Ação</td></tr>
+<tr><td>vim -o arq1.txt arq2.txt </td><td>- Editar os arquivos na mesma janela dividida na horizontal</td></tr>
+<tr><td>vim -O arq1.txt arq2.txt </td><td>- Editar os arquivos na mesma janela dividida na vertical</td></tr>
+<tr><td>vi -d arq1.txt arq2.txt   </td><td>- Ver diferenças entre arquivos     </td></tr>
+<tr><td>CTRL Wn </td><td>Nova Janela </td></tr>
+<tr><td>CTRL Wn </td><td>Dividir a Janela </td></tr>
+<tr><td>CTRL Wv </td><td>Dividir verticalmente </td></tr>
+<tr><td>CTRL Wc </td><td>Fechar </td></tr>
+<tr><td>CTRL Wo </td><td>Fechar outra(s) </td></tr>
+<tr><td>CTRL WR </td><td>Girar para cima </td></tr>
+<tr><td>CTRL Wr </td><td>Girar para baixo </td></tr>
+<tr><td>CTRL W= </td><td>Mesmo Tamanho </td></tr>
+<tr><td>CTRL W_ </td><td>Altura Maxima </td></tr>
+<tr><td>CTRL W1_ </td><td>Altura Minima </td></tr>
+<tr><td>CTRL W| </td><td>Largura Maxima </td></tr>
+<tr><td>CTRL W1| </td><td>Largura Minima </td></tr>
+<tr><td>CTRL WK </td><td>Mover para cima </td></tr>
+<tr><td>CTRL WJ </td><td>Mover para Baixo </td></tr>
+<tr><td>CTRL WH </td><td>Mover para esquerda </td></tr>
+<tr><td>CTRL WL </td><td>Mover para Direita </td></tr>
+<tr><td>CTRL WW </td><td>Mover para próxima janela</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">                Usando o vi para examinar diferenças entre arquivos</td></tr>
+<tr><td>vimdiff arq1.txt arq2.txt </td><td>- abri os dois arquivos, lado a lado, com as diferenças em texto destacado.</td></tr>
+<tr><td>vi -d arq1.txt arq2.txt   </td><td>- Ver diferenças entre arquivos     </td></tr>
+<tr><td>vimtutor                  </td><td>- Guia básico do iniciante no vi</td></tr>
+<tr><td colspan="2" align="center" class="fundoamarelo">Fonte: http://www.onlinux.com.br/dicas/dicasinformatica/vi.htm</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">   Substituição com arquivo externo</td></tr>
+<tr><td>Conteúdo de troca.vi:<br><code>:%s/reação/REAÇÃO/g</code><br><code>:%s/fusão/FUSÃO/g</code><br><code>:wq</code><br>Execute <code>vi -s troca.vi arq.txt</code></td><td> Será executado no arquivo arq.txt os comandos contidos <br>em troca.vi e o arquivo arq.txt será salvo e fechado <br>com as alterações efetuadas</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">    Encriptado arquivo</td></tr>
+<tr><td>vi -x arq.txt                  </td><td>- Será solicitada uma senha e o arquivo ficará encriptado.</td></tr>
+<tr><td colspan="2" align="center" class="fundoamarelo">Fonte: http://geraldo-ribeiro.sites.uol.com.br/vim.htm</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">Recursos diversos do vi</td></tr>
+<tr><td><code>fgrep -l animal *.txt | vi -</code>    </td><td>- Abre no vi um novo arquivo contendo os nomes dos arquivos que contenham a palavra animal em seu conteúdo.</td></tr>
+<tr><td><code>vi `fgrep -l animal *.txt`</code>      </td><td>- Diferentemente do anterior, este comando abre os arquivos que contém a palavra animal em seu conteúdo.</td></tr>
+<tr><td><code>man sed | col -b | vim -</code>        </td><td>- Edita no vi um novo arquivo contendo o texto do man sobre o comando sed</td></tr>
+<tr><td><code>read !man dc|col -b</code><br> ou <code>read !dc --help</code>  </td><td>- Equivale ao anterior, só que neste você já esta com o vi aberto     </td></tr>
+<tr><td><code>3,10!cat -n|tr '^I' '-'</code>   </td><td>Numera dentro do texto da linha 3 até a 10 usando o cat -n</td></tr>
+<tr><td><code>1,$!cat -n|tr '^I' '-'</code>   </td><td>Numera dentro do texto todas as linhas do arquivo usando o cat -n</td></tr>
+<tr><td><code>let  i=0|2,20g/^/let i=i+1|s//\=i/g</code>      </td><td>Numera dentro do texto da linha 2 até a 20, usando variáveis</td></tr>
+<tr><td><code>let  @s=0|2,20g/^/let @s=@s+1|s//\=@s/g</code>      </td><td>Numera dentro do texto da linha 2 até a 20, usando registro</td></tr>
+<tr><td><code>:let @a=".!seq 5"</code><br><code>@a</code>  </td><td>Executa o comando seq, que conta de 1 até 5 e guarda o valor <br>no registro @a, depois executa o comando contido no registro <br>:@a inclui estes valores no arquivo</td></tr>
+<tr><td><code>:let @s=":%!sort -u"</code><br><code>@s</code></td><td>Executa o comando sort nas linhas do arquivo e guarda o <br>resultado no registro @s, depois executa o comando contido <br>no registro :@s para ordenar as linhas do arquivo     </td></tr>
+<tr><td><code>call setline(5,strftime("%d.%m.%Y  %X"))</code></td><td>Insere string na linha especificada, neste caso insere data e <br>hora na linha 5, mas apaga o que estava nela.</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">Dois exemplos para demonstrar que a ordem em que os filtros são passados o efeito pode ser diferente:</td></tr>
+<tr><td><code>ls -l | tail +2 | awk '{print $9}' | sed  's/^/)/' | cat -n | sed 's/^/(/' | tr "\t" " " | tr -s " " | vi -</code></td><td>Explicando: ls -l lista dos arquivos do diretório<br>tail +2 tira linha de cabeçalho<br>awk pega o campo 9 que é o nome do arquivo<br>O primeiro sed coloca o parentese fechando antes do nome do arquivo<br>cat -n coloca os números<br>O segundo sed coloca o parentese abrindo, antes dos números<br>O primeiro tr troca um tab por um espaço em branco<br>O segundo tr elimina espaços em brancos repetidos<br> e o vi - abre o resultado no edit vi</td></tr>
+<tr><td><code>ls -l | tail +2 | awk '{print $9}' | cat -n | tr "\t" ") " | tr -s " " | tr "^ " "(" | vi -</code></td><td>O mesmo comando assima pouco modificado, execute e veja a diferença nos arquivos gerados</td></tr>
+<tr><td colspan="2" align="center" class="fundoamarelo">Fonte: http://aurelio.net/doc/vim/vim-dicas-ivan.html</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">Autocompletar palavras / buscar no dicionário</td></tr>
+<tr><td><code>set dictionary=~/.meudic.txt</code></td><td>Dicionario para procurar o auto-complemento de palavras, define um dicionário padrão, pode ser colocado no .exrc </td></tr>
+<tr><td><code>imap &lt;F7&gt; &lt;c-n&gt;</code></td><td>A tecla F7 Completa uma palavra</td></tr>
+<tr><td><code>imap &lt;F8&gt; &lt;c-x&gt;&lt;c-n&gt;</code></td><td>a tecla F8 Da a sequencia a essa palavra</td></tr>
+<tr><td><code>imap &lt;c-d&gt; &lt;c-x&gt;&lt;c-k&gt;</code></td><td>Ctrl + D Procura no dicionario</td></tr>
+<tr><td colspan="2" align="center" class="fundoazclaro">Fechamento automático de (, { e [</td></tr>
+<tr><td><code>imap ( ()<esc>i</esc></code></td><td>Fecha automaticamente o parentesi quando abre um</td></tr>
+<tr><td><code>inoremap ( ()<esc>i</esc></code></td><td>Fecha automaticamente o parentesi quando abre um</td></tr>
+<tr><td><code>inoremap [ []<esc>i</esc></code></td><td>Fecha automaticamente o colchete quando abre um</td></tr>
+<tr><td><code>inoremap { {<char-13>}<esc>i</esc></char-13></code></td><td>Fecha automaticamente uma chave na linha abaixo à que foi aberta</td></tr>
+<tr><td>
+<blockquote><pre class="fundobranco">map! 'a &amp;aacute;
+map! 'A &amp;Aacute;
+map! ~a &amp;atilde;
+map! ~A &amp;Atilde;
+map! `a &amp;agrave;
+map! `A &amp;Agrave;
+map! 'e &amp;eacute;
+map! 'E &amp;Eacute;
+map! ^e &amp;ecirc;
+map! ^E &amp;Ecirc;
+map! 'i &amp;iacute;
+map! 'I &amp;Iacute;
+map! 'o &amp;oacute;
+map! 'O &amp;Oacute;
+map! ~o &amp;otilde;
+map! ~O &amp;Otilde;
+map! "u &amp;uuml;
+map! "U &amp;Uuml;
+map! ,c &amp;ccedil;
+map! ,C &amp;Ccedil;
+</pre></blockquote>
+</td><td>Exemplo do uso de map! para substituir palavras acentuadas pelo seu correspondente em code html</td></tr>
+</tbody></table></div>
+    <h4>Impressoras no Linux</h4>
+<p>
+    <code>vi /etc/printcap</code><br><br>
+    <code>l8) echo "\033\060\c"</code>           configura a impressora para 1/8<br>
+        <code>;;</code><br>
+    o arquivo das impressoras fica /usr/spool/lp/admis/lp/interfaces<br><br>
+    Instalação/Configuração via linha de comando:<br><br>
+    1 - cria diretório lp2 dentro de /var/spool/lpd<br>
+    2 - doa ao grupo lp<br>
+    3 - copia o .config de outra impressora<br>
+    4 - <code>/etc/rc.d/init.d/lpd</code>  restart    (pode tmb executar stop depois start)<br>
+</p>
+    <h4>Configuração do Samba</h4>
+<p>
+    vi /etc/smb.conf<br>
+    [teste]<br>
+    path= /oracle/dat0/teste<br>
+    read only = No<br>
+    Guest     = Yes<br><br>
+    [dataflex]<br>
+    comment = diretório dataflex<br>
+    available = yes<br>
+    browseable = yes<br>
+    public = yes<br>
+    guest only = no<br>
+    writable = yes<br>
+    only user = no<br>
+    path = /users/dataflex<br>
+    force create mode = 0777<br>
+    force directory mode = 0777<br>
+    force group = dataflex<br>
+    force user = dataflex<br>
+    allow hosts = 192.168.212.1, 192.168.212.2, 192.168.212.13<br><br>
+    Para montar a unidade c: de uma maquina como partição do Linux<br>
+    smbmount //ubiratan/c /mnt/rede<br><br>
+    Restarta da seguinte forma:<br><br>
+    /etc/rc.d/init.d/smb reload<br>
+    /etc/rc.d/init.d/smb restart<br><br>
+    Para completar este assunto ver depois dicas sobre o Samba em:<br>
+    http://www.onlinux.com.br/dicas/dicasinformatica/samba30.txt<br><br>
+</p>
+    <h4>Servidor de e-mail / squid</h4>
+<p>
+    Para definir sites proibidos e usuários librados edita os arquivos:<br><br>
+    /etc/squid/data/sites-proibidos.txt<br>
+    /etc/squid/data/users-liberados.txt<br><br>
+    depois executa /etc/init.d/squid reload   (stop start restart)<br>
+</p>
+<hr>
+<div class="rodape">Fonte: Pesquisas Diversas<br><br>
+<a href="http://www.zago.eti.br/comandos.html">http://www.zago.eti.br/comandos.html</a><br>
+<a href="http://www.devin.com.br/eitch/comandos_linux/">http://www.devin.com.br/eitch/comandos_linux/</a><br>
+<a href="http://www.onlinux.com.br/dicas/lnag/Linux_commands.htm">http://www.onlinux.com.br/dicas/lnag/Linux_commands.htm</a><br>
+<a href="http://www.ss64.com/index.html">http://www.ss64.com/index.html</a><br>
+<a href="http://guiabozolinux.sourceforge.net/FSL:Comandos_do_Linux">http://guiabozolinux.sourceforge.net/FSL:Comandos_do_Linux</a><br>
+<a href="http://www.onlinux.com.br/dicas/lnag/Linux_commands.htm">http://www.onlinux.com.br/dicas/lnag/Linux_commands.htm</a><br>
+<a href="http://www.pixelbeat.org/cmdline.html">http://www.pixelbeat.org/cmdline.html</a><br>
+<a href="http://www.ss64.com/bash/index.html">um&nbsp;superguia&nbsp;de&nbsp;comandos</a><br>
+<a href="http://www.fg.med.br/linux/comm.html">outra&nbsp;lista&nbsp;de&nbsp;comandos</a><br>
+<a href="http://urs.bira.nom.br/Comandos%20avan%C3%A7ados">Comandos avançados</a><br>
+<a href="http://www.uniriotec.br/~morganna/guia/introd_guia.html">um&nbsp;guia&nbsp;de&nbsp;comandos&nbsp;completo</a><br>
+<a href="http://www.debian.org/doc/manuals/reference/">http://www.debian.org/doc/manuals/reference/</a> referência debian<br>
+<a href="http://sergioaraujo.pbwiki.com/">sergioaraujo.pbwiki.com</a><br>
+</div>
+<div id="onlinux" class="rodape">Fonte: <a href="http://www.onlinux.com.br/dicas/lnag/Linux_learning.htm">[1] - onlinux</a><br><br></div>
+<div id="onlinux2" class="rodape">Fonte: <a href="http://www.onlinux.com.br/dicas/dicasinformatica/maisdicasbash.htm">[2] - onlinux</a><br><br></div>
+<div id="onlinux3" class="rodape">Fonte: <a href="http://focalinux.cipsga.org.br/guia/iniciante/index.htm">Guia Foca GNU/Linux</a><br></div>
+<p class="rodape">
+   <a href="http://validator.w3.org/check?uri=referer"><img src="./Comandos do Unix _ Linux_files/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88"></a>
+</p>
+
+</body></html>

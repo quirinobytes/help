@@ -12,11 +12,24 @@ DESCRIÇÃO
 
 `vim` Usado para editar arquivos.
 
-OPÇÕES
+COMANDOS
 ------
 
-* `-f` *file* :
-   usar o seguinte arquivo de (vimrc) *file* 
+* `i` :
+   Entra no modo Inserir dados(INSERT).
+
+* `gg` :
+	Ir par ao inicio do arquivo, (ggi-> vai pro inicio ja inserindo)
+
+* `GG` :
+	Ir par ao fim do arquivo:
+
+* `yy` :
+	Copia linha.
+
+* `dd` :
+	Apagar linha.
+
 
 EXEMPLOS
 --------
@@ -30,6 +43,7 @@ Para apagar todas as linhas em branco em um arquivo:
 
    `:g/^$/d'` => diz para procurar em todo o Arquivo(G) com linhas que casem com ^(Comeco) $(fim) juntos e apague-os (d).
 
+   `:30,$s/^/\/\/`  => da linha 30 ate o final($), substitua(s) tudo que for (/) começo de linha(^) por(/) comentário(//) escapado né(\/\/) claro! 
 
 
 ARQUIVOS
