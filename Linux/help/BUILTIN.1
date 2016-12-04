@@ -7,7 +7,7 @@
 \fBBULTIN\fR \- Funções embutidas do shell (bash)
 .
 .SH "SYNOPSIS"
-\fBbash\fR [\fB\-\-help\fR]
+\fBminiman BUILTIN\fR [\fB\-\-help\fR] ()
 .
 .SH "DESCRIÇÃO"
 \fBBULTIN\fR é um documento que mostra algumas funções embutidas do shell\.
@@ -42,8 +42,313 @@ Nessa sessao mostro o problema de usar backspace e nao fechar os caracteres nao 
 .P
 \fIKeeping the "original" this should also work:\fR \fB\e[\e033[1;32m\e]\eu:\e[\e033[1;34m\e] \eW\e[\e033[1;34m\e] \e$\e[\e033[0m\e]\fR |\fI| |\fR| | | +\-\-\-\-\-\-\-\-\-\-\-+\-\- Enclose in [ ]
 .
+.P
+45 exemplos de variáveis e arrays em Shell Script
+.
+.P
+\fB1 \- Criar uma variável, ${var} é o mesmo que $var, porém não ambíguo\.\fR var="http://www\.terminalroot\.com\.br/"
+.
+.P
+echo $var
+.
+.P
+http://www\.terminalroot\.com\.br/
+.
+.P
+\fB2 \- Retornar o tamanho da string\fR echo ${#var}
+.
+.P
+31
+.
+.P
+\fB3 \- Executa o conteúdo de $var (igual \'eval \e$$var\')\fR
+.
+.P
+echo ${!var}
+.
+.P
+\fB4 \- Retorna os nomes de variáveis começadas por \'U\'\fR
+.
+.P
+echo ${!U*}
+.
+.P
+UID USER USERNAME
+.
+.P
+\fB5 \- Retorna o texto a partir da posição 7\fR echo ${var:7}
+.
+.P
+www\.terminalroot\.com\.br/
+.
+.P
+\fB6 \- Retorna 8 caracteres a partir da posição 11\fR echo ${var:11:8}
+.
+.P
+terminal
+.
+.P
+\fB7 \- Corta \'http://\' do início da string\fR echo ${var#http://}
+.
+.P
+www\.terminalroot\.com\.br/
+.
+.P
+\fB8 \- Corta \'\.com\.br/\' do final da string\fR echo ${var%\.com\.br/}
+.
+.P
+http://www\.terminalroot
+.
+.P
+\fB9 \- Substitui \'terminalroot\' por \'aurelio\', uma vez\fR echo ${var/terminalroot/aurelio}
+.
+.P
+http://www\.aurelio\.com\.br/
+.
+.P
+\fB10 \- Substitui \'o\' por \'O\', sempre\fR echo ${var//o/O}
+.
+.P
+http://www\.terminalrOOt\.cOm\.br/
+.
+.P
+\fB11 \- Se a string começar com \'http\', substitui \'http\' por \'Site\'\fR echo ${var/#http/Site}
+.
+.P
+Site://www\.terminalroot\.com\.br/
+.
+.P
+\fB12 \- Se a string terminar com \'te\', substitui \'te\' por \'TADO\'\fR var2="teste"
+.
+.P
+echo ${var2/%te/TADO}
+.
+.P
+tesTADO
+.
+.P
+\fB13 \- "" (aspas duplas) protege uma string, mas reconhece $, \e e\fR como especiais` echo "$var"
+.
+.P
+http://www\.terminalroot\.com\.br/
+.
+.P
+\fB14 \- \'\' (aspas simples) protege uma string, mas reconhece $, \e e\fR como especiais` echo \'$var\'
+.
+.P
+$var
+.
+.P
+\fB15 \- $\'\.\.\.\' (cifrão antes de aspas simples) protege uma string completamente, mas interpreta \en, \et, \ea, etc\fR echo $\'$var\en\'
+.
+.P
+$var
+.
+.P
+.
+.P
+\fB16 \-\fR\.\.\.\fB(entre crases) Executa comandos numa subshell, retornando o resultado\fR echo \fBls\fR
+.
+.P
+Área de trabalho Documentos Downloads Imagens Modelos Música Público Vídeos
+.
+.P
+\fB17 \- Executa comandos numa subshell\fR (ls)
+.
+.P
+Área de trabalho Documentos Downloads Imagens Modelos Música Público Vídeos
+.
+.P
+\fB18 \- Executa comandos numa subshell, retornando o resultado\fR echo $(ls)
+.
+.P
+Área de trabalho Documentos Downloads Imagens Modelos Música Público Vídeos
+.
+.P
+\fB19 \- Testa uma operação aritmética, retornando 0 ou 1\fR ((11>9))
+.
+.P
+\fB20 \- Retorna o resultado de uma operação aritmética\fR echo $((11\-9))
+.
+.P
+2
+.
+.P
+\fB21 \- Testa uma expressão, retornando 0 ou 1 (alias do comando \'test\')\fR [ 5 \-gt 3 ] && echo \'É maior!\'
+.
+.P
+É maior!
+.
+.P
+\fB22 \- Testa uma expressão, retornando 0 ou 1 (podendo usar && e ||)\fR [[ $var ]] && echo \'Existe essa variável\'
+.
+.P
+Existe essa variável
+.
+.P
+\fB23 \- Variáveis especiais\fR Variável Parâmetros Posicionais $0 Parâmetro número 0 (nome do comando ou função) $1 Parâmetro número 1 (da linha de comando ou função) \.\.\. Parâmetro número N \.\.\. $9 Parâmetro número 9 (da linha de comando ou função) ${10} Parâmetro número 10 (da linha de comando ou função) \.\.\. Parâmetro número NN \.\.\. $# Número total de parâmetros da linha de comando ou função $* Todos os parâmetros, como uma string única $@ Todos os parâmetros, como várias strings protegidas Variável Miscelânia $$ Número PID do processo atual (do próprio script) $! Número PID do último job em segundo plano $_ Último argumento do último comando executado $? Código de retorno do último comando executado
+.
+.P
+\fB24 \- Opções do comando test ou [\fR
+.
+.P
+Comparação Numérica \-lt É menor que (LessThan) \-gt É maior que (GreaterThan) \-le É menor igual (LessEqual) \-ge É maior igual (GreaterEqual) \-eq É igual (EQual) \-ne É diferente (NotEqual)É igual != É diferente \-n É não nula \-z É nula Operadores Lógicos ! NÃO lógico (NOT) \-a E lógico (AND) \-o OU lógico (OR) Testes em arquivos \-b É um dispositivo de bloco \-c É um dispositivo de caractere \-d É um diretório \-e O arquivo existe \-f É um arquivo normal \-g O bit SGID está ativado \-G O grupo do arquivo é o do usuário atual \-k O sticky\-bit está ativado \-L O arquivo é um link simbólico \-O O dono do arquivo é o usuário atual \-p O arquivo é um named pipe \-r O arquivo tem permissão de leitura \-s O tamanho do arquivo é maior que zero \-S O arquivo é um socket \-t O descritor de arquivos N é um terminal \-u O bit SUID está ativado \-w O arquivo tem permissão de escrita \-x O arquivo tem permissão de execução \-nt O arquivo é mais recente (NewerThan) \-ot O arquivo é mais antigo (OlderThan) \-ef O arquivo é o mesmo (EqualFile) 25 \- Escapes especiais para usar no prompt (PS1)
+.
+.P
+Escape Lembrete Expande para\.\.\. \ea Alerta Alerta (bipe) \ed Data Data no formato "Dia\-da\-semana Mês Dia" (Sat Jan 15) \ee Escape Caractere Esc \eh Hostname Nome da máquina sem o domínio (dhcp11) \eH Hostname Nome completo da máquina (dhcp11\.empresa) \ej Jobs Número de jobs ativos \el Tty Nome do terminal corrente (ttyp1) \en Newline Linha nova \er Return Retorno de carro \es Shell Nome do shell (basename $0) \et Time Horário no formato 24 horas HH:MM:SS \eT Time Horário no formato 12 horas HH:MM:SS \e@ At Horário no formato 12 horas HH:MM am/pm \eA At Horário no formato 24 horas HH:MM \eu Usuário Login do usuário corrente \ev Versão Versão do Bash (2\.00) \eV Versão Versão+subversão do Bash (2\.00\.0) \ew Working Dir Diretório corrente, caminho completo ($PWD) \eW Working Dir Diretório corrente, somente o último (basename $PWD) ! Histórico Número do comando corrente no histórico # Número Número do comando corrente \e$ ID Mostra "#" se for root, "$" se for usuário normal \ennn Octal Caractere cujo octal é nnn \e Backslash Barra invertida \e literal [ Escapes Inicia uma seqüência de escapes (tipo códigos de cores) ] Escapes Termina uma seqüência de escapes \fB26 \- Escapes reconhecidos pelo comando echo\fR
+.
+.P
+Escape Lembrete Descrição \ea Alerta Alerta (bipe) \eb Backspace Caractere Backspace \ec EOS Termina a string \ee Escape Caractere Esc \ef Form feed Alimentação \en Newline Linha nova \er Return Retorno de carro \et Tab Tabulação horizontal \ev Vtab Tabulação vertical \e Backslash Barra invertida \e literal \ennn Octal Caractere cujo octal é nnn \exnn Hexa Caractere cujo hexadecimal é nn 27 \- Formatadores do comando date
+.
+.P
+Formato Descrição %a Nome do dia da semana abreviado (Dom\.\.Sáb) %A Nome do dia da semana (Domingo\.\.Sábado) %b Nome do mês abreviado (Jan\.\.Dez) %B Nome do mês (Janeiro\.\.Dezembro) %c Data completa (Sat Nov 04 12:02:33 EST 1989) %y Ano (dois dígitos) %Y Ano (quatro dígitos) %m Mês (01\.\.12) %d Dia (01\.\.31) %j Dia do ano (001\.\.366) %H Horas (00\.\.23) %M Minutos (00\.\.59) %S Segundos (00\.\.60) %s Segundos desde 1º de Janeiro de 1970 %% Um % literal %t Um TAB %n Uma quebra de linha 28 \- Formatadores do comando printf
+.
+.P
+Formato Descrição %d Número decimal %o Número octal %x Número hexadecimal (a\-f) %X Número hexadecimal (A\-F) %f Número com ponto flutuante %e Número em notação científica (e+1) %E Número em notação científica (E+1) %s String 29 \- Para saber todas as variáveis locais, execute
+.
+.P
+set ou, e abra o txt para ver depois
+.
+.P
+set > VariaveisLocais\.txt 30 \- Variáveis globais, para saber todas as variáveis globais, execute
+.
+.P
+env ou
+.
+.P
+printenv 31 \- Para atribuir um valor a uma variável local
+.
+.P
+LINUX=free
+.
+.P
+echo $LINUX
+.
+.P
+free 32 \- verificar se a variável criada no item anterior aparece na relação de variáveis locais
+.
+.P
+set | grep LINUX
+.
+.P
+LINUX=free 33 \- Agora vamos tornar esta variável local em uma variável global
+.
+.P
+export LINUX
+.
+.P
+env | grep LINUX
+.
+.P
+LINUX=free 34 \- Deletar uma \'variável de ambiente local\' da memória usamos o comando unset
+.
+.P
+unset LINUX
+.
+.P
+echo $LINUX
+.
+.P
+35 \- Criar um aliases ( apelido para um comando ou programa ), você ainda pode incluí\-lo no seu ~/\.bashrc
+.
+.P
+alias listar=\'ls \-la color=auto\' 36 \- Destruir um aliase
+.
+.P
+unalias listar 37 \- Verificar todos os comando digitados
+.
+.P
+history executar o comando pelo número dele no history
+.
+.P
+!468 executar o último comando digitado
+.
+.P
+!! eles ficam no bash_history
+.
+.P
+cat bash_history limpar o history
+.
+.P
+history \-c
+.
+.P
+\fB38 \- Interpretadores de linha de comando\fR $ \- Shell de um usuário comum;Verificar dos os Shells disponíveis
+.
+.P
+cat /etc/shells Variável que mostra o SHELL que você utiliza
+.
+.P
+echo $SHELL
+.
+.P
+\fB39 \- Criando um Array (Arranjo) "conjunto de variáveis"\fR
+.
+.P
+DISTROS=( "Debian" "Trisquel" "Ubuntu" "RedHat") Se você imprimir o Array DISTROS como variável, ele printará a variável 0 , o array exibe as variáveis nele contidas começando do 0 (zero), logo seria o mesmo de imprimir a ${DISTROS[0]}
+.
+.P
+echo $DISTROS
+.
+.P
+\fB40 \- Imprimir o elemento 1 da array DISTROS\fR echo ${DISTROS[1]}
+.
+.P
+Trisquel
+.
+.P
+\fB41 \- Pode\-se também criar um array inserindo elemento um de cada vez\fR DISTROS[0]="Debian"
+.
+.P
+DISTROS[1]="Trisquel"
+.
+.P
+DISTROS[2]="Ubuntu"
+.
+.P
+DISTROS[3]="RedHat"
+.
+.P
+\fB42 \- Alterar o elemento 2 do array DISTROS\fR DISTROS[2]="Linux Mint"
+.
+.P
+echo ${DISTROS[2]}
+.
+.P
+Linux Mint
+.
+.P
+\fB43 \- Exibir Distro do elemento 2 até o final\fR echo\~ ${DISTROS[@]:2}
+.
+.P
+Ubuntu RedHat
+.
+.P
+\fB44 \- Esta exibe os elementos com início na posição 1 seguidos de mais dois elementos consecutivos à posição 1\fR echo ${DISTROS[@]:1:2}
+.
+.P
+Trisquel Ubuntu
+.
+.P
+\fB45 \- Saber quantos elementos possui o array DISTROS\fR echo\~ ${#DISTROS[@]}
+.
+.P
+4 roff: \./BUILTIN\.1
+.
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
 .
 .SH "VEJA SOBRE"
-ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
+http://aurelio\.net/shell/canivete/
+.
+.P
+http://www\.vivaolinux\.com\.br/artigo/Trabalhando\-com\-shell\-e\-variaveis\-de\-ambiente
+.
+.P
+http://www\.vivaolinux\.com\.br/dica/Utilizando\-arrays\-em\-shell\-script
+.
+.P
+Terminal Root \- http://www\.terminalroot\.com\.br
+.
+.P
+bash(7), set(1), env(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
