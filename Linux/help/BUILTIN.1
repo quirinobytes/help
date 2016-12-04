@@ -1,0 +1,49 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "BULTIN" "1" "December 2016" "" ""
+.
+.SH "NAME"
+\fBBULTIN\fR \- Funções embutidas do shell (bash)
+.
+.SH "SYNOPSIS"
+\fBbash\fR [\fB\-\-help\fR]
+.
+.SH "DESCRIÇÃO"
+\fBBULTIN\fR é um documento que mostra algumas funções embutidas do shell\.
+.
+.SH "OPÇÕES"
+.
+.SH "EXEMPLOS"
+.
+.nf
+
+Pegar o tamanho da variável\.
+
+`size=${#myvar} $ echo $size`
+.
+.fi
+.
+.SH "ARQUIVOS"
+\fI~/\.bashrc\fR Arquivo de configuração do shell por usuár
+.
+.SH "ENVIRONMENT"
+\fBSHELL=bash\fR Para ambiente shell bash com o CDSHELL o arquivo do enviroment lido é o \fI~/\.bashrc\fR que chama o \fI\.alias\fR e o \fI\.export\fR na sequencia, definindo tudo que é necessário, inclusive outros arquivos fontes, como colors\.sh
+.
+.SH "BUGS"
+Nessa sessao mostro o problema de usar backspace e nao fechar os caracteres nao imprimiveis no PS1:
+.
+.P
+\fINon\-printable sequences should be enclosed in [ and ]\fR \fB\e[\e033[01;32m\e]\eu:\e[\e033[01;34m\e] \eW\e033[01;34m \e$\e[\e033[00m\e]\fR |\fI____________| |\fR| | | +\-\-\- Let this apply to this as well\.
+.
+.P
+\fIAs such this should have intended coloring:\fR \fB\e[\e033[1;32m\e]\eu:\e[\e033[1;34m\e] \eW \e$\e[\e033[0m\e]\fR |_____| | +\-\-\-\- Bold blue\.
+.
+.P
+\fIKeeping the "original" this should also work:\fR \fB\e[\e033[1;32m\e]\eu:\e[\e033[1;34m\e] \eW\e[\e033[1;34m\e] \e$\e[\e033[0m\e]\fR |\fI| |\fR| | | +\-\-\-\-\-\-\-\-\-\-\-+\-\- Enclose in [ ]
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
