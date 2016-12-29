@@ -21,6 +21,10 @@ OPÇÕES
 * `afxr`:
 	Solicita a transferencia de Zonas da Domínio para mim(host).
 
+
+* `ifxr`:
+	Solicita a transferência incremental, ou seja traz somente oque foi alterado.
+
 * `NS`:
 	Faz querys para saber que é 
 
