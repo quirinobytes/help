@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>iscsiadm(1) - iscsiadm iSCSI Admin </title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#NOME">NOME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>iscsiadm(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>iscsiadm(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>iscsiadm</code> - <span class="man-whatis">iscsiadm iSCSI Admin </span>
+</p>
+
+<h2 id="NOME">NOME</h2>
+
+<p><code>iscsiadm</code> - iscsiadm é um cliente para acesso e mapeamento de discos iSCSI..</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>iscsiadm</code> [<code>-m MODE</code>] [<code>-p</code> <em>ip</em> ] <em>iface</em></p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><code>iscsiadm</code> é um documento escrito para facilitar a crição de documentos a partir de um template.
+Com a MARCAÇÃO <em>markup</em> é possível gerar Man Pages usando o comando <strong>ronn</strong>. Veja mais em <span class="man-ref">ronn<span class="s">(1)</span></span>.
+Necessita Ruby >= 2.0 com Mustache para funcionar..</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<dl>
+<dt class="flush">MODE:</dt><dd><p></p></dd>
+<dt><code>discovery</code></dt><dd><p>Usado para descobrir(MOSTRAR) os targets iqn, ja encontrados.</p></dd>
+<dt class="flush"><code>node</code></dt><dd><p>Usado para se tornar ou nao um no que usa o Target IQN ou nao usa.</p></dd>
+<dt class="flush">OPCOES:</dt><dd><p></p></dd>
+<dt class="flush"><code>-t st</code> </dt><dd><p>Usado para enviar do SENDTARGETS, para descobrir as informacoes do STORAGE.</p></dd>
+<dt class="flush"><code>-p</code></dt><dd><p>IP do PORTAL do Storage ou o servidor de ISCSI.</p></dd>
+<dt><code>--portal &lt;IP></code></dt><dd><p> Usado para indicar o endereço IP do servidor que tem o Portal para conexão.</p></dd>
+<dt class="flush"><code>--login</code></dt><dd><p> Usado para fazer o login no target iSCSI, basta mandar um fdisk -l para ver o disco já entregue para o SO.</p></dd>
+<dt><code>--logout</code></dt><dd><p> Usado para fazer o logout no target iSCSI, dessa forma o disco é removido do SO.</p></dd>
+<dt><code>--targetname &lt;IQN></code></dt><dd><p> Usado para indicar o nome do target IQN a ser utilizado, use o modo de discovery unido a opção de</p></dd>
+<dt><code>-o delete -p PORTAL:3260</code></dt><dd><p>Apagar um target portal</p></dd>
+</dl>
+
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<p>Para descobrir os targets IQN que existem para determinado portal:</p>
+
+<p>   <code>$&gt; iscsiadm -m discovery -t st -p 192.168.45.145</code></p>
+
+<p>O retorno é algo parecido com isso:</p>
+
+<p>192.168.45.145:3260,1 iqn.2006-01.com.openfiler:tsn.73ef1a2e5abf
+192.168.45.145:3260,1 iqn.2006-01.com.openfiler:tsn.acc51ecccc11</p>
+
+<p>Para logar em um target e poder usa-lo.</p>
+
+<pre><code>`$&gt; iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --login `
+</code></pre>
+
+<p>o retorno é algo parecido com isso:<code>
+Logging in to [iface: default, target: iqn.2007-09.com.google.www:disk0, portal: 192.168.1.250,3260] (multiple)
+Login to [iface: default, target: iqn.2007-09.com.google.www:disk0, portal: 192.168.1.250,3260] successful.
+</code></p>
+
+<p>Para deslogar para mandar o logout no final
+    <code>$&gt; iscsiadm -m node --targetname "iqn.2007-09.com.google.www:disk0" --portal "192.168.1.250:3260" --logout</code></p>
+
+<p>Apagar um Portal ja cadastrado:
+    <code>$&gt; iscsiadm -m discovery -o delete -p 192.168.1.30:3260</code></p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">iscsid<span class="s">(1)</span></span>, <span class="man-ref">iscsi-utils<span class="s">(1)</span></span>, <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>September 2015</li>
+    <li class='tr'>iscsiadm(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

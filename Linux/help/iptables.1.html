@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>iptables(1) - iptables Firewall</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#NOME">NOME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
+    <a href="#DIAGNOSTICS">DIAGNOSTICS</a>
+    <a href="#COMENTARIOS">COMENTARIOS</a>
+    <a href="#BUGS">BUGS</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>iptables(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>iptables(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>iptables</code> - <span class="man-whatis">iptables Firewall</span>
+</p>
+
+<h2 id="NOME">NOME</h2>
+
+<p><code>iptables</code> - iptables para gerenciar o Firewall do Linux</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>iptables</code> [<code>-OPCOES</code>] [<code>&lt;</code> <em>iptables-savefile</em> ]</p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><code>iptables</code> é o firewall do linux, e com esse comando pode-=se criar, ver e excluir regras de firewall.</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<dl>
+<dt class="flush"><code>-L</code></dt><dd><p>Usado para listar as regras para a tabela informada, usa tabela FILTER como pradão.</p></dd>
+<dt><code>-t nat</code> <em>config-file</em></dt><dd><p>Informa para usar a tabela <em>nat</em> ao inves da <em>filter</em>.</p></dd>
+<dt><code>-t mangle</code></dt><dd><p>Informa para usar a tabela <em>mangle</em> ao inves da <em>filter</em>.</p></dd>
+<dt class="flush"><code>-F</code></dt><dd><p>Faz a limpeza das tabelas. Zera as regras.</p></dd>
+<dt><code>-P CHAIN POLICE_NAME</code></dt><dd><p>Usado para definir a politica da CHAIN. Por exemplo DROP ou ACCEPT.</p></dd>
+</dl>
+
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<p>Definir a politica restritiva,i ou seja entrada como DROP.</p>
+
+<p>   <code>$&gt; iptables -P INPUT DROP</code></p>
+
+<p>Aumentar o TTL do pacote que for pre roteado e vindo de eth0 em +1 salto, pode-se usar 2,10, qtos quizer até 256 se nao me engano.</p>
+
+<pre><code>`$&gt; iptables -t mangle -A PREROUTING -i eth0 -d 239.255.255.250 -j TTL –ttl-inc 1`
+</code></pre>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p>Esse comando dropa as conexoes que ja existem ESTABLISHED através do firewall.
+<code>&gt; sysctl -w net.netfilter.nf_conntrack_skip_filter=0</code></p>
+
+<p><em>/etc/foo.conf</em>
+  The system wide configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<p><em>~/.foorc</em>
+  Per user configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<p><code>FOOCONF</code>
+  If non-null the full pathname for an alternate system wide <em>/etc/foo.conf</em>.
+  Overridden by the <code>-c</code> option.</p>
+
+<h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
+
+<p>Os seguintes programas podem ser usados para diagnosticos de rede e seus erros e saídas vao direto para <em>stderr</em>:</p>
+
+<p><strong>tcpdump</strong>
+ Pode ser usado para inpecionar os pacotes da rede e facilitar a resolução de problemas.</p>
+
+<p><strong>ngrep</strong>
+ Como <code>tcpdump</code> também pode ser usado para solucionar problemas de rede, e também para sniffar pacotes de rede inspecionando seu conteúdo.
+  Necessário ser root.</p>
+
+<p><strong>netstat -anutp | grep SYN</strong>
+  Esse comando mágico pode ser usado para descobrir problemas de conexão, onde existe um CLIENT-SERVER e que alguma coisa nao acontece.</p>
+
+<h2 id="COMENTARIOS">COMENTARIOS</h2>
+
+<p>Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, não sai nada.></p>
+
+<h2 id="BUGS">BUGS</h2>
+
+<p>The command name should have been chosen more carefully to reflect its
+purpose.</p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">ronn<span class="s">(5)</span></span>, <span class="man-ref">markdown<span class="s">(1)</span></span>, <span class="man-ref">txt2tags<span class="s">(1)</span></span> <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>January 2016</li>
+    <li class='tr'>iptables(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

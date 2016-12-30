@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>zpool(1) - zpool ZFS Pool utility Manager</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#NOME">NOME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
+    <a href="#DIAGNOSTICS">DIAGNOSTICS</a>
+    <a href="#COMENTARIOS">COMENTARIOS</a>
+    <a href="#BUGS">BUGS</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>zpool(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>zpool(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>zpool</code> - <span class="man-whatis">zpool ZFS Pool utility Manager</span>
+</p>
+
+<h2 id="NOME">NOME</h2>
+
+<p><code>zpool</code> - zpool usado para gerenciar pool de discos no ZFS.</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>zpool</code> [<code>&lt;OPTIONS></code>] [<code>POOL</code> <em>device</em> ] <em>file</em> ...</p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><em>ZFS</em> é um tipo de filesystem moderno que veio para substituir os sistema tipo LVM no Linux, pois ele simplifica muito além de ser muito mais eficiente e robusto na questão da segurança dos dados.
+<code>zpool</code> é uma aplicação utlizada para gerenciar piscina(pool) de discos, com ele é possível criar, excluir, adicionar e fazer toda a manutenção de um pool de arquivos <strong>ZFS</strong>. Veja mais em <span class="man-ref">zfs<span class="s">(1)</span></span>.</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<dl>
+<dt><code>attach &lt;POOL> &lt;DEVICE></code></dt><dd><p>Adiciona um disco ao pool de discos.</p></dd>
+<dt><code>status -v &lt;POOL></code></dt><dd><p>Exibe o status da <code>POOL</code>.</p></dd>
+<dt><code>replace &lt;POOL> &lt;DEVICE></code></dt><dd><p>Com esse comando é possível trocar o disco usado <em>DEVICE</em>, após isso será refeito o silvering, após o silvering basta executar o comando novamente passando o novo dispositivo que será substituido.</p></dd>
+<dt><code>detach &lt;POOL> &lt;DEVICE></code></dt><dd><p>Retirar um disco <em>device</em> do <em>POOL</em></p></dd>
+<dt><code>scrub rpool</code></dt><dd><p>Faz um scrub do disco, isso faz tipo uma checagem dos CHECKSUMS
+<strong>recomenda-se fazer o <em>SCRUBING</em> pelo menos uma vez ao mês.</strong></p></dd>
+<dt><code>create mypool mirror /dev/da2 /dev/da3</code></dt><dd><p>Cria um 2 discos no formato <em>mirror</em></p></dd>
+<dt><code>create mypool mirror /dev/da2 /dev/da3 mirror /dev/da4 /dev/da5</code></dt><dd><p>Cria dois mirrors somados de 2 discos cada. um mirror (da2,da3) mais outro mirror(da4,da5).</p></dd>
+<dt><code>create mypool raidz2 /dev/ada0p3 /dev/ada1p3 /dev/ada2p3 /dev/ada3p3 /dev/ada4p3 /dev/ada5p3</code></dt><dd><p>Cria um RAID Z2 com todos esses discos</p></dd>
+<dt><code>clear &lt;POOL></code></dt><dd><p>Limpa erros que por ventura ocorreram no disco.</p></dd>
+<dt><code>create healer mirror /dev/ada0 /dev/ada1</code></dt><dd><p>Esse comando permite criar um SELF-HEALER, auto-cura, isso permite que o próprio sistema faça a checagem dos checksums dos blocks, quando esse não bate ele automaticamente recupera as informações do disco.</p></dd>
+<dt><code>export &lt;HEALER></code></dt><dd><p>Esse comando permite que o <em>HEALER</em> seja exportado.</p></dd>
+<dt><code>status &lt;HEALER></code></dt><dd><p>Exibe o status do <em>HEALER</em>.</p></dd>
+<dt><code>scrub &lt;HEALER></code></dt><dd><p>Faz o scrub do <em>HEALER</em>.</p></dd>
+<dt><code>clear &lt;HEALER></code></dt><dd><p>Faz a limpeza dos erros no <em>HEALER</em></p></dd>
+<dt><code>export &lt;POOL></code></dt><dd><p>Faz o export da POOL</p></dd>
+<dt class="flush"><code>import</code></dt><dd><p>Exibe os possíveis pools não utilizados e que podem ser importados.</p></dd>
+<dt><code>import -o altroot=/mnt mypool</code></dt><dd><p>Faz o import do POOL em um diretório alternativo de root</p></dd>
+<dt><code>history</code>:</dt><dd><p></p></dd>
+<dt><code>upgrade</code>:</dt><dd><p></p></dd>
+<dt class="flush"><code>iostat</code></dt><dd><p>Exibe informaações do tráfego de dados nos dispositivos do pool.</p></dd>
+</dl>
+
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<p>Exibir as informações do pool:</p>
+
+<p>   <code>$&gt; zpool status -v</code></p>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p><em>/etc/foo.conf</em>
+  The system wide configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<p><em>~/.foorc</em>
+  Per user configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<p>$ zfs set compression=on mysqlpool
+$ zfs set dedup=on mysqlpool
+$ zfs set atime=off mysqlpool</p>
+
+<h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
+
+<p>Criei um script para fazer o scrub do ZFS, está na pasta de CDSHELL/script/ZFS</p>
+
+<p><em>DEGRADED</em></p>
+
+<p>Quando um disco entra no modo <strong>DEGRADED</strong> é possível substitui-lo com o seguinte comando:
+<code>$&gt; zpool replace mypool 316502962686821739 ada2p3</code>   onde esse numero é o numero que aparece no disco zuado, quando executado zpool status</p>
+
+<p><code>$&gt; zpool status</code>
+ NAME                    STATE     READ WRITE CKSUM
+        mypool                  DEGRADED     0     0     0
+          mirror-0              DEGRADED     0     0     0
+            ada0p3              ONLINE       0     0     0
+            316502962686821739  UNAVAIL      0     0     0  was /dev/ada1p3</p>
+
+<p><em>ONLINE</em>
+  Significa que o disco está ONLINE, e sem problemas de replicação.</p>
+
+<p><em>UNAVAIL</em>
+  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
+  supported in this version.</p>
+
+<h2 id="COMENTARIOS">COMENTARIOS</h2>
+
+<p>Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, não sai nada.></p>
+
+<p>Segundo o site prefetch.net é possível fazer um tunning dos scrubs com os seguintes comandos</p>
+
+<p>In particular, the “zfs:zfs_scrub_delay” (I believe) defines the # of seconds to pause a scrub if there’s I/O in the pool. If you set this to 0, then the scrub will go to town regards of activity on the pool. For example, I have the following line in my /etc/system file to set this tuneable:
+set zfs:zfs_scrub_delay = 0x1</p>
+
+<h2 id="BUGS">BUGS</h2>
+
+<p>The command name should have been chosen more carefully to reflect its
+purpose.</p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">ronn<span class="s">(5)</span></span>, <span class="man-ref">markdown<span class="s">(1)</span></span>, <span class="man-ref">txt2tags<span class="s">(1)</span></span> <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>September 2015</li>
+    <li class='tr'>zpool(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

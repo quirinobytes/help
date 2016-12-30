@@ -1,10 +1,10 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "ICONV" "1" "May 2015" "" ""
+.TH "ICONV" "1" "August 2015" "" ""
 .
 .SH "NAME"
-\fBiconv\fR \- iconv Conversor de arquivos
+\fBiconv\fR \- Conversor de arquivos
 .
 .SH "NOME"
 \fBiconv\fR \- programa de conversão de codificação de texto\.
@@ -17,13 +17,16 @@
 .
 .SH "OPÇÕES"
 .
-.TP
-\fB\-f\fR \fIfile\-encode\fR
-(from) Define tipo do arquivo de origem\.
+.IP "\(bu" 4
+\fB\-f\fR \fIfile\-encode\fR: (from) Define tipo do arquivo de origem\. \-> utf\-8 , iso\-8859\-1
 .
-.TP
-\fB\-t\fR \fIfile\-encode\fR
-(to) Define o tipo que será converido
+.IP "\(bu" 4
+\fB\-t\fR \fIfile\-encode\fR: (to) Define o tipo que será converido \-> utf\-8 , iso\-8859\-1
+.
+.IP "\(bu" 4
+\fB\-c\fR \fIfile\-name\fR
+.
+.IP "" 0
 .
 .SH "EXEMPLOS"
 .
@@ -31,7 +34,13 @@
 converte o arquivo\.txt para UTF\-8
 .
 .IP
-\fB$>iconv \-f utf\-8 \-t ucs\-4 < arquivo\.txt >/dev/null\fR
+\fB$> iconv \-f utf\-8 \-t ucs\-4 < arquivo\.txt >/dev/null\fR
+.
+.IP "\(bu" 4
+limpa os caracteres estranhos no arquivo
+.
+.IP
+\fB$> iconv \-f utf\-8 \-t utf\-8 \-c file\.txt > novoarquivo\-limpo\.txt\fR
 .
 .IP "" 0
 .

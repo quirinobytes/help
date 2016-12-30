@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>puppet(1) - puppet usado para orquestrar servidores em ambientes de produção.</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
+    <a href="#DIAGNOSTICS">DIAGNOSTICS</a>
+    <a href="#COMENTARIOS">COMENTARIOS</a>
+    <a href="#BUGS">BUGS</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>puppet(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>puppet(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>puppet</code> - <span class="man-whatis">puppet usado para orquestrar servidores em ambientes de produção.</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>puppet</code> [<code>ACAO</code>] [<code>--opcoes</code> <code>-c</code> <em>config-file</em> ] <em>comando</em> ...</p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><code>puppet</code> é um documento escrito para facilitar a crição de documentos a partir de um template.
+Com a MARCAÇÃO <em>markup</em> é possível gerar Man Pages usando o comando <strong>ronn</strong>. Veja mais em <span class="man-ref">ronn<span class="s">(1)</span></span>.
+Necessita Ruby >= 2.0 com Mustache para funcionar..</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<dl>
+<dt class="flush"><code>-t</code></dt><dd><p>Fazer um teste.</p></dd>
+<dt><code>--server</code> <em>hostname</em></dt><dd><p>Usa o servidor indicado para conectar.</p></dd>
+<dt><code>--environment *AMBIENTE*</code></dt><dd><p>Define o ambiente a ser utilizado devel, homol, production</p></dd>
+</dl>
+
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<pre><code>Exibir os cerificados:
+</code></pre>
+
+<p>   <code>$&gt; puppet cert --list --all</code></p>
+
+<pre><code>Testar conexao com servidor.com.br:
+</code></pre>
+
+<p>   <code>$&gt; puppet agent --server servidor.com.br --test</code></p>
+
+<pre><code>Executar servidor no modo debug:
+</code></pre>
+
+<p>   <code>$&gt; puppet master --no-daemonize -debug</code></p>
+
+<pre><code>Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
+</code></pre>
+
+<p>   <code>$&gt; puppet parser validate site.pp</code></p>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p><em>/etc/foo.conf</em>
+  The system wide configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<p><em>~/.foorc</em>
+  Per user configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<p><code>FOOCONF</code>
+  If non-null the full pathname for an alternate system wide <em>/etc/foo.conf</em>.
+  Overridden by the <code>-c</code> option.</p>
+
+<h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
+
+<p>The following diagnostics may be issued on stderr:</p>
+
+<p><strong>Bad magic number.</strong>
+  The input file does not look like an archive file.</p>
+
+<p><strong>Old style baz segments.</strong>
+  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
+  supported in this version.</p>
+
+<h2 id="COMENTARIOS">COMENTARIOS</h2>
+
+<p>Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, não sai nada.></p>
+
+<h2 id="BUGS">BUGS</h2>
+
+<p>The command name should have been chosen more carefully to reflect its
+purpose.</p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">ronn<span class="s">(5)</span></span>, <span class="man-ref">markdown<span class="s">(1)</span></span>, <span class="man-ref">txt2tags<span class="s">(1)</span></span> <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>December 2016</li>
+    <li class='tr'>puppet(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>
