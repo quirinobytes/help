@@ -29,7 +29,7 @@ Usado para executar o script em AWK usando o \fIarquivo\.awk\fR como programa\. 
 Exibindo somente os CS(Context Switch) maiores que 5000 em \fBVERMELHO\fR
 .
 .P
-\fB$> vmstat \-n 5 | awk \'{ if ($12 > 5000) print "\e033[31m;" $0 ; else print "\e033[33m;" $0}\'\'\fR
+\fB$> vmstat \-n 5 | awk \'{ if ($12 > 5000) print "\e033[31m;" $0 ; else print "\e033[33m;" $0}\'\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
