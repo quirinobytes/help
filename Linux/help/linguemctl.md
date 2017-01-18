@@ -25,9 +25,8 @@ OPÇÕES
 * `linguemctl hs version all`:
    Exibir todas as versões dos HS.
 
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `linguemctl fs list | grep nitro52`:
+	Listar a situação dos File Servers do Linguem, filtrando por nitro52.
 
 EXEMPLOS
 --------
