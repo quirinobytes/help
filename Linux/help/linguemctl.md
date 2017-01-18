@@ -18,7 +18,7 @@ OPÇÕES
 * `linguemctl hs check --detail all `:
 	Listar os usuários com status.
 
-* `-c` *config-file*:
+* `linguemctl us status alexandre@qualisegco.dominiotemporario.com`
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
 
