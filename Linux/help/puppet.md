@@ -40,8 +40,8 @@ EXEMPLOS
     Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
    `$> puppet parser validate site.pp`
 
-
-
+	Executar o puppet no servidor no.
+	`puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d`
 
 ARQUIVOS
 --------
