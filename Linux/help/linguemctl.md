@@ -22,8 +22,8 @@ OPÇÕES
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
 
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
+* `linguemctl hs version all`:
+   Exibir todas as versões dos HS.
 
 * `-r`:
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
