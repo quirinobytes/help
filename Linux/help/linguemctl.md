@@ -1,4 +1,4 @@
-linguemctl(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
+linguemctl(1) -- Sistema de Email proprietário.
 ===============================================
 
 
@@ -10,15 +10,13 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-`linguemctl` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`linguemctl` é um servidor de email.
 
 OPÇÕES
 ------
 
 * `linguemctl hs check --detail all `:
-Listar os usuários com status.
+	Listar os usuários com status.
 
 * `-c` *config-file*:
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
