@@ -15,7 +15,7 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
-* `-p PID`:
+* `-p PID`: pode ser uma lista de pid, exemplo -pN1 -pN2 -pN3
   Exibir apenas o processo de pid = PID.
 
 
@@ -34,8 +34,9 @@ EXEMPLOS
 
 Coloque os exemplos aqui:
 
-   `$> top -p `pgrep -d ',' "java|tomcat|redis|mysql|mongo"``
+   `$> top -p ``pgrep -d ',' "java|tomcat|redis|mysql|mongo"```
 
+	`$> top -p $(pgrep -d',' java)`
 
 ARQUIVOS
 --------
