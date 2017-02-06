@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "GIT" "1" "December 2016" "" ""
+.TH "GIT" "1" "February 2017" "" ""
 .
 .SH "NAME"
 \fBgit\fR \- Git Versionamento like Torvalds
@@ -31,10 +31,25 @@ Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os ar
 Salvar as credenciais para https, \fIfica toda hora pedindo\fR
 .
 .SH "EXEMPLOS"
-Coloque os exemplos aqui:
+Clonar um repo em HTTP
 .
 .P
 \fB$> git clone http://github\.com/quirinobytes/shell\.git\'\fR
+.
+.P
+Exportar os arquivos sem os (*\.git)
+.
+.IP "" 4
+.
+.nf
+
+`git archive master \-\-format zip \-\-output "output\.zip"$> `
+ou
+`$> git archive master | gzip > latest\.tgz`
+.
+.fi
+.
+.IP "" 0
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

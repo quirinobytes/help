@@ -104,9 +104,9 @@ Sobrescreve o direcionamento com pipe <code>|</code>.</p></dd>
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<p>Coloque os exemplos aqui:</p>
+<p>Exibindo somente os CS(Context Switch) maiores que 5000 em <strong>VERMELHO</strong></p>
 
-<p>   <code>$&gt; date '%Y/%m/%d'</code></p>
+<p>   <code>$&gt; vmstat -n 5 | awk '{ if ($12 &gt; 5000) print "\033[31m;" $0 ; else print "\033[33m;" $0}'</code></p>
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -154,7 +154,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>September 2015</li>
+    <li class='tc'>January 2017</li>
     <li class='tr'>awk(1)</li>
   </ol>
 

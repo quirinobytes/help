@@ -1,51 +1,36 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "TCPDUMP" "1" "December 2016" "" ""
+.TH "CURL" "1" "January 2017" "" ""
 .
 .SH "NAME"
-\fBtcpdump\fR \- tcpdump para minhas man pages v1\.0
-.
-.SH "NOME"
-\fBtcpdump\fR \- tcpdump de arquivo MarkDown para gerar Man Pages por Rafael Quirino\.
+\fBcurl\fR \- curl \- Usado para fazer requisições HTTP, entre uma série de outros recursos\.
 .
 .SH "SYNOPSIS"
-\fBtcpdump\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+\fBcurl\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
 .
 .SH "DESCRIÇÃO"
-\fBtcpdump\fR
+\fBcurl\fR Usado para enviar requisições HTTP/HTTPS/FTP entre outros, muito poderoso\.
 .
 .SH "OPÇÕES"
 .
 .TP
-\fB\-A\fR
-Mostra o cabeçalho do pacote, muito bom para saber de onde vem e HEADERS infos\.
+\fB\-6\fR
+Usar IPv6\.
 .
 .TP
-\fB\-nn\fR
-Não traduz nomes de host(FQDN) nem numeros de porta(/etc/services)\.
+\fB\-\-reoslve\fR \fIhostname\fR
+Usar a resolução indicada ao invés de consultar o DNS\. \fIhostname\fR
 .
 .TP
-\fB\-X\fR
-Exibe informação do conteúdo heXa do pacote, mas decodificando o dado em texto\.
-.
-.TP
-\fB\-x\fR
-Mesta coisa que \-X so que nao decodifica\.
-.
-.TP
-\fB\-vv\fR
-Modo bemmm verbose, seria um tipo nervose verbose\.
-.
-.TP
-\fB\-i <IF>\fR
-Exibe o dump de pacotes somente nessa(s) interfaces\.
+\fB\-I / \-\-head\fR
+Mostrar somente as informações de cabeçalho, only\.
 .
 .SH "EXEMPLOS"
-Exibir conteúdo de pacotes UPnP Entertaiment Service(UDP/239\.255\.255\.250:1900)\.
+Coloque os exemplos aqui:
 .
 .P
-\fB$> tcpdump \-Annvi \-i eth0 host 239\.255\.255\.250\fR
+\fB$> curl \-I \-6 \-\-resolve mail\.uol\.com\.br:443:2804:49c:319:430::354 https://mail\.uol\.com\.br/cnx\.htm\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

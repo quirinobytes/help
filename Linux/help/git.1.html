@@ -98,9 +98,16 @@
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<p>Coloque os exemplos aqui:</p>
+<p>Clonar um repo em HTTP</p>
 
 <p>   <code>$&gt; git clone http://github.com/quirinobytes/shell.git'</code></p>
+
+<p>Exportar os arquivos sem os (*.git)</p>
+
+<pre><code>`git archive master --format zip --output "output.zip"$&gt; `
+ou
+`$&gt; git archive master | gzip &gt; latest.tgz`
+</code></pre>
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -149,7 +156,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>February 2017</li>
     <li class='tr'>git(1)</li>
   </ol>
 

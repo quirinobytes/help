@@ -14,9 +14,10 @@
 .
 .SH "OPÇÕES"
 .
-.TP
-\fB\-p PID\fR
-Exibir apenas o processo de pid = PID\.
+.IP "\(bu" 4
+\fB\-p PID\fR: pode ser uma lista de pid, exemplo \-pN1 \-pN2 \-pN3 Exibir apenas o processo de pid = PID\.
+.
+.IP "" 0
 .
 .SH "COMANDOS INTERATIVOS"
 .
@@ -35,7 +36,17 @@ Exibir apenas o processo de pid = PID\.
 Coloque os exemplos aqui:
 .
 .P
-\fB$> top \-p\fRpgrep \-d \',\' "java|tomcat|redis|mysql|mongo"``
+`$> top \-p ``pgrep \-d \',\' "java|tomcat|redis|mysql|mongo"```
+.
+.IP "" 4
+.
+.nf
+
+`$> top \-p $(pgrep \-d\',\' java)`
+.
+.fi
+.
+.IP "" 0
 .
 .SH "ARQUIVOS"
 \fI~/\.toprc\fR Arquivos de configuração do Top para o usuário\.

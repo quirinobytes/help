@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>BPF(1) - BPF Berkley Packge Filter</title>
+  <title>top(1) - TOP process do Linux</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -54,53 +54,89 @@
 
   <div class='man-navigation' style='display:none'>
     <a href="#NAME">NAME</a>
-    <a href="#NOME">NOME</a>
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRI-O">DESCRIÇÃO</a>
     <a href="#OP-ES">OPÇÕES</a>
+    <a href="#COMANDOS-INTERATIVOS">COMANDOS INTERATIVOS</a>
     <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#DIAGNOSTICS">DIAGNOSTICS</a>
+    <a href="#COMENTARIOS">COMENTARIOS</a>
+    <a href="#BUGS">BUGS</a>
     <a href="#AUTOR">AUTOR</a>
     <a href="#VEJA-SOBRE">VEJA SOBRE</a>
   </div>
 
   <ol class='man-decor man-head man head'>
-    <li class='tl'>BPF(1)</li>
+    <li class='tl'>top(1)</li>
     <li class='tc'></li>
-    <li class='tr'>BPF(1)</li>
+    <li class='tr'>top(1)</li>
   </ol>
 
   <h2 id="NAME">NAME</h2>
 <p class="man-name">
-  <code>BPF</code> - <span class="man-whatis">BPF Berkley Packge Filter</span>
+  <code>top</code> - <span class="man-whatis">TOP process do Linux</span>
 </p>
-
-<h2 id="NOME">NOME</h2>
-
-<p><code>BPF</code> - BPF Filtro de Pacotes da universidade de Berkley</p>
 
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-<p><code>BPF</code> [<code>-bar</code>] [<code>-c</code> <em>config-file</em> ] <em>file</em> ...</p>
+<p><code>top</code> [<code>-opcoes</code>] [<code>-u</code> <em>username</em> ]</p>
 
 <h2 id="DESCRI-O">DESCRIÇÃO</h2>
 
-<p><code>BPF</code> é muito utilizado para realizar filtros de tráfego de rede em interfaces, aceita vários tipos de filtros, desde os mais simples até filtros com lógicas complexas até de entender.</p>
+<p><code>top</code> Usado para exibir o todos os processos que estão sendo executados agora no linux. Em ordem, de CPU/MEM/usuário etc.</p>
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
-<dl>
-<dt><code>host A.B.C.D</code></dt><dd><p>Filtro para pacotes com IP tal, tanto origem quanto destino.</p></dd>
-<dt class="flush"><code>ip</code>:</dt><dd><p></p></dd>
-<dt><code>tcp[13]==2</code></dt><dd><p>Filtro para Pacotes SYN.</p></dd>
-<dt><code>port [1-65536]</code></dt><dd><p>Filtra pacotes com partas tal, pode se usar mais de uma: 10-15,22</p></dd>
-</dl>
+<ul>
+<li><code>-p PID</code>: pode ser uma lista de pid, exemplo -pN1 -pN2 -pN3
+Exibir apenas o processo de pid = PID.</li>
+</ul>
+
+
+<h2 id="COMANDOS-INTERATIVOS">COMANDOS INTERATIVOS</h2>
+
+<ul>
+<li><p><code>a/A</code>: troca a janela seleciona</p></li>
+<li><p><code>g1/g2/g3/g4</code>: Habilita/Desabilita o Grupo de Processos, cada grupo tem uma abordagem de exibição, por memória, processo, etc.</p></li>
+<li><p><code>1</code>: Exibir o número de processadores.</p></li>
+</ul>
 
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
 <p>Coloque os exemplos aqui:</p>
 
-<p>   <code>$&gt;host 192.168.0.1 and host 192.168.0.254 and tcp dport 22</code></p>
+<p>   `$> top -p ``pgrep -d ',' "java|tomcat|redis|mysql|mongo"```</p>
+
+<pre><code>`$&gt; top -p $(pgrep -d',' java)`
+</code></pre>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p><em>~/.toprc</em>
+  Arquivos de configuração do Top para o usuário.</p>
+
+<h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
+
+<p>The following diagnostics may be issued on stderr:</p>
+
+<p><strong>Bad magic number.</strong>
+  The input file does not look like an archive file.</p>
+
+<p><strong>Old style baz segments.</strong>
+  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
+  supported in this version.</p>
+
+<h2 id="COMENTARIOS">COMENTARIOS</h2>
+
+<p>Coloque seus comentários aqui...
+<- Tag para comentários na Man Page, juro, não sai nada.></p>
+
+<h2 id="BUGS">BUGS</h2>
+
+<p>The command name should have been chosen more carefully to reflect its
+purpose.</p>
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -113,8 +149,8 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
-    <li class='tr'>BPF(1)</li>
+    <li class='tc'>January 2017</li>
+    <li class='tr'>top(1)</li>
   </ol>
 
   </div>

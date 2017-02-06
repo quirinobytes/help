@@ -30,10 +30,15 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Clonar um repo em HTTP
 
    `$> git clone http://github.com/quirinobytes/shell.git'`
 
+Exportar os arquivos sem os (\*.git)
+
+	`git archive master --format zip --output "output.zip"$> `
+	ou
+	`$> git archive master | gzip > latest.tgz`
 
 ARQUIVOS
 --------
