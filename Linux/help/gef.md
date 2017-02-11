@@ -25,6 +25,9 @@ OPÇÕES
 * `r`:
    Running, colocar para rodar o binario.
 
+* `x/s $rax`:
+   Exibir o conteudo do registrador $rax, formato s(tring).
+
 * `elf-info`:
   Exibe informaçoes do binario.
 
