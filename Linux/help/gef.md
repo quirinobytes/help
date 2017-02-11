@@ -28,6 +28,15 @@ OPÇÕES
 * `elf-info`:
   Exibe informaçoes do binario.
 
+* `checksec`:
+  Exibe informaçoes do binario.
+
+* `gef-remote -t your.ip.address:1234 -p 666`:
+  Fazer debug remoto.
+
+* `gdbserver 0.0.0.0:1234 /path/to/file`:
+  Servidor de debug.
+
 
 EXEMPLOS
 --------
