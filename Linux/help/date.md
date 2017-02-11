@@ -1,4 +1,4 @@
-date(1) -- Exibe a data do sistema de acordo com os parametros passados.
+/bin/bash: ronn: command not found
 ===============================================
 
 

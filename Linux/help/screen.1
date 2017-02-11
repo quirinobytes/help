@@ -1,19 +1,16 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "SCREEN" "1" "May 2015" "" ""
+.TH "SCREEN" "1" "December 2016" "" ""
 .
 .SH "NAME"
-\fBscreen\fR \- screeno para minhas man pages v1\.0
-.
-.SH "NOME"
-\fBscreen\fR \- screeno de arquivo MarkDown para gerar Man Pages por Rafael Quirino\.
+\fBscreen\fR \- screen Para gerenciar as janelas\.
 .
 .SH "SYNOPSIS"
-\fBscreen\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+\fBscr\fR [\fB\-ls\fR] [\fB\-x\fR \fB\-r\fR \fIpid\fR ] \-f \fI\.screenrc\-file\fR
 .
 .SH "DESCRIÇÃO"
-\fBscreen\fR é um programa do Rafael Quirino para abrir multiplas sessões de console em multiplas janelas, alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar a mesma sessão usando o mesmo usuário e senha\.
+\fBscreen\fR é um programa feito para abrir multiplas sessões de console em multiplas janelas, alternar entre essas janelas, executar comandos, macros mapear teclas, enfim uma série de coisas, mas a melhor de todas pra mim é a possibilidade de compartilhar a mesma sessão usando o mesmo usuário e senha\.
 .
 .P
 Pode e deve ser usado com o arquivo de configuração \fB\.screenrc\fR\. Veja mais em screen(1)\.
@@ -40,6 +37,12 @@ teste de comandos
 .
 .SH "ENVIRONMENT"
 \fI~/\.screenrc\fR O arquivo mágico de configurção que todo admin pode usar\. Veja screerc(5) para mais detalhes\.
+.
+.SH "BUGS"
+Caso as quebras de linhas começarem a dar problema, tente:
+.
+.P
+\fB$> termcapinfo xterm* ti@:te@\fR ou \fB$>bind \'set horizontal\-scroll\-mode off\'\fR
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR

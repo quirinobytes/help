@@ -32,9 +32,11 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Exibindo somente os CS(Context Switch) maiores que 5000 em **VERMELHO**
 
-   `$> date '%Y/%m/%d'`
+   `$> vmstat -n 5 | awk '{ if ($12 > 5000) print "\033[31m;" $0 ; else print "\033[33m;" $0}'`
+
+
 
 
 ARQUIVOS

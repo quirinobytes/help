@@ -42,7 +42,12 @@ Criar uma rede Ad Hoc no Windows 8 e iniciá-la:
    `$> netsh wlan start hostednetwork'`
    `$> netsh wlan stop hostednetwork'`
 
-Coloque outros emails aqui:
+Exibir as regras do **portproxy**
+
+	`$> netsh interface portproxy show all`
+
+Apagar uma entrada no **portproxy**
+	`$>  netsh interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0`
 
 
 ARQUIVOS

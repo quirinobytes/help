@@ -1,0 +1,31 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "FIND" "1" "December 2016" "" ""
+.
+.SH "NAME"
+\fBfind\fR \- Localizador de arquivos ou diretórios no file system\.
+.
+.SH "SYNOPSIS"
+\fBfind\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBfind\fR Usado para localizar arquivos diretórios, links, pode se executar uma série de comandos nele e tem muitos parametros, sem duvida uma excelente ferramenta do GNU\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-type f\fR
+Procura somente arquivos (file)
+.
+.SH "EXEMPLOS"
+Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:
+.
+.P
+\fBfind / \-type f \-perm +a+x \-print0 | xargs \-0 rpm \-qf | grep file | cut \-f2 \-d\' \'\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

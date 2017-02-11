@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "IPTABLES" "1" "September 2015" "" ""
+.TH "IPTABLES" "1" "December 2016" "" ""
 .
 .SH "NAME"
 \fBiptables\fR \- iptables Firewall
@@ -57,6 +57,9 @@ Aumentar o TTL do pacote que for pre roteado e vindo de eth0 em +1 salto, pode\-
 .IP "" 0
 .
 .SH "ARQUIVOS"
+Esse comando dropa as conexoes que ja existem ESTABLISHED através do firewall\. \fB> sysctl \-w net\.netfilter\.nf_conntrack_skip_filter=0\fR
+.
+.P
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
 .
 .P
