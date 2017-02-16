@@ -36,7 +36,8 @@ ARQUIVOS
 */etc/sysctl.conf*
   Arquivos de configuração dos parametros do kernel.
 
-cat /proc/sys/net/core/somaxconn
+`cat /proc/sys/net/core/somaxconn`
+
 /proc/sys/ipv4/* -> configurações de kernel para IPv4.*
 
 ENVIRONMENT
