@@ -38,6 +38,26 @@ Exibindo somente os CS(Context Switch) maiores que 5000 em **VERMELHO**
 
 
 
+`/foo/ { print }`
+
+
+`/[0-9]+\.[0-9]*/ { print }`
+
+
+`$1 == "fred" { print $3 }`
+
+
+`$5 ~ /root/ { print $3 }`
+
+
+`{ 
+  if ( $5 ~ /root/ ) { 
+          print $3 
+  } 
+}`
+
+
+
 
 ARQUIVOS
 --------
