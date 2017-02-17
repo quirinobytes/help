@@ -10,12 +10,25 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-Usar melhorias de segurança no HTTP headers:
+
+Usar melhorias de segurança no HTTP headers(ver página da `OWASP` sobre *Content-Security-Policy*:
 Content-Security-Policy
 X-Content-Security-Policy
 X-WebKit-CSP
 
 
+Ficar atendo ao OWASP top 10
+
+
+
+ATAQUES
+-------
+
+Clickjacking
+Cross Site Request Forgery (CSRF)
+Denial of Service(DoS)
+Server Site Request Forgery (SSRF)
+CORS ( Cross Origin Resource Sharing)
 
 
 
