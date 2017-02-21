@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "AWK" "1" "January 2017" "" ""
+.TH "AWK" "1" "February 2017" "" ""
 .
 .SH "NAME"
 \fBawk\fR \- awk linguagem de desenvolvimento de script orientado a strem
@@ -30,6 +30,24 @@ Exibindo somente os CS(Context Switch) maiores que 5000 em \fBVERMELHO\fR
 .
 .P
 \fB$> vmstat \-n 5 | awk \'{ if ($12 > 5000) print "\e033[31m;" $0 ; else print "\e033[33m;" $0}\'\fR
+.
+.P
+\fB/foo/ { print }\fR
+.
+.P
+\fB/[0\-9]+\e\.[0\-9]*/ { print }\fR
+.
+.P
+\fB$1 == "fred" { print $3 }\fR
+.
+.P
+\fB$5 ~ /root/ { print $3 }\fR
+.
+.P
+\fB{ if ( $5 ~ /root/ ) { print $3 } }\fR
+.
+.P
+Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes: $> \fBawk \'{if ($1>100 && $1<120) print d,"\e033[33m" $0 ; else if ($1>120) print d,"\e033[31m" $0 ; else print d,"\e033[0m" $0}\' "d=$(date \-R)"\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
