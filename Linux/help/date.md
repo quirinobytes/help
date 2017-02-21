@@ -1,6 +1,5 @@
-/bin/bash: ronn: command not found
+date(1) - Manipular datas
 ===============================================
-
 
 SYNOPSIS
 --------
