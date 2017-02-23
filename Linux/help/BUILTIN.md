@@ -15,6 +15,13 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+Dentro de um programa .sh, voce pode pegar os parametros passados como argumento assim:
+*Variável*	*Significado*
+$0			Contém o nome do programa
+$#			Contém a quantidade de parâmetros passados
+$*			Contém o conjunto de todos os parâmetros (muito parecido com $@)
+
+
 EXEMPLOS
 --------
 
