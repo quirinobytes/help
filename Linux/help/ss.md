@@ -22,6 +22,9 @@ OPÇÕES
 * `-4`:
   Usado para exibir os sockets IPv4.
 
+* `-s`:
+  Usado para exibir um sumario (resumo das conexões)
+
 EXEMPLOS
 --------
 
