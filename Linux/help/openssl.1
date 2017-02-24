@@ -1,0 +1,40 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "OPENSSL" "1" "January 2017" "" ""
+.
+.SH "NAME"
+\fBopenssl\fR \- Criar e fazer testes com certificado digital\.
+.
+.SH "SYNOPSIS"
+\fBopenssl\fR [\fB\-options\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBopenssl\fR Usado para enviar request de Certificado, criar, gerar e testar certificados difitais\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-connect\fR \fIhostname\fR
+Conectar usando o hostname a seguir\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> openssl s_client \-connect srvhost:443 > /tmp/cert\.crt\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/ssl\fR Arquivos de certificado, etc\.
+.
+.SH "DIAGNOSTICS"
+Use o seguinte site abaixo para realizar o teste do Certificado\.
+.
+.P
+\fBhttps://www\.sslshopper\.com/ssl\-checker\.html\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+openssl(5), curl(1), wget(1) [Linux Man Page Howto](

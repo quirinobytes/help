@@ -1,6 +1,5 @@
-date(1) -- Exibe a data do sistema de acordo com os parametros passados.
+date(1) - Manipular datas
 ===============================================
-
 
 SYNOPSIS
 --------

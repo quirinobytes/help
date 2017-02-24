@@ -32,9 +32,36 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Exibindo somente os CS(Context Switch) maiores que 5000 em **VERMELHO**
 
-   `$> date '%Y/%m/%d'`
+   `$> vmstat -n 5 | awk '{ if ($12 > 5000) print "\033[31m;" $0 ; else print "\033[33m;" $0}'`
+
+
+
+`/foo/ { print }`
+
+
+`/[0-9]+\.[0-9]*/ { print }`
+
+
+`$1 == "fred" { print $3 }`
+
+
+`$5 ~ /root/ { print $3 }`
+
+
+`{ 
+  if ( $5 ~ /root/ ) { 
+          print $3 
+  } 
+}`
+
+
+
+
+Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes:
+$> `awk '{if ($1>100 && $1<120) print d,"\033[33m" $0 ; else if ($1>120) print d,"\033[31m" $0 ; else print d,"\033[0m" $0}' "d=$(date -R)" `
+
 
 
 ARQUIVOS

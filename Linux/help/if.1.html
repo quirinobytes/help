@@ -88,13 +88,29 @@
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
-<dl>
-<dt class="flush"><code>-n</code></dt><dd>Non-zero -> Teste se náo for nulo, veja se a var contém algo pelo menos.
-q</dd>
-<dt class="flush"><code>-z</code></dt><dd>Verifica se a variável foi setada, pode até ser vazia.</dd>
-<dt class="flush"><code>-e</code></dt><dd><p>Verifica se o <em>arquivo</em> existe.</p></dd>
-<dt class="flush"><code>-d</code></dt><dd><p>Verifica se o diretório existe.</p></dd>
-</dl>
+<ul>
+<li><p><code>-n</code>:
+Non-zero -> Testar se a variável existe, se nao é nulo [NOT NULL].</p></li>
+<li><p><code>-z</code>:
+Verifica se a variável foi setada, pode até ser vazia.</p></li>
+<li><p><code>-e</code>:
+Verifica se o <em>arquivo</em> existe.</p></li>
+<li><p><code>-d</code>:
+Verifica se o diretório existe.</p></li>
+<li><p><code>-eq</code>: igual</p></li>
+<li><p><code>-ne</code>: diferente</p></li>
+<li><p><code>-gt</code>: maior</p></li>
+<li><p><code>-ge</code>: maior ou igual</p></li>
+<li><p><code>-lt</code>: menor</p></li>
+<li><p><code>-le</code>: menor ou igual</p></li>
+<li><p><code>-d</code>: se é um diretório</p></li>
+<li><p><code>-e</code>: se existe</p></li>
+<li><p><code>-z</code>: se é vazio</p></li>
+<li><p><code>-f</code>: se contem texto.</p></li>
+<li><p><code>-r</code>: se o arquivo possui permissão de leitura</p></li>
+<li><p><code>-w</code>: se o arquivo possui permissão de escrita.</p></li>
+<li><p><code>-x</code>: se o arquivo é executavel.</p></li>
+</ul>
 
 
 <h2 id="EXAMPLES">EXAMPLES</h2>
@@ -107,7 +123,26 @@ q</dd>
 else
     echo "Não sou ninguém"
 fi`
+
+   `if [ -z "$1" ]                           # Is parameter #1 zero length?
 </code></pre>
+
+<p>   `then
+     echo "-Parameter #1 is zero length.-"  # Or no parameter passed.
+   else
+     echo "-Parameter #1 is \"$1\".-"
+   fi</p>
+
+<p>   variable=${1-$DEFAULT}                   #  What does
+   echo "variable = $variable"              #+ parameter substitution show?
+                                            #  ---------------------------
+                                            #  It distinguishes between
+                                            #+ no param and a null param.`</p>
+
+<p>   <code>if [ "$2" ]
+   then
+     echo "-Parameter #2 is \"$2\".-"
+   fi</code></p>
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -120,7 +155,7 @@ fi`
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>May 2015</li>
+    <li class='tc'>December 2016</li>
     <li class='tr'>if(1)</li>
   </ol>
 

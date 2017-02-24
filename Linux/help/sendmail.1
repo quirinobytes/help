@@ -1,0 +1,64 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SENDMAIL" "1" "January 2017" "" ""
+.
+.SH "NAME"
+\fBsendmail\fR \- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino\.
+.
+.SH "SYNOPSIS"
+\fBsendmail\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBsendmail\fR usado para enviar email na linha de comando\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-b\fR
+Do not write "busy" to stdout while processing\.
+.
+.TP
+\fB\-c\fR \fIconfig\-file\fR
+Use the alternate system wide \fIconfig\-file\fR instead of \fI/etc/foo\.conf\fR\. This overrides any \fBFOOCONF\fR environment variable\.
+.
+.TP
+\fB\-a\fR
+In addition to the baz segments, also parse the blurfl headers\.
+.
+.TP
+\fB\-r\fR
+Recursive mode\. Operates as fast as lightning at the expense of a megabyte of virtual memory\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> date \'%Y/%m/%d\'\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
+.
+.P
+\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+\fBmailq\fR Usando para ver a fila de mensagens de email\.
+.
+.P
+\fBpostflush\.\fR \fBflush\fR faz um flush na fila\.
+.
+.SH "COMENTARIOS"
+Exemplo de um script Sendmail\.shexport smtpemailfrom=zabbix@ghelfond\.com\.br export zabbixemailto=$1 export zabbixsubject=$2 export zabbixbody=$3 export smtpserver=smtplw\.com\.br export smtplogin=ghelfond export smtppass=gheadm001/usr/bin/sendmail \-o message\-charset=utf\-8 \-f $smtpemailfrom \-t $zabbixemailto \-u $zabbixsubject \-m $zabbixbody \-s $smtpserver:587 \-xu $smtplogin \-xp $smtppass
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

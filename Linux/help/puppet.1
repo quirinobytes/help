@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "PUPPET" "1" "October 2016" "" ""
+.TH "PUPPET" "1" "January 2017" "" ""
 .
 .SH "NAME"
 \fBpuppet\fR \- puppet usado para orquestrar servidores em ambientes de produção\.
@@ -75,6 +75,17 @@ Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
 .
 .P
 \fB$> puppet parser validate site\.pp\fR
+.
+.IP "" 4
+.
+.nf
+
+Executar o puppet no servidor no\.
+`puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-d`
+.
+.fi
+.
+.IP "" 0
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
