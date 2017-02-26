@@ -1,0 +1,56 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "HARDENING" "1" "January 2017" "" ""
+.
+.SH "NAME"
+\fBHARDENING\fR \- Hardening é uma tecnica para endurecer a segurança do servidor\.
+.
+.SH "SYNOPSIS"
+\fBHARDENING\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBHARDENING\fR é usado para melhorar a segurança e a estabilidade do servidor
+.
+.SH "OPÇÕES"
+.
+.IP "\(bu" 4
+\fBtcp\fR: Colocar configurações de kernel para melhorar o tempo de time wait dos pacotes, para não ficar muito tempo no keepalive\. (isso permite um melhor uso das conexoes sendo que as que estão com keepalive muito tempo serao desconectados, abrindo espaço para novas conexões acontecerem\.
+.
+.IP
+net\.ipv4\.tcp_keepalive_intvl = 10 net\.ipv4\.tcp_keepalive_probes = 9 net\.ipv4\.tcp_keepalive_time = 1800
+.
+.IP "" 0
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui: \fB$> date \'%Y/%m/%d\'\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/sysctl\.conf\fR Arquivo com as configurações de opções de kernel\.
+.
+.P
+\fI/etc/sysctl\.d/\fR Diretõrio com as configurações de opções de kernel\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBad magic number\.\fR The input file does not look like an archive file\.
+.
+.P
+\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

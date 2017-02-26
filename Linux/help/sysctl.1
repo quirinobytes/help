@@ -1,0 +1,73 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SYSCTL" "1" "February 2017" "" ""
+.
+.SH "NAME"
+\fBsysctl\fR \- System Control
+.
+.SH "SYNOPSIS"
+\fBsysctl\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBsysctl\fR é um comando usado para gerenciar argumentos de Kernel\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-A\fR
+Exibir todas as configurações do kernel\.
+.
+.TP
+\fB\-p\fR
+Exibir somente as configurações que foram alteradas\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> sysctl \-A | grep somaxconn\'\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/sysctl\.conf\fR Arquivos de configuração dos parametros do kernel\.
+.
+.P
+\fBcat /proc/sys/net/core/somaxconn\fR
+.
+.P
+/proc/sys/ipv4/\fI\-> configurações de kernel para IPv4\.\fR
+.
+.SH "ENVIRONMENT"
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBad magic number\.\fR The input file does not look like an archive file\.
+.
+.P
+\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+.
+.SH "TUNNING"
+\fISysctl Tweaks\fR
+.
+.P
+\-Open $> vim /etc/sysctl\.conf \-Add following towards bottom
+.
+.SS "IMPROVE SYSTEM MEMORY MANAGEMENT"
+fs\.file\-max = 2097152vm\.swappiness = 10 vm\.dirty_ratio = 60 vm\.dirty_background_ratio = 2
+.
+.SS "GENERAL NETWORK SECURITY OPTIONS"
+net\.ipv4\.tcp_synack_retries = 2net\.ipv4\.ip_local_port_range = 2000 65535net\.ipv4\.tcp_rfc1337 = 1net\.ipv4\.tcp_fin_timeout = 15net\.ipv4\.tcp_keepalive_time = 300 net\.ipv4\.tcp_keepalive_probes = 5 net\.ipv4\.tcp_keepalive_intvl = 15
+.
+.SS "TUNING NETWORK PERFORMANCE"
+net\.core\.rmem_default = 31457280net\.core\.rmem_max = 12582912net\.core\.wmem_default = 31457280net\.core\.wmem_max = 12582912net\.core\.somaxconn = 4096net\.core\.netdev_max_backlog = 65536net\.core\.optmem_max = 25165824net\.ipv4\.tcp_mem = 65536 131072 262144 net\.ipv4\.udp_mem = 65536 131072 262144net\.ipv4\.tcp_rmem = 8192 87380 16777216 net\.ipv4\.udp_rmem_min = 16384net\.ipv4\.tcp_wmem = 8192 65536 16777216 net\.ipv4\.udp_wmem_min = 16384net\.ipv4\.tcp_max_tw_buckets = 1440000 net\.ipv4\.tcp_tw_recycle = 1 net\.ipv4\.tcp_tw_reuse = 1
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

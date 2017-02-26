@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "BULTIN" "1" "December 2016" "" ""
+.TH "BULTIN" "1" "February 2017" "" ""
 .
 .SH "NAME"
 \fBBULTIN\fR \- Funções embutidas do shell (bash)
@@ -13,6 +13,7 @@
 \fBBULTIN\fR é um documento que mostra algumas funções embutidas do shell\.
 .
 .SH "OPÇÕES"
+Dentro de um programa \.sh, voce pode pegar os parametros passados como argumento assim: \fIVariável\fR \fISignificado\fR $0 Contém o nome do programa $# Contém a quantidade de parâmetros passados $* Contém o conjunto de todos os parâmetros (muito parecido com $@)
 .
 .SH "EXEMPLOS"
 .
@@ -44,6 +45,9 @@ Nessa sessao mostro o problema de usar backspace e nao fechar os caracteres nao 
 .
 .P
 45 exemplos de variáveis e arrays em Shell Script
+.
+.P
+\fB0 \- Retorna quantos índices (posições) existem no array\fR $> echo ${#VALOR[*]}
 .
 .P
 \fB1 \- Criar uma variável, ${var} é o mesmo que $var, porém não ambíguo\.\fR var="http://www\.terminalroot\.com\.br/"

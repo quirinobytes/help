@@ -22,7 +22,7 @@ OPÇÕES
 ------
 
 * `-i`:
-  Usado para exibir as informações de DEBUG/ERROS.
+  Usado para exibir as informações das (I)nterfaces com DEBUG/ERROS 
 
 * `-antu`: 
   Usado para exibir todas as informações com TCP/UDP somente numeros.
@@ -41,6 +41,16 @@ OPÇÕES
 
 * `-p`:
   Exibe as informações sobre os processos. quem é o dono porta.
+
+* `-s`:
+  Exibir as e(S)tatisticas de uso, com st(TCP) ou su(UDP).
+* `-r`:
+  Exibir a tabela de roteamento.
+* `-c`:
+  Continuously, exibir continuamente.
+* `-l`:
+  Exibir somente as ports que estão em modo LISTEN. -lx(active UNIX sockets), -lu(Active Unix), lt(Active TCP).
+
 
 EXEMPLOS
 --------

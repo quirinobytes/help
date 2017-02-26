@@ -80,7 +80,9 @@
 
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-<p><code>for</code> [<code>-bar</code>] [<code>-c</code> <em>config-file</em> ] <em>file</em> ...</p>
+<p><code>for &lt;iteração> in &lt;lista>; do
+    bloco de codigos/comando
+done</code></p>
 
 <h2 id="DESCRI-O">DESCRIÇÃO</h2>
 
@@ -89,9 +91,10 @@
 <h2 id="OP-ES">OPÇÕES</h2>
 
 <dl>
-<dt><code>for ((c=0;$c&gt;10;$c++)) do echo $c ; done</code></dt><dd><p>In addition to the baz segments, also parse the blurfl headers.</p></dd>
-<dt><code>for i in</code>seq 1 2 10<code>; do echo $i ; done</code></dt><dd><p>Recursive mode. Operates as fast as lightning at the expense of a megabyte
+<dt><code>for ((c=0;$c&gt;10;c++)) do echo $c ; done</code></dt><dd><p>In addition to the baz segments, also parse the blurfl headers.</p></dd>
+<dt><code>for i in $(seq 1 2 10); do echo $i ; done</code></dt><dd><p>Recursive mode. Operates as fast as lightning at the expense of a megabyte
 of virtual memory.</p></dd>
+<dt><code>for file in *.txt ; do echo $file; done</code></dt><dd><p>Para todos os arquivos txt, exiba seus nomes, barabum!</p></dd>
 </dl>
 
 
@@ -102,6 +105,19 @@ of virtual memory.</p></dd>
 <p>   <code>$&gt; for i in</code>seq 1 2 10<code>; do echo $i ; done</code></p>
 
 <p>   <code>$&gt; for ((c=0;$c&gt;10;$c++)) do echo $c ; done</code></p>
+
+<p><code>$&gt; for ((i=1, j=10; i &lt;= 5 ; i++, j=j+5))
+do
+ echo "Number $i: $j"
+done
+</code></p>
+
+<p>Usando Range Incremental:</p>
+
+<p><code>$&gt; for num in {1..10..2}
+do
+ echo "Number: $num"
+done</code></p>
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -114,7 +130,7 @@ of virtual memory.</p></dd>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>August 2015</li>
+    <li class='tc'>December 2016</li>
     <li class='tr'>for(1)</li>
   </ol>
 

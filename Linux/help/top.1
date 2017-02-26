@@ -1,0 +1,73 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "TOP" "1" "January 2017" "" ""
+.
+.SH "NAME"
+\fBtop\fR \- TOP process do Linux
+.
+.SH "SYNOPSIS"
+\fBtop\fR [\fB\-opcoes\fR] [\fB\-u\fR \fIusername\fR ]
+.
+.SH "DESCRIÇÃO"
+\fBtop\fR Usado para exibir o todos os processos que estão sendo executados agora no linux\. Em ordem, de CPU/MEM/usuário etc\.
+.
+.SH "OPÇÕES"
+.
+.IP "\(bu" 4
+\fB\-p PID\fR: pode ser uma lista de pid, exemplo \-pN1 \-pN2 \-pN3 Exibir apenas o processo de pid = PID\.
+.
+.IP "" 0
+.
+.SH "COMANDOS INTERATIVOS"
+.
+.IP "\(bu" 4
+\fBa/A\fR: troca a janela seleciona
+.
+.IP "\(bu" 4
+\fBg1/g2/g3/g4\fR: Habilita/Desabilita o Grupo de Processos, cada grupo tem uma abordagem de exibição, por memória, processo, etc\.
+.
+.IP "\(bu" 4
+\fB1\fR: Exibir o número de processadores\.
+.
+.IP "" 0
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+`$> top \-p ``pgrep \-d \',\' "java|tomcat|redis|mysql|mongo"```
+.
+.IP "" 4
+.
+.nf
+
+`$> top \-p $(pgrep \-d\',\' java)`
+.
+.fi
+.
+.IP "" 0
+.
+.SH "ARQUIVOS"
+\fI~/\.toprc\fR Arquivos de configuração do Top para o usuário\.
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBad magic number\.\fR The input file does not look like an archive file\.
+.
+.P
+\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

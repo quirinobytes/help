@@ -15,6 +15,13 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+Dentro de um programa .sh, voce pode pegar os parametros passados como argumento assim:
+*Variável*	*Significado*
+$0			Contém o nome do programa
+$#			Contém a quantidade de parâmetros passados
+$*			Contém o conjunto de todos os parâmetros (muito parecido com $@)
+
+
 EXEMPLOS
 --------
 
@@ -62,6 +69,10 @@ Nessa sessao mostro o problema de usar backspace e nao fechar os caracteres nao 
 
 
 45 exemplos de variáveis e arrays em Shell Script
+
+
+`0 - Retorna quantos índices (posições) existem no array`
+$> echo ${#VALOR[*]}
 
 `1 - Criar uma variável, ${var} é o mesmo que $var, porém não ambíguo.`
 var="http://www.terminalroot.com.br/"</p><p>echo $var</p><p>http://www.terminalroot.com.br/
