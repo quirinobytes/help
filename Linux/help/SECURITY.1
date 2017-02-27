@@ -18,6 +18,18 @@ Ficar atendo ao OWASP top 10
 .SH "ATAQUES"
 Clickjacking Cross Site Request Forgery (CSRF) Denial of Service(DoS) Server Site Request Forgery (SSRF) CORS ( Cross Origin Resource Sharing)
 .
+.SH "FALHAS EM CONFIGURAÇOES"
+Esquecer o debug ligado, pode retornar informações importantes para o atacante\. Falta de Monitoramento Principle of least privilege Rate limiting & Captchas Senhas e segredos de projeto em arquivos
+.
+.SH "DOCKER"
+Minimo de privilegio possivel\. Usar imagens oficiais\. Automatizar build evita falhas e erros humanos\. Dockerfile \-> não rodar como root\. Least Privilege Read only se for o caso!
+.
+.SH "PENTESTING"
+OWASP 10 \- Tentar automatizar pentest para falhas de segurança\. Conhecer as ferramentas que podem Automatizar \- OWASP ZAP \- Kali \- Blach Arch
+.
+.SH "CONTINUOUS SECURITY HYGIENE"
+Fazer levantamentos rotineiros para procurar problemas de segurança\. Manter os padrões de segurança\. Segunrança x Usabilidade\. fazer Threat Modeling \- Procurar sobre, tem um documento bom da Microsoft\.
+.
 .P
 \fBmodel\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
 .
