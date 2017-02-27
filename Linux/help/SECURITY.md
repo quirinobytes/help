@@ -32,6 +32,43 @@ CORS ( Cross Origin Resource Sharing)
 
 
 
+FALHAS EM CONFIGURAÇOES
+-----------------------
+Esquecer o debug ligado, pode retornar informações importantes para o atacante.
+Falta de Monitoramento
+Principle of least privilege
+Rate limiting & Captchas
+Senhas e segredos de projeto em arquivos
+
+
+DOCKER
+------
+Minimo de privilegio possivel.
+Usar imagens oficiais.
+Automatizar build evita falhas e erros humanos.
+Dockerfile -> não rodar como root.
+Least Privilege
+Read only se for o caso!
+
+
+PENTESTING
+----------
+
+OWASP 10 - Tentar automatizar pentest para falhas de segurança.
+Conhecer as ferramentas que podem Automatizar - OWASP ZAP - Kali - Blach Arch
+
+
+CONTINUOUS SECURITY HYGIENE
+---------------------------
+Fazer levantamentos rotineiros para procurar problemas de segurança.
+Manter os padrões de segurança.
+Segunrança x Usabilidade.
+fazer Threat Modeling - Procurar sobre, tem um documento bom da Microsoft.
+
+
+
+
+
 
 
 
