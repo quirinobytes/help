@@ -72,8 +72,18 @@ The following diagnostics may be issued on stderr:
 COMENTARIOS
 -----------
 
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
+*evoluindo com set dentro do ""*
+`set var1 3.14159
+set var2 hello
+set var3 13
+foreach num {1 2 3} {
+    puts "var$num = [set var$num]"
+}
+output:
+var1 = 3.14159
+var2 = hello
+var3 = 13`
+
 
 BUGS
 ----
