@@ -15,6 +15,9 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+*Imprimir o resultado da saida do ultimo comando*
+`puts $expect_out(buffer)`
+
 *Definnindo uma variável*
 
 set greeting hello
@@ -40,6 +43,18 @@ isqrt       log         log10       max
 min         pow         rand        round
 sin         sinh        sqrt        srand
 tan         tanh        wide
+
+
+*TYPE CONVERSIONS*
+
+Tcl supports the following functions to convert from one representation of a number to another:
+
+
+double int wide entier
+double() converts a number to a floating-point number.
+int() converts a number to an ordinary integer number (by truncating the decimal part).
+wide() converts a number to a so-called wide integer number (these numbers have a larger range).
+entier() coerces a number to an integer of appropriate size to hold it without truncation. This might return the same as int() or wide() or an integer of arbitrary size (in Tcl 8.5 and above).
 
 EXEMPLOS
 --------

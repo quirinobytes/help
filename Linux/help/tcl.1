@@ -13,6 +13,9 @@
 \fBtcl\fR é uma linguagem de programação para se trabalhar com trafego de dados\.
 .
 .SH "OPÇÕES"
+\fIImprimir o resultado da saida do ultimo comando\fR \fBputs $expect_out(buffer)\fR
+.
+.P
 \fIDefinnindo uma variável\fR
 .
 .P
@@ -27,7 +30,32 @@ Tcl supports the following mathematical functions in expressions:
 .P
 abs acos asin atan atan2 bool ceil cos cosh double entier exp floor fmod hypot int isqrt log log10 max min pow rand round sin sinh sqrt srand tan tanh wide
 .
+.P
+\fITYPE CONVERSIONS\fR
+.
+.P
+Tcl supports the following functions to convert from one representation of a number to another:
+.
+.P
+double int wide entier double() converts a number to a floating\-point number\. int() converts a number to an ordinary integer number (by truncating the decimal part)\. wide() converts a number to a so\-called wide integer number (these numbers have a larger range)\. entier() coerces a number to an integer of appropriate size to hold it without truncation\. This might return the same as int() or wide() or an integer of arbitrary size (in Tcl 8\.5 and above)\.
+.
 .SH "EXEMPLOS"
+\fIUsando expressoes matematicas\fR `set X 100 set Y 256 set Z [expr {$Y + $X}] set Z_LABEL "$Y plus $X is "
+.
+.P
+puts "$Z_LABEL $Z" puts "The square root of $Y is [expr { sqrt($Y) }]\en"
+.
+.P
+puts "Because of the precedence rules \e"5 + \-3 * 4\e" is: [expr {\-3 * 4 + 5}]" puts "Because of the parentheses \e"(5 + \-3) * 4\e" is: [expr {(5 + \-3) * 4}]"
+.
+.P
+set A 3 set B 4 puts "The hypotenuse of a triangle: [expr {hypot($A,$B)}]"
+.
+.P
+## set pi6 [expr {3\.1415926/6\.0}] puts "The sine and cosine of pi/6: [expr {sin($pi6)}] [expr {cos($pi6)}]"`
+.
+.P
+## set a(1) 10 set a(2) 7 set a(3) 17 set b 2 puts "Sum: [expr {$a(1)+$a($b)}]"
 .
 .SH "ARQUIVOS"
 \fISHA\-BANG\fR #!/usr/bin/expect
