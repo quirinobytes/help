@@ -15,6 +15,14 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+*Declarar variaveis se nao existir ainda*
+`set TMPDIR "/tmp"
+if { [info exists ::env(TMP)] } {
+    set TMPDIR $::env(TMP)
+}
+`
+
+
 *Imprimir o resultado da saida do ultimo comando*
 `puts $expect_out(buffer)`
 
@@ -28,6 +36,14 @@ set (name) bob ;# the is an array variable, where the array name is the empty st
 set (name) ;#-> bob
 set {} hello 
 set {} ;#->hello
+
+
+*if*
+`if { $count < 0} {
+    puts "True : $count\n";
+} else {
+    puts "False : $count\n";
+}`
 
 
 

@@ -13,6 +13,9 @@
 \fBtcl\fR é uma linguagem de programação para se trabalhar com trafego de dados\.
 .
 .SH "OPÇÕES"
+\fIDeclarar variaveis se nao existir ainda\fR \fBset TMPDIR "/tmp" if { [info exists ::env(TMP)] } { set TMPDIR $::env(TMP) }\fR
+.
+.P
 \fIImprimir o resultado da saida do ultimo comando\fR \fBputs $expect_out(buffer)\fR
 .
 .P
@@ -20,6 +23,9 @@
 .
 .P
 set greeting hello set greeting ;# \->hello set person(name) bob set person(name) ;#\-> bob set (name) bob ;# the is an array variable, where the array name is the empty string set (name) ;#\-> bob set {} hello set {} ;#\->hello
+.
+.P
+\fIif\fR \fBif { $count < 0} { puts "True : $count\en"; } else { puts "False : $count\en"; }\fR
 .
 .P
 \fIMATH FUNCTIONS\fR

@@ -45,6 +45,11 @@ Exibir conteúdo de pacotes UPnP Entertaiment Service(UDP/239.255.255.250:1900).
    `$> tcpdump -Annvi -i eth0 host 239.255.255.250`
 
 
+Capturando senhas em texto puro com tcpdump e grep.
+   `$> tcpdump port http or port ftp or port smtp or port imap or port pop3 -l -A | egrep -i 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user ' --color=auto --line-buffered -B20`
+
+
+
 ARQUIVOS
 --------
 
