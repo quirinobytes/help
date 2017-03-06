@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "FIND" "1" "December 2016" "" ""
+.TH "FIND" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBfind\fR \- Localizador de arquivos ou diretórios no file system\.
@@ -19,10 +19,24 @@
 Procura somente arquivos (file)
 .
 .SH "EXEMPLOS"
+.
+.TP
 Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:
 .
-.P
-\fBfind / \-type f \-perm +a+x \-print0 | xargs \-0 rpm \-qf | grep file | cut \-f2 \-d\' \'\fR
+.IP
+\fB$> find / \-type f \-perm +a+x \-print0 | xargs \-0 rpm \-qf | grep file | cut \-f2 \-d\' \'\fR
+.
+.TP
+Localizar arquivos mais velhos que 1 Ano:
+.
+.IP
+\fB$> find /dir/to/start \-type f \-mtime +365 \-ls\fR
+.
+.TP
+Apagar arquivos mais velhos que 2 ANOS:
+.
+.IP
+\fB$> find /path/to/files/ \-type f \-mtime +365 \-ls \-exec rm \-f \-\- {} \e;\fR
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR

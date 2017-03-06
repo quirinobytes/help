@@ -22,10 +22,18 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:
+- Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:
 
-   `find / -type f -perm +a+x -print0 | xargs -0 rpm -qf | grep file | cut -f2 -d' '`
+   `$> find / -type f -perm +a+x -print0 | xargs -0 rpm -qf | grep file | cut -f2 -d' '`
 
+
+- Localizar arquivos mais velhos que 1 Ano:
+
+	`$> find /dir/to/start -type f -mtime +365 -ls`
+
+- Apagar arquivos mais velhos que 2 ANOS:
+
+	`$> find /path/to/files/ -type f -mtime +365 -ls -exec rm -f -- {} \;`
 
 
 AUTOR
