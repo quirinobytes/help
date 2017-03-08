@@ -27,8 +27,6 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
-
 1. Pegar os nomes dos arquivos
 
 $> miniman -ls 
@@ -48,11 +46,16 @@ if
 screen
 `
 
-Apagar as linhas em branco de um arquivo
+2. Apagar as linhas em branco de um arquivo
 `$> sed '/^$/d' arquivo.txt > novoarquivo.txt ou 
 awk 'NF>0' arquivo.txt > novoarquivo.txt`
 
 
+3. Apagar somente a 3linha
+`$> echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 3d`
+
+4. Imprimir a linha 1
+`$> echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 1p`
 
 
 AUTOR

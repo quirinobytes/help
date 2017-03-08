@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "SED" "1" "December 2016" "" ""
+.TH "SED" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBsed\fR \- sed stream editor
@@ -22,7 +22,6 @@
 Edita o arquivo diretamente na fonte, Cuidado para não destruir o arquivo\.
 .
 .SH "EXEMPLOS"
-Coloque os exemplos aqui:
 .
 .IP "1." 4
 Pegar os nomes dos arquivos
@@ -38,8 +37,16 @@ Queremos somente os nomes dos arquivos, portanto corta o \.1 e tira todas as let
 .P
 \fB$> miniman \-ls | sed \'s/\.1//g\' |sed \'s/[a\-zA\-Z]*\e///g\' complete iconv if screen\fR
 .
-.P
+.IP "1." 4
 Apagar as linhas em branco de um arquivo \fB$> sed \'/^$/d\' arquivo\.txt > novoarquivo\.txt ou awk \'NF>0\' arquivo\.txt > novoarquivo\.txt\fR
+.
+.IP "2." 4
+Apagar somente a 3linha \fB$> echo \-en \'varias\enlinhas\enagora\ennovalinha\' | sed 3d\fR
+.
+.IP "3." 4
+Imprimir a linha 1 \fB$> echo \-en \'varias\enlinhas\enagora\ennovalinha\' | sed 1p\fR
+.
+.IP "" 0
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
