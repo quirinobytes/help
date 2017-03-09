@@ -15,6 +15,7 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+* `-a`:
 * `-A`:
   Exibir todas as configurações do kernel.
 

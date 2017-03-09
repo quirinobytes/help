@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DIG" "1" "December 2016" "" ""
+.TH "DIG" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBdig\fR \- dig \- usado para questionar o DNS Server
@@ -44,23 +44,26 @@ Coloque os exemplos aqui:
 .P
 \fB$> date \'%Y/%m/%d\'\fR
 .
-.SH "ARQUIVOS"
-\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
+.P
+\fITeste de SPF\fR
 .
 .P
-\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
+\fB$> dig TXT uol\.com\.br +short\fR \fB$> dig TXT _net1\.uol\.com\.br +short\fR \fB$> dig TXT _net2\.uol\.com\.br +short\fR
+.
+.SH "ARQUIVOS"
+\fI/etc/resolv\.conf\fR Arquivo para configuração de resolvedor de nomes Locais para *n?x like\.
 .
 .SH "ENVIRONMENT"
-\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+\fBnslookup\fR Também pode ser usado para enviar QUERIES para servidores de DNS\.
 .
 .SH "DIAGNOSTICS"
-The following diagnostics may be issued on stderr:
+Usando o nslookup é possível fazer um diagnótico mais detalhado\.
 .
 .P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
+\fBset debug\.\fR Configura o format de debug para uso do nslookup
 .
 .P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+**set query={A,TXT,PTR,NS,MX} \fBA\fR configura modo de retorno de QUERIES somente para tipo A\. \fBTXT\fR configura modo de retorno de QUERIES somente para tipo TXT\. \fBPTR\fR configura modo de retorno de QUERIES somente para tipo REVERSO\. \fBNS\fR configura modo de retorno de QUERIES somente para tipo NS(Domain servers)\. \fBMX\fR configura modo de retorno de QUERIES somente para tipo MX(Mail eXchange)\.
 .
 .SH "COMENTARIOS"
 Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>

@@ -40,35 +40,39 @@ Coloque os exemplos aqui:
 
    `$> date '%Y/%m/%d'`
 
+*Teste de SPF*
+
+`$> dig TXT uol.com.br +short`
+`$> dig TXT _net1.uol.com.br +short`
+`$> dig TXT _net2.uol.com.br +short`
+
 
 ARQUIVOS
 --------
 
-
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
-
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
+*/etc/resolv.conf*
+  Arquivo para configuração de resolvedor de nomes Locais para \*n?x like.
 
 ENVIRONMENT
 -----------
 
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
+`nslookup`
+	Também pode ser usado para enviar QUERIES para servidores de DNS.
 
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
+Usando o nslookup é possível fazer um diagnótico mais detalhado.
 
-**Bad magic number.**
-  The input file does not look like an archive file.
+**set debug.**
+  Configura o format de debug para uso do nslookup
 
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
+**set query={A,TXT,PTR,NS,MX}
+  `A` configura modo de retorno de QUERIES somente para tipo A.
+  `TXT` configura modo de retorno de QUERIES somente para tipo TXT.
+  `PTR` configura modo de retorno de QUERIES somente para tipo REVERSO.
+  `NS` configura modo de retorno de QUERIES somente para tipo NS(Domain servers).
+  `MX` configura modo de retorno de QUERIES somente para tipo MX(Mail eXchange).
 
 COMENTARIOS
 -----------
