@@ -22,6 +22,20 @@ EXEMPLOS
 
    `$>hdparm -giI /dev/hda | tee /tmp/hdparm.txt`
 
+DIAGNOSTIC
+----------
+
+Luttgens allows you to mount a complete disk image
+as a loopback device instead of only one partition
+• Download from
+ftp://ftp.hq.nasa.gov/pub/ig/ccd/enhanced_loopback/
+--
+National Institute of Standards and Technology
+• Includes primarily “known good” files, but does
+include “Hacker Tools” as well
+• Download from ftp://ftp.nist.gov/pub/itl/div897/
+
+
 
 
 AUTOR
