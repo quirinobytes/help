@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "VIM" "1" "December 2016" "" ""
+.TH "VIM" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBvim\fR \- Editor de Texto Avançado
@@ -53,7 +53,31 @@ Para apagar todas as linhas em branco em um arquivo:
 \fI~/\.vimrc\fR Arquivo de configuraçao dos recursos do vim, lido automagicamente na inicialização\.
 .
 .SH "ENVIRONMENT"
-\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+\fICursor:\fR k : para cima backspace: esquerda space: direita j: para baixo Toda vez que desejar voltar ao modo comando, pressione a tecla ESC\.
+.
+.P
+\fIMovimentação de palavra:\fR w : pula uma palavra b : volta uma palavra c : vai para o fim da palavra ex: 2w \- pula duas palavras $ : vai para o fim da linha ^ ou O \- vai para o início da linha
+.
+.P
+\fIControle do cursor:\fR G \- final do arquivo:# \- vai para uma linha Ctrl g \- informa a linha que você foi Ctrl b \- retorna página Ctrl f \- avança página Ctrl u \- retorna metade da página Ctrl d \- avança metade da página Ctrl I \- refresh da tela L \- última linha da tela M \- meio da linha na tela H \- início da tela
+.
+.P
+\fIModo de entrada:\fR a \- acrescenta texto depois do cursor i \- insere texto antes do cursor o \- abre uma linha de texto abaixo O \- abre uma linha de texto A \- acrescenta texto no fim da linha I \- insere texto no início da linha
+.
+.P
+\fIDeletando texto:\fR x \- deleta um caracter dw \- deleta palavra ex: 2dw \- delete duas palavras dd \- deleta linha corrente dG \- deleta até a última linha do arquivo d$ \- deleta até o fim da linha d^ \- deleta até o início da linha
+.
+.P
+\fIMovendo texto:\fR
+.
+.P
+Primeiro executar o comando deletar, depois executar o colar: p \- cola abaixo do cursor P \- cola acima do cursor
+.
+.P
+\fICopiando texto:\fR yw \- copia palavra corrente yy \- copia a linha corrente yG \- copia até a última linha do arquivo y$ \- copia até o fim da linha y^ \- copia até o início da linha
+.
+.P
+\fIAlterando o texto:\fR r \- substitui caracter R \- substitui todas as letras até pressionar ESC cw \- altera palavra cc \- altera a linha inteira cG \- altera até a última linha do arquivo c$ \- altera até o fim da linha
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
