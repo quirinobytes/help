@@ -24,6 +24,12 @@ OPÇÕES
 * `-I / --head`:
 	Mostrar somente as informações de cabeçalho, only.
 
+* `-X`:
+   Permite escolher TIPO de metodo: GET, POST, PUT, DELETE, etc...
+
+*  -H`:
+Setar o tipo do conteudo: Ex.: 
+'-H Content-Type: application/json' 
 
 EXEMPLOS
 --------
