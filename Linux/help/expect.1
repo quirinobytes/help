@@ -33,6 +33,9 @@ spawn comando paramtros => executa o comando com seus parametros\.
 .P
 set fd1[open "~/arquivo\.txt"] set senha1 [read $fd1] => Le o arquivo arquivo\.txt e coloca o conteudo em senha1
 .
+.P
+expect \-exact "ssh aspen\er => Espera exatamente "ssh aspen"
+.
 .SH "ENVIRONMENT"
 \fBTCL\fR Expect por padrão usa as mesma nuances e caracteristicas de TCL, miniman tcl para mais informações\.
 .

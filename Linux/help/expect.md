@@ -34,7 +34,7 @@ spawn comando paramtros => executa o comando com seus parametros.
 set fd1[open "~/arquivo.txt"]
 set senha1 [read $fd1]				=> Le o arquivo arquivo.txt e coloca o conteudo em senha1
 
-
+expect -exact "ssh aspen\r   => Espera exatamente "ssh aspen"
 
 ENVIRONMENT
 -----------
