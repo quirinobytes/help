@@ -25,6 +25,16 @@ EXEMPLOS
 set arg1 [lindex $argv 0]
 
 
+puts => printf
+
+set timeout => define um tempo para o expect aguardar.
+
+spawn comando paramtros => executa o comando com seus parametros.
+
+set fd1[open "~/arquivo.txt"]
+set senha1 [read $fd1]				=> Le o arquivo arquivo.txt e coloca o conteudo em senha1
+
+
 
 ENVIRONMENT
 -----------

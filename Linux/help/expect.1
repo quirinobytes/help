@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "EXPECT" "1" "February 2017" "" ""
+.TH "EXPECT" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBexpect\fR \- Script para interagir com sistemas\.
@@ -20,6 +20,18 @@ Modo debug
 .
 .SH "EXEMPLOS"
 \fILendo argumentos\fR set arg1 [lindex $argv 0]
+.
+.P
+puts => printf
+.
+.P
+set timeout => define um tempo para o expect aguardar\.
+.
+.P
+spawn comando paramtros => executa o comando com seus parametros\.
+.
+.P
+set fd1[open "~/arquivo\.txt"] set senha1 [read $fd1] => Le o arquivo arquivo\.txt e coloca o conteudo em senha1
 .
 .SH "ENVIRONMENT"
 \fBTCL\fR Expect por padrão usa as mesma nuances e caracteristicas de TCL, miniman tcl para mais informações\.
