@@ -28,11 +28,17 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Exemplos de data:
 
-   `$> date +'%d/%m/%Y'`
+
+   `$> date +%d-%m-%Y`
+	14-03-2017
 
    `$> date +'%B'`
+	March
+
+   `$> date +%D`
+	03/14/17
 
 
 AUTOR
