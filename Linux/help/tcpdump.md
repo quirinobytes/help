@@ -36,6 +36,10 @@ OPÇÕES
 
 * `-i <IF>`:
   Exibe o dump de pacotes somente nessa(s) interfaces.
+* `-w <FILENAME>`:
+	Salva no formato pcap para ser visualizado no wireshark, network miner, etc. use com *-s 65536*
+* `-s <NUM>`:
+	Ler a quantidade de bytes para cada pacote, usar a qtde necessaria para capturar a informacao para o protocolo desejado.
 
 EXEMPLOS
 --------
