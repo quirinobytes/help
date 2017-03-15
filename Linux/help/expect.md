@@ -44,6 +44,11 @@ if [string match "f*b*" "foobar"] {
 }
 
 
+*If you want to check if your string is only digits, pick one of*
+if {[regexp {^\d+$} $loadNum]}
+if {![regexp {\D} $loadNum]}
+if {![string match {[^0-9]} $loadNum]}
+
 
 ENVIRONMENT
 -----------

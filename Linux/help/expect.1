@@ -40,6 +40,9 @@ expect \-exact "ssh aspen\er => Espera exatamente "ssh aspen"
 \fBexemplo de if com comparacao de STRINGS\fR
 if [string match "f\fIb\fR" "foobar"] { puts "match" } else { puts "no match" }
 .
+.P
+\fIIf you want to check if your string is only digits, pick one of\fR if {[regexp {^\ed+$} $loadNum]} if {![regexp {\eD} $loadNum]} if {![string match {[^0\-9]} $loadNum]}
+.
 .SH "ENVIRONMENT"
 \fBTCL\fR Expect por padrão usa as mesma nuances e caracteristicas de TCL, miniman tcl para mais informações\.
 .
