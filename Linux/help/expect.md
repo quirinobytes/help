@@ -36,6 +36,15 @@ set senha1 [read $fd1]				=> Le o arquivo arquivo.txt e coloca o conteudo em sen
 
 expect -exact "ssh aspen\r   => Espera exatamente "ssh aspen"
 
+* `exemplo de if com comparacao de STRINGS`:
+if [string match "f*b*" "foobar"] {
+    puts "match"
+} else {
+    puts "no match"
+}
+
+
+
 ENVIRONMENT
 -----------
 

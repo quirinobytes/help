@@ -36,6 +36,10 @@ set fd1[open "~/arquivo\.txt"] set senha1 [read $fd1] => Le o arquivo arquivo\.t
 .P
 expect \-exact "ssh aspen\er => Espera exatamente "ssh aspen"
 .
+.TP
+\fBexemplo de if com comparacao de STRINGS\fR
+if [string match "f\fIb\fR" "foobar"] { puts "match" } else { puts "no match" }
+.
 .SH "ENVIRONMENT"
 \fBTCL\fR Expect por padrão usa as mesma nuances e caracteristicas de TCL, miniman tcl para mais informações\.
 .
