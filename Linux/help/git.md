@@ -27,6 +27,9 @@ OPÇÕES
 * `git config credential.helper store`:
 	Salvar as credenciais para https, *fica toda hora pedindo*
 
+* `git remote set-url origin https://user@site.stash.com.br/`
+	Adicionar um novo Origin, tipo o servidor para armazenar os codigos.
+
 EXEMPLOS
 --------
 
