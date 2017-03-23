@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "IF" "1" "December 2016" "" ""
+.TH "IF" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBif\fR \- testa e executada alguma função
@@ -98,6 +98,12 @@ variable=${1\-$DEFAULT} # What does echo "variable = $variable" #+ parameter sub
 .
 .P
 \fBif [ "$2" ] then echo "\-Parameter #2 is \e"$2\e"\.\-" fi\fR
+.
+.SH "NOTES"
+Comparisons: \-eq equal to \-ne not equal to \-lt less than \-le less than or equal to \-gt greater than \-ge greater than or equal to
+.
+.P
+File Operations: \-s file exists and is not empty \-f file exists and is not a directory \-d directory exists \-x file is executable \-w file is writable \-r file is readable
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
