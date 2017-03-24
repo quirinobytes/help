@@ -33,9 +33,11 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+* Execute o bash caso exista:
 
-   `$> date '%Y/%m/%d'`
+`if [ -f ~/.bashrc ]; then 
+    source ~/.bashrc 
+fi`
 
 
 ARQUIVOS
