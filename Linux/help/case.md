@@ -42,6 +42,19 @@ Escolher entre casoA ou casoB, e se nao encontrar execute o comando seguinte.
         ;;
 esac`
 
+
+Procurar uma string dentro de outra string usando um recurso do proprio POSIX
+`#!/bin/sh
+CURRENT_DIR=`pwd`
+
+case "$CURRENT_DIR" in
+  *String1*) echo "String1 present" ;;
+  *String2*) echo "String2 present" ;;
+  *)         echo "else" ;;
+esac`
+
+
+
 AUTOR
 -----
 

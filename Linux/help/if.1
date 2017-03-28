@@ -99,6 +99,15 @@ variable=${1\-$DEFAULT} # What does echo "variable = $variable" #+ parameter sub
 .P
 \fBif [ "$2" ] then echo "\-Parameter #2 is \e"$2\e"\.\-" fi\fR
 .
+.P
+Procurar uma string dentro de outra string, igual no case so que lá usa POSIX\.
+.
+.P
+`#!/bin/bash CURRENT_DIR=$(pwd)
+.
+.P
+if [[ "$CURRENT_DIR" =~ "String1" ]] then echo "String1 present" elif [[ "$CURRENT_DIR" =~ "String2" ]] then echo "String2 present" else echo "Else" fi`
+.
 .SH "NOTES"
 Comparisons: \-eq equal to \-ne not equal to \-lt less than \-le less than or equal to \-gt greater than \-ge greater than or equal to
 .

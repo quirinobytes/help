@@ -87,6 +87,25 @@ Comparando uma variável se está vazia.
    fi`
 
 
+
+Procurar uma string dentro de outra string, igual no case so que lá usa POSIX.
+
+`#!/bin/bash
+CURRENT_DIR=$(pwd)
+
+if [[ "$CURRENT_DIR" =~ "String1" ]]
+then
+ echo "String1 present"
+elif [[ "$CURRENT_DIR" =~ "String2" ]]
+then
+ echo "String2 present"
+else
+ echo "Else"
+fi`
+
+
+
+
 NOTES
 -----
 Comparisons:
