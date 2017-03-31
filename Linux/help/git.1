@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "GIT" "1" "February 2017" "" ""
+.TH "GIT" "1" "March 2017" "" ""
 .
 .SH "NAME"
 \fBgit\fR \- Git Versionamento like Torvalds
@@ -14,21 +14,22 @@
 .
 .SH "OPÇÕES"
 .
-.TP
-\fBgit commit \-m \'message\'\fR
-Faz o envio das alterações para o repositório local\.
+.IP "\(bu" 4
+\fBgit commit \-m \'message\'\fR: Faz o envio das alterações para o repositório local\.
 .
-.TP
-\fBgit push origin master\fR
-Empurrando o repositório master para o SERVIDOR conhecido como origin no \fIgit config \-l\fR
+.IP "\(bu" 4
+\fBgit push origin master\fR : Empurrando o repositório master para o SERVIDOR conhecido como origin no \fIgit config \-l\fR
 .
-.TP
-\fBgit add \-\-all\fR
-Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os arquivos sob o TRACKER, (PROCURADOR, para que se faça ser visto)\.
+.IP "\(bu" 4
+\fBgit add \-\-all\fR: Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os arquivos sob o TRACKER, (PROCURADOR, para que se faça ser visto)\.
 .
-.TP
-\fBgit config credential\.helper store\fR
-Salvar as credenciais para https, \fIfica toda hora pedindo\fR
+.IP "\(bu" 4
+\fBgit config credential\.helper store\fR: Salvar as credenciais para https, \fIfica toda hora pedindo\fR
+.
+.IP "\(bu" 4
+\fBgit remote set\-url origin https://user@site\.stash\.com\.br/\fR Adicionar um novo Origin, tipo o servidor para armazenar os codigos\.
+.
+.IP "" 0
 .
 .SH "EXEMPLOS"
 Clonar um repo em HTTP

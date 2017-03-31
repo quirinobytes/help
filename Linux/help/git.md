@@ -24,8 +24,15 @@ OPÇÕES
 * `git add --all`:
 	Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os arquivos sob o TRACKER, (PROCURADOR, para que se faça ser visto).
 
+
+* `git config http.sslVerify false`
+	Eliminando a verificação do Certificado SSL, qualquer cert. Tem como fazer isso somente para um site, mas tem um paranaue.
+
 * `git config credential.helper store`:
 	Salvar as credenciais para https, *fica toda hora pedindo*
+
+* `git remote set-url origin https://user@site.stash.com.br/`
+	Adicionar um novo Origin, tipo o servidor para armazenar os codigos.
 
 EXEMPLOS
 --------
