@@ -25,6 +25,10 @@ OPÇÕES
 * `--environment *AMBIENTE*`:
   Define o ambiente a ser utilizado devel, homol, production
 
+* `--noop`: O puppet vai sugerir oque deve mudar sem fazer nada.
+
+* `--tags=<container>`: usado para executar somente um container.
+
 EXEMPLOS
 --------
 

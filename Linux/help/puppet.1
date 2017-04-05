@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "PUPPET" "1" "January 2017" "" ""
+.TH "PUPPET" "1" "April 2017" "" ""
 .
 .SH "NAME"
 \fBpuppet\fR \- puppet usado para orquestrar servidores em ambientes de produção\.
@@ -14,17 +14,22 @@
 .
 .SH "OPÇÕES"
 .
-.TP
-\fB\-t\fR
-Fazer um teste\.
+.IP "\(bu" 4
+\fB\-t\fR: Fazer um teste\.
 .
-.TP
-\fB\-\-server\fR \fIhostname\fR
-Usa o servidor indicado para conectar\.
+.IP "\(bu" 4
+\fB\-\-server\fR \fIhostname\fR: Usa o servidor indicado para conectar\.
 .
-.TP
-\fB\-\-environment *AMBIENTE*\fR
-Define o ambiente a ser utilizado devel, homol, production
+.IP "\(bu" 4
+\fB\-\-environment *AMBIENTE*\fR: Define o ambiente a ser utilizado devel, homol, production
+.
+.IP "\(bu" 4
+\fB\-\-noop\fR: O puppet vai sugerir oque deve mudar sem fazer nada\.
+.
+.IP "\(bu" 4
+\fB\-\-tags=<container>\fR: usado para executar somente um container\.
+.
+.IP "" 0
 .
 .SH "EXEMPLOS"
 .
