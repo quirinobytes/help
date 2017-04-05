@@ -36,6 +36,13 @@ EXEMPLOS
 	`$> find /path/to/files/ -type f -mtime +365 -ls -exec rm -f -- {} \;`
 
 
+*SECURITY*
+
+find / -perm 766 | grep backup
+
+find / -perm 777 
+
+
 AUTOR
 -----
 
