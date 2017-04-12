@@ -74,6 +74,8 @@ $> puppet resource package htop ensure=absent
 $> puppet resource package htop ensure=installed
 
 $> puppet resource services apache ensure=started
+$> puppet resource user root
+$> facter 
 
 
 COMENTARIOS
