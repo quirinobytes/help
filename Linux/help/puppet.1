@@ -102,13 +102,16 @@ Executar o puppet no servidor no\.
 \fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
 .
 .SH "DIAGNOSTICS"
-The following diagnostics may be issued on stderr:
+Executando testes com o puppet na linha de comando:
 .
 .P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
+$> puppet resource package htop ensure=absent
 .
 .P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+$> puppet resource package htop ensure=installed
+.
+.P
+$> puppet resource services apache ensure=started
 .
 .SH "COMENTARIOS"
 Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>

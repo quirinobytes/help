@@ -67,14 +67,14 @@ ENVIRONMENT
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
+Executando testes com o puppet na linha de comando:
 
-**Bad magic number.**
-  The input file does not look like an archive file.
+$> puppet resource package htop ensure=absent
 
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
+$> puppet resource package htop ensure=installed
+
+$> puppet resource services apache ensure=started
+
 
 COMENTARIOS
 -----------
