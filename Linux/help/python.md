@@ -34,9 +34,10 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Decodificando um base64:
 
-   `$> date '%Y/%m/%d'`
+`python> import base64
+base64.decodestring("L3Vzci9iaW4vY3VybCAtcXMgbG9jYWxob3N0L25naW54X3N0YXR1cyB8IGdyZXAgY29ubmVjdGlvbnMgfCAvYmluL2F3ayB7J3ByaW50ICQzJ30=")`
 
 
 ARQUIVOS
