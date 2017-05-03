@@ -29,23 +29,28 @@ OPÇÕES
 
 * `--tags=<container>`: usado para executar somente um container.
 
+
 EXEMPLOS
 --------
 
-    Exibir os cerificados:
+Exibir os cerificados:
    `$> puppet cert --list --all`
 
-    Testar conexao com servidor.com.br:
+Testar conexao com servidor.com.br:
    `$> puppet agent --server servidor.com.br --test`
 
-    Executar servidor no modo debug:
+Executar servidor no modo debug:
    `$> puppet master --no-daemonize -debug`
 
-    Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
+Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
    `$> puppet parser validate site.pp`
 
-	Executar o puppet no servidor no.
-	`puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d`
+Executar o puppet no servidor no:
+   `$> puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d`
+
+Verificar se o puppet está como *ENABLE* ou *DISABLE*
+	`puppet status -S "environment=stage"`
+
 
 ARQUIVOS
 --------

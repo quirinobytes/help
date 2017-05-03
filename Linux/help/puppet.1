@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "PUPPET" "1" "April 2017" "" ""
+.TH "PUPPET" "1" "May 2017" "" ""
 .
 .SH "NAME"
 \fBpuppet\fR \- puppet usado para orquestrar servidores em ambientes de produção\.
@@ -32,65 +32,22 @@
 .IP "" 0
 .
 .SH "EXEMPLOS"
-.
-.nf
-
-Exibir os cerificados:
-.
-.fi
+Exibir os cerificados: \fB$> puppet cert \-\-list \-\-all\fR
 .
 .P
-\fB$> puppet cert \-\-list \-\-all\fR
-.
-.IP "" 4
-.
-.nf
-
-Testar conexao com servidor\.com\.br:
-.
-.fi
-.
-.IP "" 0
+Testar conexao com servidor\.com\.br: \fB$> puppet agent \-\-server servidor\.com\.br \-\-test\fR
 .
 .P
-\fB$> puppet agent \-\-server servidor\.com\.br \-\-test\fR
-.
-.IP "" 4
-.
-.nf
-
-Executar servidor no modo debug:
-.
-.fi
-.
-.IP "" 0
+Executar servidor no modo debug: \fB$> puppet master \-\-no\-daemonize \-debug\fR
 .
 .P
-\fB$> puppet master \-\-no\-daemonize \-debug\fR
-.
-.IP "" 4
-.
-.nf
-
-Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
-.
-.fi
-.
-.IP "" 0
+Verificar se o arquivo esta configurado corretamente, e sem erros aparentes: \fB$> puppet parser validate site\.pp\fR
 .
 .P
-\fB$> puppet parser validate site\.pp\fR
+Executar o puppet no servidor no: \fB$> puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-d\fR
 .
-.IP "" 4
-.
-.nf
-
-Executar o puppet no servidor no\.
-`puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-d`
-.
-.fi
-.
-.IP "" 0
+.P
+Verificar se o puppet está como \fIENABLE\fR ou \fIDISABLE\fR \fBpuppet status \-S "environment=stage"\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
