@@ -49,7 +49,7 @@ Executar o puppet no servidor no:
    `$> puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d`
 
 Verificar se o puppet está como *ENABLE* ou *DISABLE*
-	`puppet status -S "environment=stage"`
+	`puppet status "environment=stage"`
 
 
 ARQUIVOS
