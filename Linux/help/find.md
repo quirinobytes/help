@@ -15,8 +15,14 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+ Procura somente arquivos (file)
 * `-type f`:
-	Procura somente arquivos (file)
+
+ Procurar somente diretorios do primeiro nivel, ou seja os subdiretórios filhos, nao os filhos dos filhos.
+* `-type d -mindepth 1`:
+
+ Procurar somente diretorio até MAX nivel.
+* `-type d -maxdepth 5`:
 
 
 EXEMPLOS
