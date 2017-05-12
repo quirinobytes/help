@@ -22,23 +22,44 @@ OPÇÕES
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
 
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
+* `-tt`:
+	Colocar tempo e microsegundos.
 
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `-T`:
+	Tempo de execuçao da systemcall *bom para pegar os delays*.
+
+* `-p <PID>`:
+	Executar o system trace para determinado PID.
+
+* `-S <time/calls/name/nothing>`:
+	Organizar syscall por time/calls/name/nada
+
+* `-e expr`:
+	Permite usar expressoes para filtrar.
 
 EXEMPLOS
 --------
+	
+	O -e faz filtro na syscall especifica tipo NETWORK:
+`$> strace -p pid -e trace=network -s 0`
 
-Coloque os exemplos aqui:
+	O -e faz filtro na syscall especifica tipo READ/WRITE:
+`$> strace -p pid -e trace=read,write -s`
 
-   `$> date '%Y/%m/%d'`
-   
-   `$> strace -p pid -e trace=network -s 0`
+	Pegar a systemcall que faz chamadas a funcao SELECT:
+`$> strace -e select -p <PID>`
 
-   `$> strace -p pid -e trace=read,write -s`
+	Pegar 2(DUAS) systemcall ao mesmo tempo:
+`$>strace -e select,rt_sigprocmask	-p <PID>`
+
+	Filtrar systemcall FUTEXT:
+`$>strace -e futex	-p <PID>`
+
+	Filtrar systemcall OPEN:
+`$>strace -e open 	-p <PID>`
+
+
+
 
 ARQUIVOS
 --------
