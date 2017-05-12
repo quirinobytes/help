@@ -32,7 +32,15 @@ Tempo de execuçao da systemcall \fIbom para pegar os delays\fR\.
 .
 .TP
 \fB\-p <PID>\fR
-Executar o system trace para determinado PID\. *
+Executar o system trace para determinado PID\.
+.
+.TP
+\fB\-S <time/calls/name/nothing>\fR
+Organizar syscall por time/calls/name/nada
+.
+.TP
+\fB\-e expr\fR
+Permite usar expressoes para filtrar\.
 .
 .SH "EXEMPLOS"
 .
@@ -109,6 +117,19 @@ Filtrar systemcall OPEN:
 .
 .P
 \fB$>strace \-e open \-p <PID>\fR
+.
+.IP "" 4
+.
+.nf
+
+Strace THREADS em uma linha:
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fB$>strace \-f \-o strace\.out\fRls /proc/\fIpid\fR/task/ | xargs \-n 1 echo \-n " \-p"`
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

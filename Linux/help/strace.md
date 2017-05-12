@@ -59,6 +59,8 @@ EXEMPLOS
 `$>strace -e open 	-p <PID>`
 
 
+	Strace THREADS em uma linha:
+`$>strace -f -o strace.out `ls /proc/<pid>/task/ | xargs -n 1 echo -n " -p"`
 
 
 ARQUIVOS
