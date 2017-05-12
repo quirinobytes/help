@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "FIND" "1" "March 2017" "" ""
+.TH "FIND" "1" "May 2017" "" ""
 .
 .SH "NAME"
 \fBfind\fR \- Localizador de arquivos ou diretórios no file system\.
@@ -13,10 +13,13 @@
 \fBfind\fR Usado para localizar arquivos diretórios, links, pode se executar uma série de comandos nele e tem muitos parametros, sem duvida uma excelente ferramenta do GNU\.
 .
 .SH "OPÇÕES"
+Procura somente arquivos (file) * \fB\-type f\fR:
 .
-.TP
-\fB\-type f\fR
-Procura somente arquivos (file)
+.P
+Procurar somente diretorios do primeiro nivel, ou seja os subdiretórios filhos, nao os filhos dos filhos\. * \fB\-type d \-mindepth 1\fR:
+.
+.P
+Procurar somente diretorio até MAX nivel\. * \fB\-type d \-maxdepth 5\fR:
 .
 .SH "EXEMPLOS"
 .
@@ -37,6 +40,15 @@ Apagar arquivos mais velhos que 2 ANOS:
 .
 .IP
 \fB$> find /path/to/files/ \-type f \-mtime +365 \-ls \-exec rm \-f \-\- {} \e;\fR
+.
+.P
+\fISECURITY\fR
+.
+.P
+find / \-perm 766 | grep backup
+.
+.P
+find / \-perm 777
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
