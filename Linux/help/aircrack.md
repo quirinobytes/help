@@ -1,42 +1,26 @@
-model(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
+aircrack(1) -- Programa para quebrar senha de rede wifi
 ===============================================
 
 
 SYNOPSIS
 --------
 
-`model` [`-bar`] [`-c` *config-file* ] *file* ...
+`aircrack` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`model` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`aircrack`é um programa utilizado na maioria das vezes por *hacker* para quebrar a senha de redes wifi.
+
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
-
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
-
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
-
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `-w` FILENAME:
+  Usar uma wordlist FILENAME.
 
 EXEMPLOS
 --------
-
-Coloque os exemplos aqui:
-
-   `$> date '%Y/%m/%d'`
 
 root@crack_WEP:~# airodump-ng mon0
 [ CH 10 ][ Elapsed: 4 s ][ 2009-08-08 18:01 ][]
@@ -105,49 +89,15 @@ root@crack_WEP:~# tcpdump -r temp-01-dec.cap -i wlan
 
 
 
-
-
-
 ARQUIVOS
 --------
 
-
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
-
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
+ Use uma wordlist para ajudar a achar a chave.
 
 ENVIRONMENT
 -----------
 
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
-
-DIAGNOSTICS
------------
-
-The following diagnostics may be issued on stderr:
-
-**Bad magic number.**
-  The input file does not look like an archive file.
-
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
-
-COMENTARIOS
------------
-
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
-
-BUGS
-----
-
-The command name should have been chosen more carefully to reflect its
-purpose.
+O cdshell prove uma ferramenta chamada generator_wordlist.py que pode ser usada para gerar uma wordlist do jeito que você desejar.
 
 AUTOR
 -----
