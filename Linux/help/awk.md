@@ -59,8 +59,11 @@ Exibindo somente os CS(Context Switch) maiores que 5000 em **VERMELHO**
 
 
 
-Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes:
+   Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes:
 $> `awk '{if ($1>100 && $1<120) print d,"\033[33m" $0 ; else if ($1>120) print d,"\033[31m" $0 ; else print d,"\033[0m" $0}' "d=$(date -R)" `
+
+Executar um comando, por exemplo apagar arquivos que tenha txt no nome.
+	`>cat myfile | awk '/.txt/{print "rm -rf " $0}' | bash`
 
 
 
