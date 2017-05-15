@@ -37,6 +37,9 @@ OPÇÕES
 * `-e expr`:
 	Permite usar expressoes para filtrar.
 
+* `-i`:
+	Mostra o delay do systemcall
+
 EXEMPLOS
 --------
 	
