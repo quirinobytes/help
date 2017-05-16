@@ -42,7 +42,9 @@ OPÇÕES
 
 * `-le`: menor ou igual
 
-* `-d`: se é um diretório
+* `-d`: se é um diretório que existe.
+
+* `! -d`: se esse diretório nao existe.
 
 * `-e`: se existe
 
