@@ -27,6 +27,8 @@ OPÇÕES
 * `-f` *arquivo.awk*:
   Usado para executar o script em AWK usando o *arquivo.awk* como programa. Isso
   Sobrescreve o direcionamento com pipe `|`.
+* `-F <CARACTER>`:
+	Usado para indicar o Field Separator
 
 
 EXEMPLOS

@@ -27,9 +27,8 @@ OPÇÕES
 * `-a`:
   In addition to the baz segments, also parse the blurfl headers.
 
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `-o cmd,%cpu,%mem,lwp`:
+	Exibe apenas os campos desejados: comando(cmd), porcentagem de cpu, porcentagem de mem, threads linux.
 
 EXEMPLOS
 --------

@@ -18,6 +18,7 @@ OPÇÕES
 ------
 
 * `-b`:
+<<<<<<< HEAD
   Do not write "busy" to stdout while processing.
 
 * `-c` *config-file*:
@@ -30,6 +31,25 @@ OPÇÕES
 * `-r`:
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
   of virtual memory.
+=======
+	Do not write "busy" to stdout while processing.
+
+* `-c` *config-file*:
+	Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
+  overrides any `FOOCONF` environment variable.
+
+* `-a`:
+	In addition to the baz segments, also parse the blurfl headers.
+
+* `-T`:
+	Recursive mode. Operates as fast as lightning at the expense of a megabyte of virtual memory.
+
+* `-t`:
+	Mostrar os tempos (timestamp) das chamadas as syscall.
+
+* `-e syscall`:
+	Faz um filtro para exibir somente chamadas daquela syscall.
+>>>>>>> 2a9f6b1b67b58f1f4bab0a36b6b7572307402d4a
 
 EXEMPLOS
 --------
@@ -39,6 +59,7 @@ Coloque os exemplos aqui:
    `$> date '%Y/%m/%d'`
 
 
+<<<<<<< HEAD
  perf trace
 
 perf trace -ttT -H -p
@@ -47,6 +68,8 @@ perf trace -ttT -H -p
 
 
 
+=======
+>>>>>>> 2a9f6b1b67b58f1f4bab0a36b6b7572307402d4a
 ARQUIVOS
 --------
 
