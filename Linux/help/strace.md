@@ -40,6 +40,10 @@ OPÇÕES
 * `-i`:
 	Mostra o delay do systemcall
 
+* `-f`:
+	Mostra as *THREADS*
+
+
 EXEMPLOS
 --------
 	
