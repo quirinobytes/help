@@ -25,9 +25,11 @@ $*			Contém o conjunto de todos os parâmetros (muito parecido com $@)
 EXEMPLOS
 --------
 
-	Pegar o tamanho da variável.
+	Pegar o tamanho da variável:
+* `size=${#myvar} $ echo $size`
 
-	`size=${#myvar} $ echo $size`
+	Remover linhas com caracteres minusculos.:
+*  `>$ sed '/[[:upper:]]/d'`
 
 ARQUIVOS
 --------
