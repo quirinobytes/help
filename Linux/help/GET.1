@@ -1,0 +1,32 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "GET" "1" "May 2017" "" ""
+.
+.SH "NAME"
+\fBGET\fR \- programa de linha de comando para fazer um HTTP GET/POST
+.
+.SH "SYNOPSIS"
+\fBGET\fR [\fB\-opcoes\fR] [\fIhttp://endereço\fR ]
+.
+.SH "DESCRIÇÃO"
+\fBGET\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-s\fR
+Exibir o retorno do GET, exemplo 200 OK, 404, 401 etc\.\.\.
+.
+.TP
+\fB\-u\fR
+Exibir a URL que foi chamada\.
+.
+.SH "EXEMPLOS"
+Testando a chamada para um pool inteiro com 20 maquinas e saida do retorno\. \fB$> GET \-u \-s http://a4\-winter{1\.\.20}/cnx\.htm \'\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
