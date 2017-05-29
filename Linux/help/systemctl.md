@@ -73,12 +73,12 @@ COMENTARIOS
 
 Systemd is able to handle various different service types specifically one of the following
 
-simple - A long running process that does not background its self and stays attached to the shell.
-forking - A typical daemon that forks itself detaching it from the process that ran it, effectively backgrounding itself.
-oneshot - A short lived process that is expected to exit.
+*simple* - A long running process that does not background its self and stays attached to the shell.
+*forking* - A typical daemon that forks itself detaching it from the process that ran it, effectively backgrounding itself.
+*oneshot* - A short lived process that is expected to exit.
 dbus - Like simple, but notification of processes startup finishing is sent over dbus.
-notify - Like simple, but notification of processes startup finishing is sent over inotify.
-idle - Like simple, but the binary is started after the job has been dispatched.
+*notify* - Like simple, but notification of processes startup finishing is sent over inotify.
+*idle* - Like simple, but the binary is started after the job has been dispatched.
 
 BUGS
 ----
