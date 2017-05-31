@@ -21,7 +21,11 @@ OPÇÕES
 	Exibir o retorno do GET, exemplo 200 OK, 404, 401 etc...
 
 * `-u`:
-	Exibir a URL que foi chamada.
+	Exibir a Location(URL) que foi chamada no GET/POST/HEAD/etc.
+* `-U`:
+	Exibir o User-Agent Utilizado.
+
+
 
 EXEMPLOS
 --------
