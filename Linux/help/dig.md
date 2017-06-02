@@ -47,11 +47,19 @@ Coloque os exemplos aqui:
 `$> dig TXT _net2.uol.com.br +short`
 
 
+*Pegando a VERSAO do Servidor DNS:*
+	`$> dig version.bind txt chaos @pubhost`
+
+;; ANSWER SECTION:
+version.bind.           0       CH      TXT     "NSD 4.1.14"
+
+
 ARQUIVOS
 --------
 
 */etc/resolv.conf*
   Arquivo para configuração de resolvedor de nomes Locais para \*n?x like.
+ miniman resolv.conf
 
 ENVIRONMENT
 -----------
