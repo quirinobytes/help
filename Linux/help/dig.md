@@ -47,8 +47,14 @@ Coloque os exemplos aqui:
 `$> dig TXT _net2.uol.com.br +short`
 
 
+*Pegando a Versão do Bind*
+	`nslookup -q=txt -class=CHAOS version.bind 192.168.51.250`
+
+*Pegando a versão do NSD:*
+	`dig -t txt -c chaos VERSION.BIND @192.168.51.250`
+
 *Pegando a VERSAO do Servidor DNS:*
-	`$> dig version.bind txt chaos @pubhost`
+	`$> dig version.bind txt chaos @DNS_IPSERVER`
 
 ;; ANSWER SECTION:
 version.bind.           0       CH      TXT     "NSD 4.1.14"
@@ -85,8 +91,9 @@ Usando o nslookup é possível fazer um diagnótico mais detalhado.
 COMENTARIOS
 -----------
 
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
+Existem informaçoes na área do Security do miniman, procure em Security ou miniman -S
+
+
 
 BUGS
 ----
