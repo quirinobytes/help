@@ -48,10 +48,10 @@ Coloque os exemplos aqui:
 
 
 *Pegando a Versão do Bind*
-	`nslookup -q=txt -class=CHAOS version.bind 192.168.51.250`
+	`nslookup -q=txt -class=CHAOS version.bind 169.168.51.250`
 
 *Pegando a versão do NSD:*
-	`dig -t txt -c chaos VERSION.BIND @192.168.51.250`
+	`dig -t txt -c chaos VERSION.BIND @189.168.51.250`
 
 *Pegando a VERSAO do Servidor DNS:*
 	`$> dig version.bind txt chaos @DNS_IPSERVER`
