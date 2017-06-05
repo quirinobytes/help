@@ -56,6 +56,18 @@ Coloque os exemplos aqui:
 *Pegando a VERSAO do Servidor DNS:*
 	`$> dig version.bind txt chaos @DNS_IPSERVER`
 
+
+Pegando a Versão
+
+a
+
+
+
+
+
+
+
+
 ;; ANSWER SECTION:
 version.bind.           0       CH      TXT     "NSD 4.1.14"
 
@@ -91,8 +103,7 @@ Usando o nslookup é possível fazer um diagnótico mais detalhado.
 COMENTARIOS
 -----------
 
-Existem informaçoes na área do Security do miniman, procure em Security ou miniman -S
-
+Existem informaçoes na área do Security do miniman, procure em i../help/Security ou miniman -S
 
 
 BUGS
