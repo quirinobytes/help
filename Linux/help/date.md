@@ -40,6 +40,15 @@ Exemplos de data:
    `$> date +%D`
 	03/14/17
 
+Check the date man page for more options.
+Returns the real date from epoch time:
+date –d @1284127201
+Return an epoch time of 1288756800:
+date +%s -d “2010-11-03”
+Return a 2 days old date:
+date --date="-2 days" +"%Y-%m-%d"
+Return 20:00 hours:
+date -d @1288310401 +%k:%M 
 
 AUTOR
 -----
