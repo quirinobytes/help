@@ -90,38 +90,37 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..</p>
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
-<dl>
-<dt class="flush"><code>-t</code></dt><dd><p>Fazer um teste.</p></dd>
-<dt><code>--server</code> <em>hostname</em></dt><dd><p>Usa o servidor indicado para conectar.</p></dd>
-<dt><code>--environment *AMBIENTE*</code></dt><dd><p>Define o ambiente a ser utilizado devel, homol, production</p></dd>
-</dl>
+<ul>
+<li><p><code>-t</code>:
+Fazer um teste.</p></li>
+<li><p><code>--server</code> <em>hostname</em>:
+Usa o servidor indicado para conectar.</p></li>
+<li><p><code>--environment *AMBIENTE*</code>:
+Define o ambiente a ser utilizado devel, homol, production</p></li>
+<li><p><code>--noop</code>: O puppet vai sugerir oque deve mudar sem fazer nada.</p></li>
+<li><p><code>--tags=&lt;container></code>: usado para executar somente um container.</p></li>
+</ul>
 
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<pre><code>Exibir os cerificados:
-</code></pre>
+<p>Exibir os cerificados:
+   <code>$&gt; puppet cert --list --all</code></p>
 
-<p>   <code>$&gt; puppet cert --list --all</code></p>
+<p>Testar conexao com servidor.com.br:
+   <code>$&gt; puppet agent --server servidor.com.br --test</code></p>
 
-<pre><code>Testar conexao com servidor.com.br:
-</code></pre>
+<p>Executar servidor no modo debug:
+   <code>$&gt; puppet master --no-daemonize -debug</code></p>
 
-<p>   <code>$&gt; puppet agent --server servidor.com.br --test</code></p>
+<p>Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
+   <code>$&gt; puppet parser validate site.pp</code></p>
 
-<pre><code>Executar servidor no modo debug:
-</code></pre>
+<p>Executar o puppet no servidor no:
+   <code>$&gt; puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d</code></p>
 
-<p>   <code>$&gt; puppet master --no-daemonize -debug</code></p>
-
-<pre><code>Verificar se o arquivo esta configurado corretamente, e sem erros aparentes:
-</code></pre>
-
-<p>   <code>$&gt; puppet parser validate site.pp</code></p>
-
-<pre><code>Executar o puppet no servidor no.
-`puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -d`
-</code></pre>
+<p>Verificar se o puppet está como <em>ENABLE</em> ou <em>DISABLE</em>
+    <code>puppet status "environment=stage"</code></p>
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -139,14 +138,15 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..</p>
 
 <h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
 
-<p>The following diagnostics may be issued on stderr:</p>
+<p>Executando testes com o puppet na linha de comando:</p>
 
-<p><strong>Bad magic number.</strong>
-  The input file does not look like an archive file.</p>
+<p>$> puppet resource package htop ensure=absent</p>
 
-<p><strong>Old style baz segments.</strong>
-  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.</p>
+<p>$> puppet resource package htop ensure=installed</p>
+
+<p>$> puppet resource services apache ensure=started
+$> puppet resource user root
+$> facter</p>
 
 <h2 id="COMENTARIOS">COMENTARIOS</h2>
 
@@ -169,7 +169,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>January 2017</li>
+    <li class='tc'>May 2017</li>
     <li class='tr'>puppet(1)</li>
   </ol>
 

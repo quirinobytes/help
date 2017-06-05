@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DIG" "1" "March 2017" "" ""
+.TH "DIG" "1" "June 2017" "" ""
 .
 .SH "NAME"
 \fBdig\fR \- dig \- usado para questionar o DNS Server
@@ -50,8 +50,26 @@ Coloque os exemplos aqui:
 .P
 \fB$> dig TXT uol\.com\.br +short\fR \fB$> dig TXT _net1\.uol\.com\.br +short\fR \fB$> dig TXT _net2\.uol\.com\.br +short\fR
 .
+.P
+\fIPegando a Versão do Bind\fR \fBnslookup \-q=txt \-class=CHAOS version\.bind 169\.168\.51\.250\fR
+.
+.P
+\fIPegando a versão do NSD:\fR \fBdig \-t txt \-c chaos VERSION\.BIND @189\.168\.51\.250\fR
+.
+.P
+\fIPegando a VERSAO do Servidor DNS:\fR \fB$> dig version\.bind txt chaos @DNS_IPSERVER\fR
+.
+.P
+Pegando a Versão
+.
+.P
+a
+.
+.P
+;; ANSWER SECTION: version\.bind\. 0 CH TXT "NSD 4\.1\.14"
+.
 .SH "ARQUIVOS"
-\fI/etc/resolv\.conf\fR Arquivo para configuração de resolvedor de nomes Locais para *n?x like\.
+\fI/etc/resolv\.conf\fR Arquivo para configuração de resolvedor de nomes Locais para *n?x like\. miniman resolv\.conf
 .
 .SH "ENVIRONMENT"
 \fBnslookup\fR Também pode ser usado para enviar QUERIES para servidores de DNS\.
@@ -66,7 +84,7 @@ Usando o nslookup é possível fazer um diagnótico mais detalhado\.
 **set query={A,TXT,PTR,NS,MX} \fBA\fR configura modo de retorno de QUERIES somente para tipo A\. \fBTXT\fR configura modo de retorno de QUERIES somente para tipo TXT\. \fBPTR\fR configura modo de retorno de QUERIES somente para tipo REVERSO\. \fBNS\fR configura modo de retorno de QUERIES somente para tipo NS(Domain servers)\. \fBMX\fR configura modo de retorno de QUERIES somente para tipo MX(Mail eXchange)\.
 .
 .SH "COMENTARIOS"
-Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+Existem informaçoes na área do Security do miniman, procure em i\.\./help/Security ou miniman \-S
 .
 .SH "BUGS"
 The command name should have been chosen more carefully to reflect its purpose\.

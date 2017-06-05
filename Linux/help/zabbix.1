@@ -37,31 +37,10 @@ Recursive mode\. Operates as fast as lightning at the expense of a megabyte of v
 \fB$> zabbix_get \-p 10050 \-k "vfs\.fs\.size[C:\e,free]" \-s 172\.17\.150\.2\fR
 .
 .SH "ARQUIVOS"
-\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
-.
-.P
-\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
-.
-.SH "ENVIRONMENT"
-\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
-.
-.SH "DIAGNOSTICS"
-The following diagnostics may be issued on stderr:
-.
-.P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
-.
-.P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
-.
-.SH "COMENTARIOS"
-Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
-.
-.SH "BUGS"
-The command name should have been chosen more carefully to reflect its purpose\.
+\fI/etc/zabbix\.conf\fR Arquivo de configuração do zabbix\.
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
 .
 .SH "VEJA SOBRE"
-ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
+zabbix_get(1), zabbix(1), zabbix agent(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

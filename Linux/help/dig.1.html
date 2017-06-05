@@ -104,35 +104,56 @@
 
 <p>   <code>$&gt; date '%Y/%m/%d'</code></p>
 
+<p><em>Teste de SPF</em></p>
+
+<p><code>$&gt; dig TXT uol.com.br +short</code>
+<code>$&gt; dig TXT _net1.uol.com.br +short</code>
+<code>$&gt; dig TXT _net2.uol.com.br +short</code></p>
+
+<p><em>Pegando a Versão do Bind</em>
+    <code>nslookup -q=txt -class=CHAOS version.bind 169.168.51.250</code></p>
+
+<p><em>Pegando a versão do NSD:</em>
+    <code>dig -t txt -c chaos VERSION.BIND @189.168.51.250</code></p>
+
+<p><em>Pegando a VERSAO do Servidor DNS:</em>
+    <code>$&gt; dig version.bind txt chaos @DNS_IPSERVER</code></p>
+
+<p>Pegando a Versão</p>
+
+<p>a</p>
+
+<p>;; ANSWER SECTION:
+version.bind.           0       CH      TXT     "NSD 4.1.14"</p>
+
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
-<p><em>/etc/foo.conf</em>
-  The system wide configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
-
-<p><em>~/.foorc</em>
-  Per user configuration file. See <span class="man-ref">foo<span class="s">(5)</span></span> for further details.</p>
+<p><em>/etc/resolv.conf</em>
+  Arquivo para configuração de resolvedor de nomes Locais para *n?x like.
+ miniman resolv.conf</p>
 
 <h2 id="ENVIRONMENT">ENVIRONMENT</h2>
 
-<p><code>FOOCONF</code>
-  If non-null the full pathname for an alternate system wide <em>/etc/foo.conf</em>.
-  Overridden by the <code>-c</code> option.</p>
+<p><code>nslookup</code>
+    Também pode ser usado para enviar QUERIES para servidores de DNS.</p>
 
 <h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
 
-<p>The following diagnostics may be issued on stderr:</p>
+<p>Usando o nslookup é possível fazer um diagnótico mais detalhado.</p>
 
-<p><strong>Bad magic number.</strong>
-  The input file does not look like an archive file.</p>
+<p><strong>set debug.</strong>
+  Configura o format de debug para uso do nslookup</p>
 
-<p><strong>Old style baz segments.</strong>
-  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.</p>
+<p>**set query={A,TXT,PTR,NS,MX}
+  <code>A</code> configura modo de retorno de QUERIES somente para tipo A.
+  <code>TXT</code> configura modo de retorno de QUERIES somente para tipo TXT.
+  <code>PTR</code> configura modo de retorno de QUERIES somente para tipo REVERSO.
+  <code>NS</code> configura modo de retorno de QUERIES somente para tipo NS(Domain servers).
+  <code>MX</code> configura modo de retorno de QUERIES somente para tipo MX(Mail eXchange).</p>
 
 <h2 id="COMENTARIOS">COMENTARIOS</h2>
 
-<p>Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.></p>
+<p>Existem informaçoes na área do Security do miniman, procure em i../help/Security ou miniman -S</p>
 
 <h2 id="BUGS">BUGS</h2>
 
@@ -150,7 +171,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>June 2017</li>
     <li class='tr'>dig(1)</li>
   </ol>
 

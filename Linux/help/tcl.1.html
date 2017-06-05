@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>tcl(1) - Traffic Control libraries</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
+    <a href="#DIAGNOSTICS">DIAGNOSTICS</a>
+    <a href="#COMENTARIOS">COMENTARIOS</a>
+    <a href="#BUGS">BUGS</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>tcl(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>tcl(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>tcl</code> - <span class="man-whatis">Traffic Control libraries</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>tcl</code> [<code>-bar</code>] [<code>-c</code> <em>config-file</em> ] <em>file</em> ...</p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><code>tcl</code> é uma linguagem de programação para se trabalhar com trafego de dados.</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<p><em>Declarar variaveis se nao existir ainda</em>
+<code>set TMPDIR "/tmp"
+if { [info exists ::env(TMP)] } {
+    set TMPDIR $::env(TMP)
+}
+</code></p>
+
+<p><em>Imprimir o resultado da saida do ultimo comando</em>
+<code>puts $expect_out(buffer)</code></p>
+
+<p><em>Definnindo uma variável</em></p>
+
+<p>set greeting hello
+set greeting ;# ->hello
+set person(name) bob
+set person(name) ;#-> bob
+set (name) bob ;# the is an array variable, where the array name is the empty string
+set (name) ;#-> bob
+set {} hello
+set {} ;#->hello</p>
+
+<p><em>if</em>
+<code>if { $count &lt; 0} {
+    puts "True : $count\n";
+} else {
+    puts "False : $count\n";
+}</code></p>
+
+<p><em>MATH FUNCTIONS</em></p>
+
+<p>Tcl supports the following mathematical functions in expressions:</p>
+
+<p>abs         acos        asin        atan
+atan2       bool        ceil        cos
+cosh        double      entier      exp
+floor       fmod        hypot       int
+isqrt       log         log10       max
+min         pow         rand        round
+sin         sinh        sqrt        srand
+tan         tanh        wide</p>
+
+<p><em>TYPE CONVERSIONS</em></p>
+
+<p>Tcl supports the following functions to convert from one representation of a number to another:</p>
+
+<p>double int wide entier
+double() converts a number to a floating-point number.
+int() converts a number to an ordinary integer number (by truncating the decimal part).
+wide() converts a number to a so-called wide integer number (these numbers have a larger range).
+entier() coerces a number to an integer of appropriate size to hold it without truncation. This might return the same as int() or wide() or an integer of arbitrary size (in Tcl 8.5 and above).</p>
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<p><em>Usando expressoes matematicas</em>
+`set X 100
+set Y 256
+set Z [expr {$Y + $X}]
+set Z_LABEL "$Y plus $X is "</p>
+
+<p>puts "$Z_LABEL $Z"
+puts "The square root of $Y is [expr { sqrt($Y) }]\n"</p>
+
+<p>puts "Because of the precedence rules \"5 + -3 * 4\"   is: [expr {-3 * 4 + 5}]"
+puts "Because of the parentheses      \"(5 + -3) * 4\" is: [expr {(5 + -3) * 4}]"</p>
+
+<p>set A 3
+set B 4
+puts "The hypotenuse of a triangle: [expr {hypot($A,$B)}]"</p>
+
+<p>#</p>
+
+<h1>The trigonometric functions work with radians ...</h1>
+
+<p>#
+set pi6 [expr {3.1415926/6.0}]
+puts "The sine and cosine of pi/6: [expr {sin($pi6)}] [expr {cos($pi6)}]"`</p>
+
+<p>#</p>
+
+<h1>Working with arrays</h1>
+
+<p>#
+set <span class="man-ref">a<span class="s">(1)</span></span> 10
+set <span class="man-ref">a<span class="s">(2)</span></span> 7
+set <span class="man-ref">a<span class="s">(3)</span></span> 17
+set b    2
+puts "Sum: [expr {$<span class="man-ref">a<span class="s">(1)</span></span>+$a($b)}]"</p>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p><em>SHA-BANG</em>    #!/usr/bin/expect</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<p><code>FOOCONF</code>
+  If non-null the full pathname for an alternate system wide <em>/etc/foo.conf</em>.
+  Overridden by the <code>-c</code> option.</p>
+
+<h2 id="DIAGNOSTICS">DIAGNOSTICS</h2>
+
+<p>The following diagnostics may be issued on stderr:</p>
+
+<p><strong>Bad magic number.</strong>
+  The input file does not look like an archive file.</p>
+
+<p><strong>Old style baz segments.</strong>
+  <code>foo</code> can only handle new style baz segments. COBOL object libraries are not
+  supported in this version.</p>
+
+<h2 id="COMENTARIOS">COMENTARIOS</h2>
+
+<p><em>evoluindo com set dentro do ""</em>
+<code>set var1 3.14159
+set var2 hello
+set var3 13
+foreach num {1 2 3} {
+    puts "var$num = [set var$num]"
+}
+output:
+var1 = 3.14159
+var2 = hello
+var3 = 13</code></p>
+
+<h2 id="BUGS">BUGS</h2>
+
+<p>The command name should have been chosen more carefully to reflect its
+purpose.</p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">ronn<span class="s">(5)</span></span>, <span class="man-ref">markdown<span class="s">(1)</span></span>, <span class="man-ref">txt2tags<span class="s">(1)</span></span> <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>March 2017</li>
+    <li class='tr'>tcl(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

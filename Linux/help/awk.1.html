@@ -99,6 +99,7 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..</p>
 <dt><code>-v var=$1</code></dt><dd><p>dessa forma é possível usar a variável var dentro do programa.awk recebendo o conteúdo de um $1 por exemplo dentro de um shellscript.sh.</p></dd>
 <dt><code>-f</code> <em>arquivo.awk</em></dt><dd><p>Usado para executar o script em AWK usando o <em>arquivo.awk</em> como programa. Isso
 Sobrescreve o direcionamento com pipe <code>|</code>.</p></dd>
+<dt><code>-F &lt;CARACTER></code></dt><dd>  Usado para indicar o Field Separator</dd>
 </dl>
 
 
@@ -107,6 +108,26 @@ Sobrescreve o direcionamento com pipe <code>|</code>.</p></dd>
 <p>Exibindo somente os CS(Context Switch) maiores que 5000 em <strong>VERMELHO</strong></p>
 
 <p>   <code>$&gt; vmstat -n 5 | awk '{ if ($12 &gt; 5000) print "\033[31m;" $0 ; else print "\033[33m;" $0}'</code></p>
+
+<p><code>/foo/ { print }</code></p>
+
+<p><code>/[0-9]+\.[0-9]*/ { print }</code></p>
+
+<p><code>$1 == "fred" { print $3 }</code></p>
+
+<p><code>$5 ~ /root/ { print $3 }</code></p>
+
+<p><code>{
+  if ( $5 ~ /root/ ) {
+          print $3
+  }
+}</code></p>
+
+<p>   Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes:
+$> <code>awk '{if ($1&gt;100 &amp;&amp; $1&lt;120) print d,"\033[33m" $0 ; else if ($1>120) print d,"\033[31m" $0 ; else print d,"\033[0m" $0}' "d=$(date -R)"</code></p>
+
+<p>Executar um comando, por exemplo apagar arquivos que tenha txt no nome.
+    <code>&gt;cat myfile | awk '/.txt/{print "rm -rf " $0}' | bash</code></p>
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -154,7 +175,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>January 2017</li>
+    <li class='tc'>May 2017</li>
     <li class='tr'>awk(1)</li>
   </ol>
 
