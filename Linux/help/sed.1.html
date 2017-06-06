@@ -96,8 +96,6 @@
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<p>Coloque os exemplos aqui:</p>
-
 <ol>
 <li>Pegar os nomes dos arquivos</li>
 </ol>
@@ -118,9 +116,16 @@ if
 screen
 </code></p>
 
-<p>Apagar as linhas em branco de um arquivo
+<ol>
+<li><p>Apagar as linhas em branco de um arquivo
 <code>$&gt; sed '/^$/d' arquivo.txt &gt; novoarquivo.txt ou
-awk 'NF&gt;0' arquivo.txt &gt; novoarquivo.txt</code></p>
+awk 'NF&gt;0' arquivo.txt &gt; novoarquivo.txt</code></p></li>
+<li><p>Apagar somente a 3linha
+<code>$&gt; echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 3d</code></p></li>
+<li><p>Imprimir a linha 1
+<code>$&gt; echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 1p</code></p></li>
+</ol>
+
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -133,7 +138,7 @@ awk 'NF&gt;0' arquivo.txt &gt; novoarquivo.txt</code></p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>March 2017</li>
     <li class='tr'>sed(1)</li>
   </ol>
 

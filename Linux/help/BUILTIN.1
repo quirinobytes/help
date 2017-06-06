@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "BULTIN" "1" "February 2017" "" ""
+.TH "BULTIN" "1" "May 2017" "" ""
 .
 .SH "NAME"
 \fBBULTIN\fR \- Funções embutidas do shell (bash)
@@ -19,11 +19,20 @@ Dentro de um programa \.sh, voce pode pegar os parametros passados como argument
 .
 .nf
 
-Pegar o tamanho da variável\.
-
-`size=${#myvar} $ echo $size`
+Pegar o tamanho da variável:
 .
 .fi
+.
+.IP "\(bu" 4
+\fBsize=${#myvar} $ echo $size\fR
+.
+.IP
+Remover linhas com caracteres minusculos\.:
+.
+.IP "\(bu" 4
+\fB>$ sed \'/[[:upper:]]/d\'\fR
+.
+.IP "" 0
 .
 .SH "ARQUIVOS"
 \fI~/\.bashrc\fR Arquivo de configuração do shell por usuár

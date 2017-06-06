@@ -59,6 +59,7 @@
     <a href="#DESCRI-O">DESCRIÇÃO</a>
     <a href="#OP-ES">OPÇÕES</a>
     <a href="#EXAMPLES">EXAMPLES</a>
+    <a href="#NOTES">NOTES</a>
     <a href="#AUTOR">AUTOR</a>
     <a href="#VEJA-SOBRE">VEJA SOBRE</a>
   </div>
@@ -103,7 +104,8 @@ Verifica se o diretório existe.</p></li>
 <li><p><code>-ge</code>: maior ou igual</p></li>
 <li><p><code>-lt</code>: menor</p></li>
 <li><p><code>-le</code>: menor ou igual</p></li>
-<li><p><code>-d</code>: se é um diretório</p></li>
+<li><p><code>-d</code>: se é um diretório que existe.</p></li>
+<li><p><code>! -d</code>: se esse diretório nao existe.</p></li>
 <li><p><code>-e</code>: se existe</p></li>
 <li><p><code>-z</code>: se é vazio</p></li>
 <li><p><code>-f</code>: se contem texto.</p></li>
@@ -144,6 +146,39 @@ fi`
      echo "-Parameter #2 is \"$2\".-"
    fi</code></p>
 
+<p>Procurar uma string dentro de outra string, igual no case so que lá usa POSIX.</p>
+
+<p>`#!/bin/bash
+CURRENT_DIR=$(pwd)</p>
+
+<p>if [[ "$CURRENT_DIR" =~ "String1" ]]
+then
+ echo "String1 present"
+elif [[ "$CURRENT_DIR" =~ "String2" ]]
+then
+ echo "String2 present"
+else
+ echo "Else"
+fi`</p>
+
+<h2 id="NOTES">NOTES</h2>
+
+<p>Comparisons:
+-eq equal to
+-ne not equal to
+-lt less than
+-le less than or equal to
+-gt greater than
+-ge greater than or equal to</p>
+
+<p>File Operations:
+-s  file exists and is not empty
+-f  file exists and is not a directory
+-d  directory exists
+-x  file is executable
+-w  file is writable
+-r  file is readable</p>
+
 <h2 id="AUTOR">AUTOR</h2>
 
 <p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
@@ -155,7 +190,7 @@ fi`
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>May 2017</li>
     <li class='tr'>if(1)</li>
   </ol>
 

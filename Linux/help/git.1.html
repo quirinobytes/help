@@ -88,12 +88,20 @@
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
-<dl>
-<dt><code>git commit -m 'message'</code></dt><dd><p>  Faz o envio das alterações para o repositório local.</p></dd>
-<dt><code>git push origin master</code> </dt><dd><p>  Empurrando o repositório master para o SERVIDOR conhecido como origin no <em>git config -l</em></p></dd>
-<dt><code>git add --all</code></dt><dd><p>  Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os arquivos sob o TRACKER, (PROCURADOR, para que se faça ser visto).</p></dd>
-<dt><code>git config credential.helper store</code></dt><dd><p>  Salvar as credenciais para https, <em>fica toda hora pedindo</em></p></dd>
-</dl>
+<ul>
+<li><p><code>git commit -m 'message'</code>:
+  Faz o envio das alterações para o repositório local.</p></li>
+<li><p><code>git push origin master</code> :
+  Empurrando o repositório master para o SERVIDOR conhecido como origin no <em>git config -l</em></p></li>
+<li><p><code>git add --all</code>:
+  Quando se exclui ou adiciona arquivos necessário, fazer isso para colocar os arquivos sob o TRACKER, (PROCURADOR, para que se faça ser visto).</p></li>
+<li><p><code>git config http.sslVerify false</code>
+  Eliminando a verificação do Certificado SSL, qualquer cert. Tem como fazer isso somente para um site, mas tem um paranaue.</p></li>
+<li><p><code>git config credential.helper store</code>:
+  Salvar as credenciais para https, <em>fica toda hora pedindo</em></p></li>
+<li><p><code>git remote set-url origin https://user@site.stash.com.br/</code>
+  Adicionar um novo Origin, tipo o servidor para armazenar os codigos.</p></li>
+</ul>
 
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
@@ -156,7 +164,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>February 2017</li>
+    <li class='tc'>March 2017</li>
     <li class='tr'>git(1)</li>
   </ol>
 
