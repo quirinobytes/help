@@ -1,42 +1,42 @@
-while(1) -- laço de repetição
+fierce(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
 ===============================================
 
-NOME
-----
-
-`while` - Usado para criar laços de repetição.
 
 SYNOPSIS
 --------
 
-`while` [`(COND)`] [`do` *comandos* ; ] *done* 
+`fierce` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`while` é usado para criar laços condicionais onde o teste da confição fica no começo.
+`fierce` é um documento escrito para facilitar a crição de documentos a partir de um template.
+Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
+Necessita Ruby >= 2.0 com Mustache para funcionar..
 
 OPÇÕES
 ------
 
+* `-b`:
+  Do not write "busy" to stdout while processing.
+
+* `-c` *config-file*:
+  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
+  overrides any `FOOCONF` environment variable.
+
+* `-a`:
+  In addition to the baz segments, also parse the blurfl headers.
+
+* `-r`:
+  Recursive mode. Operates as fast as lightning at the expense of a megabyte
+  of virtual memory.
+
 EXEMPLOS
 --------
 
-Usando o While com < (REDIRECT de ARQUIVO):
-* `while read line ;do
-   echo $line
-done < /path/to/infile`
+Coloque os exemplos aqui:
 
-Exemplo com GetOpts:
- * `while getopts "hr:s:S:p" opt; do
-     case ${opt} in
-       s) CI_STATUS="${OPTARG}" && ci_status ;;
-       S) CI_REGEXP="${OPTARG}" && ci_regexp ;;
-       r) RELATED="${OPTARG}" && relationship ;;
-       p) POOL_NAME="${2}" && echo ${OPTARG}&& pool_upanddownstream ;;
-       *) usage ;;
-     esac
- done`
+   `$> date '%Y/%m/%d'`
 
 
 ARQUIVOS
