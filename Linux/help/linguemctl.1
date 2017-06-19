@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "LINGUEMCTL" "1" "February 2017" "" ""
+.TH "LINGUEMCTL" "1" "June 2017" "" ""
 .
 .SH "NAME"
 \fBlinguemctl\fR \- Sistema de Email proprietário\.
@@ -13,50 +13,25 @@
 \fBlinguemctl\fR é um servidor de email\.
 .
 .SH "OPÇÕES"
+Listar os usuários com status\. * \fBlinguemctl hs check \-\-detail all\fR:
 .
-.IP "\(bu" 4
-\fBlinguemctl hs check \-\-detail all\fR: Listar os usuários com status\.
+.P
+Use the alternate system wide \fIconfig\-file\fR instead of \fI/etc/foo\.conf\fR\. This overrides any \fBFOOCONF\fR environment variable\. * \fBlinguemctl us status alexandre@qualisegco\.dominiotemporario\.com\fR
 .
-.IP "\(bu" 4
-\fBlinguemctl us status alexandre@qualisegco\.dominiotemporario\.com\fR Use the alternate system wide \fIconfig\-file\fR instead of \fI/etc/foo\.conf\fR\. This overrides any \fBFOOCONF\fR environment variable\.
+.P
+Exibir todas as versões dos HS\. * \fBlinguemctl hs version all\fR:
 .
-.IP "\(bu" 4
-\fBlinguemctl hs version all\fR: Exibir todas as versões dos HS\.
+.P
+Listar a situação dos File Servers do Linguem, filtrando por nitro52\. * \fBlinguemctl fs list | grep nitro52\fR:
 .
-.IP "\(bu" 4
-\fBlinguemctl fs list | grep nitro52\fR: Listar a situação dos File Servers do Linguem, filtrando por nitro52\.
+.P
+Suspender HS * \fBlinguemctl hs status suspended <HS_NAME>\fR
 .
-.IP "" 0
+.P
+Des Suspender: * \fBlinguemctl hs status up <HS_NAME>\fR
 .
 .SH "EXEMPLOS"
-Coloque os exemplos aqui:
-.
-.P
-\fB$> date \'%Y/%m/%d\'\fR
-.
-.SH "ARQUIVOS"
-\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
-.
-.P
-\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
-.
-.SH "ENVIRONMENT"
-\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
-.
-.SH "DIAGNOSTICS"
-The following diagnostics may be issued on stderr:
-.
-.P
-\fBBad magic number\.\fR The input file does not look like an archive file\.
-.
-.P
-\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
-.
-.SH "COMENTARIOS"
-Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
-.
-.SH "BUGS"
-The command name should have been chosen more carefully to reflect its purpose\.
+Suspender HS \fB$> lc hs status suspended <HS_NAME>\'\fR
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
