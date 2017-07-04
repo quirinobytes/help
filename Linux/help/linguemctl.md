@@ -28,6 +28,9 @@ Exibir todas as versões dos HS.
 Listar a situação dos File Servers do Linguem, filtrando por nitro52.
 * `linguemctl fs list | grep nitro52`:
 
+Listar *infos do HS emerge192
+* `linguemctl hs info emerge192`:
+
 Suspender HS
 * `linguemctl hs status suspended <HS_NAME>`
 
