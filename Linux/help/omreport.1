@@ -10,25 +10,19 @@
 \fBomreport\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
 .
 .SH "DESCRIÇÃO"
-\fBomreport\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+\fBomreport\fR é usado para coletar informações do hardware\.
 .
 .SH "OPÇÕES"
 .
-.TP
-\fB\-b\fR
-Do not write "busy" to stdout while processing\.
+.nf
+
+about   \->  Shows version number and properties for the Server Administrator program\.
+chassis \->  Shows a general status for all main components\.
+storage \->  See "omreport: Using the Storage Reports\."
+system  \->  Shows a high\-level summary of system components\.
+rac     \->  See "omreport rac: Viewing Remote Access Controller Components\."
 .
-.TP
-\fB\-c\fR \fIconfig\-file\fR
-Use the alternate system wide \fIconfig\-file\fR instead of \fI/etc/foo\.conf\fR\. This overrides any \fBFOOCONF\fR environment variable\.
-.
-.TP
-\fB\-a\fR
-In addition to the baz segments, also parse the blurfl headers\.
-.
-.TP
-\fB\-r\fR
-Recursive mode\. Operates as fast as lightning at the expense of a megabyte of virtual memory\.
+.fi
 .
 .SH "EXEMPLOS"
 Exibir a versão da BIOS: \fB$> omreport chassis bios\fR

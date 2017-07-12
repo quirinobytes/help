@@ -10,26 +10,17 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-`omreport` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`omreport` é usado para coletar informações do hardware.
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
+	about	->	Shows version number and properties for the Server Administrator program.
+	chassis	->  Shows a general status for all main components.
+	storage	->  See "omreport: Using the Storage Reports."
+	system  ->  Shows a high-level summary of system components.
+	rac     ->  See "omreport rac: Viewing Remote Access Controller Components."
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
-
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
-
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
 
 EXEMPLOS
 --------
