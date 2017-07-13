@@ -434,7 +434,10 @@ echo ${DISTROS[@]:1:2} </p><p>Trisquel Ubuntu
 
 `45 - Saber quantos elementos possui o array DISTROS`
 echo&nbsp; ${#DISTROS[@]} </p><p>4
-     roff: ./BUILTIN.1                                
+
+`46 - Exibir os 3 últimos elementos - `
+echo&nbsp; ${VAR:(-3)} </p><p>ultimos elementos
+
 
 AUTOR
 -----
