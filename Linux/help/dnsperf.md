@@ -32,24 +32,24 @@ OPÇÕES
 EXEMPLOS
 --------
 
-2.1) Borges
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-100.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-1000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-5000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-10000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.borges-10000.120.log
-2.2) Charles
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-100.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-1000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-5000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-10000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.charles-10000.120.log
-2.3) Eliot
-                dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-100.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-1000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-5000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-10000.30.log
-                dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.eliot-10000.120.log
+**2.1) Borges**:
+`dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-100.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-1000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-5000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.borges-10000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.borges-10000.120.log`
+**2.2) Charles**:
+`dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-100.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-1000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-5000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.charles-10000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.147.38.8 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.charles-10000.120.log`
+**2.3) Eliot**:
+`dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 100 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-100.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 1000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-1000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 5000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-5000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 10000 -q 10000 -l 30 -v | tee apontamentos-UOLCSExterno.20160730.eliot-10000.30.log
+dnsperf -d ./registros_uolcs_externo -s 200.221.11.98 -Q 10000 -q 10000 -l 120 -v | tee apontamentos-UOLCSExterno.20160730.eliot-10000.120.log`
 
 ARQUIVOS
 --------
