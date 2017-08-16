@@ -41,15 +41,22 @@ Coloque os exemplos aqui:
    `$> date '%Y/%m/%d'`
 
 
+*checar as versões de criptografias usadas no SSL*:
+`nmap --script ssl-enum-ciphers -p 443 example.com`
+
+
 ARQUIVOS
 --------
 
+*Script para ler o arquivo allexternal.txt e validar todos os certificados nessas URLs*:
 
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
-
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
+	`for ip in `awk '{print $1}' < allexternal.txt`; do
+	    if gtimeout 30 openssl s_client -connect $ip:443 -ssl3 | grep -q 'Protocol  : SSLv3' ; then
+    	    echo $ip SSLv3 detected >> sslv3output;
+	    else
+	        echo $ip SSLv3 NOT detected >> sslv3output;
+	    fi;
+	done`
 
 ENVIRONMENT
 -----------

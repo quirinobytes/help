@@ -40,11 +40,27 @@ Coloque os exemplos aqui:
 .P
 \fB$> date \'%Y/%m/%d\'\fR
 .
-.SH "ARQUIVOS"
-\fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
-.
 .P
-\fI~/\.foorc\fR Per user configuration file\. See foo(5) for further details\.
+\fIchecar as versões de criptografias usadas no SSL\fR: \fBnmap \-\-script ssl\-enum\-ciphers \-p 443 example\.com\fR
+.
+.SH "ARQUIVOS"
+\fIScript para ler o arquivo allexternal\.txt e validar todos os certificados nessas URLs\fR:
+.
+.IP "" 4
+.
+.nf
+
+`for ip in `awk \'{print $1}\' < allexternal\.txt`; do
+    if gtimeout 30 openssl s_client \-connect $ip:443 \-ssl3 | grep \-q \'Protocol  : SSLv3\' ; then
+        echo $ip SSLv3 detected >> sslv3output;
+    else
+        echo $ip SSLv3 NOT detected >> sslv3output;
+    fi;
+done`
+.
+.fi
+.
+.IP "" 0
 .
 .SH "ENVIRONMENT"
 \fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
