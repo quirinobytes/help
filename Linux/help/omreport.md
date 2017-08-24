@@ -37,8 +37,8 @@ Exibir um sumario do SISTEMA/HW/DELL ou HP ETC:
 
 
 Chegar a porcentagem de *STATUS REBUILD*:
-`[root@server93 ~]# omreport storage pdisk controller=0 | grep -i progress
-Progress                        : Not Applicable
+`[root@server93 ~]# omreport storage pdisk controller=0 | grep -i progress`
+`Progress                        : Not Applicable
 Progress                        : Not Applicable
 Progress                        : Not Applicable
 Progress                        : 25% complete
