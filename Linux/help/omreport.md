@@ -34,6 +34,19 @@ Exibir a versão do OMREPORT:
 Exibir um sumario do SISTEMA/HW/DELL ou HP ETC:
 `$> omreport system summary`
 
+
+
+Chegar a porcentagem de *STATUS REBUILD*:
+`[root@server93 ~]# omreport storage pdisk controller=0 | grep -i progress
+Progress                        : Not Applicable
+Progress                        : Not Applicable
+Progress                        : Not Applicable
+Progress                        : 25% complete
+Progress                        : Not Applicable
+Progress                        : Not Applicable
+`
+
+
 DIAGNOSTICS
 -----------
 
