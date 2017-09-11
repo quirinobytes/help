@@ -40,7 +40,8 @@ Listar *infos do HS emerge192*:
 *Status do usuário/email* 
 `linguemctl user status <EMAIL@bol.com.br/sem uol.com.br> `
 
-
+*Replicar Usuários:*
+`linguemctl hs replicate --topusers 2000 emerge113-a`
 
 EXEMPLOS
 --------
