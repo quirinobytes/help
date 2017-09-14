@@ -48,6 +48,9 @@ Listar *infos do HS emerge192*:
 `linguemctl hs version <HS_NAME>`
 
 
+*Listar tudo do HS, principalmente ver os OUTDATED*
+`/opt/linguem/bin/linguemctl --nolog hs check --detail emerge113`
+
 
 **USUARIO**
 
