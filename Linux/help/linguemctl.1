@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "LINGUEMCTL" "1" "July 2017" "" ""
+.TH "LINGUEMCTL" "1" "September 2017" "" ""
 .
 .SH "NAME"
 \fBlinguemctl\fR \- Sistema de Email proprietário\.
@@ -28,13 +28,28 @@ Listar a situação dos File Servers do Linguem, filtrando por nitro52\. * \fBli
 Listar \fIinfos do HS emerge192\fR: \fBlinguemctl hs info emerge192\fR:
 .
 .P
+\fBHS\fR
+.
+.P
 \fISuspender HS\fR: \fBlinguemctl hs status suspended <HS_NAME>\fR
 .
 .P
 \fIDes Suspender:\fR \fBlinguemctl hs status up <HS_NAME>\fR
 .
 .P
+\fISlow HS\fR: \fBlinguemctl hs status slow <HS_NAME>\fR
+.
+.P
+\fIListar Versao dos HS´s\fR \fBlinguemctl hs version all\fR \fBlinguemctl hs version <HS_NAME>\fR
+.
+.P
+\fBUSUARIO\fR
+.
+.P
 \fIStatus do usuário/email\fR \fBlinguemctl user status <EMAIL@bol\.com\.br/sem uol\.com\.br>\fR
+.
+.P
+\fIReplicar Usuários:\fR \fBlinguemctl hs replicate \-\-topusers 2000 emerge113\-a\fR
 .
 .SH "EXEMPLOS"
 Suspender HS \fB$> lc hs status suspended <HS_NAME>\'\fR

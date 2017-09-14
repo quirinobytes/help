@@ -31,11 +31,25 @@ Listar a situação dos File Servers do Linguem, filtrando por nitro52.
 Listar *infos do HS emerge192*:
 `linguemctl hs info emerge192`:
 
+
+**HS** 
+
 *Suspender HS*:
 `linguemctl hs status suspended <HS_NAME>`
 
 *Des Suspender:* 
 `linguemctl hs status up <HS_NAME>`
+
+*Slow HS*:
+`linguemctl hs status slow <HS_NAME>`
+
+*Listar Versao dos HS´s*
+`linguemctl hs version all`
+`linguemctl hs version <HS_NAME>`
+
+
+
+**USUARIO**
 
 *Status do usuário/email* 
 `linguemctl user status <EMAIL@bol.com.br/sem uol.com.br> `
