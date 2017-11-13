@@ -32,7 +32,7 @@ Listar *infos do HS emerge192*:
 `linguemctl hs info emerge192`:
 
 
-**HS** 
+** HS ** 
 
 *Suspender HS*:
 	`linguemctl hs status suspended <HS_NAME>`
@@ -47,6 +47,8 @@ Listar *infos do HS emerge192*:
 	`linguemctl hs version all`
 	`linguemctl hs version <HS_NAME>`
 
+*Mostrar numero de usuários por HS*:
+	`linguemctl hs show <EMERGE69>`
 
 *Listar tudo do HS, principalmente ver os OUTDATED*
 	`/opt/linguem/bin/linguemctl --nolog hs check --detail emerge113`
