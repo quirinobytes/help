@@ -468,8 +468,22 @@ Space characters: tab, newline, vertical tab, form feed, carriage return, and sp
 Upper-case letters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.
 [:xdigit:]
 Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f.
-
-
+--------------------------------------------------------------------
+"alnum"	letras minúsculas, letras maiúsculas e dígitos
+"alpha"	letras minúsculas e letras maiúsculas
+"blank"	espaço ou tabulação
+"cntrl"	os caracteres de escape de formato de arquivo
+"digit"	dígitos
+"graph"	letras minúsculas, letras maiúsculas, dígitos e pontuação
+"lower"	letras minúsculas
+"print"	letras minúsculas, letras maiúsculas, dígitos, pontuação e espaço
+"punct"	pontuação
+"space"	espaço
+"upper	caracteres maiúsculos
+"xdigit"	dígitos, 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'
+"d"	mesmo que digit
+"s"	mesmo que space
+"w"	mesmo que alnum
 AUTOR
 -----
 
