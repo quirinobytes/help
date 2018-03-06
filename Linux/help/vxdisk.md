@@ -34,9 +34,17 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
 
-   `$> date '%Y/%m/%d'`
+   `$> vmdisk list md3000_0'`
+	group:     name=NARUTO168_DG id=1247647907.16.naruto168-b
+	info:      format=cdsdisk,privoffset=256,pubslice=3,privslice=3
+	flags:     online ready private autoconfig autoimport imported
+	pubpaths:  block=/dev/vx/dmp/md30000_0s3 char=/dev/vx/rdmp/md30000_0s3
+	guid:      {b31b4574-1dd1-11b2-ae74-bd96287ddab0}
+	udid:      DELL%5FMD3000%5F6002219000BEF44C0000000049D54E69%5F6002219000BEF44C000001F64A439E61
+
+
 
 
 ARQUIVOS
