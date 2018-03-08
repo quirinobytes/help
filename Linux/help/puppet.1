@@ -50,7 +50,7 @@ Executar o puppet no servidor no: \fB$> puppetd \-\-server=auto\-gt\.intranet \-
 Verificar se o puppet está como \fIENABLE\fR ou \fIDISABLE\fR \fBpuppet status "environment=stage"\fR
 .
 .P
-Renovar Certificado no Puppet \- UOL: \- seguir os passos abaixo dentro do CI que deseja renovar o certificado \fB$> curl \-v \-k "http://auto\-gt\.intranet/cgi\-bin/cert\-clean\.cgi?host=$(hostname \-f)\.pem"\fR \fBrm \-rf /var/lib/puppet/*\fR \fB/usr/sbin/puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-v \-w 2\fR
+Renovar Certificado no Puppet \- U_O_L: \- seguir os passos abaixo dentro do CI que deseja renovar o certificado \fB$> curl \-v \-k "http://server\.puppet /cgi\-bin/cert\-clean\.cgi?host=$(hostname \-f)\.pem"\fR \fBrm \-rf /var/lib/puppet/*\fR \fB/usr/sbin/puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-v \-w 2\fR
 .
 .IP "" 4
 .
