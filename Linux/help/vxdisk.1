@@ -34,7 +34,7 @@ Recursive mode\. Operates as fast as lightning at the expense of a megabyte of v
 Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
 .
 .P
-\fB$> vmdisk list md3000_0\'\fR group: name=NARUTO168_DG id=1247647907\.16\.naruto168\-b info: format=cdsdisk,privoffset=256,pubslice=3,privslice=3 flags: online ready private autoconfig autoimport imported pubpaths: block=/dev/vx/dmp/md30000_0s3 char=/dev/vx/rdmp/md30000_0s3 guid: {b31b4574\-1dd1\-11b2\-ae74\-bd96287ddab0} udid: DELL%5FMD3000%5F6002219000BEF44C0000000049D54E69%5F6002219000BEF44C000001F64A439E61
+\fB$> vmdisk list md3000_0\fR group: name=NARUTO168_DG id=1247647907\.16\.naruto168\-b info: format=cdsdisk,privoffset=256,pubslice=3,privslice=3 flags: online ready private autoconfig autoimport imported pubpaths: block=/dev/vx/dmp/md30000_0s3 char=/dev/vx/rdmp/md30000_0s3 guid: {b31b4574\-1dd1\-11b2\-ae74\-bd96287ddab0} udid: DELL%5FMD3000%5F6002219000BEF44C0000000049D54E69%5F6002219000BEF44C000001F64A439E61
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
@@ -46,10 +46,11 @@ Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
 \fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
 .
 .SH "DIAGNOSTICS"
+\fBPara verificar o status do uso do disco, uma forma interessante é:\fR
+.
+.IP "" 4
 .
 .nf
-
-  Para verificar o status do uso do disco, uma forma interessante é:
 
   `while : ; do iostat ; sleep 2; done`
   Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
@@ -72,9 +73,17 @@ Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
   VxVM32998       133\.80      2184\.88        55\.06  136680356    3444592
   VxVM32997        78\.10      1150\.68       120\.28   71983452    7524567
   VxVM32996        78\.54      1161\.73       104\.30   72674892    6524697
-
-
-  Para exibir os discos e seus respectivos mapeamentos no linux:
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fIPara exibir os discos e seus respectivos mapeamentos no linux:\fR
+.
+.IP "" 4
+.
+.nf
 
   `$> [root@naruto168\-b ~]# vxdisk \-e list`
     DEVICE       TYPE           DISK        GROUP        STATUS               OS_NATIVE_NAME   ATTR
@@ -85,6 +94,25 @@ Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
     md30000_3    auto:cdsdisk   diskmd4      NARUTO168_DG online               sde              \-
 .
 .fi
+.
+.IP "" 0
+.
+.P
+\fIPara exibir o status da controlador:\fR
+.
+.IP "" 4
+.
+.nf
+
+    `$> [root@naruto168\-b ~]#  vxdmpadm listenclosure
+    ENCLR_NAME        ENCLR_TYPE     ENCLR_SNO      STATUS       ARRAY_TYPE     LUN_COUNT    FIRMWARE
+    ===================================================================================================
+    disk              Disk           DISKS                CONNECTED    Disk        1         1028
+    md30000           MD3000         6002219000BEF44C0000000049D54E69  CONNECTED    A/PF\-LSI    4         0735
+.
+.fi
+.
+.IP "" 0
 .
 .SH "COMENTARIOS"
 Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>

@@ -20,8 +20,8 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Acompanhar o uso da capacidade do Device:
-   `$> iostat -x -t 10'`
+Acompanhar o uso da capacidade do Device de 1 em 1 segundo:
+   `$> iostat -x -t 1'`
 
 
 ARQUIVOS

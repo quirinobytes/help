@@ -36,7 +36,7 @@ EXEMPLOS
 
 Obter os dados do MD_3000 (UUID/hostid/disk/group/info/flags/guid/udid,etc)
 
-   `$> vmdisk list md3000_0'`
+   `$> vmdisk list md3000_0`
 	group:     name=NARUTO168_DG id=1247647907.16.naruto168-b
 	info:      format=cdsdisk,privoffset=256,pubslice=3,privslice=3
 	flags:     online ready private autoconfig autoimport imported
@@ -67,9 +67,9 @@ ENVIRONMENT
 DIAGNOSTICS
 -----------
 
-	  Para verificar o status do uso do disco, uma forma interessante é:
+`-Para verificar o status do uso do disco, uma forma interessante é:`
 
-      `while : ; do iostat ; sleep 2; done`
+      `$> while : ; do iostat ; sleep 2; done`
 	  Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
 	  sda               2.33        44.77        94.98    2800966    5941856
 	  sdb               5.94        42.48        26.55    2657200    1660934
@@ -92,7 +92,7 @@ DIAGNOSTICS
 	  VxVM32996        78.54      1161.73       104.30   72674892    6524697
 
 
-	  Para exibir os discos e seus respectivos mapeamentos no linux:
+*Para exibir os discos e seus respectivos mapeamentos no linux:*
 
 	  `$> [root@naruto168-b ~]# vxdisk -e list`
 		DEVICE       TYPE           DISK        GROUP        STATUS               OS_NATIVE_NAME   ATTR
@@ -101,6 +101,14 @@ DIAGNOSTICS
 		md30000_1    auto:cdsdisk   diskmd3      NARUTO168_DG online               sdd              -
 		md30000_2    auto:cdsdisk   diskmd2      NARUTO168_DG online               sdc              -
 		md30000_3    auto:cdsdisk   diskmd4      NARUTO168_DG online               sde              -
+
+*Para exibir o status da controlador:*
+
+		`$> [root@naruto168-b ~]#  vxdmpadm listenclosure
+		ENCLR_NAME        ENCLR_TYPE     ENCLR_SNO      STATUS       ARRAY_TYPE     LUN_COUNT    FIRMWARE
+		===================================================================================================
+		disk              Disk           DISKS                CONNECTED    Disk        1         1028
+		md30000           MD3000         6002219000BEF44C0000000049D54E69  CONNECTED    A/PF-LSI    4         0735
 
 
 
