@@ -68,8 +68,8 @@ DIAGNOSTICS
 -----------
 
 	  Para verificar o status do uso do disco, uma forma interessante é:
-		  `while : ; do iostat ; sleep 2; done`
 
+      `while : ; do iostat ; sleep 2; done`
 	  Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
 	  sda               2.33        44.77        94.98    2800966    5941856
 	  sdb               5.94        42.48        26.55    2657200    1660934
@@ -90,6 +90,18 @@ DIAGNOSTICS
 	  VxVM32998       133.80      2184.88        55.06  136680356    3444592
 	  VxVM32997        78.10      1150.68       120.28   71983452    7524567
 	  VxVM32996        78.54      1161.73       104.30   72674892    6524697
+
+
+	  Para exibir os discos e seus respectivos mapeamentos no linux:
+
+	  `$> [root@naruto168-b ~]# vxdisk -e list`
+		DEVICE       TYPE           DISK        GROUP        STATUS               OS_NATIVE_NAME   ATTR
+		disk_0       auto:LVM       -            -           online invalid       sda              -
+		md30000_0    auto:cdsdisk   diskmd1      NARUTO168_DG online               sdb              -
+		md30000_1    auto:cdsdisk   diskmd3      NARUTO168_DG online               sdd              -
+		md30000_2    auto:cdsdisk   diskmd2      NARUTO168_DG online               sdc              -
+		md30000_3    auto:cdsdisk   diskmd4      NARUTO168_DG online               sde              -
+
 
 
 COMENTARIOS
