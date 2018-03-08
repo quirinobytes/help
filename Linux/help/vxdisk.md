@@ -67,14 +67,30 @@ ENVIRONMENT
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
+	  Para verificar o status do uso do disco, uma forma interessante é:
+		  `while : ; do iostat ; sleep 2; done`
 
-**Bad magic number.**
-  The input file does not look like an archive file.
+	  Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+	  sda               2.33        44.77        94.98    2800966    5941856
+	  sdb               5.94        42.48        26.55    2657200    1660934
+	  sdc             133.79      2185.01        55.95  136688223    3500200
+	  sdd              78.07      1150.80       121.17   71991234    7580175
+	  sde              78.52      1162.68       104.37   72734119    6528947
+	  sdf               0.01         0.28         0.91      17289      56632
+	  sdg               0.01         0.05         0.00       3424          0
+	  sdh               0.01         0.05         0.00       3246          0
+	  sdi               0.01         0.05         0.00       3424          0
+	  dm-0              8.76         7.32        62.76     458192    3925808
+	  dm-1              0.81         6.55         3.35     409970     209368
+	  dm-2              0.79         4.21         5.86     263642     366328
+	  dm-3              0.10         3.62         0.12     226714       7624
+	  dm-4              1.35        16.51         8.57    1032634     536400
+	  dm-5              1.90         6.00        14.33     375370     896296
+	  VxVM32999         5.11        40.91        26.55    2559448    1660934
+	  VxVM32998       133.80      2184.88        55.06  136680356    3444592
+	  VxVM32997        78.10      1150.68       120.28   71983452    7524567
+	  VxVM32996        78.54      1161.73       104.30   72674892    6524697
 
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
 
 COMENTARIOS
 -----------
