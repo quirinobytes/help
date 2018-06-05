@@ -34,6 +34,16 @@ OPÇÕES
 * `git remote set-url origin https://user@site.stash.com.br/`
 	Adicionar um novo Origin, tipo o servidor para armazenar os codigos.
 
+* `git config --get http.proxy`
+	Exibir o Proxy utilizado pelo git
+
+* `git config --global http.proxy http://proxy.mycompany:80`
+	Setar o proxy proxy.mycompany:80
+
+
+* `git config --global http.proxy http://mydomain\\myusername:mypassword@myproxyserver:8080`
+	Configurar proxy com senha.
+
 EXEMPLOS
 --------
 

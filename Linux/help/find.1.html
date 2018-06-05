@@ -83,16 +83,35 @@
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
-<dl>
-<dt class="flush"><code>-type f</code></dt><dd>  Procura somente arquivos (file)</dd>
-</dl>
+<p> Procura somente arquivos (file)
+* <code>-type f</code>:</p>
 
+<p> Procurar somente diretorios do primeiro nivel, ou seja os subdiretórios filhos, nao os filhos dos filhos.
+* <code>-type d -mindepth 1</code>:</p>
+
+<p> Procurar somente diretorio até MAX nivel.
+* <code>-type d -maxdepth 5</code>:</p>
 
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<p>Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:</p>
+<dl>
+<dt>Localiza todos os executáveis a partir do / que não foram instalados pelo RPM:</dt><dd><p></p>
 
-<p>   <code>find / -type f -perm +a+x -print0 | xargs -0 rpm -qf | grep file | cut -f2 -d' '</code></p>
+<p> <code>$&gt; find / -type f -perm +a+x -print0 | xargs -0 rpm -qf | grep file | cut -f2 -d' '</code></p></dd>
+<dt>Localizar arquivos mais velhos que 1 Ano:</dt><dd><p></p>
+
+<p>  <code>$&gt; find /dir/to/start -type f -mtime +365 -ls</code></p></dd>
+<dt>Apagar arquivos mais velhos que 2 ANOS:</dt><dd><p></p>
+
+<p>  <code>$&gt; find /path/to/files/ -type f -mtime +365 -ls -exec rm -f -- {} \;</code></p></dd>
+</dl>
+
+
+<p><em>SECURITY</em></p>
+
+<p>find / -perm 766 | grep backup</p>
+
+<p>find / -perm 777</p>
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -105,7 +124,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>May 2017</li>
     <li class='tr'>find(1)</li>
   </ol>
 

@@ -22,8 +22,11 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+*Exibir os nomes SAN do certificado*:
+`echo | openssl s_client -connect bmail.uol.com.br:443 2> /dev/null | openssl x509 -noout -text | grep DNS:
+                DNS:afmail.uol.com.br, DNS:mail.folha.uol.com.br, DNS:bmail.uol.com.br`
 
+*Pegar o certificado*:
    `$> openssl s_client -connect srvhost:443 > /tmp/cert.crt`
 
 ARQUIVOS

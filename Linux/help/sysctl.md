@@ -19,8 +19,8 @@ OPÇÕES
 * `-A`:
   Exibir todas as configurações do kernel.
 
-* `-p`:
-  Exibir somente as configurações que foram alteradas.
+* `-p <FILE>`:
+  Carregar as configurações do arquivo /etc/sysctl.conf caso nenhum seja especificado.
 
 EXEMPLOS
 --------

@@ -100,6 +100,8 @@
 <dt class="flush"><code>-x</code></dt><dd><p>Mesta coisa que -X so que nao decodifica.</p></dd>
 <dt class="flush"><code>-vv</code></dt><dd><p>Modo bemmm verbose, seria um tipo nervose verbose.</p></dd>
 <dt class="flush"><code>-i &lt;IF></code></dt><dd><p>Exibe o dump de pacotes somente nessa(s) interfaces.</p></dd>
+<dt><code>-w &lt;FILENAME></code></dt><dd>  Salva no formato pcap para ser visualizado no wireshark, network miner, etc. use com <em>-s 65536</em></dd>
+<dt><code>-s &lt;NUM></code></dt><dd>  Ler a quantidade de bytes para cada pacote, usar a qtde necessaria para capturar a informacao para o protocolo desejado.</dd>
 </dl>
 
 
@@ -108,6 +110,9 @@
 <p>Exibir conteúdo de pacotes UPnP Entertaiment Service(UDP/239.255.255.250:1900).</p>
 
 <p>   <code>$&gt; tcpdump -Annvi -i eth0 host 239.255.255.250</code></p>
+
+<p>Capturando senhas em texto puro com tcpdump e grep.
+   <code>$&gt; tcpdump port http or port ftp or port smtp or port imap or port pop3 -l -A | egrep -i 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user ' --color=auto --line-buffered -B20</code></p>
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -155,7 +160,7 @@ purpose.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>March 2017</li>
     <li class='tr'>tcpdump(1)</li>
   </ol>
 

@@ -51,6 +51,15 @@ Executar o puppet no servidor no:
 Verificar se o puppet está como *ENABLE* ou *DISABLE*
 	`puppet status "environment=stage"`
 
+Renovar Certificado no Puppet - U_O_L:
+	- seguir os passos abaixo dentro do CI que deseja renovar o certificado
+	`$> curl -v -k "http://server.puppet /cgi-bin/cert-clean.cgi?host=$(hostname -f).pem" `
+	`rm -rf /var/lib/puppet/*`
+	`/usr/sbin/puppetd --server=auto-gt.intranet --no-daemonize --no-usecacheonfailure -o --factsync --report -v -w 2`
+
+	Se mesmo após a execução do puppet der erro de certificado, validar os passos abaixo
+	- horário do CI;
+	- hostname do CI;
 
 ARQUIVOS
 --------

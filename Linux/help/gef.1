@@ -1,0 +1,59 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "GEF" "1" "February 2017" "" ""
+.
+.SH "NAME"
+\fBgef\fR \- Melhorar o gdb para melhorar o debug
+.
+.SH "SYNOPSIS"
+\fBgef\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBgef\fR melhora seu GDB para ser um debugger mais eficiente e facil de usar\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fBdisassemble main\fR
+Exibe toda a pilha de stack do binario\.
+.
+.TP
+\fBb *addr\fR \fIaddr\fR
+Colocar um breakpoint no endereço, precisa do *\.
+.
+.TP
+\fBr\fR
+Running, colocar para rodar o binario\.
+.
+.TP
+\fBx/s $rax\fR
+Exibir o conteudo do registrador $rax, formato s(tring)\.
+.
+.TP
+\fBelf\-info\fR
+Exibe informaçoes do binario\.
+.
+.TP
+\fBchecksec\fR
+Exibe informaçoes do binario\.
+.
+.TP
+\fBgef\-remote \-t your\.ip\.address:1234 \-p 666\fR
+Fazer debug remoto\.
+.
+.TP
+\fBgdbserver 0\.0\.0\.0:1234 /path/to/file\fR
+Servidor de debug\.
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fBgef> elf\-info\'\fR
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

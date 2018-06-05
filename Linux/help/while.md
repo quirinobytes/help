@@ -6,6 +6,9 @@ NOME
 
 `while` - Usado para criar laços de repetição.
 
+
+
+
 SYNOPSIS
 --------
 
@@ -22,13 +25,21 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Usando o While com < (REDIRECT de ARQUIVO) 
-
-
-`while read line ;do
+Usando o While com < (REDIRECT de ARQUIVO):
+* `while read line ;do
    echo $line
 done < /path/to/infile`
 
+Exemplo com GetOpts:
+ * `while getopts "hr:s:S:p" opt; do
+     case ${opt} in
+       s) CI_STATUS="${OPTARG}" && ci_status ;;
+       S) CI_REGEXP="${OPTARG}" && ci_regexp ;;
+       r) RELATED="${OPTARG}" && relationship ;;
+       p) POOL_NAME="${2}" && echo ${OPTARG}&& pool_upanddownstream ;;
+       *) usage ;;
+     esac
+ done`
 
 
 ARQUIVOS

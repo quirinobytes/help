@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "STRACE" "1" "May 2017" "" ""
+.TH "STRACE" "1" "June 2017" "" ""
 .
 .SH "NAME"
 \fBstrace\fR \- Stack Trace
@@ -138,6 +138,19 @@ Strace THREADS em uma linha:
 .
 .P
 \fB$>strace \-f \-o strace\.out\fRls /proc/\fIpid\fR/task/ | xargs \-n 1 echo \-n " \-p"`
+.
+.IP "" 4
+.
+.nf
+
+* MONITORANDO OS ARQUIVOS:
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fBstrace \-f \-e trace=file \-p7546 \-o /tmp/outputfile \-f ensures that events from child processes are captured\. \-e trace=file says that we should capture file\-related syscalls (e\.g\. stat, open, futex etc\.) \-p is the process ID (retrieved from ps \-aux or other means) \-o specified the outputfile (there may be a lot of data and you could instead use grep as a filter\.\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

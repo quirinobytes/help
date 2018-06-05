@@ -1,0 +1,49 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "OMREPORT" "1" "August 2017" "" ""
+.
+.SH "NAME"
+\fBomreport\fR \- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino\.
+.
+.SH "SYNOPSIS"
+\fBomreport\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBomreport\fR é usado para coletar informações do hardware\.
+.
+.SH "OPÇÕES"
+.
+.nf
+
+about   \->  Shows version number and properties for the Server Administrator program\.
+chassis \->  Shows a general status for all main components\.
+storage \->  See "omreport: Using the Storage Reports\."
+system  \->  Shows a high\-level summary of system components\.
+rac     \->  See "omreport rac: Viewing Remote Access Controller Components\."
+.
+.fi
+.
+.SH "EXEMPLOS"
+Exibir a versão da BIOS: \fB$> omreport chassis bios\fR
+.
+.P
+Exibir a versão do OMREPORT: \fB$> omreport about\fR
+.
+.P
+Exibir um sumario do SISTEMA/HW/DELL ou HP ETC: \fB$> omreport system summary\fR
+.
+.P
+Chegar a porcentagem de \fISTATUS REBUILD\fR: \fB[root@server93 ~]# omreport storage pdisk controller=0 | grep \-i progress\fR
+.
+.P
+\fBProgress : Not Applicable Progress : Not Applicable Progress : Not Applicable Progress : 25% complete Progress : Not Applicable Progress : Not Applicable\fR
+.
+.SH "DIAGNOSTICS"
+https://cs\.uwaterloo\.ca/~brecht/servers/docs/PowerEdge\-2600/en/Dosa/CLI/cli_cc4r\.htm
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

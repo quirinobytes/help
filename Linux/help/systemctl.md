@@ -41,6 +41,8 @@ Coloque os exemplos aqui:
 
    `$> date '%Y/%m/%d'`
 
+Listar as units:
+`systemctl list-unit-files --type=service`
 
 ARQUIVOS
 --------

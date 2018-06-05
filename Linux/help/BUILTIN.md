@@ -434,8 +434,56 @@ echo ${DISTROS[@]:1:2} </p><p>Trisquel Ubuntu
 
 `45 - Saber quantos elementos possui o array DISTROS`
 echo&nbsp; ${#DISTROS[@]} </p><p>4
-     roff: ./BUILTIN.1                                
 
+`46 - Exibir os 3 últimos elementos - `
+echo&nbsp; ${VAR:(-3)} </p><p>ultimos elementos
+
+
+
+#####################
+Classes de caracteres
+#####################
+
+[:alnum:]
+Alphanumeric characters: `[:alpha:]' and `[:digit:]'.
+[:alpha:]
+Alphabetic characters: `[:lower:]' and `[:upper:]'.
+[:blank:]
+Blank characters: space and tab.
+[:cntrl:]
+Control characters. In ASCII, these characters have octal codes 000 through 037, and 177 (DEL). In other character sets, these are the equivalent characters, if any.
+[:digit:]
+Digits: 0 1 2 3 4 5 6 7 8 9.
+[:graph:]
+Graphical characters: `[:alnum:]' and `[:punct:]'.
+[:lower:]
+Lower-case letters: a b c d e f g h i j k l m n o p q r s t u v w x y z.
+[:print:]
+Printable characters: `[:alnum:]', `[:punct:]', and space.
+[:punct:]
+Punctuation characters: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~.
+[:space:]
+Space characters: tab, newline, vertical tab, form feed, carriage return, and space.
+[:upper:]
+Upper-case letters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.
+[:xdigit:]
+Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f.
+--------------------------------------------------------------------
+"alnum"	letras minúsculas, letras maiúsculas e dígitos
+"alpha"	letras minúsculas e letras maiúsculas
+"blank"	espaço ou tabulação
+"cntrl"	os caracteres de escape de formato de arquivo
+"digit"	dígitos
+"graph"	letras minúsculas, letras maiúsculas, dígitos e pontuação
+"lower"	letras minúsculas
+"print"	letras minúsculas, letras maiúsculas, dígitos, pontuação e espaço
+"punct"	pontuação
+"space"	espaço
+"upper	caracteres maiúsculos
+"xdigit"	dígitos, 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'
+"d"	mesmo que digit
+"s"	mesmo que space
+"w"	mesmo que alnum
 AUTOR
 -----
 

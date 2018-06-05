@@ -15,67 +15,70 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+Listar os usuários com status.
 * `linguemctl hs check --detail all `:
-	Listar os usuários com status.
 
-* `linguemctl us status alexandre@qualisegco.dominiotemporario.com`
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
+Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
+* `linguemctl us status alexandre@qualisegco.dominiotemporario.com`
 
+Exibir todas as versões dos HS.
 * `linguemctl hs version all`:
-   Exibir todas as versões dos HS.
 
+Listar a situação dos File Servers do Linguem, filtrando por nitro52.
 * `linguemctl fs list | grep nitro52`:
-	Listar a situação dos File Servers do Linguem, filtrando por nitro52.
+
+Listar *infos do HS emerge192*:
+`linguemctl hs info emerge192`:
+
+
+** HS ** 
+
+*Suspender HS*:
+	`linguemctl hs status suspended <HS_NAME>`
+
+*Des Suspender:* 
+	`linguemctl hs status up <HS_NAME>`
+
+*Slow HS*:
+	`linguemctl hs status slow <HS_NAME>`
+
+*Listar Versao dos HS´s*
+	`linguemctl hs version all`
+	`linguemctl hs version <HS_NAME>`
+
+*Mostrar numero de usuários por HS*:
+	`linguemctl hs show <EMERGE69>`
+
+*Listar tudo do HS, principalmente ver os OUTDATED*
+	`/opt/linguem/bin/linguemctl --nolog hs check --detail emerge113`
+
+
+**USUARIO**
+
+*Status do usuário/email* 
+	`linguemctl user status <EMAIL@bol.com.br/sem uol.com.br> `
+
+*Replicar Usuários:*
+	`linguemctl hs replicate --topusers 2000 emerge113-a`
+
+
+** FS **
+
+*reconstruct*
+	`linguemctl us reconstruct  lucianahran@bol.com.br   --ignorefsdown`
+
+** MENSAGEM ** 
+
+
+
 
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+Suspender HS
+   `$> lc hs status suspended <HS_NAME>'`
 
-   `$> date '%Y/%m/%d'`
-
-
-ARQUIVOS
---------
-
-
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
-
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
-
-ENVIRONMENT
------------
-
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
-
-DIAGNOSTICS
------------
-
-The following diagnostics may be issued on stderr:
-
-**Bad magic number.**
-  The input file does not look like an archive file.
-
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
-
-COMENTARIOS
------------
-
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
-
-BUGS
-----
-
-The command name should have been chosen more carefully to reflect its
-purpose.
 
 AUTOR
 -----

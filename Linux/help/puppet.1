@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "PUPPET" "1" "May 2017" "" ""
+.TH "PUPPET" "1" "March 2018" "" ""
 .
 .SH "NAME"
 \fBpuppet\fR \- puppet usado para orquestrar servidores em ambientes de produção\.
@@ -48,6 +48,21 @@ Executar o puppet no servidor no: \fB$> puppetd \-\-server=auto\-gt\.intranet \-
 .
 .P
 Verificar se o puppet está como \fIENABLE\fR ou \fIDISABLE\fR \fBpuppet status "environment=stage"\fR
+.
+.P
+Renovar Certificado no Puppet \- U_O_L: \- seguir os passos abaixo dentro do CI que deseja renovar o certificado \fB$> curl \-v \-k "http://server\.puppet /cgi\-bin/cert\-clean\.cgi?host=$(hostname \-f)\.pem"\fR \fBrm \-rf /var/lib/puppet/*\fR \fB/usr/sbin/puppetd \-\-server=auto\-gt\.intranet \-\-no\-daemonize \-\-no\-usecacheonfailure \-o \-\-factsync \-\-report \-v \-w 2\fR
+.
+.IP "" 4
+.
+.nf
+
+Se mesmo após a execução do puppet der erro de certificado, validar os passos abaixo
+\- horário do CI;
+\- hostname do CI;
+.
+.fi
+.
+.IP "" 0
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

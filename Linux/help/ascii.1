@@ -1,0 +1,48 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "ASCII" "1" "February 2017" "" ""
+.
+.SH "NAME"
+\fBascii\fR \- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino\.
+.
+.SH "SYNOPSIS"
+\fBascii\fR
+.
+.SH "DESCRIÇÃO"
+\fBascii\fR Manual do ASCII
+.
+.SH "OPÇÕES"
+.
+.SH "EXEMPLOS"
+Shell script para imprimir os caracteres em ASCII
+.
+.P
+\fIShell\-Script\fR `# !/bin/bash
+.
+.P
+for i in $(seq 32 126) do printf \e$(printf \'%03o\' "${i}") done`
+.
+.P
+PERL para imprimir os caracteres em ACSCII
+.
+.P
+\fIPerl\fR \fBprint chr for 32\.\.126;\fR
+.
+.P
+\fIPython\fR \fBfor x in range(32, 127): print (chr(x))\fR
+.
+.P
+\fIPhp\fR \fBfor ( $i=32; $i <= 126; $i++ ) { echo chr($i); }\fR
+.
+.P
+\fIR\fR \fBintToUtf8(32:126)\fR
+.
+.SH "COMENTARIOS"
+man ascii
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

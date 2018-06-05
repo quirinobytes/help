@@ -128,6 +128,19 @@ cc - altera a linha inteira
 cG - altera até a última linha do arquivo
 c$ - altera até o fim da linha
 
+
+NAME COMPLETION
+---------------
+
+Ctrl-x Ctrl-f 	=> Completa nomes de arquivos no sistema.
+Crtl-x Ctrl-n	=> Completa palavras que já existem no texto, procura palavras que existem depois.
+Crtl-x Ctrl-p	=> Completa palavras que ja existem no texto, procura palavras previas.
+Crtl-x Ctrl-l	=> Completa linhas que ja existem no texto.
+
+Ctrl-x Ctrl-k	=> Procurar palavras no dicionário.
+Voce tambem pode definir um dictionary para o VIM procurar essas palavras.
+set dictionary+=/usr/share/dict/words
+
 AUTOR
 -----
 

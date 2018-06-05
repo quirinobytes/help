@@ -64,6 +64,21 @@ DIAGNOSTICS
 **postflush.**
   `flush` faz um flush na fila.
 
+
+**SEND MAIL via TELNET**:
+
+	`$> netcat smtp.server.com.br 25
+    HELO HOSTNAME_QUALQUER
+	MAIL FROM: <email@uol.com.br>
+	RCPT TO: <origem@dominio.com.br>
+	DATA 
+	" Digitar os dados "
+	SUBJECT: "TITULO"
+	. <ENTER>`
+
+	O Servidor deverá responder com QUEUED, ou ENVIADO com sucesso.
+
+
 COMENTARIOS
 -----------
 

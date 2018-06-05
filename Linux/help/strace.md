@@ -70,6 +70,13 @@ EXEMPLOS
 `$>strace -f -o strace.out `ls /proc/<pid>/task/ | xargs -n 1 echo -n " -p"`
 
 
+
+	* MONITORANDO OS ARQUIVOS:
+`strace -f -e trace=file -p7546 -o /tmp/outputfile 
+	-f ensures that events from child processes are captured.
+	-e trace=file says that we should capture file-related syscalls (e.g. stat, open, futex etc.)
+	-p is the process ID (retrieved from ps -aux or other means) -o specified the outputfile (there may be a lot of data and you could instead use grep as a filter.`
+
 ARQUIVOS
 --------
 

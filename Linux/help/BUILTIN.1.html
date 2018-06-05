@@ -86,12 +86,24 @@
 
 <h2 id="OP-ES">OPÇÕES</h2>
 
+<p>Dentro de um programa .sh, voce pode pegar os parametros passados como argumento assim:
+<em>Variável</em> <em>Significado</em>
+$0          Contém o nome do programa
+$#          Contém a quantidade de parâmetros passados
+$*          Contém o conjunto de todos os parâmetros (muito parecido com $@)</p>
+
 <h2 id="EXEMPLOS">EXEMPLOS</h2>
 
-<pre><code>Pegar o tamanho da variável.
-
-`size=${#myvar} $ echo $size`
+<pre><code>Pegar o tamanho da variável:
 </code></pre>
+
+<ul>
+<li><p><code>size=${#myvar} $ echo $size</code></p>
+
+<p>  Remover linhas com caracteres minusculos.:</p></li>
+<li><code>&gt;$ sed '/[[:upper:]]/d'</code></li>
+</ul>
+
 
 <h2 id="ARQUIVOS">ARQUIVOS</h2>
 
@@ -508,7 +520,7 @@ echo&nbsp; ${#DISTROS[@]} </p><p>4
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>May 2017</li>
     <li class='tr'>BULTIN(1)</li>
   </ol>
 

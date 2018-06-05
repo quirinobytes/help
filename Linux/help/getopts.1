@@ -1,0 +1,30 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "GETOPTS" "1" "August 2017" "" ""
+.
+.SH "NAME"
+\fBgetopts\fR \- Usado para pegar as opçoes via linha de comando\.
+.
+.SH "SYNOPSIS"
+\fBgetopts\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBgetopts\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+.
+.SH "OPÇÕES"
+\&\.\.\.
+.
+.SH "EXEMPLOS"
+*
+.
+.SS "Start of main program"
+.
+.P
+while getopts abinvFe:f:c:hk:p:s:qx: option do case "${option}" in a) ALARM="TRUE";; b) NOHEADER="TRUE";; c) CERTFILE=${OPTARG};; e) ADMIN=${OPTARG};; f) SERVERFILE=$OPTARG;; h) usage exit 1;; i) ISSUER="TRUE";; k) PKCSDBPASSWD=${OPTARG};; n) NAGIOS="TRUE";; p) PORT=$OPTARG;; s) HOST=$OPTARG;; q) QUIET="TRUE";; v) VALIDATION="TRUE";; x) WARNDAYS=$OPTARG;; F) FAKE="TRUE";; \e?) usage exit 1;; esac done *
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

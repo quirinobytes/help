@@ -1,0 +1,58 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SSH" "1" "March 2017" "" ""
+.
+.SH "NAME"
+\fBssh\fR \- Executar comandos remotos com segurança
+.
+.SH "SYNOPSIS"
+\fBssh\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBssh\fR Executa comandos remotos com uma série de características\.
+.
+.SH "OPÇÕES"
+.
+.TP
+\fB\-o "StrictHostKeyChecking no"\fR
+Evita aparecer aquela mensagem: \fIAre you sure you want to continue connecting (yes/no)\fR
+.
+.SH "EXEMPLOS"
+Coloque os exemplos aqui:
+.
+.P
+\fB$> date \'%Y/%m/%d\'\fR
+.
+.SH "ARQUIVOS"
+\fI/\.ssh/authorized_keys\fR \-> Arquivo quye autoriza as chaves publicas
+.
+.P
+\fI~/id_rsa\fR \-> Arquivo com as chaves privadas\.
+.
+.P
+\fI~/id_rsa\.pub\fR \-> Arquivo com a chave publica\.
+.
+.SH "ENVIRONMENT"
+\fBFOOCONF\fR If non\-null the full pathname for an alternate system wide \fI/etc/foo\.conf\fR\. Overridden by the \fB\-c\fR option\.
+.
+.SH "DIAGNOSTICS"
+The following diagnostics may be issued on stderr:
+.
+.P
+\fBBad magic number\.\fR The input file does not look like an archive file\.
+.
+.P
+\fBOld style baz segments\.\fR \fBfoo\fR can only handle new style baz segments\. COBOL object libraries are not supported in this version\.
+.
+.SH "COMENTARIOS"
+Coloque seus comentários aqui\.\.\. <\- Tag para comentários na Man Page, juro, não sai nada\.>
+.
+.SH "BUGS"
+The command name should have been chosen more carefully to reflect its purpose\.
+.
+.SH "AUTOR"
+Rafael Quirino \- \fIquirinobytes (a) gmail com\fR
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR

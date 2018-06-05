@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "WHILE" "1" "February 2017" "" ""
+.TH "WHILE" "1" "June 2017" "" ""
 .
 .SH "NAME"
 \fBwhile\fR \- laço de repetição
@@ -18,10 +18,10 @@
 .SH "OPÇÕES"
 .
 .SH "EXEMPLOS"
-Usando o While com < (REDIRECT de ARQUIVO)
+Usando o While com < (REDIRECT de ARQUIVO): * \fBwhile read line ;do echo $line done < /path/to/infile\fR
 .
 .P
-\fBwhile read line ;do echo $line done < /path/to/infile\fR
+Exemplo com GetOpts: * \fBwhile getopts "hr:s:S:p" opt; do case ${opt} in s) CI_STATUS="${OPTARG}" && ci_status ;; S) CI_REGEXP="${OPTARG}" && ci_regexp ;; r) RELATED="${OPTARG}" && relationship ;; p) POOL_NAME="${2}" && echo ${OPTARG}&& pool_upanddownstream ;; *) usage ;; esac done\fR
 .
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.

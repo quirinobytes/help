@@ -58,7 +58,8 @@ Exibindo somente os CS(Context Switch) maiores que 5000 em **VERMELHO**
   } 
 }`
 
-
+Fazendo um contador com a coluna $9:
+`awk 'BEGIN{a=0}{ a+=$9}END{print a}'`
 
 
    Exemplo usando IF e imprimindo com data, 3 condicoes e 3 cores diferentes:

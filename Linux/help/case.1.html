@@ -113,6 +113,16 @@ esac
 
 <p>esac`</p>
 
+<p>Procurar uma string dentro de outra string usando um recurso do proprio POSIX
+<code>#!/bin/sh
+CURRENT_DIR=</code>pwd`</p>
+
+<p>case "$CURRENT_DIR" in
+  <em>String1</em>) echo "String1 present" ;;
+  <em>String2</em>) echo "String2 present" ;;
+  *)         echo "else" ;;
+esac`</p>
+
 <h2 id="AUTOR">AUTOR</h2>
 
 <p>Rafael Quirino - <var>quirinobytes (a) gmail com</var></p>
@@ -124,7 +134,7 @@ esac
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>March 2017</li>
     <li class='tr'>case(1)</li>
   </ol>
 

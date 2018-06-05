@@ -37,9 +37,8 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
-
-   `$> date '%Y/%m/%d'`
+IP route GET
+   `$> ip route get 192.168.100.1'`
 
 
 ARQUIVOS

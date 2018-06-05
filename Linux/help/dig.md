@@ -47,11 +47,37 @@ Coloque os exemplos aqui:
 `$> dig TXT _net2.uol.com.br +short`
 
 
+*Pegando a Versão do Bind*
+	`nslookup -q=txt -class=CHAOS version.bind 169.168.51.250`
+
+*Pegando a versão do NSD:*
+	`dig -t txt -c chaos VERSION.BIND @189.168.51.250`
+
+*Pegando a VERSAO do Servidor DNS:*
+	`$> dig version.bind txt chaos @DNS_IPSERVER`
+
+
+Pegando a Versão
+
+a
+
+
+
+
+
+
+
+
+;; ANSWER SECTION:
+version.bind.           0       CH      TXT     "NSD 4.1.14"
+
+
 ARQUIVOS
 --------
 
 */etc/resolv.conf*
   Arquivo para configuração de resolvedor de nomes Locais para \*n?x like.
+ miniman resolv.conf
 
 ENVIRONMENT
 -----------
@@ -77,8 +103,8 @@ Usando o nslookup é possível fazer um diagnótico mais detalhado.
 COMENTARIOS
 -----------
 
-Coloque seus comentários aqui...
-<- Tag para comentários na Man Page, juro, não sai nada.>
+Existem informaçoes na área do Security do miniman, procure em i../help/Security ou miniman -S
+
 
 BUGS
 ----

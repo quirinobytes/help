@@ -19,6 +19,9 @@ OPÇÕES
 * `--proxy <PROXY_IP>`:
 	Usado para informar um servidor PROXY para conexão a internet.
 
+* ` --install-dir `:  Especifica o diretório para instalação da GEM.
+
+
 EXEMPLOS
 --------
 

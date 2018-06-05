@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "SENDMAIL" "1" "January 2017" "" ""
+.TH "SENDMAIL" "1" "July 2017" "" ""
 .
 .SH "NAME"
 \fBsendmail\fR \- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino\.
@@ -50,6 +50,28 @@ Coloque os exemplos aqui:
 .
 .P
 \fBpostflush\.\fR \fBflush\fR faz um flush na fila\.
+.
+.P
+\fBSEND MAIL via TELNET\fR:
+.
+.IP "" 4
+.
+.nf
+
+`$> netcat smtp\.server\.com\.br 25
+HELO HOSTNAME_QUALQUER
+MAIL FROM: <email@uol\.com\.br>
+RCPT TO: <origem@dominio\.com\.br>
+DATA
+" Digitar os dados "
+SUBJECT: "TITULO"
+\. <ENTER>`
+
+O Servidor deverá responder com QUEUED, ou ENVIADO com sucesso\.
+.
+.fi
+.
+.IP "" 0
 .
 .SH "COMENTARIOS"
 Exemplo de um script Sendmail\.shexport smtpemailfrom=zabbix@ghelfond\.com\.br export zabbixemailto=$1 export zabbixsubject=$2 export zabbixbody=$3 export smtpserver=smtplw\.com\.br export smtplogin=ghelfond export smtppass=gheadm001/usr/bin/sendmail \-o message\-charset=utf\-8 \-f $smtpemailfrom \-t $zabbixemailto \-u $zabbixsubject \-m $zabbixbody \-s $smtpserver:587 \-xu $smtplogin \-xp $smtppass
