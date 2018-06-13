@@ -61,6 +61,7 @@
     <a href="#ARQUIVOS">ARQUIVOS</a>
     <a href="#ENVIRONMENT">ENVIRONMENT</a>
     <a href="#BUGS">BUGS</a>
+    <a href="#Hexadecimal-digits-0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F-a-b-c-d-e-f-">Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f.</a>
     <a href="#AUTOR">AUTOR</a>
     <a href="#VEJA-SOBRE">VEJA SOBRE</a>
   </div>
@@ -498,8 +499,85 @@ echo&nbsp; ${DISTROS[@]:2} </p><p>Ubuntu RedHat</p>
 echo ${DISTROS[@]:1:2} </p><p>Trisquel Ubuntu</p>
 
 <p><code>45 - Saber quantos elementos possui o array DISTROS</code>
-echo&nbsp; ${#DISTROS[@]} </p><p>4
-     roff: ./BUILTIN.1</p>
+echo&nbsp; ${#DISTROS[@]} </p><p>4</p>
+
+<p><code>46 - Exibir os 3 últimos elementos -</code>
+echo&nbsp; ${VAR:(-3)} </p><p>ultimos elementos</p>
+
+<h6 id="-">#</h6>
+
+<p>Classes de caracteres</p>
+
+<h6 id="-">#</h6>
+
+<p>[:alnum:]
+Alphanumeric characters: <code>[:alpha:]' and</code>[:digit:]'.
+[:alpha:]
+Alphabetic characters: <code>[:lower:]' and</code>[:upper:]'.
+[:blank:]
+Blank characters: space and tab.
+[:cntrl:]
+Control characters. In ASCII, these characters have octal codes 000 through 037, and 177 (DEL). In other character sets, these are the equivalent characters, if any.
+[:digit:]
+Digits: 0 1 2 3 4 5 6 7 8 9.
+[:graph:]
+Graphical characters: <code>[:alnum:]' and</code>[:punct:]'.
+[:lower:]
+Lower-case letters: a b c d e f g h i j k l m n o p q r s t u v w x y z.
+[:print:]
+Printable characters: <code>[:alnum:]',</code>[:punct:]', and space.
+[:punct:]
+Punctuation characters: ! " # $ % &amp; ' ( ) * + , - . / : ; <var> = </var> ? @ [ \ ] ^ _ ` { | } ~.
+[:space:]
+Space characters: tab, newline, vertical tab, form feed, carriage return, and space.
+[:upper:]
+Upper-case letters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.
+[:xdigit:]</p>
+
+<h2 id="Hexadecimal-digits-0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F-a-b-c-d-e-f-">Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f.</h2>
+
+<p>"alnum" letras minúsculas, letras maiúsculas e dígitos
+"alpha" letras minúsculas e letras maiúsculas
+"blank" espaço ou tabulação
+"cntrl" os caracteres de escape de formato de arquivo
+"digit" dígitos
+"graph" letras minúsculas, letras maiúsculas, dígitos e pontuação
+"lower" letras minúsculas
+"print" letras minúsculas, letras maiúsculas, dígitos, pontuação e espaço
+"punct" pontuação
+"space" espaço
+"upper  caracteres maiúsculos
+"xdigit"    dígitos, 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'
+"d" mesmo que digit
+"s" mesmo que space
+"w" mesmo que alnum</p>
+
+<p><em>Atalhos</em></p>
+
+<p>Shortcut    |   Action
+CTRL + A    |   Move to the beginning of the line
+CTRL + E    |   Move to the end of the line
+CTRL + [left arrow] |   Move one word backward (on some systems this is ALT + B)
+CTRL + [right arrow] |  Move one word forward (on some systems this is ALT + F)
+CTRL + U (bash) | Clear the characters on the line before the current cursor position
+CTRL + U (zsh)  | If you're using the zsh, this will clear the entire line
+CTRL + K    | Clear the characters on the line after the current cursor position
+ESC + [backspace]   | Delete the word in front of the cursor
+CTRL + W    | Delete the word in front of the cursor
+ALT + D     | Delete the word after the cursor
+CTRL + R    | Search history
+CTRL + G    | Escape from search mode
+CTRL + _    | Undo the last change
+CTRL + L    | Clear screen
+CTRL + S    | Stop output to screen
+CTRL + Q    | Re-enable screen output
+CTRL + C    | Terminate/kill current foreground process
+CTRL + Z    | Suspend/stop current foreground process</p>
+
+<p>Command Action
+!!  Execute last command in history
+!abc    Execute last command in history beginning with abc
+!abc:p  Print last command in history beginning with abc</p>
 
 <h2 id="AUTOR">AUTOR</h2>
 
@@ -520,7 +598,7 @@ echo&nbsp; ${#DISTROS[@]} </p><p>4
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>May 2017</li>
+    <li class='tc'>June 2018</li>
     <li class='tr'>BULTIN(1)</li>
   </ol>
 
