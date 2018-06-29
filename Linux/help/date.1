@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DATE" "1" "June 2017" "" ""
+.TH "DATE" "1" "June 2018" "" ""
 .
 .SH "NAME"
 \fBdate\fR \- Manipular datas
@@ -30,6 +30,10 @@ Exibe o dia como numero, ex: 2016
 \fB%y\fR
 Exibe o ano como numero, ex: 16
 .
+.TP
+\fB%s\fR
+Exibe o TIMESTAMP, numero de segundos passados depois de 1970\.
+.
 .SH "EXEMPLOS"
 Exemplos de data:
 .
@@ -43,7 +47,16 @@ Exemplos de data:
 \fB$> date +%D\fR 03/14/17
 .
 .P
-Check the date man page for more options\. Returns the real date from epoch time: date –d @1284127201 Return an epoch time of 1288756800: date +%s \-d “2010\-11\-03” Return a 2 days old date: date \-\-date="\-2 days" +"%Y\-%m\-%d" Return 20:00 hours: date \-d @1288310401 +%k:%M
+Returns the real date from epoch time: date –d @1284127201
+.
+.P
+Return an epoch time of 1288756800: date +%s \-d “2010\-11\-03”
+.
+.P
+Return a 2 days old date: date \-\-date="\-2 days" +"%Y\-%m\-%d"
+.
+.P
+Return 20:00 hours: date \-d @1288310401 +%k:%M
 .
 .SH "AUTOR"
 Rafael Quirino \- \fIquirinobytes (a) gmail com\fR

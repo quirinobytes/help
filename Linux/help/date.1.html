@@ -88,6 +88,7 @@
 <dt class="flush"><code>%m</code></dt><dd>  Exibe o mes como numero, ex: 12</dd>
 <dt class="flush"><code>%Y</code></dt><dd>  Exibe o dia como numero, ex: 2016</dd>
 <dt class="flush"><code>%y</code></dt><dd>  Exibe o ano como numero, ex: 16</dd>
+<dt class="flush"><code>%s</code></dt><dd>  Exibe o TIMESTAMP, numero de segundos passados depois de 1970.</dd>
 </dl>
 
 
@@ -104,14 +105,16 @@
 <p>   <code>$&gt; date +%D</code>
     03/14/17</p>
 
-<p>Check the date man page for more options.
-Returns the real date from epoch time:
-date –d @1284127201
-Return an epoch time of 1288756800:
-date +%s -d “2010-11-03”
-Return a 2 days old date:
-date --date="-2 days" +"%Y-%m-%d"
-Return 20:00 hours:
+<p>Returns the real date from epoch time:
+date –d @1284127201</p>
+
+<p>Return an epoch time of 1288756800:
+date +%s -d “2010-11-03”</p>
+
+<p>Return a 2 days old date:
+date --date="-2 days" +"%Y-%m-%d"</p>
+
+<p>Return 20:00 hours:
 date -d @1288310401 +%k:%M</p>
 
 <h2 id="AUTOR">AUTOR</h2>
@@ -125,7 +128,7 @@ date -d @1288310401 +%k:%M</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>June 2017</li>
+    <li class='tc'>June 2018</li>
     <li class='tr'>date(1)</li>
   </ol>
 
