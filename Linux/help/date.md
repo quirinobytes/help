@@ -26,22 +26,29 @@ OPÇÕES
 	Exibe o TIMESTAMP, numero de segundos passados depois de 1970.
 
 
-1.dow 
-	é o dia da semana, no seu caso Sat(sábado)
-2. mon
-	é o mês, o Feb(fevereiro) do seu resultado
-3.dd
-	é o dia do mês representado como dois dígitos, de 01 a 31, no seu caso dia 26
-4.hh 
-	é a hora do dia, com valores de 00 até 23, o 11 da sua saída.
-5.mm
-	é a representação, também em dois dígitos, do minuto, o 38 da sua saída
-6. ss
-	é o segundo, novamente representado em dois dígitos, de 00 até 61
-7. zzz
-	é o time zone, o BRT da sua saída, podendo ser vazio, se não estiver disponível
-8. yyyy
-	é o ano, em quatro dígitos, como o 2015
+*dow*
+	- é o dia da semana, no seu caso Sat(sábado)
+
+*mon*
+	- é o mês, o Feb(fevereiro) do seu resultado
+
+*dd*
+	- é o dia do mês representado como dois dígitos, de 01 a 31, no seu caso dia 26
+
+*hh* 
+	- é a hora do dia, com valores de 00 até 23, o 11 da sua saída.
+
+*mm*
+	- é a representação, também em dois dígitos, do minuto, o 38 da sua saída
+
+*ss*
+	- é o segundo, novamente representado em dois dígitos, de 00 até 61
+
+*zzz* 
+	- é o time zone, o BRT da sua saída, podendo ser vazio, se não estiver disponível
+
+*yyyy*
+	- é o ano, em quatro dígitos, como o 2015
 
 
 
