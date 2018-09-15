@@ -56,7 +56,7 @@ OPÇÕES
 
 * `-w`: se o arquivo possui permissão de escrita.
 
-* `-x`: se o arquivo é executavel.
+* `-x`: se o arquivo é eXecutável.
 
 	   -b FILE
               FILE exists and is block special
