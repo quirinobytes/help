@@ -22,6 +22,36 @@ OPÇÕES
 	Exibe o dia como numero, ex: 2016
 * `%y`:
 	Exibe o ano como numero, ex: 16
+* `%s`:
+	Exibe o TIMESTAMP, numero de segundos passados depois de 1970.
+
+
+*dow*
+	- é o dia da semana, no seu caso Sat(sábado)
+
+*mon*
+	- é o mês, o Feb(fevereiro) do seu resultado
+
+*dd*
+	- é o dia do mês representado como dois dígitos, de 01 a 31, no seu caso dia 26
+
+*hh* 
+	- é a hora do dia, com valores de 00 até 23, o 11 da sua saída.
+
+*mm*
+	- é a representação, também em dois dígitos, do minuto, o 38 da sua saída
+
+*ss*
+	- é o segundo, novamente representado em dois dígitos, de 00 até 61
+
+*zzz* 
+	- é o time zone, o BRT da sua saída, podendo ser vazio, se não estiver disponível
+
+*yyyy*
+	- é o ano, em quatro dígitos, como o 2015
+
+
+
 
 
 
@@ -40,13 +70,16 @@ Exemplos de data:
    `$> date +%D`
 	03/14/17
 
-Check the date man page for more options.
+
 Returns the real date from epoch time:
 date –d @1284127201
+
 Return an epoch time of 1288756800:
 date +%s -d “2010-11-03”
+
 Return a 2 days old date:
 date --date="-2 days" +"%Y-%m-%d"
+
 Return 20:00 hours:
 date -d @1288310401 +%k:%M 
 

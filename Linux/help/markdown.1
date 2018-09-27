@@ -1,0 +1,99 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "MARKDOWN" "1" "June 2018" "" ""
+.
+.SH "NAME"
+\fBmarkdown\fR \- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino\.
+.
+.SH "SYNOPSIS"
+\fBmarkdown\fR [\fB\-bar\fR] [\fB\-c\fR \fIconfig\-file\fR ] \fIfile\fR \.\.\.
+.
+.SH "DESCRIÇÃO"
+\fBmarkdown\fR é um documento escrito para facilitar a crição de documentos a partir de um template\. Com a MARCAÇÃO \fImarkup\fR é possível gerar Man Pages usando o comando \fBronn\fR\. Veja mais em ronn(1)\. Necessita Ruby >= 2\.0 com Mustache para funcionar\.\.
+.
+.IP "1." 4
+Negrito (\fB*\fR)
+.
+.IP "\(bu" 4
+**This is a bold text**
+.
+.IP "\(bu" 4
+\fBThis is a bold text\fR
+.
+.IP "" 0
+
+.
+.IP "2." 4
+Sublinhado (\fB* *\fR)
+.
+.IP "\(bu" 4
+*sublinhado*
+.
+.IP "\(bu" 4
+\fIsublinhado\fR
+.
+.IP "" 0
+
+.
+.IP "3." 4
+Escape character (\fB\e\fR)
+.
+.IP "\(bu" 4
+\e*our\-new\-project\e*
+.
+.IP "\(bu" 4
+*our\-old\-project*
+.
+.IP "" 0
+
+.
+.IP "4." 4
+Tarefas ( \fB[x]\fR )
+.
+.IP "\(bu" 4
+[x] Primeira tarefa
+.
+.IP "\(bu" 4
+[ ] Segunda
+.
+.IP "\(bu" 4
+[ ] Terceira
+.
+.IP "" 0
+
+.
+.IP "5." 4
+Bullets (*)
+.
+.IP "\(bu" 4
+Pilotos Raiz
+.
+.IP "\(bu" 4
+Pilotos Nutela
+.
+.IP "\(bu" 4
+Pilotos Mortadela
+.
+.IP "" 0
+
+.
+.IP "6." 4
+Listas Enumeradas \e1\. Texto \e2\. Outra linha \e3\. Na linha de baixo\.
+.
+.IP "1." 4
+Texto
+.
+.IP "2." 4
+Outra linha
+.
+.IP "3." 4
+Na linha de baixo\.
+.
+.IP "" 0
+
+.
+.IP "" 0
+.
+.SH "VEJA SOBRE"
+ronn(5), markdown(1), txt2tags(1) Linux Man Page Howto \fIhttp://www\.schweikhardt\.net/man_page_howto\.html\fR
