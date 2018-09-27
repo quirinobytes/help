@@ -164,6 +164,9 @@ fi`
 
 
 
+Comparando se um eh mais novo q o outro.
+
+
 
 NOTES
 -----
