@@ -39,6 +39,10 @@ EXEMPLOS
 
 	-> 		net.ifnames=0 biosdevname=0
 
+ e rode para atualizar:
+
+ $>  grub2-mkconfig -o /boot/grub2/grub.cfg
+
 
 ARQUIVOS
 --------

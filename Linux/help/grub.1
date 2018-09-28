@@ -39,6 +39,12 @@ Coloque esses parametros no arquivo /etc/default/grub e depois execute um $> gru
 .IP
 \-> net\.ifnames=0 biosdevname=0
 .
+.P
+e rode para atualizar:
+.
+.P
+$> grub2\-mkconfig \-o /boot/grub2/grub\.cfg
+.
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
 .
