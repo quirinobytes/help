@@ -37,6 +37,9 @@ EXEMPLOS
 * `alterar os nomes das interfaces`:
 	Coloque esses parametros no arquivo /etc/default/grub e depois execute um $> grub2-install /boot/grub.list
 
+	-> 		net.ifnames=0 biosdevname=0
+
+
 ARQUIVOS
 --------
 
