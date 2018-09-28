@@ -36,6 +36,9 @@ Recursive mode\. Operates as fast as lightning at the expense of a megabyte of v
 \fBalterar os nomes das interfaces\fR
 Coloque esses parametros no arquivo /etc/default/grub e depois execute um $> grub2\-install /boot/grub\.list
 .
+.IP
+\-> net\.ifnames=0 biosdevname=0
+.
 .SH "ARQUIVOS"
 \fI/etc/foo\.conf\fR The system wide configuration file\. See foo(5) for further details\.
 .
