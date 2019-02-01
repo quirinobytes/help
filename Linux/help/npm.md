@@ -21,6 +21,12 @@ OPÇÕES
 * 'npm -g request
 	Instala o modulo request globalmente.
 
+* `npm audit`:
+	Faz um check por vulnerabilidades.
+
+* `npm audit fix`:
+	Resolve as vulnerabilidades encontradas.
+
 EXEMPLOS
 --------
 
