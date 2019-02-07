@@ -23,6 +23,7 @@ OPÇÕES
 
 * `npm audit`:
 	Faz um check por vulnerabilidades.
+	* Necessário executar um `npm install` antes.
 
 * `npm audit fix`:
 	Resolve as vulnerabilidades encontradas.
