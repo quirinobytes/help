@@ -17,24 +17,25 @@ Necessita Ruby >= 2.0 com Mustache para funcionar..
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
+* `get cronjob`:
+  Exibir os CRONJOB´s
 
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
+* `get pods`:
+  Exibir os POD´s
 
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
+* `get nodes`:
+  Exibir os NODE´s
 
-* `-r`:
-  Recursive mode. Operates as fast as lightning at the expense of a megabyte
-  of virtual memory.
+* `get daemonset`:
+  Exibir os DAEMONSET´s
+
 
 EXEMPLOS
 --------
 
-kubectl cluster-info dump
+Coloque os exemplos aqui:
+
+   `$> date '%Y/%m/%d'`
 
 
 ARQUIVOS
