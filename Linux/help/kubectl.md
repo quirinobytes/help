@@ -33,9 +33,12 @@ OPÇÕES
 EXEMPLOS
 --------
 
-Coloque os exemplos aqui:
+- Descreve as configs do POD
+   `$> kubectl describe pod <POD_NAME>`
+	
 
-   `$> date '%Y/%m/%d'`
+
+
 
 
 ARQUIVOS
