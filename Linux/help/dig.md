@@ -42,9 +42,13 @@ Coloque os exemplos aqui:
 
 *Teste de SPF*
 
-`$> dig TXT uol.com.br +short`
-`$> dig TXT _net1.uol.com.br +short`
-`$> dig TXT _net2.uol.com.br +short`
+* `$> dig TXT uol.com.br +short`:
+
+* `$> dig TXT _net1.uol.com.br +short`:
+
+* `$> dig TXT _net2.uol.com.br +short`:
+
+* `$> dig +short LB_ADDRESS yourwebsite.com`: verificar se o load balance está apontando para o seu site.
 
 
 *Pegando a Versão do Bind*
@@ -60,13 +64,6 @@ Coloque os exemplos aqui:
 Pegando a Versão
 
 a
-
-
-
-
-
-
-
 
 ;; ANSWER SECTION:
 version.bind.           0       CH      TXT     "NSD 4.1.14"
