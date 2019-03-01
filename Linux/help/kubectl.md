@@ -29,6 +29,8 @@ OPÇÕES
 * `get daemonset`:
   Exibir os DAEMONSET´s
 
+* `--watch`
+  Usado para assistir o output na tela.
 
 EXEMPLOS
 --------

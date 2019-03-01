@@ -44,6 +44,10 @@ OPÇÕES
 * `git config --global http.proxy http://mydomain\\myusername:mypassword@myproxyserver:8080`
 	Configurar proxy com senha.
 
+* `git status -sb`
+	Destaca merges e conflitos.
+
+
 EXEMPLOS
 --------
 
