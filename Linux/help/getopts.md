@@ -51,6 +51,72 @@ do
 done
 *
 
+
+*outro exemplo*:
+
+`#!/bin/bash
+ 
+function PrintUsage() {
+   echo "Uso: `basename $0` <-umsf> [-ohv]"
+   exit 1
+}
+ 
+while getopts "hvo:umsf" OPTION
+do
+   case $OPTION in
+      h) PrintUsage
+         ;;
+      v) echo "`basename $0` versao 666."
+         exit
+         ;;
+      o) ARQUIVO_LOG=$OPTARG
+         ;;
+      u) DO_UNAME=1
+         ;;
+      m) DO_FREE=1
+         ;;
+      s) DO_SWAPON=1
+         ;;
+      ?) PrintUsage
+         ;;
+   esac
+done
+shift $((OPTIND-1))
+ 
+if [ -z "$DO_UNAME" ] && [ -z "$DO_FREE" ] && [ -z "$DO_SWAPON" ] && [ -z "$DO_FDISK" ]; then
+   PrintUsage
+fi
+ 
+if [ "$ARQUIVO_LOG" ]; then   echo "Execucao iniciada em `date`." >> $ARQUIVO_LOG
+ 
+   if [ "$DO_UNAME" == 1 ]; then
+      uname -a >> $ARQUIVO_LOG
+   fi
+ 
+   if [ "$DO_FREE" == 1 ]; then
+      free -m >> $ARQUIVO_LOG
+   fi
+ 
+   if [ "$DO_SWAPON" == 1 ]; then
+      swapon -s >> $ARQUIVO_LOG
+   fi
+else
+   echo "Execucao iniciada em `date`."
+   if [ "$DO_UNAME" == 1 ]; then
+      uname -a
+   fi
+ 
+   if [ "$DO_FREE" == 1 ]; then
+      free -m
+   fi
+ 
+   if [ "$DO_SWAPON" == 1 ]; then
+      swapon -s
+   fi
+fi`
+
+
+
 AUTOR
 -----
 
