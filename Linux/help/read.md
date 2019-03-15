@@ -31,6 +31,10 @@ OPÇÕES
   Recursive mode. Operates as fast as lightning at the expense of a megabyte
   of virtual memory.
 
+* `-d <MS>`:
+  Delay - Temporizador para aguardar o input, senao retorna null.
+
+
 EXEMPLOS
 --------
 
