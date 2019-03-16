@@ -68,30 +68,45 @@ Nessa sessao mostro o problema de usar backspace e nao fechar os caracteres nao 
                                     |           |
                                     +-----------+-- Enclose in \[ \]
 
+* 'Convert to upper to lower case or vice versa':
+	Use the following syntax to convert lowercase characters to uppercase:
+
+	name="vivek"
+	# Turn vivek to Vivek (only first character to uppercase)
+	echo "${name^}" 
+	# Turn vivek to VIVEK (uppercase)
+	echo "${name^^}" 
+	echo "Hi, $USERNAME"
+	echo "Hi, ${USERNAME^}"
+	echo "Hi, ${USERNAME^^}"
+	# Convert everything to lowercase 
+	dest="/HOME/Vivek/DaTA"
+	echo "Actual path: ${dest,,}"
+	# Convert only first character to lowercase 
+	src="HOME"
+	echo "${src,}"
 
 
-45 exemplos de variáveis e arrays em Shell Script
 
+* 45 exemplos de variáveis e arrays em Shell Script *
 
-`0 - Retorna quantos índices (posições) existem no array`
-$> echo ${#VALOR[*]}
+`0 - Retorna quantos índices (posições) existem no array`:
+	$> echo ${#VALOR[*]}
 
-`1 - Criar uma variável, ${var} é o mesmo que $var, porém não ambíguo.`
-var="http://www.terminalroot.com.br/"</p><p>echo $var</p><p>http://www.terminalroot.com.br/
+`1 - Criar uma variável, ${var} é o mesmo que $var, porém não ambíguo.`:
+	var="http://www.terminalroot.com.br/"</p><p>echo $var</p><p>http://www.terminalroot.com.br/
 
-`2 - Retornar o tamanho da string`
-echo ${#var}</p><p>31
+`2 - Retornar o tamanho da string`:
+	echo ${#var}</p><p>31
 
-`3 - Executa o conteúdo de $var (igual 'eval \$$var')`
+`3 - Executa o conteúdo de $var (igual 'eval \$$var')`:
+	echo ${!var}
 
-echo ${!var}
+`4 - Retorna os nomes de variáveis começadas por 'U'`:
+	echo ${!U*}</p><p>UID USER USERNAME
 
-`4 - Retorna os nomes de variáveis começadas por 'U'`
-
-echo ${!U*}</p><p>UID USER USERNAME
-
-`5 - Retorna o texto a partir da posição 7`
-echo ${var:7}</p><p>www.terminalroot.com.br/
+`5 - Retorna o texto a partir da posição 7`:
+	echo ${var:7}</p><p>www.terminalroot.com.br/
 
 `6 - Retorna 8 caracteres a partir da posição 11`
 echo ${var:11:8}</p><p>terminal
