@@ -1,37 +1,39 @@
-mvn(1) -- Maven - Usado para gerenciar as dependencias do Java
+netsh(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
 ===============================================
 
 
 SYNOPSIS
 --------
 
-`mvn` [`-bar`] [`-c` *config-file* ] *file* ...
+`netsh` [`-bar`] [`-c` *config-file* ] *file* ...
 
 DESCRIÇÃO
 ---------
 
-`mvn` usado para baixar e administrar as dependencias de Java.
+`netsh` é uma espécie de encaminhador do Windows. Encaminhador de portas... Faz proxyport que é uma beleza.
 
 OPÇÕES
 ------
 
-* `clean`:
+* `-b`:
   Do not write "busy" to stdout while processing.
 
-* `compile` *config-file*:
+* `-c` *config-file*:
   Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
   overrides any `FOOCONF` environment variable.
 
-* `install`:
+* `-a`:
   In addition to the baz segments, also parse the blurfl headers.
 
-* `spring-boot:run`:
-  Iniciar o boot do Spring Cloud
+* `-r`:
+  Recursive mode. Operates as fast as lightning at the expense of a megabyte
+  of virtual memory.
 
 EXEMPLOS
 --------
-* `setar uma versão específica em todos os pom.xml`:
-    $> mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
+
+`FAZ NAT de 1.1.1.1:10 para 2.2.2.2:20`: 
+
 
 ARQUIVOS
 --------
