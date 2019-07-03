@@ -36,6 +36,9 @@ EXEMPLOS
 AWS DynamoDB - put-item
    `$> aws dynamodb put-item --table-name MusicCollection --item file://item.json --return-consumed-capacity TOTAL`
 
+AWS DynamoDB - put-item
+  `$> aws dynamodb put-item --table-name MusicCollection --item '{"Artist": {"S": "Obscure Indie Band"}}' --condition-expression "attribute_not_exists(Artist)" `   
+
 
 ARQUIVOS
 --------
