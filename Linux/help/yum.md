@@ -38,6 +38,9 @@ OPÇÕES
 * `yum repolist disabled`:
   Exibir os repositórios desabilitados.
 
+* `yum whatprovides '*bin/dig':
+  Procurar e exibir em qual pacote está o arquivo binário *bin/dig.
+
 EXEMPLOS
 --------
 
