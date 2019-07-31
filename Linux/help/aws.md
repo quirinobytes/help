@@ -1,4 +1,4 @@
-aws(1) -- Descrição do programa MarkDown para gerar MiniMan Pages Próprias por Rafael Quirino.
+aws(1) -- Comando para administrar a AWS
 ===============================================
 
 
@@ -10,34 +10,28 @@ SYNOPSIS
 DESCRIÇÃO
 ---------
 
-`aws` é um documento escrito para facilitar a crição de documentos a partir de um template.
-Com a MARCAÇÃO *markup* é possível gerar Man Pages usando o comando **ronn**. Veja mais em ronn(1).
-Necessita Ruby >= 2.0 com Mustache para funcionar..
+`aws cli` é um comando para administrar a AWS.
 
 OPÇÕES
 ------
 
-* `-b`:
-  Do not write "busy" to stdout while processing.
-
-* `-c` *config-file*:
-  Use the alternate system wide *config-file* instead of */etc/foo.conf*. This
-  overrides any `FOOCONF` environment variable.
-
-* `-a`:
-  In addition to the baz segments, also parse the blurfl headers.
-
-* `dynamodb`:
-  Usado para trabalhar com o DynamoDB
+* `--profile <PROFILE_NAME>`:
+  
 
 EXEMPLOS
 --------
 
-AWS DynamoDB - put-item
+[AWS CLI]
+
+DynamoDB - put-item:
    `$> aws dynamodb put-item --table-name MusicCollection --item file://item.json --return-consumed-capacity TOTAL`
 
-AWS DynamoDB - put-item
-  `$> aws dynamodb put-item --table-name MusicCollection --item '{"Artist": {"S": "Obscure Indie Band"}}' --condition-expression "attribute_not_exists(Artist)" `   
+DynamoDB - put-item:
+  `$> aws dynamodb put-item --table-name MusicCollection --item '{"Artist": {"S": "Obscure Indie Band"}}' --condition-expression "attribute_not_exists(Artist)" `
+
+
+Cloudformation - create-stack:
+  `$> aws cloudformation create-stack --stack-name MyStackResources --template-body file://template.yml --parameters ParameterKey=KeyPairName,ParameterValue=TestKey ParameterKey=SubnetIDs,ParameterValue=SubnetID1\\,SubnetID2`
 
 
 ARQUIVOS
