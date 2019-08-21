@@ -15,6 +15,9 @@ DESCRIÇÃO
 OPÇÕES
 ------
 
+* `-k`:
+  Nao verifica certificado SSL
+
 * `-6`:
 	Usar IPv6.
 
