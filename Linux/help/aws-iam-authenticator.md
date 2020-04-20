@@ -37,7 +37,7 @@ EXEMPLOS
 
 Gerar o Token para sua determinada *ROLE*
 
-   `aws-iam-authenticator token -i veloe-cluster -r arn:aws:iam::987807708973:role/IamRoleAdmin`
+   `aws-iam-authenticator token -i cluster -r arn:aws:iam::conta:role/IamRoleAdmin`
 
 
 ARQUIVOS
