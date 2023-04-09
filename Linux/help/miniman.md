@@ -29,6 +29,8 @@ OPÇÕES
 
 * `-W`:
   Windows mode.
+* `-h`:
+  Mostrar o help.
 
 EXEMPLOS
 --------
