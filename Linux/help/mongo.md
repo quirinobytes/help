@@ -33,6 +33,11 @@ EXEMPLOS
 	- Após o primeiro passo, já poderemos inserir dados na nossa database faculdade e em qual collection eu desejar, lembrando que collection tem uma função parecida com as tabelas dos bancos relacionais.:
 `db.collection.insert(json);`
 
+ - Trocar DATABASE para admin
+`use admin`
+
+ - Criar usuário myapp dbOwner no mongodb
+`db.createUser({user:"myapp", pwd:"pwd5299", roles:[{role:"dbOwner", db:"myapp"}]});`
 
 ARQUIVOS
 --------
