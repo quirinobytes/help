@@ -28,7 +28,7 @@ OPÇÕES
   Usado para executar o script em AWK usando o *arquivo.awk* como programa. Isso
   Sobrescreve o direcionamento com pipe `|`.
 * `-F <CARACTER>`:
-	Usado para indicar o Field Separator
+	Usado para indicar o Field Separator  
 
 
 EXEMPLOS
@@ -68,7 +68,8 @@ $> `awk '{if ($1>100 && $1<120) print d,"\033[33m" $0 ; else if ($1>120) print d
 Executar um comando, por exemplo apagar arquivos que tenha txt no nome.
 	`>cat myfile | awk '/.txt/{print "rm -rf " $0}' | bash`
 
-
+Excluir colunas 6 e 8.
+  `awk '{$6=$8=""; print $0}' file | column -t `
 
 ARQUIVOS
 --------
