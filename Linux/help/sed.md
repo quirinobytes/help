@@ -24,12 +24,12 @@ OPÇÕES
  Edita o arquivo diretamente na fonte, Cuidado para não destruir o arquivo.
 
 
-EXEMPLOS
+# EXEMPLOS
 --------
 
-1. Pegar os nomes dos arquivos
+## - 1 Pegar os nomes dos arquivos
 
-$> miniman -ls 
+$> miniman -ls
 /root/help/Linux/help/complete.1
 /root/help/Linux/help/iconv.1
 /root/help/Linux/help/if.1
@@ -46,20 +46,29 @@ if
 screen
 `
 
-2. Apagar as linhas em branco de um arquivo
+## - 2 Apagar as linhas em branco de um arquivo
 `$> sed '/^$/d' arquivo.txt > novoarquivo.txt ou 
 awk 'NF>0' arquivo.txt > novoarquivo.txt`
 
 
-3. Apagar somente a 3linha
+## - 3 Apagar somente a 3a. linha
 `$> echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 3d`
 
-4. Imprimir a linha 1
+## - 4 Imprimir somente a 1a. linha
 `$> echo -en 'varias\nlinhas\nagora\nnovalinha' | sed 1p`
 
-ALPHABETO sed
+## - 5 Verificar se o nome passado tem extensão, como em arquivos
+` echo teste.txt | grep -E '.*\..*[^\\]'
+  $      = Look from the end of string
+  [^\\]+ = Any character except path separator one or more time
+  \.     = looks for <dot> character before extension
+`
+
+
+# ALPHABETO (sed)
 --------
-Written by Aurelio Jargas on December 12, 2012
+
+*Written by Aurelio Jargas on December 12, 2012*
 
 a    append        append some text after the [PATT]
 b    branch        branch to label (GOTO)
