@@ -16,15 +16,19 @@ DESCRIÇÃO
 rm -f /etc/resolv.conf
 ln -sv /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
+RESTARTING
+----------
 
-OPÇÕES
-------
+- Para reiniciar o serviço: systemd-resolved, faça:
+
+`$> service systemd-resolved restart`
 
 
-EXEMPLOS
+
+ARQUIVOS
 --------
 
-`$> cat /etc/systemd/resolved.conf`
+*/etc/systemd/resolved.conf*
 
  DNS=1.1.1.1 8.8.8.8
  FallbackDNS=208.67.222.222
@@ -41,35 +45,16 @@ EXEMPLOS
  #ResolveUnicastSingleLabel=no
 
 
+*/etc/resolv.conf*
 
-ARQUIVOS
---------
-
-
-*/etc/foo.conf*
-  The system wide configuration file. See foo(5) for further details.
-
-*~/.foorc*
-  Per user configuration file. See foo(5) for further details.
-
-ENVIRONMENT
------------
-
-`FOOCONF`
-  If non-null the full pathname for an alternate system wide */etc/foo.conf*.
-  Overridden by the `-c` option.
+  nameserver 8.8.8.8
+	domain dominio.com.br
+	search buscar.com.br
 
 DIAGNOSTICS
 -----------
 
-The following diagnostics may be issued on stderr:
-
-**Bad magic number.**
-  The input file does not look like an archive file.
-
-**Old style baz segments.**
-  `foo` can only handle new style baz segments. COBOL object libraries are not
-  supported in this version.
+`$> journalctl -xf systemd-resolved`
 
 COMENTARIOS
 -----------
